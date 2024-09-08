@@ -1,0 +1,107 @@
+$spacers: (
+  0: 0%,
+  1: 10px,
+  2: 15px,
+  3: 20px,
+  4: 30px,
+  5: 50px,
+  6: 80px,
+  7: 120px
+);
+
+$compensate_padding: 80px;
+$compensate_padding_sm: 60px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px + $compensate_padding_sm,
+  md: 768px + $compensate_padding,
+  lg: 992px + $compensate_padding,
+  xl: 1200px + $compensate_padding,
+  xxl: 1400px + $compensate_padding
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+// Headings.
+$headings-margin-bottom: 0;
+
+// Horizontal and vertical rule.
+$hr-opacity: 1;
+
+// Utilities.
+$enable-smooth-scroll: false;
+$enable-negative-margins: true;
+$paragraph-margin-bottom: 0;
+
+// Grid.
+$grid-gutter-width: 30px;
+
+// Form.
+$input-box-shadow: 0;
+$input-focus-box-shadow: 0;
+$form-select-box-shadow: 0;
+$form-select-focus-box-shadow: 0;
+$form-check-margin-bottom: 0;
+$form-check-min-height: 0;
+$form-check-padding-start: 0;
+$form-check-input-focus-box-shadow: 0;
+
+// Nav Tabs.
+$nav-tabs-border-width: 0;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-active-bg: transparent;
+
+// Accordion.
+$accordion-border-width: 0;
+$accordion-border-radius: 0;
+$accordion-inner-border-radius: 0;
+$accordion-button-bg: transparent;
+$accordion-button-active-bg: transparent;
+$accordion-button-focus-box-shadow: 0;
+$accordion-bg: transparent;
+
+// Card.
+$card-bg: transparent;
+$card-color: hsl(var(--flq-color-title));
+$card-border-width: 0;
+$card-border-radius: 0;
+$card-box-shadow: 0;
+$card-spacer-x: 0;
+$card-spacer-y: 0;
+$card-title-spacer-x: 0;
+$card-title-spacer-y: 0;
+$card-cap-bg: transparent;
+
+// Pagination.
+$pagination-border-width: 0;
+$pagination-focus-box-shadow: 0;
+
+// List group.
+$list-group-border-radius: 0;
+$list-group-bg: transparent;
+$list-group-active-bg: transparent;
+$list-group-disabled-bg: transparent;
+
+// Modal.
+$modal-content-bg: hsla(var(--flq-color-background-100), 1);
+$modal-content-border-color: hsla(var(--flq-color-border), 1);
+$modal-header-border-color: hsla(var(--flq-color-border), 1);
+$modal-footer-border-color: hsla(var(--flq-color-border), 1);
+
+// Close.
+$btn-close-color: hsla(var(--flq-color-title), 1);
+
+// Button.
+$btn-border-width: 2px;
+$btn-active-box-shadow: 0;
+$btn-focus-box-shadow: 0;
+$btn-focus-width: 0;
+
+// Caret.
+$enable-caret: false;

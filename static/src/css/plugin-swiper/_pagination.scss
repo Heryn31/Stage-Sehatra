@@ -1,0 +1,172 @@
+.flq-swiper-pagination.swiper-pagination-bullets {
+  width: auto;
+
+  .swiper-pagination-bullet {
+    margin: 0;
+  }
+}
+
+.flq-swiper-pagination {
+  --flq-swiper-pagination--gap: 20px;
+  --flq-swiper-pagination__bullet--border-size: 32px;
+  --flq-swiper-pagination__bullet--border-width: 2px;
+
+  @include media-breakpoint-down(md) {
+    --flq-swiper-pagination--gap: 15px;
+    --flq-swiper-pagination__bullet--border-size: 22px;
+  }
+
+  display: flex;
+
+  > .swiper-pagination-bullet {
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    opacity: 1;
+
+    &::before {
+      display: block;
+      content: "";
+      background-color: hsla(var(--flq-color-white));
+      opacity: 0.5;
+      transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), opacity var(--flq-transition-duration) var(--flq-transition-easing);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  > .swiper-pagination-bullet-active {
+    background-color: transparent;
+    opacity: 1;
+
+    &::before {
+      background-color: hsla(var(--flq-color-white));
+      opacity: 1;
+    }
+  }
+
+  // Vertical.
+  @mixin flq-swiper-pagination-vertical() {
+    flex-direction: column;
+
+    > .swiper-pagination-bullet {
+      padding: calc(var(--flq-swiper-pagination--gap) * 0.5) 0;
+
+      &::before {
+        width: var(--flq-swiper-pagination__bullet--border-size);
+        height: var(--flq-swiper-pagination__bullet--border-width);
+        clip-path: inset(0 20% 0 20% round var(--flq-border-radius));
+      }
+    }
+
+    > .swiper-pagination-bullet-active::before {
+      clip-path: inset(0 0% 0 0% round var(--flq-border-radius));
+    }
+  }
+
+  &.flq-swiper-pagination-vertical {
+    @include flq-swiper-pagination-vertical();
+  }
+
+  // Horizontal.
+  &.flq-swiper-pagination-horizontal {
+    > .swiper-pagination-bullet {
+      padding: 0 calc(var(--flq-swiper-pagination--gap) * 0.5);
+
+      &::before {
+        width: var(--flq-swiper-pagination__bullet--border-width);
+        height: var(--flq-swiper-pagination__bullet--border-size);
+        clip-path: inset(20% 0 20% 0 round var(--flq-border-radius));
+      }
+    }
+
+    > .swiper-pagination-bullet-active::before {
+      clip-path: inset(0% 0 0% 0 round var(--flq-border-radius));
+    }
+  }
+
+  &.flq-swiper-pagination-md-vertical {
+    @include media-breakpoint-up(md) {
+      @include flq-swiper-pagination-vertical();
+    }
+  }
+}
+
+// Progress.
+.flq-swiper-pagination-progress {
+  position: relative;
+
+  &,
+  &.swiper-pagination-horizontal {
+    height: 2px;
+    overflow: hidden;
+    background-color: hsla(var(--flq-color-border));
+    border-radius: var(--flq-border-radius);
+  }
+
+  .swiper-pagination-progressbar-fill {
+    background-color: hsla(var(--flq-color-title));
+  }
+}
+
+// Custom.
+.flq-swiper-pagination-custom {
+  --flq-swiper-pagination--gap: 0%;
+
+  position: relative;
+  display: flex;
+  padding: 7.5px 14px;
+  font-size: var(--flq-small--font-size);
+  font-weight: var(--flq-small--font-weight-bold);
+  line-height: var(--flq-small--line-height);
+  color: hsla(var(--flq-color-meta));
+  text-transform: var(--flq-small--text-transform);
+  background-color: hsla(var(--flq-color-background-300));
+  border-radius: var(--flq-border-radius);
+
+  &::before {
+    order: 1;
+    margin: 0 6px;
+    content: "/";
+  }
+
+  &::after {
+    order: 2;
+    content: attr(data-bullets-total);
+  }
+
+  > .swiper-pagination-bullet {
+    position: absolute;
+    top: 7.5px;
+    left: 14px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    color: hsla(var(--flq-color-title));
+    visibility: hidden;
+    background-color: transparent;
+    border-radius: 0;
+    opacity: 0;
+    transition: transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), opacity var(--flq-transition-duration) var(--flq-transition-easing), visibility var(--flq-transition-duration) var(--flq-transition-easing);
+    transform: translateY(-50%);
+
+    &:last-child {
+      position: static;
+    }
+  }
+
+  > .swiper-pagination-bullet-active {
+    visibility: visible;
+    background-color: transparent;
+    opacity: 1;
+    transform: translateY(0);
+
+    ~ .swiper-pagination-bullet {
+      transform: translateY(50%);
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@keyframes flq-offcanvas-toggle-dots {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Toggle
+[data-bs-toggle="offcanvas"] {
+  --flq-offcanvas-toggle__dot--size: 3.5px;
+  --flq-offcanvas-toggle__dot--gap: 3px;
+
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: var(--flq-btn-md--size);
+    height: var(--flq-btn-md--size);
+    margin-top: calc(var(--flq-btn-md--size) * -0.5);
+    margin-left: calc(var(--flq-btn-md--size) * -0.5);
+    content: "";
+  }
+
+  > span {
+    width: var(--flq-offcanvas-toggle__dot--size);
+    height: var(--flq-offcanvas-toggle__dot--size);
+    margin-top: calc(var(--flq-offcanvas-toggle__dot--gap) * 0.5);
+    margin-bottom: calc(var(--flq-offcanvas-toggle__dot--gap) * 0.5);
+    background-color: currentColor;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    > span {
+      animation: flq-offcanvas-toggle-dots calc(var(--flq-transition-duration) + 0.1s) linear;
+
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+    }
+  }
+}
+
+// Popup.
+.offcanvas {
+  --flq-offcanvas--padding-v: 40px;
+  --flq-offcanvas--padding-h: 40px;
+  --flq-offcanvas--delay: 0.3s;
+
+  width: calc(var(--flq-page__sidebar--width) + var(--flq-offcanvas--padding-h) + var(--flq-offcanvas--padding-h) + var(--flq-page-scrollbar__size));
+  background-color: hsla(var(--flq-color-background));
+  transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+
+  // Header.
+  .offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    min-height: var(--flq-navbar-top--min-height);
+    padding-right: var(--flq-offcanvas--padding-h);
+    padding-left: var(--flq-offcanvas--padding-h);
+  }
+
+  // Body.
+  .offcanvas-body {
+    padding: var(--flq-offcanvas--padding-v) var(--flq-offcanvas--padding-h);
+    overflow-y: scroll;
+  }
+
+  // Show.
+  &.show {
+    clip-path: inset(0 0% 0 0%);
+    transform: translateX(0);
+
+    // Close.
+    .offcanvas-close {
+      clip-path: circle(100% at 50% 50%);
+
+      > span {
+        background-color: hsla(var(--flq-color-white), 0.1);
+
+        &::before,
+        &::after {
+          clip-path: inset(0 3px 0 3px round var(--flq-border-radius));
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+// Close.
+.offcanvas-close {
+  display: flex;
+  width: var(--flq-btn-xs--size);
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path calc(var(--flq-transition-duration-cubic) + 1s) var(--flq-transition-easing-cubic);
+  transition-delay: calc(var(--flq-offcanvas--delay) - 0.15s);
+
+  > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--flq-btn-xs--size);
+    height: var(--flq-btn-xs--size);
+    clip-path: inset(0 0 0 0 round var(--flq-border-radius));
+    background-color: transparent;
+    transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), background-color var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+    transition-delay: 0s, calc(var(--flq-offcanvas--delay) + 0.3s);
+
+    &::before,
+    &::after {
+      display: block;
+      width: 28px;
+      height: 2px;
+      clip-path: inset(0% round var(--flq-border-radius));
+      content: "";
+      background-color: hsla(var(--flq-color-title));
+      transition: transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), clip-path var(--flq-transition-duration) var(--flq-transition-easing);
+      transition-delay: var(--flq-offcanvas--delay), calc(var(--flq-offcanvas--delay) + 0.25s);
+    }
+
+    &::before {
+      margin-bottom: -1px;
+    }
+
+    &::after {
+      margin-top: -1px;
+    }
+  }
+
+  &:hover > span,
+  &:focus > span {
+    clip-path: inset(0 0 0 0 round 50%);
+  }
+}
+
+// Start.
+.offcanvas-start {
+  clip-path: inset(0 50% 0 0);
+  border-right: 0;
+  transform: translateX(-50%);
+}
+
+// End.
+.offcanvas-end {
+  clip-path: inset(0 0 0 50%);
+  border-left: 0;
+  transform: translateX(50%);
+}
+
+// Closing.
+.flq-offcanvas-is-closing .offcanvas-close {
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+  transition-delay: 0s;
+}

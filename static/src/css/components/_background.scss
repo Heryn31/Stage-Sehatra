@@ -1,0 +1,83 @@
+.flq-background {
+  position: relative;
+
+  // Overlay.
+  > .flq-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  > .flq-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+    .flq-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      img {
+        @extend %img-ofi;
+      }
+    }
+  }
+
+  // Ticker.
+  > .flq-background-ticker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+    .flq-image-ticker {
+      height: var(--flq-image-ticker__height);
+    }
+  }
+
+  // Shape.
+  > .flq-background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+    [data-rellax] {
+      position: relative;
+      max-width: 100%;
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+@each $color in (100, 200, 300) {
+  .flq-background-color-#{$color} {
+    background-color: hsla(var(--flq-color-background-#{$color}));
+  }
+}

@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function flq-responsive($width: 0, $height: 0) {
+  @return flq-round(math.div((100 * $height), $width), 2) + "%";
+}

@@ -1,0 +1,65 @@
+.flq-post-content {
+  > p,
+  > ul,
+  > ol {
+    > a {
+      color: hsla(var(--flq-color-title));
+      background-image: linear-gradient(0deg, hsla(var(--flq-color-brand)) 0%, hsla(var(--flq-color-brand)) 100%);
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: 100% 2px;
+      transition: background-size var(--flq-transition-duration) var(--flq-transition-easing);
+
+      &:hover,
+      &:focus {
+        color: hsla(var(--flq-color-title));
+        background-size: 100% 100%;
+      }
+    }
+
+    > strong {
+      color: hsla(var(--flq-color-title));
+    }
+  }
+}
+
+// Author block.
+.flq-post-author {
+  padding: 40px;
+  background-color: hsla(var(--flq-color-background-100));
+  border-radius: var(--flq-border-radius-xl);
+
+  .flq-post-author-head {
+    display: flex;
+    flex-wrap: wrap;
+
+    + .flq-post-author-body {
+      margin-top: var(--flq-vertical-rhythm);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .flq-media {
+      @include create-col(grow);
+
+      margin-right: 30px;
+    }
+
+    .flq-social {
+      @include create-col(auto);
+
+      margin-left: auto;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .flq-media,
+    .flq-social {
+      @include create-col(1, 1);
+    }
+
+    .flq-social {
+      margin-top: var(--flq-vertical-rhythm);
+    }
+  }
+}

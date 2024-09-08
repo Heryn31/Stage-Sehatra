@@ -1,0 +1,79 @@
+:root {
+  --flq-image-ticker__height: 180px;
+  --flq-image-ticker__gap: 20px;
+}
+
+@keyframes flq-image-ticker-slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes flq-image-ticker-slide-inverted {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.flq-image-ticker {
+  overflow: hidden;
+
+  &.flq-image-ticker-ready .flq-image-ticker-inner {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .flq-image-ticker-item {
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
+  }
+
+  .flq-image {
+    height: 100%;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+// Pause on Hover.
+.flq-image-ticker-pause-hover:hover .flq-image-ticker-inner {
+  animation-play-state: paused;
+}
+
+.flq-image-ticker-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s opacity, 0.5s visibility;
+  animation-name: flq-image-ticker-slide;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  [data-inverted].flq-image-ticker & {
+    justify-content: flex-end;
+    animation-name: flq-image-ticker-slide-inverted;
+  }
+
+  // Animation duration calculated in initImagesTicker.js
+
+  > div {
+    padding-left: var(--flq-image-ticker__gap);
+    white-space: nowrap;
+  }
+}

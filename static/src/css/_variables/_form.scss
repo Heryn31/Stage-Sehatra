@@ -1,0 +1,46 @@
+:root {
+  --flq-form--color: var(--flq-color-text);
+  --flq-form--border-width: 1px;
+  --flq-form--border-color: var(--flq-color-border);
+  --flq-form--border-radius: var(--flq-border-radius);
+  --flq-form--background-color: var(--flq-color-background-300);
+  --flq-form-focus--color: var(--flq-color-title);
+  --flq-form-focus--border-color: var(--flq-color-meta);
+  --flq-form-focus--background-color: var(--flq-color-background-300);
+
+  // Large.
+  --flq-form-lg--padding-v: 12.5px;
+  --flq-form-lg--padding-h: 25px;
+  --flq-form-lg--min-height: 56px;
+  --flq-form-lg--border-radius: var(--flq-border-radius-lg);
+
+  // Icon.
+  --flq-form__icon--size: 15px;
+  --flq-form__icon--gap: 15px;
+  --flq-form__icon--position: 0.4em;
+
+  // Placeholder.
+  --flq-form__placeholder--color: var(--flq-color-meta);
+
+  // Check.
+  --flq-form-check--size: 20px;
+  --flq-form-check--gap: 15px;
+  --flq-form-check--position: 0.3em;
+  --flq-form-check--color: var(--flq-color-title);
+  --flq-form-check--border-radius: var(--flq-border-radius-sm);
+  --flq-form-check--border-width: var(--flq-form--border-width);
+  --flq-form-check--border-color: var(--flq-form--border-color);
+  --flq-form-check--background-color: var(--flq-form--background-color);
+  --flq-form-check-focus--border-color: var(--flq-form-focus--border-color);
+  --flq-form-check-focus--background-color: var(--flq-form-focus--background-color);
+  --flq-form-check-checked--border-color: var(--flq-color-brand);
+  --flq-form-check-checked--background-color: var(--flq-color-brand);
+  --flq-form-check-active--border-color: var(--flq-color-brand), 0.8;
+  --flq-form-check-active--background-color: var(--flq-color-brand), 0.8;
+
+  // Checkbox.
+  --flq-form-checkbox__icon--size: 14px;
+
+  // Radio.
+  --flq-form-radio__icon--size: 16px;
+}

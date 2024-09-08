@@ -1,0 +1,94 @@
+:root {
+  // Vertical Rhythm.
+  --flq-vertical-rhythm: 32px;
+  --flq-vertical-rhythm-1: 10px;
+  --flq-vertical-rhythm-2: 15px;
+  --flq-vertical-rhythm-3: 25px;
+
+  // Body.
+  --flq-body--font-size: 16px;
+  --flq-body--font-family: inter, sans-serif;
+  --flq-body--font-weight: 500;
+  --flq-body--font-weight-bold: 600;
+  --flq-body--line-height: 1.8;
+  --flq-body--text-transform: none;
+
+  // Small.
+  --flq-small--font-size: 14px;
+  --flq-small--font-weight: 500;
+  --flq-small--font-weight-bold: 600;
+  --flq-small--line-height: 1.8;
+  --flq-small--text-transform: none;
+
+  // Lead.
+  --flq-lead--font-size: 18px;
+  --flq-lead--font-weight: 500;
+  --flq-lead--font-weight-bold: 700;
+  --flq-lead--line-height: 1.8;
+  --flq-lead--text-transform: none;
+
+  // Headings.
+  --flq-heading--font-family: inter, sans-serif;
+  --flq-heading--font-weight: 800;
+  --flq-heading--text-transform: none;
+
+  // h1.
+  --flq-h1--font-size: 40px;
+  --flq-h1--line-height: 1.2;
+  --flq-h1--letter-spacing: -1px;
+
+  // h2.
+  --flq-h2--font-size: 32px;
+  --flq-h2--line-height: 1.2;
+  --flq-h2--letter-spacing: -0.8px;
+
+  // h3.
+  --flq-h3--font-size: 28px;
+  --flq-h3--line-height: 1.2;
+  --flq-h3--letter-spacing: -0.5px;
+
+  // h4.
+  --flq-h4--font-size: 24px;
+  --flq-h4--line-height: 1.2;
+  --flq-h4--letter-spacing: -0.3px;
+
+  // h5.
+  --flq-h5--font-size: 20px;
+  --flq-h5--line-height: 1.2;
+  --flq-h5--letter-spacing: 0%;
+
+  // h6.
+  --flq-h6--font-size: 16px;
+  --flq-h6--line-height: 1.2;
+  --flq-h6--letter-spacing: 0.1px;
+
+  // Display 1.
+  --flq-d1--font-size: 80px;
+  --flq-d1--line-height: 1.2;
+  --flq-d1--letter-spacing: -3px;
+
+  // Display 2.
+  --flq-d2--font-size: 72px;
+  --flq-d2--line-height: 1.2;
+  --flq-d2--letter-spacing: -2.5px;
+
+  // Display 3.
+  --flq-d3--font-size: 64px;
+  --flq-d3--line-height: 1.2;
+  --flq-d3--letter-spacing: -2px;
+
+  // Display 4.
+  --flq-d4--font-size: 56px;
+  --flq-d4--line-height: 1.2;
+  --flq-d4--letter-spacing: -1.5px;
+
+  // Display 5.
+  --flq-d5--font-size: 50px;
+  --flq-d5--line-height: 1.2;
+  --flq-d5--letter-spacing: -1px;
+
+  // Display 6.
+  --flq-d6--font-size: 44px;
+  --flq-d6--line-height: 1.2;
+  --flq-d6--letter-spacing: -1px;
+}

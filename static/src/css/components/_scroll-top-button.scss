@@ -1,0 +1,161 @@
+// Fixed button position when open popups.
+.flq-offcanvas-active .flq-scroll-top-wrapper,
+.fancybox-active .flq-scroll-top-wrapper {
+  right: calc(var(--flq-page-offset) + var(--flq-page-scrollbar__size));
+}
+
+@include media-breakpoint-down(sm) {
+  .flq-navbar-icons-existence {
+    .flq-scroll-top-wrapper {
+      display: none;
+    }
+
+    .flq-navbar-icons .flq-scroll-top-wrapper {
+      --flq-scroll-top-button--size: var(--flq-btn-xs--size);
+
+      @include backdrop-blur(0);
+
+      position: static;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+
+      &::before {
+        background-color: transparent;
+      }
+
+      .flq-scroll-progress-circle {
+        --flq-scroll-progress-circle__size: var(--flq-btn-xs--size);
+      }
+    }
+  }
+}
+
+.flq-scroll-top-wrapper {
+  --flq-scroll-top-button--size: var(--flq-btn-md--size);
+
+  @include backdrop-blur();
+
+  position: fixed;
+  right: var(--flq-page-offset);
+  bottom: calc(var(--flq-navbar-icons--min-height) + var(--flq-container--padding));
+  z-index: 5;
+  width: var(--flq-scroll-top-button--size);
+  height: var(--flq-scroll-top-button--size);
+  visibility: hidden;
+  border-radius: 50%;
+  opacity: 0;
+  transition: color var(--flq-transition-duration) var(--flq-transition-easing), opacity var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), visibility var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+  transform: translateX(5px);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    background-color: hsla(var(--flq-color-background), 0.3);
+    border-radius: 50%;
+  }
+}
+
+// Scroll Top Button.
+.flq-scroll-top-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsla(var(--flq-color-white));
+  border-radius: 100%;
+  transition: color var(--flq-transition-duration) var(--flq-transition-easing), background-color var(--flq-transition-duration) var(--flq-transition-easing), transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+  transform: rotate(-90deg);
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+  }
+
+  &::before {
+    z-index: -1;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0 hsla(var(--flq-color-white));
+    transition: box-shadow calc(var(--flq-transition-duration-cubic-2) - 0.1s) var(--flq-transition-easing-cubic-2), transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+    transition-delay: 0.05s, 0s;
+    transform: scale(1);
+  }
+
+  &::after {
+    border: 2px solid hsla(var(--flq-color-white), 0.2);
+    border-radius: 50%;
+  }
+
+  > svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: hsla(var(--flq-color-black));
+
+    &::before {
+      box-shadow: inset 0 0 0 calc(var(--flq-scroll-top-button--size) * 0.5) hsla(var(--flq-color-white));
+      transition-delay: 0s, 0.05s;
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Scroll Top Progress.
+.flq-scroll-progress-circle {
+  --flq-scroll-progress-circle__size: var(--flq-btn-md--size);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: hsla(var(--flq-color-white));
+  transition: transform 0.2s var(--flq-transition-easing);
+
+  svg {
+    display: block;
+    width: var(--flq-scroll-progress-circle__size);
+    height: var(--flq-scroll-progress-circle__size);
+    transform: scaleX(-1);
+
+    circle {
+      stroke-dasharray: 300%;
+      stroke-dashoffset: calc(300% + (var(--flq-scroll-progress) * 3));
+      stroke-linecap: round;
+      stroke-width: 2px;
+      transform: rotate(-90deg) translateX(-50%) translateY(50%);
+      r: calc((var(--flq-scroll-progress-circle__size) * 0.5) - 1px);
+    }
+  }
+}
+
+.flq-scroll-top-button-show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.flq-scroll-top-button-hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(5px);
+}

@@ -1,0 +1,69 @@
+.flq-meta {
+  --bs-gutter-x: 20px;
+  --bs-gutter-y: 0%;
+  --flq-meta--font-size: var(--flq-body--font-size);
+  --flq-meta--font-weight: var(--flq-body--font-weight-bold);
+  --flq-meta--line-height: var(--flq-body--line-height);
+  --flq-meta--text-transform: var(--flq-body--text-transform);
+  --flq-meta--color: var(--flq-color-meta);
+  --flq-meta-hover--color: var(--flq-color-title);
+  --flq-meta-focus--color: var(--flq-color-brand);
+
+  > ul {
+    @extend %flq-list-disable;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
+    margin-left: calc(var(--bs-gutter-x) * -0.5);
+    font-size: var(--flq-meta--font-size);
+    font-weight: var(--flq-meta--font-weight);
+    line-height: var(--flq-meta--line-height);
+    text-transform: var(--flq-meta--text-transform);
+
+    > li {
+      display: flex;
+      align-items: center;
+      padding-top: var(--bs-gutter-y);
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+      color: hsla(var(--flq-meta--color));
+
+      // Separator.
+      &::after {
+        width: 4px;
+        height: 4px;
+        content: "";
+        background-color: hsla(var(--flq-color-border));
+        border-radius: 50%;
+        transform: translateX(calc(var(--bs-gutter-x) * 0.5));
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      > a {
+        display: block;
+        color: hsla(var(--flq-meta--color));
+
+        &:hover {
+          color: hsla(var(--flq-meta-hover--color));
+        }
+
+        &:focus {
+          color: hsla(var(--flq-meta-focus--color));
+        }
+      }
+    }
+  }
+}
+
+.flq-meta-sm {
+  --flq-meta--gap-h: 15px;
+  --flq-meta--font-size: var(--flq-small--font-size);
+  --flq-meta--font-weight: var(--flq-small--font-weight-bold);
+  --flq-meta--line-height: var(--flq-small--line-height);
+  --flq-meta--text-transform: var(--flq-small--text-transform);
+}

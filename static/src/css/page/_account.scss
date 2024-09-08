@@ -1,0 +1,85 @@
+.flq-account-navbar,
+.flq-account-content {
+  padding: 40px;
+  background-color: hsla(var(--flq-color-background-100));
+  border-radius: var(--flq-border-radius-lg);
+}
+
+// Avatar.
+.flq-account-avatar {
+  display: block;
+  width: 80px;
+
+  .card-image {
+    border-radius: var(--flq-border-radius);
+  }
+}
+
+// Favorites.
+.flq-account-favorite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  background-color: hsla(var(--flq-color-background-100));
+  border-radius: var(--flq-border-radius-lg);
+  transition: background-color var(--flq-transition-duration) var(--flq-transition-easing);
+
+  @include media-breakpoint-up(sm) {
+    padding-right: 30px;
+  }
+
+  > .flq-media {
+    @include media-breakpoint-up(sm) {
+      @include create-col(grow);
+    }
+    @include media-breakpoint-down(sm) {
+      @include create-col(1, 1);
+    }
+  }
+
+  > .btn {
+    @include media-breakpoint-up(sm) {
+      @include create-col(auto);
+    }
+    @include media-breakpoint-down(sm) {
+      @include create-col(1, 1);
+
+      margin-top: var(--flq-vertical-rhythm-2);
+    }
+  }
+
+  &:hover {
+    background-color: hsla(var(--flq-color-background-200));
+  }
+}
+
+// Comment.
+.flq-account-comment {
+  padding: 30px;
+  background-color: hsla(var(--flq-color-background-100));
+  border-radius: var(--flq-border-radius-lg);
+
+  > hr {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+}
+
+// Form highlight.
+.flq-account-form-highlight {
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    position: absolute;
+    top: calc(var(--bs-gutter-y) * -0.5);
+    right: -40px;
+    bottom: calc(var(--bs-gutter-y) * -0.5);
+    left: -40px;
+    z-index: -1;
+    display: block;
+    content: "";
+    background-color: hsla(var(--flq-color-background-200));
+  }
+}

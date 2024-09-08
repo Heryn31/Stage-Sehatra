@@ -1,0 +1,253 @@
+@use "sass:math";
+
+// stylelint-disable declaration-no-important
+
+/*
+ * Text Color Helper
+ */
+.flq-color-opacity {
+  --flq-color-title: var(--flq-color-white), var(--flq-color-title-opacity);
+  --flq-color-text: var(--flq-color-white), var(--flq-color-text-opacity);
+  --flq-color-meta: var(--flq-color-white), var(--flq-color-meta-opacity);
+  --flq-color-border: var(--flq-color-white), var(--flq-color-border-opacity);
+}
+
+.flq-color-white {
+  color: hsla(var(--flq-color-white)) !important;
+}
+
+.flq-color-title,
+.flq-color-title-hover:hover {
+  color: hsla(var(--flq-color-title)) !important;
+}
+
+.flq-color-text {
+  color: hsla(var(--flq-color-text)) !important;
+}
+
+.flq-color-meta {
+  color: hsla(var(--flq-color-meta)) !important;
+}
+
+/*
+ * Rounded
+ */
+.flq-rounded {
+  border-radius: var(--flq-border-radius) !important;
+}
+
+@each $rounded in ("sm", "lg", "xl") {
+  .flq-rounded-#{$rounded} {
+    border-radius: var(--flq-border-radius-#{$rounded}) !important;
+  }
+}
+
+/*
+ * Sticky.
+ */
+
+.flq-sticky-top {
+  position: sticky;
+  top: var(--bs-gutter-x, --flq-container--padding);
+}
+
+.flq-sticky-bottom {
+  position: sticky;
+  bottom: var(--bs-gutter-x, --flq-container--padding);
+}
+
+/*
+ * Vertical Rule
+ */
+
+.vr {
+  background-color: hsla(var(--flq-color-border));
+}
+
+/*
+ * Pointer events
+ */
+
+.flq-pe-none {
+  pointer-events: none !important;
+}
+
+.flq-pe-initial {
+  pointer-events: initial !important;
+}
+
+/*
+ * z index
+ */
+
+.z-index-0 {
+  z-index: 0 !important;
+}
+
+@each $index in (1, 2) {
+  .z-index-#{$index} {
+    z-index: #{$index} !important;
+  }
+}
+
+@each $index in (1, 2) {
+  .z-index-n#{$index} {
+    z-index: #{-$index} !important;
+  }
+}
+
+/*
+ * Viewport Sizing
+ */
+.vw-50 {
+  width: calc(50vw - var(--flq-page-scrollbar__size)) !important;
+}
+
+.min-w-100 {
+  min-width: 100% !important;
+}
+
+.min-h-100 {
+  min-height: 100% !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+
+@include media-breakpoint-up(lg) {
+  .h-lg-100 {
+    height: 100% !important;
+  }
+}
+
+.flq-full-width-xl-center {
+  @include media-breakpoint-down(xl) {
+    width: calc(100vw - var(--flq-page-scrollbar__size));
+    margin-left: calc(50% - 50vw + var(--flq-page-scrollbar__size) * 0.5);
+  }
+}
+
+/*
+ * Paddings.
+ */
+
+.pt-navbar {
+  padding-top: var(--flq-navbar-top--min-height);
+}
+
+.pb-navbar {
+  padding-bottom: var(--flq-navbar-top--min-height);
+}
+
+/*
+ * Translate.
+ */
+
+.flq-translate-y50 {
+  transform: translateY(50%);
+}
+
+.flq-translate-yn50 {
+  transform: translateY(-50%);
+}
+
+/*
+ * Overflow.
+ */
+.flq-overflow-hidden {
+  overflow: hidden;
+}
+
+.flq-overflow-hidden-x {
+  overflow-x: hidden;
+}
+
+.flq-overflow-hidden-y {
+  overflow-y: hidden;
+}
+
+.flq-overflow-disable {
+  overflow: initial;
+}
+
+.flq-overflow-disable-x {
+  overflow-x: initial;
+}
+
+.flq-overflow-disable-y {
+  overflow-y: initial;
+}
+
+/*
+ * Cursor Pointer Helper
+ */
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/*
+ * Text Ellipsis Helper
+ */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+ * Opacity
+ */
+$helper-op: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 !default;
+@each $item in $helper-op {
+  .op-#{$item} {
+    opacity: math.div($item, 10) !important;
+  }
+}
+
+/*
+ * Responsive
+ */
+.flq-responsive {
+  --flq-responsive: var(--flq-responsive-16x9);
+
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  padding-top: var(--flq-responsive);
+  overflow: hidden;
+  clear: both;
+
+  > .embed-item,
+  > iframe,
+  > embed,
+  > object,
+  > img {
+    @extend %img-ofi;
+  }
+}
+
+@mixin flq-responsive($media: 0) {
+  $media_replace: "";
+
+  @if $media != 0 {
+    $media_replace: $media + "-";
+  }
+
+  @each $width, $height in $responsive {
+    .flq-responsive-#{$media_replace}#{$width}x#{$height} {
+      --flq-responsive: var(--flq-responsive-#{$width}x#{$height});
+    }
+  }
+}
+
+@each $media, $width in $grid-breakpoints {
+  @if $media == "xs" {
+    @include flq-responsive();
+  } @else {
+    @include media-breakpoint-up(#{$media}) {
+      @include flq-responsive(#{$media});
+    }
+  }
+}

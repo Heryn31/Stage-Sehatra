@@ -1,0 +1,32 @@
+:root {
+  // Logo.
+  --flq-logo-width: 53px;
+
+  // Page offset.
+  --flq-page-offset: 10px;
+
+  // Backdrop blur.
+  --flq-backdrop-blur: 20px;
+
+  // Border radius.
+  --flq-border-radius: 8px;
+  --flq-border-radius-sm: 6px;
+  --flq-border-radius-lg: 10px;
+  --flq-border-radius-xl: 14px;
+
+  // Responsive.
+  @each $width, $height in $responsive {
+    --flq-responsive-#{$width}x#{$height}: #{flq-responsive($width, $height)};
+  }
+
+  // Transitions.
+  --flq-transition-duration: 0.15s;
+  --flq-transition-easing: ease-in-out;
+  --flq-transition-duration-cubic: 0.7s;
+  --flq-transition-easing-cubic: cubic-bezier(0.2, 1, 0.2, 1);
+  --flq-transition-duration-cubic-2: 0.4s;
+  --flq-transition-easing-cubic-2: cubic-bezier(0.1, 0, 0.3, 1);
+
+  // Content.
+  --flq-page__sidebar--width: 320px;
+}

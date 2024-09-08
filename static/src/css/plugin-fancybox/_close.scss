@@ -1,0 +1,74 @@
+.flq-fancybox-close {
+  display: flex;
+  width: var(--flq-btn-xs--size);
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path calc(var(--flq-transition-duration-cubic) + 1s) var(--flq-transition-easing-cubic);
+  transition-delay: calc(var(--flq-fancybox-show--delay) - 0.15s);
+
+  > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: var(--flq-btn-xs--size);
+    height: var(--flq-btn-xs--size);
+    clip-path: inset(0 0 0 0 round var(--flq-border-radius));
+    background-color: transparent;
+    transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), background-color var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+    transition-delay: 0s, calc(var(--flq-fancybox-show--delay) + 0.3s);
+
+    &::before,
+    &::after {
+      display: block;
+      width: 28px;
+      height: 2px;
+      clip-path: inset(0% round var(--flq-border-radius));
+      content: "";
+      background-color: hsla(var(--flq-color-title));
+      transition: transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), clip-path var(--flq-transition-duration) var(--flq-transition-easing);
+      transition-delay: var(--flq-fancybox-show--delay), calc(var(--flq-fancybox-show--delay) + 0.25s);
+    }
+
+    &::before {
+      margin-bottom: -1px;
+    }
+
+    &::after {
+      margin-top: -1px;
+    }
+  }
+
+  &:hover > span,
+  &:focus > span {
+    clip-path: inset(0 0 0 0 round 50%);
+  }
+}
+
+// Open.
+.flq-fancybox-open .flq-fancybox-close {
+  clip-path: circle(100% at 50% 50%);
+
+  > span {
+    background-color: hsla(var(--flq-color-white), 0.1);
+
+    &::before,
+    &::after {
+      clip-path: inset(0 3px 0 3px round var(--flq-border-radius));
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Closing.
+.fancybox-is-closing .flq-fancybox-close {
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+  transition-delay: 0s;
+}
