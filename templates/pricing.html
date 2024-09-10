@@ -14,7 +14,7 @@
     <head>
         <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Aboonement sur Sehatra.com</title>
+      <title>Abonnement sur Sehatra.com</title>
       <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
       <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
       <meta name="author" content="nK" />
@@ -62,38 +62,38 @@
                     <span></span>
                     <span></span>
                 </button>
-                <a href="index.html" class="flq-navbar-brand me-auto me-auto me-lg-4">
-                    <img src="assets/images/logo.svg" class="flq-logo" alt="">
+                <a href="{% url 'home' %}" class="flq-navbar-brand me-auto me-auto me-lg-4">
+                    <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                 </a>
                 <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                    <li class="nav-item active">
+                        <a href="{% url 'home' %}" class="nav-link">
                             <span class="nav-link-name">Home</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a href="pricing.html" class="nav-link">
+                    <li class="nav-item">
+                        <a href="{% url 'pricing' %}" class="nav-link">
                             <span class="nav-link-name">Pricing</span>
                         </a>
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
-                        <a href="movies.html" class="nav-link" role="button">
+                        <a href="{% url 'movies' %}" class="nav-link" role="button">
                             <span class="nav-link-name">Movies</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="movies.html" class="nav-link">
+                                    <a href="{% url 'movies' %}" class="nav-link">
                                         <span class="nav-link-name">Movies</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="single-movie.html" class="nav-link">
+                                    <a href="{% url 'single_movie' %}" class="nav-link">
                                         <span class="nav-link-name">Single Movie</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="single-actor.html" class="nav-link">
+                                    <a href="{% url 'single_actor' %}" class="nav-link">
                                         <span class="nav-link-name">Single Actor</span>
                                     </a>
                                 </li>
@@ -101,23 +101,23 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="tv-shows.html" class="nav-link">
+                        <a href="{% url 'tv_shows' %}" class="nav-link">
                             <span class="nav-link-name">TV Shows</span>
                         </a>
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
-                        <a href="blog.html" class="nav-link" role="button">
+                        <a href="{% url 'blog' %}" class="nav-link" role="button">
                             <span class="nav-link-name">Blog</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">
+                                    <a href="{% url 'blog' %}" class="nav-link">
                                         <span class="nav-link-name">Blog</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="single-post.html" class="nav-link">
+                                    <a href="{% url 'single_post' %}" class="nav-link">
                                         <span class="nav-link-name">Single Post</span>
                                     </a>
                                 </li>
@@ -125,33 +125,33 @@
                         </div>
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
-                        <a href="about.html" class="nav-link" role="button">
+                        <a href="{% url 'about' %}" class="nav-link" role="button">
                             <span class="nav-link-name">Pages</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="about.html" class="nav-link">
+                                    <a href="{% url 'about' %}" class="nav-link">
                                         <span class="nav-link-name">About</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">
+                                    <a href="{% url 'contact' %}" class="nav-link">
                                         <span class="nav-link-name">Contact Us</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="faq.html" class="nav-link">
+                                    <a href="{% url 'faq' %}" class="nav-link">
                                         <span class="nav-link-name">FAQ</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="coming-soon.html" class="nav-link">
+                                    <a href="{% url 'coming_soon' %}" class="nav-link">
                                         <span class="nav-link-name">Coming Soon</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="404.html" class="nav-link">
+                                    <a href={% url '404' %} class="nav-link">
                                         <span class="nav-link-name">404</span>
                                     </a>
                                 </li>
