@@ -69,7 +69,7 @@
                     <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                 </a>
                 <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="{% url 'home' %}" class="nav-link">
                             <span class="nav-link-name">Home</span>
                         </a>
@@ -108,7 +108,7 @@
                             <span class="nav-link-name">TV Shows</span>
                         </a>
                     </li>
-                    <li class="nav-item flq-dropdown flq-dropdown-nav">
+                    <li class="nav-item active flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'blog' %}" class="nav-link" role="button">
                             <span class="nav-link-name">Blog</span>
                         </a>
@@ -119,7 +119,7 @@
                                         <span class="nav-link-name">Blog</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a href="{% url 'single_post' %}" class="nav-link">
                                         <span class="nav-link-name">Single Post</span>
                                     </a>
@@ -185,32 +185,32 @@
                     <div class="dropdown-menu gy-2">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a href="account-profile.html" class="nav-link">
+                                <a href="{% url 'profile_account' %}" class="nav-link">
                                     <span class="nav-link-name">Profile</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="account-favorites.html" class="nav-link">
+                                <a href="{% url 'favorite'%}" class="nav-link">
                                     <span class="nav-link-name">Favorites</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="account-reviews.html" class="nav-link">
+                                <a href="{% url 'reviews' %}" class="nav-link">
                                     <span class="nav-link-name">Reviews & Comments</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="account-edit.html" class="nav-link">
+                                <a href="{% url 'edit_account' %}" class="nav-link">
                                     <span class="nav-link-name">Account Edit</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="account-notifications.html" class="nav-link">
+                                <a href="{% url 'notification' %}" class="nav-link">
                                     <span class="nav-link-name">Notifications</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="account-logout.html" class="nav-link">
+                                <a href="{% url 'home'%}" class="nav-link">
                                     <span class="nav-link-name">Logout</span>
                                 </a>
                             </li>
