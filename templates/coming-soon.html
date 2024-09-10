@@ -11,41 +11,41 @@
 -->
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title> Fliqs | Coming Soon </title>
-        <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
-        <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
-        <meta name="author" content="nK" />
-        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <!-- START: Styles -->
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap" />
-        <!-- Bootstrap -->
-        <!-- <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" /> -->
-        <!-- Swiper -->
-        <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css?v=7.2.0" />
-        <!-- Fancybox -->
-        <link rel="stylesheet" href="assets/vendor/fancybox/dist/jquery.fancybox.min.css?v=3.5.7" />
-        <!-- Fliqs -->
-        <link rel="stylesheet" href="assets/css/bootstrap-custom.css?v=1.0.0" />
-        <link rel="stylesheet" href="assets/css/fliqs.css?v=1.0.0" />
-        <!-- RTL (use these styles with RTL support) -->
-        <!--
-    <link
-      rel="stylesheet"
-      href="assets/css/bootstrap-custom-rtl.css?v=1.0.0"
-    />
-    <link rel="stylesheet" href="assets/css/fliqs-rtl.css?v=1.0.0" />
-  -->
-        <!-- Custom Styles -->
-        <link rel="stylesheet" href="assets/css/custom.css?v=1.0.0" />
-        <!-- END: Styles -->
-        <!-- jQuery -->
-        <script src="assets/vendor/jquery/dist/jquery.min.js?v=3.6.0"></script>
-        <!-- Preloader -->
-        <script src="assets/js/preloader.min.js?v=1.0.0"></script>
+        {% load static %}
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title> Fliqs | Coming Soon </title>
+<meta name="description" content="Fliqs - Superpower for Gaming Websites" />
+<meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
+<meta name="author" content="nK" />
+<link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<!-- START: Styles -->
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap" />
+
+<!-- Swiper -->
+<link rel="stylesheet" href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" />
+
+<!-- Fancybox -->
+<link rel="stylesheet" href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}" />
+
+<!-- Fliqs -->
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom.css' %}" />
+<link rel="stylesheet" href="{% static 'assets/css/fliqs.css' %}" />
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+<!-- END: Styles -->
+
+<!-- jQuery -->
+<script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>
+
+<!-- Preloader -->
+<script src="{% static 'assets/js/preloader.min.js' %}"></script>
+
     </head>
     <body id="page" class="flq-navbar-icons-existence">
         <!-- Preloader -->
@@ -1044,55 +1044,56 @@
         <!-- / Offcanvas -->
         <!-- START: Scripts -->
         <!-- Object Fit Polyfill -->
-        <script src="assets/vendor/object-fit-images/dist/ofi.min.js?v=3.2.4"></script>
-        <!-- Popper -->
-        <script src="assets/vendor/@popperjs/core/dist/umd/popper.min.js?v=2.10.2"></script>
-        <!-- ScrollReveal -->
-        <script src="assets/vendor/scrollreveal/dist/scrollreveal.min.js?v=4.0.9"></script>
-        <!-- Rellax -->
-        <script src="assets/vendor/rellax/rellax.min.js?v=1.12.1"></script>
-        <!-- Tilt -->
-        <script src="assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js?v=1.7.2"></script>
-        <!-- Animejs -->
-        <script src="assets/vendor/animejs/lib/anime.min.js?v=3.2.0"></script>
-        <!-- Bootstrap -->
-        <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js?v=5.1.3"></script>
-        <!-- Jarallax -->
-        <script src="assets/vendor/jarallax/dist/jarallax.min.js?v=1.12.7"></script>
-        <!-- Swiper -->
-        <script src="assets/vendor/swiper/swiper-bundle.min.js?v=7.2.0"></script>
-        <!-- Fancybox -->
-        <script src="assets/vendor/fancybox/dist/jquery.fancybox.min.js?v=3.5.7"></script>
-        <!-- jQuery Countdown -->
-        <script src="assets/vendor/jquery-countdown/dist/jquery.countdown.min.js?v=2.2.0"></script>
-        <!-- Moment.js (needed for jquery countdown) -->
-        <script src="assets/vendor/moment/min/moment.min.js?v=2.29.1"></script>
-        <script src="assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js?v=0.5.34"></script>
-        <!-- ImagesLoaded -->
-        <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js?v=4.1.4"></script>
-        <!-- Isotope -->
-        <script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js?v=3.0.6"></script>
-        <!-- Bootstrap Validator -->
-        <script src="assets/vendor/bootstrap-validator/dist/validator.min.js?v=0.11.9"></script>
-        <!-- Fliqs -->
-        <script src="assets/js/fliqs.min.js?v=1.0.0"></script>
-        <script src="assets/js/fliqs-init.js?v=1.0.0"></script>
-        <!-- END: Scripts -->
-        <script>
-            $('.flq-countdown').each(function()
-            {
-                const $this = $(this);
-                const tz = $this.attr('data-timezone');
-                let end = $this.attr('data-end');
-                end = moment.tz(end, tz).toDate();
-                $this.countdown(end, function(event)
-                {
-                    $this.find('.flq-countdown-days').html(event.strftime('%D'));
-                    $this.find('.flq-countdown-hours').html(event.strftime('%H'));
-                    $this.find('.flq-countdown-minutes').html(event.strftime('%M'));
-                    $this.find('.flq-countdown-seconds').html(event.strftime('%S'));
-                });
-            });
-        </script>
+        {% load static %}
+
+<script src="{% static 'assets/vendor/object-fit-images/dist/ofi.min.js' %}"></script>
+<!-- Popper -->
+<script src="{% static 'assets/vendor/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+<!-- ScrollReveal -->
+<script src="{% static 'assets/vendor/scrollreveal/dist/scrollreveal.min.js' %}"></script>
+<!-- Rellax -->
+<script src="{% static 'assets/vendor/rellax/rellax.min.js' %}"></script>
+<!-- Tilt -->
+<script src="{% static 'assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js' %}"></script>
+<!-- Animejs -->
+<script src="{% static 'assets/vendor/animejs/lib/anime.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- Jarallax -->
+<script src="{% static 'assets/vendor/jarallax/dist/jarallax.min.js' %}"></script>
+<!-- Swiper -->
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<!-- Fancybox -->
+<script src="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+<!-- jQuery Countdown -->
+<script src="{% static 'assets/vendor/jquery-countdown/dist/jquery.countdown.min.js' %}"></script>
+<!-- Moment.js (needed for jquery countdown) -->
+<script src="{% static 'assets/vendor/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js' %}"></script>
+<!-- ImagesLoaded -->
+<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<!-- Isotope -->
+<script src="{% static 'assets/vendor/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+<!-- Bootstrap Validator -->
+<script src="{% static 'assets/vendor/bootstrap-validator/dist/validator.min.js' %}"></script>
+<!-- Fliqs -->
+<script src="{% static 'assets/js/fliqs.min.js' %}"></script>
+<script src="{% static 'assets/js/fliqs-init.js' %}"></script>
+<!-- END: Scripts -->
+<script>
+    $('.flq-countdown').each(function() {
+        const $this = $(this);
+        const tz = $this.attr('data-timezone');
+        let end = $this.attr('data-end');
+        end = moment.tz(end, tz).toDate();
+        $this.countdown(end, function(event) {
+            $this.find('.flq-countdown-days').html(event.strftime('%D'));
+            $this.find('.flq-countdown-hours').html(event.strftime('%H'));
+            $this.find('.flq-countdown-minutes').html(event.strftime('%M'));
+            $this.find('.flq-countdown-seconds').html(event.strftime('%S'));
+        });
+    });
+</script>
+
     </body>
 </html>
