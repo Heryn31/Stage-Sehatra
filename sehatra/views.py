@@ -39,3 +39,21 @@ def coming_soon(request):
 
 def error_404(request):
     return render(request, '404.html')
+
+def profile_account(request):
+    return  render(request, 'account-profile.html')
+
+def favorite(request):
+    return render(request, 'account-favorites.html')
+
+def reviews(request):
+    return render(request, 'account-reviews.html')
+
+def editAccount(request):
+    return render(request, 'account-edit.html')
+
+def notification(request):
+    return render(request, 'account-notifications.html')
+
+def log_out(request):
+    return render(request, 'index.html')

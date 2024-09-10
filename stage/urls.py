@@ -35,4 +35,10 @@ urlpatterns = [
     path('faq/', views.faq, name='faq'),  # Page FAQ
     path('coming-soon/', views.coming_soon, name='coming_soon'),  
     path('404/', views.error_404, name='404'), 
+    path('profile-account/', views.profile_account, name='profile_account'),  
+    path('favorite/', views.favorite, name='favorite'),  
+    path('reviews/', views.reviews, name='reviews'),  
+    path('edit-account/', views.editAccount, name='edit_account'),
+    path('notification/', views.notification, name='notification'),
+    path('log-out/', views.home, name='home'),
 ]
