@@ -40,5 +40,4 @@ urlpatterns = [
     path('reviews/', views.reviews, name='reviews'),  
     path('edit-account/', views.editAccount, name='edit_account'),
     path('notification/', views.notification, name='notification'),
-    path('log-out/', views.home, name='home'),
 ]
