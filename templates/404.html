@@ -96,33 +96,33 @@
           class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none"
         >
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="{% url 'home' %}" class="nav-link">
               <span class="nav-link-name">Home</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pricing.html" class="nav-link">
+            <a href="{% url 'pricing' %}" class="nav-link">
               <span class="nav-link-name">Pricing</span>
             </a>
           </li>
           <li class="nav-item flq-dropdown flq-dropdown-nav">
-            <a href="movies.html" class="nav-link" role="button">
+            <a href="{% url 'movies' %}" class="nav-link" role="button">
               <span class="nav-link-name">Movies</span>
             </a>
             <div class="dropdown-menu gy-2">
               <ul class="nav">
                 <li class="nav-item">
-                  <a href="movies.html" class="nav-link">
+                  <a href="{% url 'movies' %}" class="nav-link">
                     <span class="nav-link-name">Movies</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="single-movie.html" class="nav-link">
+                  <a href="{% url 'single_movie' %}" class="nav-link">
                     <span class="nav-link-name">Single Movie</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="single-actor.html" class="nav-link">
+                  <a href="{% url 'single_actor' %}" class="nav-link">
                     <span class="nav-link-name">Single Actor</span>
                   </a>
                 </li>
@@ -130,23 +130,23 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="tv-shows.html" class="nav-link">
+            <a href="{% url 'tv_shows' %}" class="nav-link">
               <span class="nav-link-name">TV Shows</span>
             </a>
           </li>
           <li class="nav-item flq-dropdown flq-dropdown-nav">
-            <a href="blog.html" class="nav-link" role="button">
+            <a href="{% url 'blog' %}" class="nav-link" role="button">
               <span class="nav-link-name">Blog</span>
             </a>
             <div class="dropdown-menu gy-2">
               <ul class="nav">
                 <li class="nav-item">
-                  <a href="blog.html" class="nav-link">
+                  <a href="{% url 'blog' %}" class="nav-link">
                     <span class="nav-link-name">Blog</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="single-post.html" class="nav-link">
+                  <a href="{% url 'single_post' %}" class="nav-link">
                     <span class="nav-link-name">Single Post</span>
                   </a>
                 </li>
@@ -154,33 +154,33 @@
             </div>
           </li>
           <li class="nav-item flq-dropdown flq-dropdown-nav active">
-            <a href="about.html" class="nav-link" role="button">
+            <a href="{% url 'about' %}" class="nav-link" role="button">
               <span class="nav-link-name">Pages</span>
             </a>
             <div class="dropdown-menu gy-2">
               <ul class="nav">
                 <li class="nav-item">
-                  <a href="about.html" class="nav-link">
+                  <a href="{% url 'about' %}" class="nav-link">
                     <span class="nav-link-name">About</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="contact.html" class="nav-link">
+                  <a href="{% url 'contact' %}" class="nav-link">
                     <span class="nav-link-name">Contact Us</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="faq.html" class="nav-link">
+                  <a href="{% url 'faq' %}" class="nav-link">
                     <span class="nav-link-name">FAQ</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="coming-soon.html" class="nav-link">
+                  <a href="{% url 'coming_soon' %}" class="nav-link">
                     <span class="nav-link-name">Coming Soon</span>
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a href="404.html" class="nav-link">
+                  <a href="{% url '404' %}" class="nav-link">
                     <span class="nav-link-name">404</span>
                   </a>
                 </li>
@@ -476,7 +476,7 @@
     <div class="flq-navbar-icons">
       <ul>
         <li>
-          <a href="index.html" class="btn btn-link btn-icon-md">
+          <a href="{% url 'home' %}" class="btn btn-link btn-icon-md">
             <svg
               width="22"
               height="22"
@@ -653,7 +653,7 @@
     <nav class="flq-navbar-mobile fancybox-content" id="flq_navbar_mobile">
       <div class="flq-fancybox-head">
         <div class="container-fluid">
-          <a href="index.html" class="flq-fancybox-brand me-auto">
+          <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
             <img src="assets/images/logo.svg" class="flq-logo" alt="" />
           </a>
           <button
@@ -669,12 +669,12 @@
           <div class="col-12 col-lg">
             <ul class="nav flex-column flq-navbar-nav accordion gy-3">
               <li class="nav-item">
-                <a href="index.html" class="nav-link">
+                <a href="{% url 'home' %}" class="nav-link">
                   <span class="nav-link-name">Home</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pricing.html" class="nav-link">
+                <a href="{% url 'pricing' %}" class="nav-link">
                   <span class="nav-link-name">Pricing</span>
                 </a>
               </li>
@@ -691,17 +691,17 @@
                 <div class="accordion-collapse collapse" id="Movies">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a href="movies.html" class="nav-link">
+                      <a href="{% url 'movies' %}" class="nav-link">
                         <span class="nav-link-name">Movies</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="single-movie.html" class="nav-link">
+                      <a href="{% url 'single_movie' %}" class="nav-link">
                         <span class="nav-link-name">Single Movie</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="single-actor.html" class="nav-link">
+                      <a href="{% url 'single_actor' %}" class="nav-link">
                         <span class="nav-link-name">Single Actor</span>
                       </a>
                     </li>
@@ -709,7 +709,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="tv-shows.html" class="nav-link">
+                <a href="{% url 'tv_shows' %}" class="nav-link">
                   <span class="nav-link-name">TV Shows</span>
                 </a>
               </li>
@@ -726,12 +726,12 @@
                 <div class="accordion-collapse collapse" id="Blog">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a href="blog.html" class="nav-link">
+                      <a href="{% url 'blog' %}" class="nav-link">
                         <span class="nav-link-name">Blog</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="single-post.html" class="nav-link">
+                      <a href="{% url 'single_post' %}" class="nav-link">
                         <span class="nav-link-name">Single Post</span>
                       </a>
                     </li>
@@ -751,27 +751,27 @@
                 <div class="accordion-collapse collapse" id="Pages">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a href="about.html" class="nav-link">
+                      <a href="{% url 'about' %}" class="nav-link">
                         <span class="nav-link-name">About</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="contact.html" class="nav-link">
+                      <a href="{% url 'contact' %}" class="nav-link">
                         <span class="nav-link-name">Contact Us</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="faq.html" class="nav-link">
+                      <a href="{% url 'faq' %}" class="nav-link">
                         <span class="nav-link-name">FAQ</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="coming-soon.html" class="nav-link">
+                      <a href="{% url 'coming_soon' %}" class="nav-link">
                         <span class="nav-link-name">Coming Soon</span>
                       </a>
                     </li>
                     <li class="nav-item active">
-                      <a href="404.html" class="nav-link">
+                      <a href="{% url '404' %}" class="nav-link">
                         <span class="nav-link-name">404</span>
                       </a>
                     </li>
@@ -873,7 +873,7 @@
                   <li>
                     <div class="card flq-card-blog">
                       <div class="card-img-wrap">
-                        <a href="single-post.html">
+                        <a href="{% url 'single_post' %}">
                           <span class="flq-image flq-responsive">
                             <img
                               src="assets/images/blog/post-1-740x420.jpg"
@@ -887,7 +887,7 @@
                       </div>
                       <div class="card-body">
                         <h5 class="card-title h5">
-                          <a href="single-post.html">Girlfriend. How and why</a>
+                          <a href="{% url 'single_post' %}">Girlfriend. How and why</a>
                         </h5>
                         <p>
                           Earth first saw earth which seas void i thing said
@@ -899,7 +899,7 @@
                   <li>
                     <div class="card flq-card-blog">
                       <div class="card-img-wrap">
-                        <a href="single-post.html">
+                        <a href="{% url 'single_post' %}">
                           <span class="flq-image flq-responsive">
                             <img
                               src="assets/images/blog/post-2-740x420.jpg"
@@ -913,7 +913,7 @@
                       </div>
                       <div class="card-body">
                         <h5 class="card-title h5">
-                          <a href="single-post.html"
+                          <a href="{% url 'single_post' %}"
                             >Years is air whose lesser. You&#39;ll thing waters
                             unto brought.</a
                           >
@@ -928,7 +928,7 @@
                   <li>
                     <div class="card flq-card-blog">
                       <div class="card-img-wrap">
-                        <a href="single-post.html">
+                        <a href="{% url 'single_post' %}">
                           <span class="flq-image flq-responsive">
                             <img
                               src="assets/images/blog/post-3-740x420.jpg"
@@ -942,7 +942,7 @@
                       </div>
                       <div class="card-body">
                         <h5 class="card-title h5">
-                          <a href="single-post.html"
+                          <a href="{% url 'single_post' %}"
                             >Is under void created his hath. One moving Appear
                             hath.</a
                           >
@@ -966,7 +966,7 @@
     <nav class="flq-navbar-mobile fancybox-content" id="flq_popup_user">
       <div class="flq-fancybox-head">
         <div class="container-fluid">
-          <a href="index.html" class="flq-fancybox-brand me-auto">
+          <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
             <img src="assets/images/logo.svg" class="flq-logo" alt="" />
           </a>
           <button
@@ -982,32 +982,32 @@
           <div class="col-12 col-lg">
             <ul class="nav flex-column flq-navbar-nav accordion gy-3">
               <li class="nav-item">
-                <a href="account-profile.html" class="nav-link">
+                <a href="{% url 'profile_account' %}" class="nav-link">
                   <span class="nav-link-name">Profile</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="account-favorites.html" class="nav-link">
+                <a href="{% url 'favorite' %}" class="nav-link">
                   <span class="nav-link-name">Favorites</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="account-reviews.html" class="nav-link">
+                <a href="{% url 'reviews' %}" class="nav-link">
                   <span class="nav-link-name">Reviews & Comments</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="account-edit.html" class="nav-link">
+                <a href="{% url 'edit_account' %}" class="nav-link">
                   <span class="nav-link-name">Account Edit</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="account-notifications.html" class="nav-link">
+                <a href="{% url 'notification' %}" class="nav-link">
                   <span class="nav-link-name">Notifications</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="account-logout.html" class="nav-link">
+                <a href="{% url 'home' %}" class="nav-link">
                   <span class="nav-link-name">Logout</span>
                 </a>
               </li>
@@ -1106,7 +1106,7 @@
                   <li>
                     <div class="card flq-card-blog">
                       <div class="card-img-wrap">
-                        <a href="single-post.html">
+                        <a href="{% url 'single_post' %}">
                           <span class="flq-image flq-responsive">
                             <img
                               src="assets/images/blog/post-1-740x420.jpg"
@@ -1120,7 +1120,7 @@
                       </div>
                       <div class="card-body">
                         <h5 class="card-title h5">
-                          <a href="single-post.html">Girlfriend. How and why</a>
+                          <a href="{% url 'single_post' %}">Girlfriend. How and why</a>
                         </h5>
                         <p>
                           Earth first saw earth which seas void i thing said
@@ -1132,7 +1132,7 @@
                   <li>
                     <div class="card flq-card-blog">
                       <div class="card-img-wrap">
-                        <a href="single-post.html">
+                        <a href="{% url 'single_post' %}">
                           <span class="flq-image flq-responsive">
                             <img
                               src="assets/images/blog/post-2-740x420.jpg"
@@ -1146,7 +1146,7 @@
                       </div>
                       <div class="card-body">
                         <h5 class="card-title h5">
-                          <a href="single-post.html"
+                          <a href="{% url 'single_post' %}"
                             >Years is air whose lesser. You&#39;ll thing waters
                             unto brought.</a
                           >
@@ -1161,7 +1161,7 @@
                   <li>
                     <div class="card flq-card-blog">
                       <div class="card-img-wrap">
-                        <a href="single-post.html">
+                        <a href="{% url 'single_post' %}">
                           <span class="flq-image flq-responsive">
                             <img
                               src="assets/images/blog/post-3-740x420.jpg"
@@ -1175,7 +1175,7 @@
                       </div>
                       <div class="card-body">
                         <h5 class="card-title h5">
-                          <a href="single-post.html"
+                          <a href="{% url 'single_post' %}"
                             >Is under void created his hath. One moving Appear
                             hath.</a
                           >
@@ -1244,7 +1244,7 @@
         </div>
         <div class="flq-fancybox-head">
           <div class="container-fluid">
-            <a href="index.html" class="flq-fancybox-brand me-auto">
+            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
               <img src="assets/images/logo.svg" class="flq-logo" alt="" />
             </a>
             <button
@@ -1336,7 +1336,7 @@
       <div class="flq-signin">
         <div class="flq-fancybox-head">
           <div class="container-fluid">
-            <a href="index.html" class="flq-fancybox-brand me-auto">
+            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
               <img src="assets/images/logo.svg" class="flq-logo" alt="" />
             </a>
             <button
@@ -1416,7 +1416,7 @@
       <div class="flq-signup">
         <div class="flq-fancybox-head">
           <div class="container-fluid">
-            <a href="index.html" class="flq-fancybox-brand me-auto">
+            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
               <img src="assets/images/logo.svg" class="flq-logo" alt="" />
             </a>
             <button
@@ -1479,7 +1479,7 @@
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
       <div class="offcanvas-header">
-        <a href="index.html" class="flq-fancybox-brand me-auto">
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
           <img src="assets/images/logo.svg" class="flq-logo" alt="" />
         </a>
         <button
@@ -1528,7 +1528,7 @@
             <li>
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="single-post.html">
+                  <a href="{% url 'single_post' %}">
                     <span class="flq-image flq-responsive">
                       <img src="assets/images/blog/post-1-740x420.jpg" alt="" />
                     </span>
@@ -1539,7 +1539,7 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title h5">
-                    <a href="single-post.html">Girlfriend. How and why</a>
+                    <a href="{% url 'single_post' %}">Girlfriend. How and why</a>
                   </h5>
                   <p>
                     Earth first saw earth which seas void i thing said bearing
@@ -1551,7 +1551,7 @@
             <li>
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="single-post.html">
+                  <a href="{% url 'single_post' %}">
                     <span class="flq-image flq-responsive">
                       <img src="assets/images/blog/post-2-740x420.jpg" alt="" />
                     </span>
@@ -1562,7 +1562,7 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title h5">
-                    <a href="single-post.html"
+                    <a href="{% url 'single_post' %}"
                       >Years is air whose lesser. You&#39;ll thing waters unto
                       brought.</a
                     >
@@ -1577,7 +1577,7 @@
             <li>
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="single-post.html">
+                  <a href="{% url 'single_post' %}">
                     <span class="flq-image flq-responsive">
                       <img src="assets/images/blog/post-3-740x420.jpg" alt="" />
                     </span>
@@ -1588,7 +1588,7 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title h5">
-                    <a href="single-post.html"
+                    <a href="{% url 'single_post' %}"
                       >Is under void created his hath. One moving Appear
                       hath.</a
                     >
