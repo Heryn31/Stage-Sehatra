@@ -62,25 +62,33 @@
                     <span></span>
                     <span></span>
                 </button>
-                <a href="{% url 'home' %}" class="flq-navbar-brand me-auto me-auto me-lg-4">
-                    <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
+                <a href="{% url 'home' %}"  class="flq-navbar-brand me-auto me-auto me-lg-4">
+                  <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                 </a>
                 <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
                     <li class="nav-item">
                         <a href="{% url 'home' %}" class="nav-link">
-                            <span class="nav-link-name">Home</span>
+                            <span class="nav-link-name">Accueil</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'pricing' %}" class="nav-link">
-                            <span class="nav-link-name">Pricing</span>
+                            <span class="nav-link-name">Abonnement</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'tv_shows' %}" class="nav-link">
+                            <span class="nav-link-name">Concerts et Live</span>
                         </a>
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'movies' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Movies</span>
+                            <span class="nav-link-name">Films</span>
                         </a>
-                        <div class="dropdown-menu gy-2">
+
+                        {% comment %} ------------------------------DropDown Films-------------------------- {% endcomment %}
+
+                        {% comment %} <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'movies' %}" class="nav-link">
@@ -98,27 +106,28 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> {% endcomment %}
                     </li>
-                    <li class="nav-item">
-                        <a href="{% url 'tv_shows' %}" class="nav-link">
-                            <span class="nav-link-name">TV Shows</span>
-                        </a>
-                    </li>
+                    
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'blog' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Blog</span>
+                            <span class="nav-link-name">Partenaires</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'blog' %}" class="nav-link">
-                                        <span class="nav-link-name">Blog</span>
+                                        <span class="nav-link-name">Artistes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'single_post' %}" class="nav-link">
-                                        <span class="nav-link-name">Single Post</span>
+                                        <span class="nav-link-name">Organisateurs</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'single_post' %}" class="nav-link">
+                                        <span class="nav-link-name">Associations</span>
                                     </a>
                                 </li>
                             </ul>
@@ -126,35 +135,35 @@
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'about' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Pages</span>
+                            <span class="nav-link-name">Plus...</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'about' %}" class="nav-link">
-                                        <span class="nav-link-name">About</span>
+                                        <span class="nav-link-name">À propos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'contact' %}" class="nav-link">
-                                        <span class="nav-link-name">Contact Us</span>
+                                        <span class="nav-link-name">Contact</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'faq' %}" class="nav-link">
-                                        <span class="nav-link-name">FAQ</span>
+                                        <span class="nav-link-name">Questions</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'coming_soon' %}" class="nav-link">
-                                        <span class="nav-link-name">Coming Soon</span>
+                                        <span class="nav-link-name">À venir</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {% comment %} <li class="nav-item">
                                     <a href={% url '404' %} class="nav-link">
                                         <span class="nav-link-name">404</span>
                                     </a>
-                                </li>
+                                </li> {% endcomment %}
                             </ul>
                         </div>
                     </li>
@@ -176,7 +185,7 @@
                 <div class="flq-dropdown flq-dropdown-nav ms-4 d-none d-sm-flex">
                     <button class="btn btn-link align-self-center">
                         <span class="flq-image flq-navbar-top-user">
-                            <img src="assets/images/user-160x160.jpg" alt="">
+                            <img src="{% static 'assets/images/user.svg' %}" alt="">
                         </span>
                     </button>
                     <div class="dropdown-menu gy-2">
@@ -188,17 +197,17 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'favorite'%}" class="nav-link">
-                                    <span class="nav-link-name">Favorites</span>
+                                    <span class="nav-link-name">Favoris</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Reviews & Comments</span>
+                                    <span class="nav-link-name">Retour & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'edit_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Account Edit</span>
+                                    <span class="nav-link-name">Paramètres</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -208,7 +217,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'home'%}" class="nav-link">
-                                    <span class="nav-link-name">Logout</span>
+                                    <span class="nav-link-name">Se deconnecter</span>
                                 </a>
                             </li>
                         </ul>
