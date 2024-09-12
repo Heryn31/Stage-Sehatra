@@ -24,8 +24,8 @@
       <link rel="stylesheet" href="{% static 'assets/css/fliqs.css' %}" />
       <!-- RTL (use these styles with RTL support) -->
       <!--
-      <link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom-rtl.css?v=1.0.0' %}" />
-      <link rel="stylesheet" href="{% static 'assets/css/fliqs-rtl.css?v=1.0.0' %}" />
+      <link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom-rtl.css' %}" />
+      <link rel="stylesheet" href="{% static 'assets/css/fliqs-rtl.css' %}" />
       -->
       <!-- Custom Styles -->
       <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
@@ -1835,7 +1835,7 @@
             <footer class="flq-footer flq-background py-7" data-sr="footer" data-sr-interval="60" data-sr-duration="1000" data-sr-distance="10">
                 <div class="flq-background-image">
                     <span class="flq-image jarallax" data-speed=0.7>
-                        <img src="assets/images/coming-soon.jpg" class="jarallax-img" alt="">
+                        <img src="{% static 'assets/images/sehatra-3.png' %}" class="jarallax-img" alt="">
                     </span>
                 </div>
                 <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-background), .8);"></div>
@@ -1843,9 +1843,9 @@
                     <div class="row gx-5 gy-5 mb-6 justify-content-center justify-content-sm-start">
                         <div class="col-md-9 col-lg-3 text-center text-sm-start" data-sr-item="footer">
                             <a href="{% url 'home' %}">
-                                <img src="assets/images/logo-sehatra.png" class="flq-logo" alt="">
+                                <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                             </a>
-                            <p class="mt-1 pt-1">Saw fourth firmament heaven let that behold they're, creature let that him heaven.</p>
+                            <p class="mt-1 pt-1">Le secteur événementiel Malagasy au service de la société et de l'environnement.</p>
                         </div>
                         <div class="col-lg-1 col-xl d-none d-lg-block"></div>
                         <div class="col-12 col-md-4 col-lg col-xl-2">
@@ -1905,7 +1905,7 @@
                     </div>
                     <div class="row gy-4 justify-content-between" data-sr="footer-copyright" data-sr-interval="100" data-sr-delay="200" data-sr-duration="1000" data-sr-distance="10">
                         <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
-                            <p>© 2021 FLIQS.</p>
+                            <p>© 2024 Sehatra.com</p>
                         </div>
                         <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
                             <div class="flq-social text-center">
@@ -2236,7 +2236,7 @@
             <div class="flq-fancybox-head">
                 <div class="container-fluid">
                     <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
-                        <img src="assets/images/logo-sehatra.png" class="flq-logo" alt="">
+                        <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                     </a>
                     <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
                         <span></span>
@@ -2416,7 +2416,7 @@
                 <div class="flq-fancybox-head">
                     <div class="container-fluid">
                         <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
-                            <img src="assets/images/logo-sehatra.png" class="flq-logo" alt="">
+                            <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                         </a>
                         <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
                             <span></span>
@@ -2461,7 +2461,7 @@
                 <div class="flq-fancybox-head">
                     <div class="container-fluid">
                         <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
-                            <img src="assets/images/logo-sehatra.png" class="flq-logo" alt="">
+                            <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                         </a>
                         <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
                             <span></span>
@@ -2470,27 +2470,27 @@
                 </div>
                 <div class="flq-fancybox-body pb-6">
                     <form action="#" class="flq-signin-content">
-                        <h4 class="mb-4 pb-1 text-center">Login</h4>
+                        <h4 class="mb-4 pb-1 text-center">Connexion</h4>
                         <div class="row justify-content-between gy-4">
                             <div class="col-12">
-                                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Username">
+                                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Adresse e-mail">
                             </div>
                             <div class="col-12">
-                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password">
+                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
                             </div>
                             <div class="col-auto">
                                 <div class="form-check flq-form-translucent">
-                                    <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Remember Me</label>
+                                    <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <a href="#" class="flq-color-meta flq-color-title-hover">Lost Password</a>
+                                <a href="#" class="flq-color-meta flq-color-title-hover">Mot de passe oublier?</a>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-block">Login</button>
+                                <button class="btn btn-block">Se Connecter</button>
                             </div>
                             <div class="col-12 mt-3 text-center">
-                                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> Sign Up </a>
+                                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> S'inscrire </a>
                             </div>
                         </div>
                     </form>
@@ -2504,7 +2504,7 @@
                 <div class="flq-fancybox-head">
                     <div class="container-fluid">
                         <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
-                            <img src="assets/images/logo-sehatra.png" class="flq-logo" alt="">
+                            <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                         </a>
                         <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
                             <span></span>
@@ -2513,23 +2513,23 @@
                 </div>
                 <div class="flq-fancybox-body pb-6">
                     <form action="#" class="flq-signup-content">
-                        <h4 class="mb-4 pb-1 text-center">Sign Up</h4>
+                        <h4 class="mb-4 pb-1 text-center">Inscription</h4>
                         <div class="row gy-4">
                             <div class="col-12">
-                                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Email">
+                                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Adresse e-mail">
                             </div>
                             <div class="col-12">
-                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password">
+                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
                             </div>
                             <div class="col-12">
                                 <div class="form-check flq-form-translucent">
-                                    <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">I have read and agree to the terms and conditions.</label>
+                                    <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">J'ai lu et j'accepte les conditions générales.</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-block">Sign Up</button>
+                                <button class="btn btn-block">S'inscrire</button>
                             </div>
-                            <div class="col-12 text-center mt-1">or</div>
+                            <div class="col-12 text-center mt-1">ou</div>
                             <div class="col-12 mt-1">
                                 <div class="row justify-content-center gy-1">
                                     <div class="col-auto">

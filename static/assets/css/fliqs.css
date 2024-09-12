@@ -119,7 +119,7 @@
 }
 
 :root {
-    --flq-color-brand: 0deg, 92%, 58%;
+    --flq-color-brand: 355deg, 59%, 57%;
     --flq-color-success: 119deg, 53%, 51%;
     --flq-color-danger: 4deg, 58%, 50%;
     --flq-color-warning: 29deg, 83%, 53%;
@@ -130,12 +130,12 @@
     --flq-color-title: 0deg, 0%, 100%;
     --flq-color-text: 0deg, 0%, 75%;
     --flq-color-meta: 0deg, 0%, 55%;
-    --flq-color-background: 240deg, 6%, 7%;
-    --flq-color-background-100: 240deg, 4%, 9%;
-    --flq-color-background-200: 240deg, 4%, 11%;
-    --flq-color-background-300: 240deg, 3%, 12%;
-    --flq-color-background-footer: 240deg, 8%, 5%;
-    --flq-color-border: 240deg, 2%, 20%;
+    --flq-color-background: 228deg, 26%, 11%;
+    --flq-color-background-100: 228deg, 26%, 11%;
+    --flq-color-background-200: 228deg, 26%, 11%;
+    --flq-color-background-300: 228deg, 26%, 11%;
+    --flq-color-background-footer: 228deg, 26%, 11%;
+    --flq-color-border: 228deg, 26%, 11%;
     --flq-color-title-opacity: 1;
     --flq-color-text-opacity: 0.7;
     --flq-color-meta-opacity: 0.5;
