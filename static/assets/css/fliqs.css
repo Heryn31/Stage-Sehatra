@@ -131,11 +131,11 @@
     --flq-color-text: 0deg, 0%, 75%;
     --flq-color-meta: 0deg, 0%, 55%;
     --flq-color-background: 228deg, 26%, 11%;
-    --flq-color-background-100: 228deg, 26%, 11%;
-    --flq-color-background-200: 228deg, 26%, 11%;
-    --flq-color-background-300: 228deg, 26%, 11%;
-    --flq-color-background-footer: 228deg, 26%, 11%;
-    --flq-color-border: 228deg, 26%, 11%;
+    --flq-color-background-100: 228deg, 30%, 10%;
+    --flq-color-background-200: 228deg, 30%, 10%;
+    --flq-color-background-300: 228deg, 30%, 10%;
+    --flq-color-background-footer: 228deg, 30%, 10%;
+    --flq-color-border: 240deg, 2%, 20%;
     --flq-color-title-opacity: 1;
     --flq-color-text-opacity: 0.7;
     --flq-color-meta-opacity: 0.5;
