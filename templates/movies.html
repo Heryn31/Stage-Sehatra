@@ -940,7 +940,7 @@
             <div class="flq-fancybox-head">
                 <div class="container-fluid">
                     <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
-                        <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
+                        <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="foryy">
                     </a>
                     <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
                         <span></span>
@@ -953,22 +953,21 @@
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
                                 <a href="{% url 'home' %}" class="nav-link">
-                                    <span class="nav-link-name">Home</span>
+                                    <span class="nav-link-name">Accueil</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a href="{% url 'pricing' %}" class="nav-link">
-                                    <span class="nav-link-name">Pricing</span>
+                                    <span class="nav-link-name">Abonnement</span>
                                 </a>
                             </li>
-                            <li class="nav-item accordion-item flq-dropdown-nav active">
-                                <button class="nav-link accordion-button collapsed" data-bs-target="#Movies" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Movies</span>
-                                    <span class="accordion-button-icon"></span>
-                                </button>
-                                <div class="accordion-collapse collapse" id="Movies">
+                            <li class="nav-item active">
+                              <a href="{% url 'movies' %}" class="nav-link">
+                                <span class="nav-link-name">Films</span>
+                              </a>
+                                {% comment %} <div class="accordion-collapse collapse" id="Movies">
                                     <ul class="nav flex-column">
-                                        <li class="nav-item active">
+                                        <li class="nav-item">
                                             <a href="{% url 'movies' %}" class="nav-link">
                                                 <span class="nav-link-name">Movies</span>
                                             </a>
@@ -984,28 +983,33 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> {% endcomment %}
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'tv_shows' %}" class="nav-link">
-                                    <span class="nav-link-name">TV Shows</span>
+                                    <span class="nav-link-name">Concerts et Lives</span>
                                 </a>
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Blog" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Blog</span>
+                                    <span class="nav-link-name">Partenaires</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Blog">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'blog' %}" class="nav-link">
-                                                <span class="nav-link-name">Blog</span>
+                                                <span class="nav-link-name">Artistes</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'single_post' %}" class="nav-link">
-                                                <span class="nav-link-name">Single Post</span>
+                                                <span class="nav-link-name">Organisateurs</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                                <span class="nav-link-name">Associations</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -1013,36 +1017,36 @@
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Pages" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Pages</span>
+                                    <span class="nav-link-name">Plus...</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Pages">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'about' %}" class="nav-link">
-                                                <span class="nav-link-name">About</span>
+                                                <span class="nav-link-name">À propos</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'contact' %}" class="nav-link">
-                                                <span class="nav-link-name">Contact Us</span>
+                                                <span class="nav-link-name">Contact</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'faq' %}" class="nav-link">
-                                                <span class="nav-link-name">FAQ</span>
+                                                <span class="nav-link-name">Questions</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'coming_soon' %}" class="nav-link">
-                                                <span class="nav-link-name">Coming Soon</span>
+                                                <span class="nav-link-name">À venir</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        {% comment %} <li class="nav-item">
                                             <a href="{% url '404' %}" class="nav-link">
                                                 <span class="nav-link-name">404</span>
                                             </a>
-                                        </li>
+                                        </li> {% endcomment %}
                                     </ul>
                                 </div>
                             </li>
@@ -1062,7 +1066,7 @@
                                     </button>
                                 </form>
                             </div>
-                            <div class="flq-widget flq-widget-tag">
+                            {% comment %} <div class="flq-widget flq-widget-tag">
                                 <h4 class="flq-widget-title h5 flq-color-opacity"><span>Tags</span></h4>
                                 <div class="flq-tags flq-tags-translucent">
                                     <ul>
@@ -1104,7 +1108,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                             <div class="flq-widget flq-widget-blog">
                                 <h4 class="flq-widget-title h5 flq-color-opacity"><span>Recent Posts</span></h4>
                                 <ul>

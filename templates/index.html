@@ -2028,10 +2028,10 @@
                                     <span class="nav-link-name">Abonnement</span>
                                 </a>
                             </li>
-                            <li class="nav-item accordion-item flq-dropdown-nav">
-                                <button class="nav-link accordion-button collapsed" data-bs-target="#Movies" data-bs-toggle="collapse" aria-expanded="false">
+                            <li class="nav-item">
+                                <a href="{% url 'movies' %}" class="nav-link">
                                     <span class="nav-link-name">Films</span>
-                                </button>
+                                </a>
                                 {% comment %} <div class="accordion-collapse collapse" id="Movies">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -2065,7 +2065,7 @@
                                 <div class="accordion-collapse collapse" id="Blog">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a href="{% url 'blog' %}l" class="nav-link">
+                                            <a href="{% url 'blog' %}" class="nav-link">
                                                 <span class="nav-link-name">Artistes</span>
                                             </a>
                                         </li>
@@ -2133,7 +2133,7 @@
                                     </button>
                                 </form>
                             </div>
-                            <div class="flq-widget flq-widget-tag">
+                            {% comment %} <div class="flq-widget flq-widget-tag">
                                 <h4 class="flq-widget-title h5 flq-color-opacity"><span>Tags</span></h4>
                                 <div class="flq-tags flq-tags-translucent">
                                     <ul>
@@ -2175,7 +2175,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                             <div class="flq-widget flq-widget-blog">
                                 <h4 class="flq-widget-title h5 flq-color-opacity"><span>Recent Posts</span></h4>
                                 <ul>
