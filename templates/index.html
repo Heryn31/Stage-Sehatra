@@ -139,7 +139,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'contact' %}" class="nav-link">
-                                        <span class="nav-link-name">Contact</span>
+                                        <span class="nav-link-name">Contactez-nous</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -185,7 +185,7 @@
                         <ul class="nav">
                             <li class="nav-item">
                                 <a href="{% url 'profile_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Profile</span>
+                                    <span class="nav-link-name">Profil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -195,7 +195,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Retour & Commentaires</span>
+                                    <span class="nav-link-name">Avis & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -263,54 +263,55 @@
             pt-navbar
             flq-vertical-rhythm
           ">
-                                        <div class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs> Action </div>
-                                        <h2 class="display-5 mb-0" data-animejs>Princess Yako</h2>
+                            {% comment %} concert a venir pour les artistes {% endcomment %}
+                                        <div class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>[Genre de la musique]</div>
+                                        <h2 class="display-5 mb-0" data-animejs>[Titre événement]</h2>
                                         <div class="flq-meta flq-color-opacity mt-3">
                                             <ul class="gx-4">
-                                                <li data-animejs>
-                                                    <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                {% comment %} <li data-animejs>
+                                                   <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
-                                                    </svg>
+                                                    </svg> 
                                                     <strong class="ms-1 flq-color-title">8.4</strong>
-                                                </li>
+                                                </li> {% endcomment %}
                                                 <li data-animejs>
-                                                    <a href="#">1997</a>
+                                                    <a href="">[Date]</a>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <p class="lead" data-animejs> A hardened mercenary's mission becomes a soul-searching race to survive when he's sent into Bangladesh to rescue a drug lord's kidnapped son. </p>
+                                        <p class="lead" data-animejs> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quo vel ab fuga architecto iste corporis quaerat corrupti. Exercitationem officiis suscipit eius totam eos! Natus et aliquid quis incidunt veniam. </p>
                                         <div>
                                             <div class="row gy-1">
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Arline Kelley</a>
+                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">[Nom de l'artiste]</a>
                                                 </div>
-                                                <div class="col-auto" data-animejs>
+                                                {% comment %} <div class="col-auto" data-animejs>
                                                     <a href="{% url 'single_actor' %}" class="btn btn-link">Julius Barnett</a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
                                                     <a href="{% url 'single_actor' %}" class="btn btn-link">Anthony Lindsey</a>
-                                                </div>
+                                                </div> {% endcomment %}
                                             </div>
                                         </div>
                                         <div class="py-1">
                                             <div class="row gy-4 align-items-center">
                                                 <div class="col-auto" data-animejs>
                                                     <a href="#" class="btn btn-icon-sm">
-                                                        <span class="btn-name">Watch Now</span>
+                                                        <span class="btn-name">Regarder maintenant</span>
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
                                                         </svg>
                                                     </a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="#" class="btn btn-link">More Details</a>
+                                                    <a href="#" class="btn btn-link">Plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div>
+                                        {% comment %} <div>
                                             <span class="badge badge-white badge-translucent badge-glass flq-color-title" data-animejs>18+</span>
-                                        </div>
+                                        </div> {% endcomment %}
                                     </div>
                                 </div>
                             </div>
@@ -329,59 +330,60 @@
             pt-navbar
             flq-vertical-rhythm
           ">
-                                        <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>Adventure</span>
-                                        <h2 class="display-5 mb-0" data-animejs>Captain Marvel</h2>
+          {% comment %} films malagasy sur sehatra.com {% endcomment %}         
+                                        <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>[Genre du film]</span>
+                                        <h2 class="display-5 mb-0" data-animejs>Titre du film</h2>
                                         <div class="flq-meta flq-color-opacity mt-3">
                                             <ul class="gx-4">
-                                                <li data-animejs>
+                                                {% comment %} <li data-animejs>
                                                     <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
                                                     </svg>
                                                     <strong class="ms-1 flq-color-title">7.4</strong>
-                                                </li>
+                                                </li> {% endcomment %}
                                                 <li data-animejs>
-                                                    <a href="#">2019</a>
+                                                    <a href="#">[Durée du film]</a>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <p class="lead" data-animejs> A hardened mercenary's mission becomes a soul-searching race to survive when he's sent into Bangladesh to rescue a drug lord's kidnapped son. </p>
+                                        <p class="lead" data-animejs> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestiae ad eos officia mollitia! Ducimus iusto ipsa asperiores cum quisquam iste labore odit excepturi? Corrupti alias quaerat aut perspiciatis rem. </p>
                                         <div>
                                             <div class="row gy-1">
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Arline Kelley</a>
+                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">[Producteur]</a>
                                                 </div>
-                                                <div class="col-auto" data-animejs>
+                                                {% comment %} <div class="col-auto" data-animejs>
                                                     <a href="{% url 'single_actor' %}" class="btn btn-link">Julius Barnett</a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
                                                     <a href="{% url 'single_actor' %}" class="btn btn-link">Anthony Lindsey</a>
-                                                </div>
+                                                </div> {% endcomment %}
                                             </div>
                                         </div>
                                         <div class="py-1">
                                             <div class="row gy-4 align-items-center">
                                                 <div class="col-auto" data-animejs>
                                                     <a href="#" class="btn btn-icon-sm">
-                                                        <span class="btn-name">Watch Now</span>
+                                                        <span class="btn-name">Regarder maintenant</span>
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
                                                         </svg>
                                                     </a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="#" class="btn btn-link">More Details</a>
+                                                    <a href="#" class="btn btn-link">Plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div>
+                                        {% comment %} <div>
                                             <span class="badge badge-white badge-translucent badge-glass flq-color-title" data-animejs>18+</span>
-                                        </div>
+                                        </div> {% endcomment %}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide flq-background">
+                        {% comment %} <div class="swiper-slide flq-background">
                             <div class="flq-background-image">
                                 <span class="flq-image swiper-image" data-speed=0.7 data-swiper-parallax-x=40%>
                                     <img src="../static/assets/images/movies/movie-2-3840x2160.jpg" alt="">
@@ -395,7 +397,7 @@
             pt-navbar
             flq-vertical-rhythm
           ">
-                                        <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>Adventure</span>
+                                      <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>Adventure</span> {% endcomment %}
                                         <h2 class="display-5 mb-0" data-animejs>Unbounded</h2>
                                         <div class="flq-meta flq-color-opacity mt-3">
                                             <ul class="gx-4">
@@ -432,14 +434,14 @@
                                             <div class="row gy-4 align-items-center">
                                                 <div class="col-auto" data-animejs>
                                                     <a href="#" class="btn btn-icon-sm">
-                                                        <span class="btn-name">Watch Now</span>
+                                                        <span class="btn-name">Regarder maintenant</span>
                                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
                                                         </svg>
                                                     </a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="#" class="btn btn-link">More Details</a>
+                                                    <a href="#" class="btn btn-link">Plus de détails</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -457,7 +459,7 @@
         <div class="content-wrap">
             <div class="flq-swiper-wrapper my-7" data-sr="new-releases" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                 <div class="container mb-5" data-sr-item="new-releases">
-                    <h2>New Releases</h2>
+                    <h2>Retrouvez aussi d'autres Live sur SEHATRA.COM</h2>
                 </div>
                 <div class="swiper flq-swiper-effect-touch" data-sr-item=new-releases data-buttons=true data-pagination-custom=true data-gap=30 data-speed=800 data-touch-ratio=0.8 data-slides=1, data-breakpoints=636:2,1072:3,1280:4>
                     <div class="swiper-container container">
@@ -470,18 +472,18 @@
     flq-responsive-sm-3x4">
                                                 <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Princess Yako</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="" class="card-year">1997</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Action</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -494,20 +496,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-2-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.9</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Ghost</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2019</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Horror</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -520,20 +522,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-6-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">9.0</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Spirit</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2014</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Drama</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -546,20 +548,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/movies/movie-3-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">7.4</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Captain Marvel</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="" class="card-year">2019</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Action</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -572,20 +574,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-8-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Sniper</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2015</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">War</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -598,20 +600,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/movies/movie-4-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.8</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">The Fast and the Furious</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="" class="card-year">2001</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Thriller</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -624,27 +626,27 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-rounded-xl flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/movies/movie-5-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">7.7</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">The Last Duel</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre de l'évenement]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="" class="card-year">2021</a>
+                                                    <a href="" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Action</a>
+                                                    <a href="#" class="card-category">[Genre de la musique]</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            {% comment %} <div class="swiper-slide">
                                 <div class="card flq-card-blog">
                                     <div class="card-img-wrap">
                                         <a href="{% url 'single_movie' %}">
@@ -669,7 +671,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -704,7 +706,7 @@
                 </div>
             </div>
             <div class="container flq-swiper-wrapper mb-7" data-sr="upcoming-movies" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                <h2 class="mb-5" data-sr-item="upcoming-movies">Upcoming Movies</h2>
+                <h2 class="mb-5" data-sr-item="upcoming-movies">Films à venir</h2>
                 <div class="swiper flq-swiper-effect-touch mb-5" data-sr-item=upcoming-movies data-buttons=true data-pagination-progress=true data-gap=30 data-speed=800 data-touch-ratio=0.8 data-breakpoints=656:1,1072:2>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -713,18 +715,20 @@
                                     <span class="card-img-wrap">
                                         <span class="flq-image flq-responsive
     flq-responsive-lg-1x1 flq-responsive-xl-16x9">
-                                            <img src="../static/assets/images/movies/movie-2-1290x1290.jpg" alt="">
+                                            <img src="{% static 'assets/images/movies/movie-2-1290x1290.jpg' %}" alt="">
                                         </span>
                                     </span>
                                     <span class="card-body">
                                         <span class="card-badge">
                                             <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
+                                                {% comment %} <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
-                                            </svg> 7.1</span>
-                                        <span class="card-title h5">Unbounded</span>
+                                            {% endcomment %}
+                                                </svg>
+                                            </span> 
+                                        <span class="card-title h5">[Titre du film]</span>
                                         <span class="card-description">
-                                            <span>Unaided and inexperienced, a crew of four venture through the most rural and inaccessible natural areas of...</span>
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span>
                                         </span>
                                     </span>
                                 </a>
@@ -734,18 +738,20 @@
                                     <span class="card-img-wrap">
                                         <span class="flq-image flq-responsive
     flq-responsive-lg-1x1 flq-responsive-xl-16x9">
-                                            <img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="">
+                                            <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="">
                                         </span>
                                     </span>
                                     <span class="card-body">
                                         <span class="card-badge">
                                             <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
+                                                {% comment %} <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
-                                            </svg> 8.4</span>
-                                        <span class="card-title h5">Princess Yako</span>
+                                            {% endcomment %}
+                                                </svg>
+                                            </span> 
+                                        <span class="card-title h5">[Titre du film]</span>
                                         <span class="card-description">
-                                            <span>On a journey to find the cure for a Tatarigami&#39;s curse, Ashitaka finds himself in the middle of a war between...</span>
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span>
                                         </span>
                                     </span>
                                 </a>
@@ -755,18 +761,20 @@
                                     <span class="card-img-wrap">
                                         <span class="flq-image flq-responsive
     flq-responsive-lg-1x1 flq-responsive-xl-16x9">
-                                            <img src="../static/assets/images/movies/movie-3-1290x1290.jpg" alt="">
+                                            <img src="{% static 'assets/images/movies/movie-3-1290x1290.jpg' %}" alt="">
                                         </span>
                                     </span>
                                     <span class="card-body">
                                         <span class="card-badge">
                                             <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
+                                                {% comment %} <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
-                                            </svg> 7.4</span>
-                                        <span class="card-title h5">Captain Marvel</span>
+                                            {% endcomment %}
+                                                </svg>
+                                            </span> 
+                                        <span class="card-title h5">[Titre du film]</span>
                                         <span class="card-description">
-                                            <span>Carol Danvers becomes one of the universe&#39;s most powerful heroes when Earth is caught in the middle of a...</span>
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span>
                                         </span>
                                     </span>
                                 </a>
@@ -782,17 +790,19 @@
                                     <span class="card-body">
                                         <span class="card-badge">
                                             <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
+                                                {% comment %} <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
-                                            </svg> 6.8</span>
-                                        <span class="card-title h5">The Fast and the Furious</span>
+                                            {% endcomment %}
+                                                </svg>
+                                            </span> 
+                                        <span class="card-title h5">[Titre du film]</span>
                                         <span class="card-description">
-                                            <span>Los Angeles police officer Brian O&#39;Conner must decide where his loyalty really lies when he becomes enamored...</span>
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span>
                                         </span>
                                     </span>
                                 </a>
                             </div>
-                            <div class="swiper-slide">
+                            {% comment %} <div class="swiper-slide">
                                 <a href="{% url 'single_movie' %}" class="card flq-card-movie flq-color-opacity">
                                     <span class="card-img-wrap">
                                         <span class="flq-image flq-responsive
@@ -812,7 +822,7 @@
                                         </span>
                                     </span>
                                 </a>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -844,7 +854,7 @@
                     </div>
                 </div>
             </div>
-            <div class="py-7" style="background-image: linear-gradient(90deg, #e6aa9d 0%, #be5d6c 100%)" data-sr="movie" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+            {% comment %} <div class="py-7" style="background-image: linear-gradient(90deg, #e6aa9d 0%, #be5d6c 100%)" data-sr="movie" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
                 <div class="container">
                     <div class="row align-items-center g-6">
                         <div class="col-12 col-lg-5 flq-vertical-rhythm">
@@ -852,22 +862,22 @@
             flq-subtitle
             badge badge-white badge-translucent
             flq-color-opacity
-          " data-sr-item="movie">Documentary</span>
-                            <h2 class="mb-0" data-sr-item="movie">Unbounded</h2>
+          " data-sr-item="movie">[Genre du film]</span>
+                            <h2 class="mb-0" data-sr-item="movie">[Titre du film]</h2>
                             <div class="flq-meta flq-color-opacity mt-2">
                                 <ul class="gx-4">
                                     <li data-sr-item="movie">
-                                        <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                         <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M43 1.89083C42.8833 0.922265 42.1751 0.150295 41.2733 0C37.3203 0 5.69694 0 1.74393 0C0.756052 0.164717 0 1.07484 0 2.17169C0 3.935 0 18.0384 0 19.801C0 21.0155 0.925061 22 2.06699 22C5.95494 22 37.0623 22 40.9502 22C42.0017 22 42.8699 21.1643 43 20.0826C43 16.4444 43 3.70955 43 1.89083Z" fill="#F6C700" />
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2105 15.7931C34.4184 15.7931 34.6936 15.7074 34.7565 15.5381C34.7983 15.425 34.8297 15.0174 34.8514 14.3152V10.8987C34.8514 10.3347 34.8155 9.96654 34.7445 9.79423C34.6727 9.62193 34.3938 9.53615 34.1859 9.53615C33.9825 9.53615 33.8508 9.61206 33.791 9.76159C33.7304 9.91265 33.7005 10.2914 33.7005 10.8987V14.4223C33.7005 15.0083 33.7342 15.3825 33.803 15.5464C33.8718 15.7112 34.0071 15.7931 34.2105 15.7931ZM33.4852 17.5504H30.4131V4.21738H33.7005V8.55468C33.9727 8.23511 34.2764 7.99676 34.6106 7.83964C34.9457 7.68251 35.4482 7.60281 35.8408 7.60281C36.2925 7.60281 36.6844 7.67416 37.0164 7.81687C37.3484 7.95957 37.6019 8.1592 37.7762 8.41653C37.9504 8.67385 38.0551 8.9251 38.0903 9.1718C38.1254 9.4185 38.1434 9.94377 38.1434 10.7484V14.4891C38.1434 15.2891 38.0903 15.8842 37.9841 16.2759C37.8779 16.6668 37.6281 17.0069 37.2363 17.2938C36.8436 17.5815 36.3785 17.725 35.8393 17.725C35.4519 17.725 34.9516 17.6399 34.6174 17.4691C34.2816 17.2991 33.9757 17.0426 33.6975 16.701C33.6953 16.7098 33.6918 16.724 33.6869 16.7436C33.6602 16.8508 33.5933 17.1197 33.4852 17.5504ZM14.911 9.62588L15.0461 10.5624L15.8366 4.3335H20.2944V17.6665H17.315L17.3038 8.667L16.111 17.6665H13.982L12.7241 8.86284L12.7137 17.6665H9.72461V4.3335H14.1487C14.2789 5.14114 14.415 6.0877 14.5578 7.17544C14.5846 7.36349 14.7025 8.1806 14.911 9.62588ZM8.59885 4.42081H5.18652V17.7538H8.59885V4.42081ZM25.9279 7.10712C25.9653 7.27715 25.9847 7.66276 25.9847 8.26546V13.4347C25.9847 14.322 25.9279 14.8655 25.815 15.0659C25.7013 15.2663 25.3992 15.3658 24.9093 15.3658V6.61373C25.281 6.61373 25.5345 6.65396 25.6691 6.7329C25.8037 6.8126 25.8905 6.93709 25.9279 7.10712ZM27.4691 17.5306C27.8752 17.4403 28.2162 17.2809 28.4929 17.0539C28.7689 16.8262 28.9626 16.5112 29.0732 16.1081C29.1847 15.7058 29.2505 14.9065 29.2505 13.711V9.02908C29.2505 7.76751 29.2019 6.92191 29.1263 6.49228C29.0501 6.06189 28.8609 5.67097 28.558 5.32028C28.2544 4.96959 27.8117 4.71758 27.2298 4.56425C26.6473 4.41092 25.6975 4.3335 24.0456 4.3335H21.5V17.6665H25.634C26.5867 17.6361 27.1984 17.5913 27.4691 17.5306Z" fill="black" />
-                                        </svg>
-                                        <strong class="ms-1 flq-color-title">7.1</strong>
+                                        </svg> 
+                                       <strong class="ms-1 flq-color-title">7.1</strong> 
                                     </li>
                                     <li data-sr-item="movie">
-                                        <a href="#">2021</a>
+                                        <a href="#">[Date]</a>
                                     </li>
                                     <li data-sr-item="movie">
-                                        <a href="#">1h 14m</a>
+                                        <a href="#">[Duré]</a>
                                     </li>
                                 </ul>
                             </div>
@@ -878,15 +888,15 @@
                                         <span class="badge badge-white badge-translucent flq-color-title">18+</span>
                                     </div>
                                     <div class="col-auto" data-sr-item="movie">
-                                        <a class="btn btn-link" href="{% url 'single_movie' %}">More Details</a>
+                                        <a class="btn btn-link" href="{% url 'single_movie' %}">Plus de détails</a>
                                     </div>
                                     <div class="col-auto" data-sr-item="movie">
-                                        <a class="btn btn-link" href="https://www.youtube.com/watch?v=CaimKeDcudo&ab_channel=WaltDisneyAnimationStudios" data-fancybox>Watch Trailer</a>
+                                        <a class="btn btn-link" href="https://www.youtube.com/watch?v=CaimKeDcudo&ab_channel=WaltDisneyAnimationStudios" data-fancybox>Bande-annonce</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg-7" data-sr data-sr-delay="200" data-sr-duration="1500" data-sr-distance="10">
+                        </div> {% endcomment %}
+                        {% comment %} <div class="col-12 col-lg-7" data-sr data-sr-delay="200" data-sr-duration="1500" data-sr-distance="10">
                             <div class="card flq-card-image flq-card-image-link
         flq-card-image-play">
                                 <a href="https://www.youtube.com/watch?v=CaimKeDcudo&amp;ab_channel=WaltDisneyAnimationStudios" class="card-image" data-fancybox>
@@ -908,7 +918,7 @@
                                         </span>
                                     </span>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -916,7 +926,7 @@
             <div class="container flq-swiper-wrapper my-7" data-sr="best-serials" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
                 <div class="row align-items-center justify-content-between gx-5 gy-4 mb-5">
                     <div class="col-auto" data-sr-item="best-serials">
-                        <h3>Best Serials</h3>
+                        <h3>Les plus regardés</h3>
                     </div>
                     <div class="col d-none d-sm-block" data-sr-item="best-serials">
                         <hr />
@@ -952,18 +962,18 @@
     flq-responsive-sm-3x4">
                                                 <img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Busanhaeng</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2016</a>
+                                                    <a href="#" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Adventure</a>
+                                                    <a href="#" class="card-category">[Genre du film]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -976,20 +986,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-5-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">7.8</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Traveler</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2021</a>
+                                                    <a href="#" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Adventure</a>
+                                                    <a href="#" class="card-category">[Genre du film]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1002,20 +1012,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-7-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.0</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Everest</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2000</a>
+                                                    <a href="#" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Action</a>
+                                                    <a href="#" class="card-category">[Genre du film]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1028,20 +1038,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-9-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">7.1</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Life of Pi</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2019</a>
+                                                    <a href="#" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Drama</a>
+                                                    <a href="#" class="card-category">[Genre du film]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1054,20 +1064,20 @@
                                         <a href="{% url 'single_movie' %}">
                                             <span class="flq-image flq-responsive
     flq-responsive-sm-3x4">
-                                                <img src="../static/assets/images/tv-shows/show-11-1290x1290.jpg" alt="">
+                                                <img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="">
                                             </span>
-                                            <span class="card-badge badge badge-dark badge-glass flq-color-white">6.3</span>
+                                            {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">6.2</span> {% endcomment %}
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">Grind</a></h5>
+                                        <h5 class="card-title"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                         <div class="flq-meta flq-meta-sm">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="card-year">2003</a>
+                                                    <a href="#" class="card-year">[Date]</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="card-category">Action</a>
+                                                    <a href="#" class="card-category">[Genre du film]</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1094,8 +1104,8 @@
                 <div class="container">
                     <div class="row gy-5 gx-6">
                         <div class="col-lg-4">
-                            <span class="flq-subtitle badge" data-sr-item="features">Experience</span>
-                            <h2 class="h1" data-sr-item="features"> Signs dry lesser bearing own night itself in </h2>
+                            <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-sr-item="features">Expérience</span>
+                            <h2 class="h1" data-sr-item="features">Découvrez des fonctionnalités innovantes et une navigation fluide</h2>
                         </div>
                         <div class="col-lg-8">
                             <div class="row g-6">
@@ -1103,16 +1113,17 @@
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
                                             <div class="card-icon">
-                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21.25 22.75H21.2589M16.7857 8.75H25.7143C26.7005 8.75 27.5 9.5335 27.5 10.5V24.5C27.5 25.4665 26.7005 26.25 25.7143 26.25H16.7857C15.7995 26.25 15 25.4665 15 24.5V10.5C15 9.5335 15.7995 8.75 16.7857 8.75Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.55556C3.75 5.29278 3.98494 5 4.375 5H19.375C19.7651 5 20 5.29278 20 5.55556V6.25H22.5V5.55556C22.5 3.82397 21.056 2.5 19.375 2.5H4.375C2.69399 2.5 1.25 3.82397 1.25 5.55556V14.5833C1.25 16.3149 2.69399 17.6389 4.375 17.6389H10.625V18.75H8.125C7.43464 18.75 6.875 19.3096 6.875 20C6.875 20.6904 7.43464 21.25 8.125 21.25H11.875H12.5V15.1389H11.875H4.375C3.98494 15.1389 3.75 14.8461 3.75 14.5833V5.55556Z" fill="currentColor" />
+                                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 4.5C3 3.11929 4.11929 2 5.5 2H18.5C19.8807 2 21 3.11929 21 4.5V19.5C21 20.8807 19.8807 22 18.5 22H5.5C4.11929 22 3 20.8807 3 19.5V4.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10 8L15 12L10 16V8Z" fill="currentColor"/>
                                                 </svg>
                                             </div>
-                                            <div class="card-title h5">Multi Platform</div>
-                                            <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
+                                            <div class="card-title h5">Accès aux films et lives</div>
+                                            <p>Profitez de nos films et diffusions en direct avec un accès facile et rapide.</p>
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12 col-sm-6" data-sr-item="features">
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
@@ -1122,8 +1133,8 @@
                                                     <path d="M15 18.75L21.25 26.25H8.75L15 18.75Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </div>
-                                            <div class="card-title h5">4k Streams</div>
-                                            <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
+                                            <div class="card-title h5">Streaming 4K</div>
+                                            <p>Profitez d'une qualité de streaming 4K pour une expérience visuelle immersive sur tous vos écrans.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1131,15 +1142,15 @@
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
                                             <div class="card-icon">
-                                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10.0962 21.1143L15.0025 26M15.0025 26L19.9087 21.1143M15.0025 26V15.0072M25.8949 22.4456C26.9613 21.6988 27.7609 20.6332 28.1779 19.4032C28.5948 18.1732 28.6073 16.8429 28.2136 15.6054C27.8198 14.3678 27.0403 13.2874 25.9882 12.5209C24.9361 11.7545 23.666 11.3418 22.3624 11.3428H20.817C20.4481 9.91113 19.7578 8.58145 18.7982 7.45387C17.8386 6.32629 16.6346 5.43018 15.2769 4.83302C13.9192 4.23586 12.4431 3.95319 10.9598 4.00631C9.4765 4.05943 8.02463 4.44695 6.71349 5.13969C5.40236 5.83243 4.26612 6.81234 3.39031 8.00565C2.5145 9.19896 1.92196 10.5746 1.65728 12.0289C1.3926 13.4833 1.46268 14.9785 1.86226 16.402C2.26183 17.8255 2.98048 19.1401 3.96411 20.247" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 4C6.48 4 2 12 2 12s4.48 8 10 8 10-8 10-8-4.48-8-10-8zM12 16.5C9.51 16.5 7.5 14.49 7.5 12S9.51 7.5 12 7.5 16.5 9.51 16.5 12 14.49 16.5 12 16.5z" fill="currentColor"/>
                                                 </svg>
                                             </div>
-                                            <div class="card-title h5">Watch Offline</div>
-                                            <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
+                                            <div class="card-title h5">Visionnage en ligne</div>
+                                            <p>Accédez instantanément à vos contenus préférés en streaming, où que vous soyez, sans nécessiter de téléchargement préalable.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div>                                
                                 <div class="col-12 col-sm-6" data-sr-item="features">
                                     <div class="card flq-card-feature">
                                         <div class="card-body">
@@ -1148,20 +1159,21 @@
                                                     <path d="M15 27.5C15 27.5 25 22.5 25 15V6.25L15 2.5L5 6.25V15C5 22.5 15 27.5 15 27.5Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </div>
-                                            <div class="card-title h5">Secure</div>
-                                            <p>Let a beginning place dry stars appear seasons winged said whales creature there darkness be dry. Itself let morning fourth.</p>
+                                            <div class="card-title h5">Sécurisé</div>
+                                            <p>Profitez de vos contenus en toute sécurité, avec une protection avancée de vos données personnelles et de vos transactions.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
             </div>
+            {% comment %} Film sur sehatra {% endcomment %}
             <div class="container my-7" data-sr="online-streaming" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
                 <div class="text-center mb-5">
-                    <span class="flq-subtitle badge" data-sr-item="online-streaming">Online Streaming</span>
-                    <h2 data-sr-item="online-streaming">Watch Shows Online</h2>
+                    <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-sr-item="online-streaming">Streaming en ligne</span>
+                    <h2 data-sr-item="online-streaming">Retrouvez aussi d'autres Films sur SEHATRA.COM</h2>
                 </div>
                 <div class="row gy-5 justify-content-center">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-sr-item="online-streaming">
@@ -1170,20 +1182,20 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="/static/assets/images/tv-shows/show-1-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">Believe</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2021</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Romance</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1196,20 +1208,20 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-2-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.9</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">Ghost</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2019</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Horror</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1222,20 +1234,20 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-3-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.2</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">Busanhaeng</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2016</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Adventure</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1248,20 +1260,20 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-4-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.6</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">The Ultimate Wave</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2018</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Comedy</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1274,20 +1286,20 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-5-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.8</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">Traveler</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2021</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Adventure</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1300,20 +1312,20 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-6-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">9.0</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">Spirit</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2014</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Drama</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1326,33 +1338,33 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-7-390x440.jpg" alt="">
+                                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
-                                    <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.0</span>
+                                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                                 </a>
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">Everest</a></h5>
+                                <h5 class="card-title h6"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                 <div class="flq-meta flq-meta-sm">
                                     <ul>
                                         <li>
-                                            <a href="#" class="card-year">2000</a>
+                                            <a href="#" class="card-year">[Date]</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="card-category">Action</a>
+                                            <a href="#" class="card-category">[Genre]</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-sr-item="online-streaming">
+                    {% comment %} <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-sr-item="online-streaming">
                         <div class="card flq-card-blog">
                             <div class="card-img-wrap">
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-8-390x440.jpg" alt="">
+                                    <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
                                     <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.2</span>
                                 </a>
@@ -1378,7 +1390,7 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-9-390x440.jpg" alt="">
+                                    <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
                                     <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.1</span>
                                 </a>
@@ -1404,7 +1416,7 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-10-390x440.jpg" alt="">
+                                    <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">               
                                     </span>
                                     <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.7</span>
                                 </a>
@@ -1430,7 +1442,7 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-11-390x440.jpg" alt="">
+                                    <img src="{% static 'assets/images/tv-shows/show-11-390x440.jpg' %}" alt="">
                                     </span>
                                     <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.3</span>
                                 </a>
@@ -1456,7 +1468,7 @@
                                 <a href="{% url 'single_movie' %}">
                                     <span class="flq-image flq-rounded-lg
       flq-responsive flq-responsive-sm-3x4">
-                                        <img src="assets/images/tv-shows/show-12-390x440.jpg" alt="">
+                                    <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="">
                                     </span>
                                     <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">8.6</span>
                                 </a>
@@ -1475,13 +1487,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
                 <div class="text-center mt-5" data-sr-item="online-streaming">
-                    <a href="{% url 'tv_shows' %}" class="btn">Browse All</a>
+                    <a href="{% url 'movies' %}" class="btn">Parcourir tout</a>
                 </div>
             </div>
-            <div class="pb-7">
+            {% comment %} <div class="pb-7">
                 <div class="flq-image-ticker" data-gap=120 data-pixels-per-second=40>
                     <div class="flq-image-ticker-inner">
                         <div class="flq-image-ticker-item">
@@ -1535,38 +1547,38 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
             <div class="py-7" style="
-    background-image: linear-gradient(
+      background-image: linear-gradient(
       95.92deg,
-      #bc2fb2 0%,
-      #f55267 49.13%,
-      #feae71 100%
+      hsl(355, 59%, 57%) 0%,  /* --flq-color-brand (inchangé) */
+      hsl(228, 60%, 20%) 49.13%,  /* Nouvelle couleur pour le milieu */
+      hsl(210, 50%, 15%) 100%  /* Nouvelle couleur pour la fin */
     );
   ">
                 <div class="container text-center my-6" data-sr="start-30-days" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                    <h1 class="display-1 mb-4" data-sr-item="start-30-days"> Available on Web,<br />iOS, and Android. </h1>
-                    <div class="row justify-content-center g-3">
-                        <div class="col-12 col-sm-auto" data-sr-item="start-30-days">
-                            <a href="#" class="btn btn-block btn-black btn-glass btn-icon-xl">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.0728 5.4325C14.9798 5.5048 13.348 6.424 13.348 8.4689C13.348 10.834 15.4239 11.6706 15.4859 11.6912C15.4756 11.7428 15.1554 12.8376 14.3911 13.953C13.7095 14.9342 12.9968 15.9153 11.9124 15.9153C10.828 15.9153 10.5491 15.2853 9.29942 15.2853C8.08072 15.2853 7.64692 15.936 6.65542 15.936C5.66392 15.936 4.97192 15.0271 4.17672 13.9117C3.25752 12.6 2.51392 10.5654 2.51392 8.6341C2.51392 5.5357 4.52792 3.8935 6.51082 3.8935C7.56432 3.8935 8.44212 4.5855 9.10312 4.5855C9.73312 4.5855 10.7143 3.8522 11.9123 3.8522C12.3668 3.8523 13.9987 3.8937 15.0728 5.4325ZM11.3444 2.5407C11.8401 1.952 12.1913 1.1361 12.1913 0.3202C12.1913 0.2066 12.181 0.093 12.1603 0C11.3547 0.031 10.3942 0.537101 9.81582 1.2084C9.36142 1.7248 8.93792 2.5407 8.93792 3.367C8.93792 3.4909 8.95862 3.6149 8.96892 3.6562C9.02052 3.6665 9.10322 3.6769 9.18582 3.6769C9.90882 3.6768 10.8176 3.1914 11.3444 2.5407Z" fill="currentColor" />
-                                </svg>
-                                <span class="btn-name"><span class="btn-name-subtitle">Download on the</span>App Store</span>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-auto" data-sr-item="start-30-days">
-                            <a href="#" class="btn btn-block btn-black btn-glass btn-icon-xl">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7271 6.75078L10.3389 9.00003L12.727 11.2492L14.8516 10.0691C15.7161 9.5889 15.7161 8.41106 14.8516 7.93087L12.7271 6.75078ZM12.0758 6.38901L9.82125 8.51243L3.11301 2.19429C3.5067 1.96008 4.02839 1.91908 4.48726 2.17396L12.0758 6.38901ZM2.62535 2.71016C2.54549 2.86887 2.5 3.0485 2.5 3.24308V14.7569C2.5 14.9515 2.5455 15.1311 2.62538 15.2899L9.30357 9.00003L2.62535 2.71016ZM3.11307 15.8058C3.50675 16.0399 4.02842 16.0809 4.48726 15.826L12.0757 11.611L9.82125 9.48761L3.11307 15.8058Z" fill="currentColor" />
-                                </svg>
-                                <span class="btn-name"><span class="btn-name-subtitle">Get it on</span>Google Play</span>
-                            </a>
-                        </div>
-                    </div>
+    <h1 class="display-1 mb-4" data-sr-item="start-30-days"> Disponible sur le Web,<br />iOS et Android. </h1>
+    <div class="row justify-content-center g-3">
+        <div class="col-12 col-sm-auto" data-sr-item="start-30-days">
+            <a href="#" class="btn btn-block btn-black btn-glass btn-icon-xl">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.0728 5.4325C14.9798 5.5048 13.348 6.424 13.348 8.4689C13.348 10.834 15.4239 11.6706 15.4859 11.6912C15.4756 11.7428 15.1554 12.8376 14.3911 13.953C13.7095 14.9342 12.9968 15.9153 11.9124 15.9153C10.828 15.9153 10.5491 15.2853 9.29942 15.2853C8.08072 15.2853 7.64692 15.936 6.65542 15.936C5.66392 15.936 4.97192 15.0271 4.17672 13.9117C3.25752 12.6 2.51392 10.5654 2.51392 8.6341C2.51392 5.5357 4.52792 3.8935 6.51082 3.8935C7.56432 3.8935 8.44212 4.5855 9.10312 4.5855C9.73312 4.5855 10.7143 3.8522 11.9123 3.8522C12.3668 3.8523 13.9987 3.8937 15.0728 5.4325ZM11.3444 2.5407C11.8401 1.952 12.1913 1.1361 12.1913 0.3202C12.1913 0.2066 12.181 0.093 12.1603 0C11.3547 0.031 10.3942 0.537101 9.81582 1.2084C9.36142 1.7248 8.93792 2.5407 8.93792 3.367C8.93792 3.4909 8.95862 3.6149 8.96892 3.6562C9.02052 3.6665 9.10322 3.6769 9.18582 3.6769C9.90882 3.6768 10.8176 3.1914 11.3444 2.5407Z" fill="currentColor" />
+                </svg>
+                <span class="btn-name"><span class="btn-name-subtitle">Télécharger sur</span>App Store</span>
+            </a>
+        </div>
+        <div class="col-12 col-sm-auto" data-sr-item="start-30-days">
+            <a href="#" class="btn btn-block btn-black btn-glass btn-icon-xl">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7271 6.75078L10.3389 9.00003L12.727 11.2492L14.8516 10.0691C15.7161 9.5889 15.7161 8.41106 14.8516 7.93087L12.7271 6.75078ZM12.0758 6.38901L9.82125 8.51243L3.11301 2.19429C3.5067 1.96008 4.02839 1.91908 4.48726 2.17396L12.0758 6.38901ZM2.62535 2.71016C2.54549 2.86887 2.5 3.0485 2.5 3.24308V14.7569C2.5 14.9515 2.5455 15.1311 2.62538 15.2899L9.30357 9.00003L2.62535 2.71016ZM3.11307 15.8058C3.50675 16.0399 4.02842 16.0809 4.48726 15.826L12.0757 11.611L9.82125 9.48761L3.11307 15.8058Z" fill="currentColor" />
+                </svg>
+                <span class="btn-name"><span class="btn-name-subtitle">Disponible sur</span>Google Play</span>
+            </a>
+        </div>
+    </div>
                 </div>
             </div>
-            <div class="swiper flq-swiper-effect-touch container-fluid mt-7 mb-3" data-sr data-sr-duration=1500 data-gap=20 data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6 data-breakpoints=320:3,500:4,848:5,1072:6,1280:8,1480:10>
+            {% comment %} <div class="swiper flq-swiper-effect-touch container-fluid mt-7 mb-3" data-sr data-sr-duration=1500 data-gap=20 data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6 data-breakpoints=320:3,500:4,848:5,1072:6,1280:8,1480:10>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -1841,8 +1853,27 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
             <!-- Footer -->
+            <div class="flq-background-color-100">
+                <div class="container">
+                    <div class="row gx-0 justify-content-center">
+                        <div class="col-12 col-lg-10 col-xl">
+                            <br><br>
+                          <h2 class="footer-title">Mode de paiement</h2>
+                          <br>
+                          <div class="row justify-content-center">
+                            <div class="col-sm-12">
+                              <a href="#"><img src="{% static 'assets/images/visa-mastercard.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="stripe" /></a>
+                              <a href="#"><img src="{% static 'assets/images/orange-money.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="orange-money" /></a>
+                              <a href="#"><img src="{% static 'assets/images/MVOLA.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="mvola" /></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br><br>
+              </div>
             <footer class="flq-footer flq-background py-7" data-sr="footer" data-sr-interval="60" data-sr-duration="1000" data-sr-distance="10">
                 <div class="flq-background-image">
                     <span class="flq-image jarallax" data-speed=0.7>
@@ -1863,10 +1894,10 @@
                             <nav>
                                 <ul class="nav flex-column gy-3">
                                     <li class="nav-item" data-sr-item="footer">
-                                        <a href="#" class="nav-link">FAQ</a>
+                                        <a href="{% url 'faq' %}" class="nav-link">FAQ</a>
                                     </li>
                                     <li class="nav-item" data-sr-item="footer">
-                                        <a href="#" class="nav-link">Investor Relations</a>
+                                        <a href="#" class="nav-link">Partenaires</a>
                                     </li>
                                     <li class="nav-item" data-sr-item="footer">
                                         <a href="#" class="nav-link">Privacy</a>
@@ -2007,7 +2038,7 @@
             <div class="flq-fancybox-head">
                 <div class="container-fluid">
                     <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
-                        <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="foryy">
+                        <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="logo-sehatra">
                     </a>
                     <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
                         <span></span>
@@ -2026,6 +2057,11 @@
                             <li class="nav-item">
                                 <a href="{% url 'pricing' %}" class="nav-link">
                                     <span class="nav-link-name">Abonnement</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'tv_shows' %}" class="nav-link">
+                                    <span class="nav-link-name">Concerts et Lives</span>
                                 </a>
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
@@ -2051,11 +2087,6 @@
                                         </li>
                                     </ul>
                                 </div> {% endcomment %}
-                            </li>
-                            <li class="nav-item">
-                                <a href="{% url 'tv_shows' %}" class="nav-link">
-                                    <span class="nav-link-name">Concerts et Lives</span>
-                                </a>
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Blog" data-bs-toggle="collapse" aria-expanded="false">
@@ -2096,7 +2127,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'contact' %}" class="nav-link">
-                                                <span class="nav-link-name">Contact</span>
+                                                <span class="nav-link-name">Contactez-nous</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -2253,7 +2284,7 @@
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
                                 <a href="{% url 'profile_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Profile</span>
+                                    <span class="nav-link-name">Profil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -2263,7 +2294,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="account-{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Retour & Commentaires</span>
+                                    <span class="nav-link-name">Avis & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
