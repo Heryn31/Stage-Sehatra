@@ -18,7 +18,7 @@
     <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
     <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
     <meta name="author" content="nK" />
-    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.ico' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- START: Styles -->
     <!-- Google Fonts -->
@@ -80,7 +80,7 @@
               </li>
               <li class="nav-item">
                   <a href="{% url 'tv_shows' %}" class="nav-link">
-                      <span class="nav-link-name">Concerts et Live</span>
+                      <span class="nav-link-name">Concerts et Lives</span>
                   </a>
               </li>
               <li class="nav-item flq-dropdown flq-dropdown-nav">
@@ -146,9 +146,9 @@
                                   <span class="nav-link-name">À propos</span>
                               </a>
                           </li>
-                          <li class="nav-item">
+                          <li class="nav-item active">
                               <a href="{% url 'contact' %}" class="nav-link">
-                                  <span class="nav-link-name">Contact</span>
+                                  <span class="nav-link-name">Contactez-nous</span>
                               </a>
                           </li>
                           <li class="nav-item">
@@ -194,7 +194,7 @@
                   <ul class="nav">
                       <li class="nav-item">
                           <a href="{% url 'profile_account' %}" class="nav-link">
-                              <span class="nav-link-name">Profile</span>
+                              <span class="nav-link-name">Profil</span>
                           </a>
                       </li>
                       <li class="nav-item">
@@ -204,12 +204,12 @@
                       </li>
                       <li class="nav-item">
                           <a href="{% url 'reviews' %}" class="nav-link">
-                              <span class="nav-link-name">Retour & Commentaires</span>
+                              <span class="nav-link-name">Avis & Commentaires</span>
                           </a>
                       </li>
                       <li class="nav-item">
                           <a href="{% url 'edit_account' %}" class="nav-link">
-                              <span class="nav-link-name">Paramètres</span>
+                              <span class="nav-link-name">Modifier mon compte</span>
                           </a>
                       </li>
                       <li class="nav-item">
@@ -219,7 +219,7 @@
                       </li>
                       <li class="nav-item">
                           <a href="{% url 'home'%}" class="nav-link">
-                              <span class="nav-link-name">Se deconnecter</span>
+                              <span class="nav-link-name">Se déconnecter</span>
                           </a>
                       </li>
                   </ul>
@@ -433,23 +433,23 @@
         <div class="pt-7">
             <div class="container">
                 <div class="row gy-4 justify-content-center" data-sr="card-feature" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                    <div class="col-12 col-md-6 col-lg" data-sr-item="card-feature">
-                        <div class="card flq-card-feature flq-card-feature-filled text-center">
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.25 12.5C26.25 21.25 15 28.75 15 28.75C15 28.75 3.75 21.25 3.75 12.5C3.75 9.51631 4.93526 6.65483 7.04505 4.54505C9.15483 2.43526 12.0163 1.25 15 1.25C17.9837 1.25 20.8452 2.43526 22.955 4.54505C25.0647 6.65483 26.25 9.51631 26.25 12.5ZM15 16.25C17.0711 16.25 18.75 14.5711 18.75 12.5C18.75 10.4289 17.0711 8.75 15 8.75C12.9289 8.75 11.25 10.4289 11.25 12.5C11.25 14.5711 12.9289 16.25 15 16.25Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.25 12.5C26.25 21.25 15 28.75 15 28.75C15 28.75 3.75 21.25 3.75 12.5C3.75 9.51631 4.93526 6.65483 7.04505 4.54505C9.15483 2.43526 12.0163 1.25 15 1.25C17.9837 1.25 20.8452 2.43526 22.955 4.54505C25.0647 6.65483 26.25 9.51631 26.25 12.5ZM15 16.25C17.0711 16.25 18.75 14.5711 18.75 12.5C18.75 10.4289 17.0711 8.75 15 8.75C12.9289 8.75 11.25 10.4289 11.25 12.5C11.25 14.5711 12.9289 16.25 15 16.25Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="card-title h5">Visit Us</div>
-                                <p>26 Lawford Rd, Rugby Ave No:204</p>
-                                <p>London - UK</p>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="col-12 col-md-6 col-lg" data-sr-item="card-feature">
+                    <a href="#" class="card flq-card-feature flq-card-feature-filled text-center">
+                        <span class="card-body">
+                            <span class="card-icon">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.25 12.5C26.25 21.25 15 28.75 15 28.75C15 28.75 3.75 21.25 3.75 12.5C3.75 9.51631 4.93526 6.65483 7.04505 4.54505C9.15483 2.43526 12.0163 1.25 15 1.25C17.9837 1.25 20.8452 2.43526 22.955 4.54505C25.0647 6.65483 26.25 9.51631 26.25 12.5ZM15 16.25C17.0711 16.25 18.75 14.5711 18.75 12.5C18.75 10.4289 17.0711 8.75 15 8.75C12.9289 8.75 11.25 10.4289 11.25 12.5C11.25 14.5711 12.9289 16.25 15 16.25Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.25 12.5C26.25 21.25 15 28.75 15 28.75C15 28.75 3.75 21.25 3.75 12.5C3.75 9.51631 4.93526 6.65483 7.04505 4.54505C9.15483 2.43526 12.0163 1.25 15 1.25C17.9837 1.25 20.8452 2.43526 22.955 4.54505C25.0647 6.65483 26.25 9.51631 26.25 12.5ZM15 16.25C17.0711 16.25 18.75 14.5711 18.75 12.5C18.75 10.4289 17.0711 8.75 15 8.75C12.9289 8.75 11.25 10.4289 11.25 12.5C11.25 14.5711 12.9289 16.25 15 16.25Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="card-title h5">Visitez-nous</span>
+                            <span class="paragraph">Tanjombato 102</span>
+                            <span class="paragraph">Antananarivo, Madagascar</span>
+                        </span>
+                    </a>
+                </div>                
                     <div class="col-12 col-md-6 col-lg" data-sr-item="card-feature">
                         <a href="#" class="card flq-card-feature flq-card-feature-filled text-center">
                             <span class="card-body">
@@ -461,9 +461,9 @@
                                         <path d="M27.5003 24.9V21.15C27.5155 20.537 27.3049 19.9397 26.9084 19.4719C26.512 19.004 25.9575 18.6982 25.3503 18.6125C24.1502 18.4542 22.9719 18.1607 21.8378 17.7375C21.3904 17.5693 20.9041 17.5329 20.4367 17.6326C19.9692 17.7323 19.5401 17.9639 19.2003 18.3L17.6128 19.8875C14.4834 18.1081 11.8922 15.5169 10.1128 12.3875L11.7003 10.8C12.0364 10.4601 12.268 10.0311 12.3677 9.5636C12.4674 9.09614 12.431 8.6099 12.2628 8.1625C11.8396 7.02841 11.5461 5.85008 11.3878 4.65C11.3029 4.04931 11.0024 3.49998 10.5425 3.10441C10.0825 2.70885 9.49442 2.49403 8.88778 2.5H5.13778C4.79071 2.50033 4.4475 2.57292 4.13002 2.71315C3.81254 2.85339 3.52773 3.05819 3.29374 3.31453C3.05975 3.57086 2.88169 3.87311 2.77091 4.20203C2.66013 4.53095 2.61905 4.87933 2.65028 5.225C3.06059 9.08874 4.37526 12.8015 6.48778 16.0625C8.40695 19.0827 10.9676 21.6433 13.9878 23.5625C17.234 25.6677 20.9288 26.982 24.7753 27.4C25.122 27.4313 25.4714 27.3899 25.8012 27.2784C26.131 27.1669 26.4339 26.9877 26.6904 26.7523C26.9469 26.517 27.1515 26.2307 27.2909 25.9117C27.4304 25.5927 27.5017 25.2481 27.5003 24.9Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                                <span class="card-title h5">Call Us</span>
-                                <span class="paragraph">+ 1 800 746 8 384</span>
-                                <span class="paragraph"># 1001</span>
+                                <span class="card-title h5">Appelez-nous</span>
+                                <span class="paragraph">032 75 369 42</span>
+                                <span class="paragraph">033 43 520 16</span>
                             </span>
                         </a>
                     </div>
@@ -478,9 +478,9 @@
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.88322 6.94244L15 14.7242L26.1168 6.94244C25.9101 6.53365 25.485 6.25 25 6.25H5C4.51505 6.25 4.08995 6.53365 3.88322 6.94244ZM1.25 7.5C1.25 5.43464 2.93464 3.75 5 3.75H25C27.0654 3.75 28.75 5.43464 28.75 7.5V22.5C28.75 24.5654 27.0654 26.25 25 26.25H5C2.93464 26.25 1.25 24.5654 1.25 22.5V7.5Z" fill="currentColor" />
                                     </svg>
                                 </span>
-                                <span class="card-title h5">Write Us</span>
-                                <span class="paragraph">demo@sinetake.com</span>
-                                <span class="paragraph">All requires</span>
+                                <span class="card-title h5">Écrivez-nous</span>
+                                <span class="paragraph">contact@sehatra.com</span>
+                                <span class="paragraph">Tous les besoins</span>
                             </span>
                         </a>
                     </div>
@@ -490,33 +490,34 @@
         <div class="py-7">
             <div class="container-small">
                 <div class="text-center mb-5" data-sr="contact-text" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                    <span class="flq-subtitle badge" data-sr-item="contact-text">Contact Form</span>
-                    <h2 class="display-6" data-sr-item="contact-text">Say Hello</h2>
+                    <span class="flq-subtitle badge" data-sr-item="contact-text">Formulaire de contact</span>
+                    <h2 class="display-6" data-sr-item="contact-text">Dites bonjour</h2>
                 </div>
                 <form action="#">
-                    <div class="row gy-4" data-sr="contact-form" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
-                        <div class="col-12 col-sm" data-sr-item="contact-form">
-                            <input class="form-control flq-form-user form-control-lg" type="text" placeholder="Your Name">
-                        </div>
-                        <div class="col-12 col-sm" data-sr-item="contact-form">
-                            <input class="form-control flq-form-mail form-control-lg" type="email" placeholder="Your Email">
-                        </div>
-                        <div class="col-12" data-sr-item="contact-form">
-                            <textarea class="form-control flq-form-message form-control-lg" rows="5" placeholder="Your Message"></textarea>
-                        </div>
-                        <div class="col-12" data-sr-item="contact-form">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="contact_form"><label class="form-check-label" for="contact_form">Save my name, email, and website in this browser for the next time I comment.</label>
-                            </div>
-                        </div>
-                        <div class="col-12" data-sr-item="contact-form">
-                            <button class="btn btn-lg btn-block">Submit</button>
-                        </div>
+                  <div class="row gy-4" data-sr="contact-form" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
+                    <div class="col-12 col-sm" data-sr-item="contact-form">
+                      <input class="form-control flq-form-user form-control-lg" type="text" placeholder="Votre nom">
                     </div>
-                </form>
+                    <div class="col-12 col-sm" data-sr-item="contact-form">
+                      <input class="form-control flq-form-mail form-control-lg" type="email" placeholder="Votre email">
+                    </div>
+                    <div class="col-12" data-sr-item="contact-form">
+                      <textarea class="form-control flq-form-message form-control-lg" rows="5" placeholder="Votre message"></textarea>
+                    </div>
+                    <div class="col-12" data-sr-item="contact-form">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="contact_form">
+                        <label class="form-check-label" for="contact_form">Enregistrer mon nom, email et site web dans ce navigateur pour mon prochain commentaire.</label>
+                      </div>
+                    </div>
+                    <div class="col-12" data-sr-item="contact-form">
+                      <button class="btn btn-lg btn-block">Envoyer</button>
+                    </div>
+                  </div>
+                </form>                
             </div>
         </div>
-        <div class="swiper flq-swiper-effect-touch container-fluid mb-3" data-sr data-sr-duration=1500 data-gap=20 data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6 data-breakpoints=320:3,500:4,848:5,1072:6,1280:8,1480:10>
+        {% comment %} <div class="swiper flq-swiper-effect-touch container-fluid mb-3" data-sr data-sr-duration=1500 data-gap=20 data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6 data-breakpoints=320:3,500:4,848:5,1072:6,1280:8,1480:10>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -773,8 +774,27 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
         <!-- Footer -->
+        <div class="flq-background-color-100">
+          <div class="container">
+              <div class="row gx-0 justify-content-center">
+                  <div class="col-12 col-lg-10 col-xl">
+                      <br><br>
+                    <h2 class="footer-title">Mode de paiement</h2>
+                    <br>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-12">
+                        <a href="#"><img src="{% static 'assets/images/visa-mastercard.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="stripe" /></a>
+                        <a href="#"><img src="{% static 'assets/images/orange-money.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="orange-money" /></a>
+                        <a href="#"><img src="{% static 'assets/images/MVOLA.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="mvola" /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
         <footer class="flq-footer flq-background py-7" data-sr="footer" data-sr-interval="60" data-sr-duration="1000" data-sr-distance="10">
             <div class="flq-background-image">
                 <span class="flq-image jarallax" data-speed=0.7>
@@ -853,13 +873,13 @@
                     <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
                         <div class="flq-social text-center">
                             <ul class="gy-4 gx-4">
-                                <li>
+                                {% comment %} <li>
                                     <a href="#" class="flq-social-link" data-sr-item=footer-copyright>
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M21.533 7.11169C21.5482 7.32488 21.5482 7.53811 21.5482 7.7513C21.5482 14.2538 16.599 21.7462 7.5533 21.7462C4.76648 21.7462 2.17767 20.9391 0 19.5381C0.395953 19.5838 0.776625 19.599 1.18781 19.599C3.48727 19.599 5.60405 18.8224 7.29441 17.4975C5.13197 17.4518 3.31978 16.0356 2.69541 14.0863C3 14.132 3.30455 14.1624 3.62437 14.1624C4.06598 14.1624 4.50764 14.1015 4.91878 13.995C2.66498 13.5381 0.974578 11.5584 0.974578 9.16753V9.10664C1.62937 9.47213 2.39086 9.70055 3.19791 9.73097C1.87303 8.8477 1.00505 7.34011 1.00505 5.63452C1.00505 4.72083 1.24866 3.88327 1.67508 3.1523C4.09641 6.13706 7.73601 8.08627 11.8172 8.2995C11.7411 7.93402 11.6954 7.55335 11.6954 7.17263C11.6954 4.46194 13.8883 2.25385 16.6141 2.25385C18.0304 2.25385 19.3095 2.84775 20.208 3.80714C21.3197 3.59395 22.3857 3.18277 23.3299 2.61933C22.9643 3.76149 22.1877 4.72088 21.1674 5.32997C22.1573 5.22342 23.1167 4.94925 23.9999 4.56858C23.33 5.54316 22.4924 6.41114 21.533 7.11169V7.11169Z" fill="currentColor" />
                                         </svg>
                                     </a>
-                                </li>
+                                </li> {% endcomment %}
                                 <li>
                                     <a href="#" class="flq-social-link" data-sr-item=footer-copyright>
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1039,7 +1059,7 @@
                                   </li>
                                   <li class="nav-item active">
                                       <a href="{% url 'contact' %}" class="nav-link">
-                                          <span class="nav-link-name">Contact</span>
+                                          <span class="nav-link-name">Contactez-nous</span>
                                       </a>
                                   </li>
                                   <li class="nav-item">
@@ -1191,22 +1211,28 @@
           <div class="col-12 col-lg">
             <ul class="nav flex-column flq-navbar-nav accordion gy-3">
               <li class="nav-item">
-                <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profile</span></a>
+                <a href="{% url 'profile_account' %}" class="nav-link">
+                  <span class="nav-link-name">Profil</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favorites</span></a>
+                <a href="{% url 'favorite' %}" class="nav-link">
+                <span class="nav-link-name">Favoris</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Reviews & Comments</span></a>
+                <a href="{% url 'reviews' %}" class="nav-link">
+                <span class="nav-link-name">Avis & Commentaires</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Account Edit</span></a>
+                <a href="{% url 'edit_account' %}" class="nav-link">
+                <span class="nav-link-name">Modifier mon compte</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
+                <a href="{% url 'notification' %}" class="nav-link">
+                <span class="nav-link-name">Notifications</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Logout</span></a>
+                <a href="{% url 'home' %}" class="nav-link">
+                <span class="nav-link-name">Se déconnecter</span></a>
               </li>
             </ul>
           </div>
@@ -1376,89 +1402,94 @@
       </div>
     </div>
     <!-- / Popup search -->
-    <!-- Popup signin -->
-    <div class="flq-fancybox-content-signin fancybox-content" id="flq_popup_signin">
+     <!-- Popup signin -->
+     <div class="flq-fancybox-content-signin fancybox-content" id="flq_popup_signin">
       <div class="flq-signin">
-        <div class="flq-fancybox-head">
-          <div class="container-fluid">
-            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt=""></a>
-            <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
+          <div class="flq-fancybox-head">
+              <div class="container-fluid">
+                  <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
+                      <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
+                  </a>
+                  <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
+                      <span></span>
+                  </button>
+              </div>
           </div>
-        </div>
-        <div class="flq-fancybox-body pb-6">
-          <form action="#" class="flq-signin-content">
-            <h4 class="mb-4 pb-1 text-center">Login</h4>
-            <div class="row justify-content-between gy-4">
-              <div class="col-12">
-                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Username" />
-              </div>
-              <div class="col-12">
-                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password" />
-              </div>
-              <div class="col-auto">
-                <div class="form-check flq-form-translucent">
-                  <input class="form-check-input" type="checkbox" id="signinRememberMe" /><label class="form-check-label" for="signinRememberMe">Remember Me</label>
-                </div>
-              </div>
-              <div class="col-auto">
-                <a href="#" class="flq-color-meta flq-color-title-hover">Lost Password</a>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-block">Login</button>
-              </div>
-              <div class="col-12 mt-3 text-center">
-                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false">Sign Up</a>
-              </div>
-            </div>
-          </form>
-        </div>
+          <div class="flq-fancybox-body pb-6">
+              <form action="#" class="flq-signin-content" autocomplete="off">
+                  <h4 class="mb-4 pb-1 text-center">Connexion</h4>
+                  <div class="row justify-content-between gy-4">
+                      <div class="col-12">
+                          <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Adresse e-mail">
+                      </div>
+                      <div class="col-12">
+                          <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
+                      </div>
+                      <div class="col-auto">
+                          <div class="form-check flq-form-translucent">
+                              <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <a href="#" class="flq-color-meta flq-color-title-hover">Mot de passe oublier?</a>
+                      </div>
+                      <div class="col-12">
+                          <button class="btn btn-block">Se Connecter</button>
+                      </div>
+                      <div class="col-12 mt-3 text-center">
+                          <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> S'inscrire </a>
+                      </div>
+                  </div>
+              </form>
+          </div>
       </div>
-    </div>
-    <!-- / Popup signin -->
-    <!-- Popup signup -->
-    <div class="flq-fancybox-content-signup fancybox-content" id="flq_popup_signup">
+  </div>
+  <!-- / Popup signin -->
+  <!-- Popup signup -->
+  <div class="flq-fancybox-content-signup fancybox-content" id="flq_popup_signup">
       <div class="flq-signup">
-        <div class="flq-fancybox-head">
-          <div class="container-fluid">
-            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt=""></a>
-            <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
+          <div class="flq-fancybox-head">
+              <div class="container-fluid">
+                  <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
+                      <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
+                  </a>
+                  <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
+                      <span></span>
+                  </button>
+              </div>
           </div>
-        </div>
-        <div class="flq-fancybox-body pb-6">
-          <form action="#" class="flq-signup-content">
-            <h4 class="mb-4 pb-1 text-center">Sign Up</h4>
-            <div class="row gy-4">
-              <div class="col-12">
-                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Email" />
-              </div>
-              <div class="col-12">
-                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password" />
-              </div>
-              <div class="col-12">
-                <div class="form-check flq-form-translucent">
-                  <input class="form-check-input" type="checkbox" id="signupTerms" /><label class="form-check-label" for="signupTerms">I have read and agree to the terms and conditions.</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-block">Sign Up</button>
-              </div>
-              <div class="col-12 text-center mt-1">or</div>
-              <div class="col-12 mt-1">
-                <div class="row justify-content-center gy-1">
-                  <div class="col-auto">
-                    <a href="#" class="btn btn-link">Facebook</a>
+          <div class="flq-fancybox-body pb-6">
+              <form action="#" class="flq-signup-content">
+                  <h4 class="mb-4 pb-1 text-center">Création de compte</h4>
+                  <div class="row gy-4">
+                      <div class="col-12">
+                          <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Adresse e-mail">
+                      </div>
+                      <div class="col-12">
+                          <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
+                      </div>
+                      <div class="col-12">
+                          <div class="form-check flq-form-translucent">
+                              <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">J'ai lu et j'accepte les conditions générales.</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <button class="btn btn-block">S'inscrire</button>
+                      </div>
+                      <div class="col-12 text-center mt-1">ou</div>
+                      <div class="col-12 mt-1">
+                          <div class="row justify-content-center gy-1">
+                              <div class="col-auto">
+                                  <a href="#" class="btn btn-link"><span class="me-1">Se connecter avec</span><i class="fab fa-google"></i>oogle</a>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="col-auto">
-                    <a href="#" class="btn btn-link">Twitter</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
+              </form>
+          </div>
       </div>
-    </div>
-    <!-- / Popup signup -->
+  </div>
+  <!-- / Popup signup -->
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
       <div class="offcanvas-header">

@@ -18,7 +18,7 @@
         <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
         <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
         <meta name="author" content="nK" />
-        <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}" />
+        <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.ico' %}" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <!-- START: Styles -->
          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap" />
@@ -80,7 +80,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'tv_shows' %}" class="nav-link">
-                            <span class="nav-link-name">Concerts et Live</span>
+                            <span class="nav-link-name">Concerts et Lives</span>
                         </a>
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
@@ -148,7 +148,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'contact' %}" class="nav-link">
-                                        <span class="nav-link-name">Contact</span>
+                                        <span class="nav-link-name">Contactez-nous</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -194,7 +194,7 @@
                         <ul class="nav">
                             <li class="nav-item">
                                 <a href="{% url 'profile_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Profile</span>
+                                    <span class="nav-link-name">Profil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -202,9 +202,9 @@
                                     <span class="nav-link-name">Favoris</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a href="{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Retour & Commentaires</span>
+                                    <span class="nav-link-name">Avis & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -219,7 +219,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'home'%}" class="nav-link">
-                                    <span class="nav-link-name">Se deconnecter</span>
+                                    <span class="nav-link-name">Se déconnecter</span>
                                 </a>
                             </li>
                         </ul>
@@ -243,21 +243,21 @@
                                     <div class="flq-media mb-0">
                                         <a href="{% url 'single_post' %}" class="flq-media-image">
                                             <span class="flq-image">
-                                                <img src="assets/images/blog/post-1-120x120.jpg" alt="">
+                                                <img src="{% static 'assets/images/blog/post-1-120x120.jpg' %}" alt="">
                                             </span>
                                         </a>
                                         <div class="flq-media-meta">
-                                            <h5 class="flq-media-title"><a href="{% url 'single_post' %}">Girlfriend. How and why</a></h5>
+                                            <h5 class="flq-media-title"><a href="{% url 'single_post' %}">[Titre du film]</a></h5>
                                             <div class="flq-meta">
                                                 <ul>
-                                                    <li>November 20, 2021</li>
+                                                    <li>[Date]</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <p>Of on am father by agreed supply rather either. Own handsome delicate its property mistress her end appetite.</p>
+                                    <p>[Description du film]</p>
                                     <hr class="my-0">
-                                    <p><strong>January 2, 2021 at 11:05 am</strong></p>
+                                    <p><strong>[Date et heure]</strong></p>
                                 </div>
                             </div>
                             <div class="col-12" data-sr-item="account-review">
@@ -265,32 +265,32 @@
                                     <div class="flq-media mb-0">
                                         <a href="{% url 'single_movie' %}" class="flq-media-image">
                                             <span class="flq-image">
-                                                <img src="assets/images/tv-shows/show-1-120x120.jpg" alt="">
+                                                <img src="{% static 'assets/images/tv-shows/show-1-120x120.jpg' %}" alt="">
                                             </span>
                                         </a>
                                         <div class="flq-media-meta">
-                                            <h5 class="flq-media-title"><a href="{% url 'single_movie' %}">Believe</a></h5>
+                                            <h5 class="flq-media-title"><a href="{% url 'single_movie' %}">[Titre du film]</a></h5>
                                             <div class="flq-meta">
                                                 <ul>
-                                                    <li>7.2</li>
-                                                    <li>2021</li>
-                                                    <li>55m</li>
+                                                    {% comment %} <li>7.2</li> {% endcomment %}
+                                                    <li>[Date]</li>
+                                                    <li>[Duré]</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <p>To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts.</p>
-                                    <p>Resolve parties but why she shewing. She sang know now how nay cold real case.</p>
-                                    <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+                                    <p>[Description du film]</p>
+                                    {% comment %} <p>Resolve parties but why she shewing. She sang know now how nay cold real case.</p>
+                                    <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p> {% endcomment %}
                                     <hr class="my-0">
                                     <div>
-                                        <div class="flq-rating" style="--flq-rating--width: 0%;">
+                                        {% comment %} <div class="flq-rating" style="--flq-rating--width: 0%;">
                                             <span>
                                                 <span></span>
                                                 <span></span>
                                             </span>
-                                        </div>
-                                        <p class="mt-1"><strong>January 6, 2021 at 1:24 pm</strong></p>
+                                        </div> {% endcomment %}
+                                        <p class="mt-1"><strong>[Date et heure]</strong></p>
                                     </div>
                                 </div>
                             </div>
@@ -303,22 +303,22 @@
                                     <ul class="nav nav-dots flex-column gy-3">
                                         <li class="nav-item">
                                             <a href="{% url 'profile_account' %}" class="nav-link">
-                                                <span class="nav-link-name">Profile</span>
+                                                <span class="nav-link-name">Profil</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'favorite' %}" class="nav-link">
-                                                <span class="nav-link-name">Favorites</span>
+                                                <span class="nav-link-name">Favoris</span>
                                             </a>
                                         </li>
                                         <li class="nav-item active">
                                             <a href="{% url 'reviews' %}" class="nav-link">
-                                                <span class="nav-link-name">Reviews &amp; Comments</span>
+                                                <span class="nav-link-name">Avis &amp; Commentaires</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'edit_account' %}" class="nav-link">
-                                                <span class="nav-link-name">Account Edit</span>
+                                                <span class="nav-link-name">Modifier mon compte</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -328,7 +328,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'home'%}" class="nav-link">
-                                                <span class="nav-link-name">Logout</span>
+                                                <span class="nav-link-name">Se déconnecter</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -339,6 +339,25 @@
                 </div>
             </div>
             <!-- Footer -->
+            <div class="flq-background-color-100">
+                <div class="container">
+                    <div class="row gx-0 justify-content-center">
+                        <div class="col-12 col-lg-10 col-xl">
+                            <br><br>
+                          <h2 class="footer-title">Mode de paiement</h2>
+                          <br>
+                          <div class="row justify-content-center">
+                            <div class="col-sm-12">
+                              <a href="#"><img src="{% static 'assets/images/visa-mastercard.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="stripe" /></a>
+                              <a href="#"><img src="{% static 'assets/images/orange-money.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="orange-money" /></a>
+                              <a href="#"><img src="{% static 'assets/images/MVOLA.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="mvola" /></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br><br>
+              </div>
             <footer class="flq-footer flq-background py-7" data-sr="footer" data-sr-interval="60" data-sr-duration="1000" data-sr-distance="10">
                 <div class="flq-background-image">
                     <span class="flq-image jarallax" data-speed=0.7>
@@ -350,7 +369,7 @@
                     <div class="row gx-5 gy-5 mb-6 justify-content-center justify-content-sm-start">
                         <div class="col-md-9 col-lg-3 text-center text-sm-start" data-sr-item="footer">
                             <a href="{% url 'home' %}">
-                                <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
+                                <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="logo-sehatra">
                             </a>
                             <p class="mt-1 pt-1">Le secteur événementiel Malagasy au service de la société et de l'environnement.</p>
                         </div>
@@ -417,13 +436,6 @@
                         <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
                             <div class="flq-social text-center">
                                 <ul class="gy-4 gx-4">
-                                    <li>
-                                        <a href="#" class="flq-social-link" data-sr-item=footer-copyright>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M21.533 7.11169C21.5482 7.32488 21.5482 7.53811 21.5482 7.7513C21.5482 14.2538 16.599 21.7462 7.5533 21.7462C4.76648 21.7462 2.17767 20.9391 0 19.5381C0.395953 19.5838 0.776625 19.599 1.18781 19.599C3.48727 19.599 5.60405 18.8224 7.29441 17.4975C5.13197 17.4518 3.31978 16.0356 2.69541 14.0863C3 14.132 3.30455 14.1624 3.62437 14.1624C4.06598 14.1624 4.50764 14.1015 4.91878 13.995C2.66498 13.5381 0.974578 11.5584 0.974578 9.16753V9.10664C1.62937 9.47213 2.39086 9.70055 3.19791 9.73097C1.87303 8.8477 1.00505 7.34011 1.00505 5.63452C1.00505 4.72083 1.24866 3.88327 1.67508 3.1523C4.09641 6.13706 7.73601 8.08627 11.8172 8.2995C11.7411 7.93402 11.6954 7.55335 11.6954 7.17263C11.6954 4.46194 13.8883 2.25385 16.6141 2.25385C18.0304 2.25385 19.3095 2.84775 20.208 3.80714C21.3197 3.59395 22.3857 3.18277 23.3299 2.61933C22.9643 3.76149 22.1877 4.72088 21.1674 5.32997C22.1573 5.22342 23.1167 4.94925 23.9999 4.56858C23.33 5.54316 22.4924 6.41114 21.533 7.11169V7.11169Z" fill="currentColor" />
-                                            </svg>
-                                        </a>
-                                    </li>
                                     <li>
                                         <a href="#" class="flq-social-link" data-sr-item=footer-copyright>
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -527,21 +539,29 @@
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
                                 <a href="{% url 'home' %}" class="nav-link">
-                                    <span class="nav-link-name">Home</span>
+                                    <span class="nav-link-name">Accueil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'pricing' %}" class="nav-link">
-                                    <span class="nav-link-name">Pricing</span>
+                                    <span class="nav-link-name">Abonnement</span>
                                 </a>
                             </li>
-                            <li class="nav-item accordion-item flq-dropdown-nav">
-                                <button class="nav-link accordion-button collapsed" data-bs-target="#Movies" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Movies</span>
-                                    <span class="accordion-button-icon"></span>
-                                </button>
-                                <div class="accordion-collapse collapse" id="Movies">
-                                    <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="{% url 'tv_shows' %}" class="nav-link">
+                                    <span class="nav-link-name">Concerts et Lives</span>
+                                </a>
+                            </li>
+                            <li class="nav-item flq-dropdown flq-dropdown-nav">
+                                <a href="{% url 'movies' %}" class="nav-link" role="button">
+                                    <span class="nav-link-name">Films</span>
+                                </a>
+                            
+                                {% comment %} ------------------------------DropDown Films-------------------------- {% endcomment %}
+                            
+                                {% comment %}
+                                <div class="dropdown-menu gy-2">
+                                    <ul class="nav">
                                         <li class="nav-item">
                                             <a href="{% url 'movies' %}" class="nav-link">
                                                 <span class="nav-link-name">Movies</span>
@@ -559,27 +579,28 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{% url 'tv_shows' %}" class="nav-link">
-                                    <span class="nav-link-name">TV Shows</span>
-                                </a>
-                            </li>
+                                {% endcomment %}
+                            </li> 
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Blog" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Blog</span>
+                                    <span class="nav-link-name">Partenaires</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Blog">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'blog' %}" class="nav-link">
-                                                <span class="nav-link-name">Blog</span>
+                                                <span class="nav-link-name">Artistes</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'single_post' %}" class="nav-link">
-                                                <span class="nav-link-name">Single Post</span>
+                                                <span class="nav-link-name">Organisateurs</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                                <span class="nav-link-name">Associations</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -587,36 +608,36 @@
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Pages" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Pages</span>
+                                    <span class="nav-link-name">Plus...</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Pages">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'about' %}" class="nav-link">
-                                                <span class="nav-link-name">About</span>
+                                                <span class="nav-link-name">À propos</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'contact' %}" class="nav-link">
-                                                <span class="nav-link-name">Contact Us</span>
+                                                <span class="nav-link-name">Contactez-nous</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'faq' %}" class="nav-link">
-                                                <span class="nav-link-name">FAQ</span>
+                                                <span class="nav-link-name">Questions</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'coming_soon' %}" class="nav-link">
-                                                <span class="nav-link-name">Coming Soon</span>
+                                                <span class="nav-link-name">À venir</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        {% comment %} <li class="nav-item">
                                             <a href="{% url '404' %}" class="nav-link">
                                                 <span class="nav-link-name">404</span>
                                             </a>
-                                        </li>
+                                        </li> {% endcomment %}
                                     </ul>
                                 </div>
                             </li>
@@ -756,22 +777,22 @@
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
                                 <a href="{% url 'profile_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Profile</span>
+                                    <span class="nav-link-name">Profil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'favorite' %}" class="nav-link">
-                                    <span class="nav-link-name">Favorites</span>
+                                    <span class="nav-link-name">Favoris</span>
                                 </a>
                             </li>
                             <li class="nav-item active">
                                 <a href="{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Reviews & Comments</span>
+                                    <span class="nav-link-name">Avis & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'edit_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Account Edit</span>
+                                    <span class="nav-link-name">Modifier mon compte</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -781,7 +802,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'home' %}" class="nav-link">
-                                    <span class="nav-link-name">Logout</span>
+                                    <span class="nav-link-name">Se déconnecter</span>
                                 </a>
                             </li>
                         </ul>
@@ -976,28 +997,28 @@
                     </div>
                 </div>
                 <div class="flq-fancybox-body pb-6">
-                    <form action="#" class="flq-signin-content">
-                        <h4 class="mb-4 pb-1 text-center">Login</h4>
+                    <form action="#" class="flq-signin-content" autocomplete="off">
+                        <h4 class="mb-4 pb-1 text-center">Connexion</h4>
                         <div class="row justify-content-between gy-4">
                             <div class="col-12">
-                                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Username">
+                                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Adresse e-mail">
                             </div>
                             <div class="col-12">
-                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password">
+                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
                             </div>
                             <div class="col-auto">
                                 <div class="form-check flq-form-translucent">
-                                    <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Remember Me</label>
+                                    <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <a href="#" class="flq-color-meta flq-color-title-hover">Lost Password</a>
+                                <a href="#" class="flq-color-meta flq-color-title-hover">Mot de passe oublier?</a>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-block">Login</button>
+                                <button class="btn btn-block">Se Connecter</button>
                             </div>
                             <div class="col-12 mt-3 text-center">
-                                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> Sign Up </a>
+                                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> S'inscrire </a>
                             </div>
                         </div>
                     </form>
@@ -1020,30 +1041,27 @@
                 </div>
                 <div class="flq-fancybox-body pb-6">
                     <form action="#" class="flq-signup-content">
-                        <h4 class="mb-4 pb-1 text-center">Sign Up</h4>
+                        <h4 class="mb-4 pb-1 text-center">Création de compte</h4>
                         <div class="row gy-4">
                             <div class="col-12">
-                                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Email">
+                                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Adresse e-mail">
                             </div>
                             <div class="col-12">
-                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password">
+                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
                             </div>
                             <div class="col-12">
                                 <div class="form-check flq-form-translucent">
-                                    <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">I have read and agree to the terms and conditions.</label>
+                                    <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">J'ai lu et j'accepte les conditions générales.</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-block">Sign Up</button>
+                                <button class="btn btn-block">S'inscrire</button>
                             </div>
-                            <div class="col-12 text-center mt-1">or</div>
+                            <div class="col-12 text-center mt-1">ou</div>
                             <div class="col-12 mt-1">
                                 <div class="row justify-content-center gy-1">
                                     <div class="col-auto">
-                                        <a href="#" class="btn btn-link">Facebook</a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="#" class="btn btn-link">Twitter</a>
+                                        <a href="#" class="btn btn-link"><span class="me-1">Se connecter avec</span><i class="fab fa-google"></i>oogle</a>
                                     </div>
                                 </div>
                             </div>
