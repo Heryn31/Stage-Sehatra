@@ -11,11 +11,11 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Concerts et Lives | Sehatra.com</title>
+    <title>Concert et Live | Sehatra.com</title>
     <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
     <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
     <meta name="author" content="nK" />
-    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.ico' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- START: Styles -->
     <!-- Google Fonts -->
@@ -76,7 +76,7 @@
               </li>
               <li class="nav-item active">
                   <a href="{% url 'tv_shows' %}" class="nav-link">
-                      <span class="nav-link-name">Concerts et Live</span>
+                      <span class="nav-link-name">Concerts et Lives</span>
                   </a>
               </li>
               <li class="nav-item flq-dropdown flq-dropdown-nav">
@@ -144,7 +144,7 @@
                           </li>
                           <li class="nav-item">
                               <a href="{% url 'contact' %}" class="nav-link">
-                                  <span class="nav-link-name">Contact</span>
+                                  <span class="nav-link-name">Contactez-nous</span>
                               </a>
                           </li>
                           <li class="nav-item">
@@ -190,7 +190,7 @@
                   <ul class="nav">
                       <li class="nav-item">
                           <a href="{% url 'profile_account' %}" class="nav-link">
-                              <span class="nav-link-name">Profile</span>
+                              <span class="nav-link-name">Profil</span>
                           </a>
                       </li>
                       <li class="nav-item">
@@ -200,12 +200,12 @@
                       </li>
                       <li class="nav-item">
                           <a href="{% url 'reviews' %}" class="nav-link">
-                              <span class="nav-link-name">Retour & Commentaires</span>
+                              <span class="nav-link-name">Avis & Commentaires</span>
                           </a>
                       </li>
                       <li class="nav-item">
                           <a href="{% url 'edit_account' %}" class="nav-link">
-                              <span class="nav-link-name">Paramètres</span>
+                              <span class="nav-link-name">Modifier mon compte</span>
                           </a>
                       </li>
                       <li class="nav-item">
@@ -215,7 +215,7 @@
                       </li>
                       <li class="nav-item">
                           <a href="{% url 'home'%}" class="nav-link">
-                              <span class="nav-link-name">Se deconnecter</span>
+                              <span class="nav-link-name">Se déconnecter</span>
                           </a>
                       </li>
                   </ul>
@@ -234,62 +234,98 @@
         <div class="flq-image-ticker mb-3" data-gap="20" data-pixels-per-second="20">
           <div class="flq-image-ticker-inner">
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/1.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/2.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/3.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/4.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/5.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/6.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/7.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/8.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/9.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
           </div>
         </div>
         <div class="flq-image-ticker" data-gap="20" data-pixels-per-second="20" data-inverted>
           <div class="flq-image-ticker-inner">
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/10.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/11.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/12.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/13.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/14.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/15.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/16.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/17.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
             <div class="flq-image-ticker-item">
-              <span class="flq-image"><img src="assets/images/background-ticker/18.jpg" alt="" /></span>
+              <span class="flq-image">
+                <img src="{% static 'assets/images/background-ticker/1.jpg' %}" alt="" />
+              </span>
             </div>
           </div>
         </div>
@@ -359,7 +395,9 @@
                 <div class="card flq-card-blog">
                   <div class="card-img-wrap">
                     <a href="{% url 'single_movie' %}">
-                      <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="assets/images/tv-shows/show-1-390x440.jpg" alt="" /></span>
+                      <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                        <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" />
+                      </span>
                       {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
                     </a>
                   </div>
@@ -384,7 +422,9 @@
                 <div class="card flq-card-blog">
                   <div class="card-img-wrap">
                     <a href="{% url 'single_movie' %}">
-                      <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="assets/images/tv-shows/show-2-390x440.jpg" alt="" /></span>
+                      <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                        <img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="concert-live" />
+                      </span>
                       {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.9</span> {% endcomment %}
                     </a>
                   </div>
@@ -1280,7 +1320,9 @@
     <nav class="flq-navbar-mobile fancybox-content" id="flq_popup_user">
       <div class="flq-fancybox-head">
         <div class="container-fluid">
-          <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt=""></a>
+          <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
+            <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
+          </a>
           <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
         </div>
       </div>
@@ -1295,10 +1337,10 @@
                 <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis & Comments</span></a>
+                <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis & Commentaires</span></a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Account Edit</span></a>
+                <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon compte</span></a>
               </li>
               <li class="nav-item">
                 <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
@@ -1438,7 +1480,9 @@
         </div>
         <div class="flq-fancybox-head">
           <div class="container-fluid">
-            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt=""></a>
+            <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
+              <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="logo-sehatra">
+            </a>
             <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
           </div>
         </div>
