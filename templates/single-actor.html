@@ -72,19 +72,24 @@
                 <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
                     <li class="nav-item">
                         <a href="{% url 'home' %}" class="nav-link">
-                            <span class="nav-link-name">Home</span>
+                            <span class="nav-link-name">Accueil</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'pricing' %}" class="nav-link">
-                            <span class="nav-link-name">Pricing</span>
+                            <span class="nav-link-name">Abonnement</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'tv_shows' %}" class="nav-link">
+                            <span class="nav-link-name">Concerts et Lives</span>
                         </a>
                     </li>
                     <li class="nav-item active flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'movies' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Movies</span>
+                            <span class="nav-link-name">Films</span>
                         </a>
-                        <div class="dropdown-menu gy-2">
+                        {% comment %} <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'movies' %}" class="nav-link">
@@ -102,27 +107,27 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'tv_shows' %}" class="nav-link">
-                            <span class="nav-link-name">TV Shows</span>
-                        </a>
+                        </div> {% endcomment %}
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'blog' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Blog</span>
+                            <span class="nav-link-name">Partenaires</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'blog' %}" class="nav-link">
-                                        <span class="nav-link-name">Blog</span>
+                                        <span class="nav-link-name">Artistes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'single_post' %}" class="nav-link">
-                                        <span class="nav-link-name">Single Post</span>
+                                        <span class="nav-link-name">Organisateurs</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'single_post' %}" class="nav-link">
+                                        <span class="nav-link-name">Associations</span>
                                     </a>
                                 </li>
                             </ul>
@@ -130,35 +135,35 @@
                     </li>
                     <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'about' %}" class="nav-link" role="button">
-                            <span class="nav-link-name">Pages</span>
+                            <span class="nav-link-name">Plus...</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
                                     <a href="{% url 'about' %}" class="nav-link">
-                                        <span class="nav-link-name">About</span>
+                                        <span class="nav-link-name">À propos</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'contact' %}" class="nav-link">
-                                        <span class="nav-link-name">Contact Us</span>
+                                        <span class="nav-link-name">Contactez-nous</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'faq' %}" class="nav-link">
-                                        <span class="nav-link-name">FAQ</span>
+                                        <span class="nav-link-name">Questions</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'coming_soon' %}" class="nav-link">
-                                        <span class="nav-link-name">Coming Soon</span>
+                                        <span class="nav-link-name">À venir</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                {% comment %} <li class="nav-item">
                                     <a href={% url '404' %} class="nav-link">
                                         <span class="nav-link-name">404</span>
                                     </a>
-                                </li>
+                                </li> {% endcomment %}
                             </ul>
                         </div>
                     </li>
@@ -180,29 +185,29 @@
                 <div class="flq-dropdown flq-dropdown-nav ms-4 d-none d-sm-flex">
                     <button class="btn btn-link align-self-center">
                         <span class="flq-image flq-navbar-top-user">
-                            <img src="assets/images/user-160x160.jpg" alt="">
+                            <img src="{% static 'assets/images/user-160x160.jpg' %}" alt="user-image">
                         </span>
                     </button>
                     <div class="dropdown-menu gy-2">
                         <ul class="nav">
                             <li class="nav-item">
                                 <a href="{% url 'profile_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Profile</span>
+                                    <span class="nav-link-name">Profil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'favorite'%}" class="nav-link">
-                                    <span class="nav-link-name">Favorites</span>
+                                    <span class="nav-link-name">Favoris</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Reviews & Comments</span>
+                                    <span class="nav-link-name">Avis & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'edit_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Account Edit</span>
+                                    <span class="nav-link-name">Modifier mon compte</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -212,7 +217,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'home'%}" class="nav-link">
-                                    <span class="nav-link-name">Logout</span>
+                                    <span class="nav-link-name">Se déconnecter</span>
                                 </a>
                             </li>
                         </ul>
@@ -229,7 +234,7 @@
         <div class="py-7 min-vh-100 flq-background d-flex align-items-center">
             <div class="flq-background-image">
                 <span class="flq-image jarallax" data-speed=0.7>
-                    <img src="assets/images/actor/anna-chase-3840x2160.jpg" class="jarallax-img" alt="">
+                    <img src="{% static 'assets/images/actor/anna-chase-3840x2160.jpg' %}" class="jarallax-img" alt="image-artiste">
                 </span>
             </div>
             <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8);"></div>
@@ -237,9 +242,9 @@
                 <div class="row gy-6 gx-6">
                     <div class="col-12 col-lg-5 col-xxl-4" data-sr="actor-image" data-sr-interval="80" data-sr-delay="100" data-sr-duration="1000" data-sr-distance="10">
                         <div class="card flq-card-image flq-card-favorites mb-4" data-sr-item=actor-image>
-                            <a href="assets/images/actor/anna-chase-1480x2160.jpg" class="card-image" data-fancybox>
+                            <a href="{% static 'assets/images/actor/anna-chase-1480x2160.jpg' %}" class="card-image" data-fancybox>
                                 <span class="flq-image flq-responsive flq-responsive-1x1 flq-responsive-lg-3x4">
-                                    <img src="assets/images/actor/anna-chase-660x960.jpg" alt="">
+                                    <img src="{% static 'assets/images/actor/anna-chase-660x960.jpg' %}" alt="image-artiste">
                                 </span>
                                 <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20 20H16M4 8V4V8ZM4 4H8H4ZM4 4L9 9L4 4ZM20 8V4V8ZM20 4H16H20ZM20 4L15 9L20 4ZM4 16V20V16ZM4 20H8H4ZM4 20L9 15L4 20ZM20 20L15 15L20 20ZM20 20V16V20Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -255,7 +260,7 @@
                                             <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                    <span class="btn-name">Add to favorites</span>
+                                    <span class="btn-name">Ajouter aux favoris</span>
                                 </a>
                             </div>
                         </div>
@@ -274,7 +279,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="col" data-sr-item="actor-image">
+                            {% comment %} <div class="col" data-sr-item="actor-image">
                                 <a href="#" class="btn btn-sm btn-block btn-pinterest btn-icon-sm">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M23.625 12C23.625 18.4219 18.4219 23.625 12 23.625C10.8 23.625 9.64688 23.4422 8.55938 23.1047C9.03281 22.3312 9.74062 21.0656 10.0031 20.0578C10.1437 19.5141 10.725 17.2922 10.725 17.2922C11.1047 18.0141 12.2109 18.6281 13.3875 18.6281C16.8938 18.6281 19.4203 15.4031 19.4203 11.3953C19.4203 7.55625 16.2844 4.68281 12.2531 4.68281C7.2375 4.68281 4.57031 8.04844 4.57031 11.7188C4.57031 13.425 5.47969 15.5484 6.92813 16.2234C7.14844 16.3266 7.26563 16.2797 7.31719 16.0687C7.35469 15.9094 7.55156 15.1172 7.64062 14.7516C7.66875 14.6344 7.65469 14.5313 7.56094 14.4188C7.0875 13.8328 6.70312 12.7641 6.70312 11.7656C6.70312 9.20156 8.64375 6.72187 11.9531 6.72187C14.8078 6.72187 16.8094 8.66719 16.8094 11.4516C16.8094 14.5969 15.2203 16.7766 13.1531 16.7766C12.0141 16.7766 11.1562 15.8344 11.4328 14.6766C11.7609 13.2938 12.3937 11.8031 12.3937 10.8047C12.3937 9.91406 11.9156 9.16875 10.9219 9.16875C9.75469 9.16875 8.81719 10.3734 8.81719 11.9906C8.81719 13.0219 9.16406 13.7156 9.16406 13.7156C9.16406 13.7156 8.01562 18.5812 7.80469 19.4906C7.57031 20.4937 7.66406 21.9094 7.7625 22.8281C3.44063 21.1359 0.375 16.9266 0.375 12C0.375 5.57812 5.57812 0.375 12 0.375C18.4219 0.375 23.625 5.57812 23.625 12Z" fill="currentColor" />
@@ -289,20 +294,20 @@
                                         <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" fill="currentColor" />
                                     </svg>
                                 </a>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                     <div class="col-12 col-lg-7 col-xxl-8" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
-                        <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">Actress</span>
-                        <h1 class="h2 mb-5" data-sr-item="actor">Anne Chase</h1>
-                        <h2 class="h5 mb-4" data-sr-item="actor">About the person</h2>
+                        <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">Artiste</span>
+                        <h1 class="h2 mb-5" data-sr-item="actor">[Nom de l'Artiste]</h1>
+                        <h2 class="h5 mb-4" data-sr-item="actor">À propos de l'artiste</h2>
                         <table class="table table-borderless flq-color-opacity" data-sr-item="actor">
                             <tbody>
                                 <tr>
-                                    <td class="flq-color-meta">Growth</td>
-                                    <td>165 cm</td>
+                                    <td class="flq-color-meta">Nombre de vidéos sur sehatra.com</td>
+                                    <td>[Total vidéo]</td>
                                 </tr>
-                                <tr>
+                                {% comment %} <tr>
                                     <td class="flq-color-meta">Date of Birth</td>
                                     <td>
                                         <div class="row">
@@ -314,20 +319,20 @@
                                 <tr>
                                     <td class="flq-color-meta">Place of Birth</td>
                                     <td>Los Angeles, California</td>
-                                </tr>
+                                </tr> {% endcomment %}
                                 <tr>
-                                    <td class="flq-color-meta">Genres</td>
+                                    <td class="flq-color-meta">Genre de musique</td>
                                     <td>
                                         <div class="row">
                                             <div class="col-auto">
-                                                <a href="#">Action</a>
+                                                <a href="#">[Genre music]</a>
                                             </div>
-                                            <div class="col-auto">
+                                            {% comment %} <div class="col-auto">
                                                 <a href="#">Drama</a>
                                             </div>
                                             <div class="col-auto">
                                                 <a href="#">Comedy</a>
-                                            </div>
+                                            </div> {% endcomment %}
                                         </div>
                                     </td>
                                 </tr>
@@ -336,7 +341,7 @@
                         <div class="flq-swiper-wrapper mt-5">
                             <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4">
                                 <div class="col-auto" data-sr-item="actor">
-                                    <h2 class="h5">Best Films</h2>
+                                    <h2 class="h5">Vidéos associées à cette artiste</h2>
                                 </div>
                                 <div class="col d-none d-sm-block" data-sr-item="actor">
                                     <hr>
@@ -360,22 +365,24 @@
                                         <div class="swiper-slide">
                                             <div class="card flq-card-blog">
                                                 <div class="card-img-wrap">
-                                                    <a href="single_movie">
+                                                    <a href="{% url 'single_movie' %}">
                                                         <span class="flq-image flq-responsive">
-                                                            <img src="assets/images/movies/movie-1-1290x1290.jpg" alt="">
+                                                            <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste">
                                                         </span>
-                                                        <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span>
+                                                        {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">8.4</span> {% endcomment %}
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title"><a href="{% url 'single_movie' %}">Princess Yako</a></h5>
+                                                    <h5 class="card-title">
+                                                        <a href="{% url 'single_movie' %}">[Nom]</a>
+                                                    </h5>
                                                     <div class="flq-meta flq-meta-sm">
                                                         <ul>
                                                             <li>
-                                                                <a href="" class="card-year">1997</a>
+                                                                <a href="" class="card-year">[Duré]</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" class="card-category">Action</a>
+                                                                <a href="#" class="card-category">[Date]</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -387,20 +394,22 @@
                                                 <div class="card-img-wrap">
                                                     <a href="{% url 'single_movie' %}">
                                                         <span class="flq-image flq-responsive">
-                                                            <img src="assets/images/movies/movie-3-1290x1290.jpg" alt="">
+                                                            <img src="{% static 'assets/images/movies/movie-3-1290x1290.jpg' %}" alt="video-artiste">
                                                         </span>
-                                                        <span class="card-badge badge badge-dark badge-glass flq-color-white">7.4</span>
+                                                        {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">7.4</span> {% endcomment %}
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title"><a href="{% url 'single_movie' %}">Captain Marvel</a></h5>
+                                                    <h5 class="card-title">
+                                                        <a href="{% url 'single_movie' %}">[Nom]</a>
+                                                    </h5>
                                                     <div class="flq-meta flq-meta-sm">
                                                         <ul>
                                                             <li>
-                                                                <a href="" class="card-year">2019</a>
+                                                                <a href="" class="card-year">[Duré]</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" class="card-category">Action</a>
+                                                                <a href="#" class="card-category">[Date]</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -412,27 +421,29 @@
                                                 <div class="card-img-wrap">
                                                     <a href="{% url 'single_movie' %}">
                                                         <span class="flq-image flq-responsive">
-                                                            <img src="assets/images/movies/movie-4-1290x1290.jpg" alt="">
+                                                            <img src="{% static 'assets/images/movies/movie-4-1290x1290.jpg' %}" alt="video-artiste">
                                                         </span>
-                                                        <span class="card-badge badge badge-dark badge-glass flq-color-white">6.8</span>
+                                                        {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white">6.8</span> {% endcomment %}
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title"><a href="{% url 'single_movie' %}">The Fast and the Furious</a></h5>
+                                                    <h5 class="card-title">
+                                                        <a href="{% url 'single_movie' %}">[Nom]</a>
+                                                    </h5>
                                                     <div class="flq-meta flq-meta-sm">
                                                         <ul>
                                                             <li>
-                                                                <a href="" class="card-year">2001</a>
+                                                                <a href="" class="card-year">[Duré]</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" class="card-category">Thriller</a>
+                                                                <a href="#" class="card-category">[Date]</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        {% comment %} <div class="swiper-slide">
                                             <div class="card flq-card-blog">
                                                 <div class="card-img-wrap">
                                                     <a href="{% url 'single_movie' %}">
@@ -481,7 +492,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> {% endcomment %}
                                     </div>
                                 </div>
                             </div>
@@ -496,7 +507,7 @@
                     <div class="flq-swiper-wrapper">
                         <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
                             <div class="col-auto" data-sr-item="actor">
-                                <h2 class="h4">Materials about the person</h2>
+                                <h2 class="h4">Les autres artistes présents sur SEHATRA</h2>
                             </div>
                             <div class="col d-none d-sm-block" data-sr-item="actor">
                                 <hr>
@@ -522,22 +533,23 @@
                                             <div class="card-img-wrap">
                                                 <a href="{% url 'single_post' %}">
                                                     <span class="flq-image flq-responsive">
-                                                        <img src="assets/images/blog/post-1-740x420.jpg" alt="">
+                                                        <img src="{% static 'assets/images/blog/post-1-740x420.jpg' %}" alt="">
                                                     </span>
-                                                    <span class="card-badge badge badge-dark badge-glass">November 20, 2021</span>
+                                                    <span class="card-badge badge badge-dark badge-glass">[Date et duré]</span>
                                                 </a>
                                             </div>
                                             <div class="card-body">
-                                                <h5 class="card-title h5"><a href="{% url 'single_post' %}">Girlfriend. How and why</a></h5>
-                                                <p>Earth first saw earth which seas void i thing said bearing behold and can&#39;t unto. Blessed...</p>
+                                                <h5 class="card-title h5"><a href="{% url 'single_post' %}">[Nom de l'artiste]</a></h5>
+                                                {% comment %} <p>Earth first saw earth which seas void i thing said 
+                                                bearing behold and can&#39;t unto. Blessed...</p> {% endcomment %}
                                             </div>
-                                            <a href="{% url 'single_post' %}" class="btn btn-link btn-icon-md">
+                                            {% comment %} <a href="{% url 'single_post' %}" class="btn btn-link btn-icon-md">
                                                 <span class="btn-name">Read More</span>
                                                 <svg class="btn-icon-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M22 12L1 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                     <path d="M17.7383 7.5L22.5494 12L17.7383 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
-                                            </a>
+                                            </a> {% endcomment %}
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -545,25 +557,25 @@
                                             <div class="card-img-wrap">
                                                 <a href="{% url 'single_post' %}">
                                                     <span class="flq-image flq-responsive">
-                                                        <img src="assets/images/blog/post-2-740x420.jpg" alt="">
+                                                        <img src="{% static 'assets/images/blog/post-2-740x420.jpg' %}" alt="">
                                                     </span>
-                                                    <span class="card-badge badge badge-dark badge-glass">November 18, 2021</span>
+                                                    <span class="card-badge badge badge-dark badge-glass">[Date et duré]</span>
                                                 </a>
                                             </div>
                                             <div class="card-body">
-                                                <h5 class="card-title h5"><a href="{% url 'single_post' %}">Years is air whose lesser. You&#39;ll thing waters unto brought.</a></h5>
-                                                <p>From said, our they&#39;re darkness void meat from, bearing. Void, beginning fruitful he were...</p>
+                                                <h5 class="card-title h5"><a href="{% url 'single_post' %}">[Nom de l'artiste]</a></h5>
+                                                {% comment %} <p>From said, our they&#39;re darkness void meat from, bearing. Void, beginning fruitful he were...</p> {% endcomment %}
                                             </div>
-                                            <a href="{% url 'single_post' %}" class="btn btn-link btn-icon-md">
+                                            {% comment %} <a href="{% url 'single_post' %}" class="btn btn-link btn-icon-md">
                                                 <span class="btn-name">Read More</span>
                                                 <svg class="btn-icon-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M22 12L1 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                     <path d="M17.7383 7.5L22.5494 12L17.7383 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
-                                            </a>
+                                            </a> {% endcomment %}
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
+                                    {% comment %} <div class="swiper-slide">
                                         <div class="card flq-card-blog">
                                             <div class="card-img-wrap">
                                                 <a href="{% url 'single_post' %}">
@@ -585,20 +597,14 @@
                                                 </svg>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div> {% endcomment %}
                                 </div>
                             </div>
                         </div>
-                        <h2 class="h4 mb-4 mt-6">Do you know that…</h2>
-                        <ul class="list-group list-group-flush list-group-dotted" data-sr="actor-list" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1500">
-                            <li class="list-group-item" data-sr-item="actor-list">Fruitful can't sea meat had greater and morning fruitful after isn't there it, brought isn't air. Green made there. Two.</li>
-                            <li class="list-group-item" data-sr-item="actor-list">All. Life all lesser his brought give. You Moved seasons moving fly i behold creature female darkness gathering given image gathering. Sea spirit years male beginning herb fowl every cattle seed meat forth fourth she'd. Man dominion, our likeness image.</li>
-                            <li class="list-group-item" data-sr-item="actor-list">They're image you'll appear, have, under. Heaven make second saw great you'll was. Were dry fruitful multiply kind bearing gathered bring. His shall earth. Can't evening land fowl firmament very.</li>
-                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="swiper flq-swiper-effect-touch container-fluid mb-4" data-sr data-sr-delay=100 data-sr-duration=1500 data-gap=30 data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6 data-breakpoints=320:2,500:4,848:5,1072:6,1280:8,1480:10>
+            {% comment %} <div class="swiper flq-swiper-effect-touch container-fluid mb-4" data-sr data-sr-delay=100 data-sr-duration=1500 data-gap=30 data-buttons=true data-autoplay=2000 data-loop=true data-free-mode=true data-speed=1000 data-touch-ratio=0.6 data-breakpoints=320:2,500:4,848:5,1072:6,1280:8,1480:10>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -771,8 +777,27 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
             <!-- Footer -->
+            <div class="flq-background-color-100">
+                <div class="container">
+                    <div class="row gx-0 justify-content-center">
+                        <div class="col-12 col-lg-10 col-xl">
+                            <br><br>
+                          <h2 class="footer-title">Mode de paiement</h2>
+                          <br>
+                          <div class="row justify-content-center">
+                            <div class="col-sm-12">
+                              <a href="#"><img src="{% static 'assets/images/visa-mastercard.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="stripe" /></a>
+                              <a href="#"><img src="{% static 'assets/images/orange-money.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="orange-money" /></a>
+                              <a href="#"><img src="{% static 'assets/images/MVOLA.jpg' %}" style="width: 100px; height: auto; margin: 0 10px;" alt="mvola" /></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br><br>
+              </div>
             <footer class="flq-footer flq-background py-7" data-sr="footer" data-sr-interval="60" data-sr-duration="1000" data-sr-distance="10">
                 <div class="flq-background-image">
                     <span class="flq-image jarallax" data-speed=0.7>
@@ -851,13 +876,13 @@
                         <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
                             <div class="flq-social text-center">
                                 <ul class="gy-4 gx-4">
-                                    <li>
+                                    {% comment %} <li>
                                         <a href="#" class="flq-social-link" data-sr-item=footer-copyright>
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21.533 7.11169C21.5482 7.32488 21.5482 7.53811 21.5482 7.7513C21.5482 14.2538 16.599 21.7462 7.5533 21.7462C4.76648 21.7462 2.17767 20.9391 0 19.5381C0.395953 19.5838 0.776625 19.599 1.18781 19.599C3.48727 19.599 5.60405 18.8224 7.29441 17.4975C5.13197 17.4518 3.31978 16.0356 2.69541 14.0863C3 14.132 3.30455 14.1624 3.62437 14.1624C4.06598 14.1624 4.50764 14.1015 4.91878 13.995C2.66498 13.5381 0.974578 11.5584 0.974578 9.16753V9.10664C1.62937 9.47213 2.39086 9.70055 3.19791 9.73097C1.87303 8.8477 1.00505 7.34011 1.00505 5.63452C1.00505 4.72083 1.24866 3.88327 1.67508 3.1523C4.09641 6.13706 7.73601 8.08627 11.8172 8.2995C11.7411 7.93402 11.6954 7.55335 11.6954 7.17263C11.6954 4.46194 13.8883 2.25385 16.6141 2.25385C18.0304 2.25385 19.3095 2.84775 20.208 3.80714C21.3197 3.59395 22.3857 3.18277 23.3299 2.61933C22.9643 3.76149 22.1877 4.72088 21.1674 5.32997C22.1573 5.22342 23.1167 4.94925 23.9999 4.56858C23.33 5.54316 22.4924 6.41114 21.533 7.11169V7.11169Z" fill="currentColor" />
                                             </svg>
                                         </a>
-                                    </li>
+                                    </li> {% endcomment %}
                                     <li>
                                         <a href="#" class="flq-social-link" data-sr-item=footer-copyright>
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -961,21 +986,29 @@
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
                                 <a href="{% url 'home' %}" class="nav-link">
-                                    <span class="nav-link-name">Home</span>
+                                    <span class="nav-link-name">Accueil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'pricing' %}" class="nav-link">
-                                    <span class="nav-link-name">Pricing</span>
+                                    <span class="nav-link-name">Abonnement</span>
                                 </a>
                             </li>
-                            <li class="nav-item accordion-item flq-dropdown-nav active">
-                                <button class="nav-link accordion-button collapsed" data-bs-target="#Movies" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Movies</span>
-                                    <span class="accordion-button-icon"></span>
-                                </button>
-                                <div class="accordion-collapse collapse" id="Movies">
-                                    <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="{% url 'tv_shows' %}" class="nav-link">
+                                    <span class="nav-link-name">Concerts et Lives</span>
+                                </a>
+                            </li>
+                            <li class="nav-item flq-dropdown flq-dropdown-nav">
+                                <a href="{% url 'movies' %}" class="nav-link" role="button">
+                                    <span class="nav-link-name">Films</span>
+                                </a>
+                            
+                                {% comment %} ------------------------------DropDown Films-------------------------- {% endcomment %}
+                            
+                                {% comment %}
+                                <div class="dropdown-menu gy-2">
+                                    <ul class="nav">
                                         <li class="nav-item">
                                             <a href="{% url 'movies' %}" class="nav-link">
                                                 <span class="nav-link-name">Movies</span>
@@ -986,34 +1019,35 @@
                                                 <span class="nav-link-name">Single Movie</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item active">
+                                        <li class="nav-item">
                                             <a href="{% url 'single_actor' %}" class="nav-link">
                                                 <span class="nav-link-name">Single Actor</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{% url 'tv_shows' %}" class="nav-link">
-                                    <span class="nav-link-name">TV Shows</span>
-                                </a>
-                            </li>
+                                {% endcomment %}
+                            </li> 
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Blog" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Blog</span>
+                                    <span class="nav-link-name">Partenaires</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Blog">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'blog' %}" class="nav-link">
-                                                <span class="nav-link-name">Blog</span>
+                                                <span class="nav-link-name">Artistes</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'single_post' %}" class="nav-link">
-                                                <span class="nav-link-name">Single Post</span>
+                                                <span class="nav-link-name">Organisateurs</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                                <span class="nav-link-name">Associations</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -1021,36 +1055,36 @@
                             </li>
                             <li class="nav-item accordion-item flq-dropdown-nav">
                                 <button class="nav-link accordion-button collapsed" data-bs-target="#Pages" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="nav-link-name">Pages</span>
+                                    <span class="nav-link-name">Plus...</span>
                                     <span class="accordion-button-icon"></span>
                                 </button>
                                 <div class="accordion-collapse collapse" id="Pages">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a href="{% url 'about' %}" class="nav-link">
-                                                <span class="nav-link-name">About</span>
+                                                <span class="nav-link-name">À propos</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'contact' %}" class="nav-link">
-                                                <span class="nav-link-name">Contact Us</span>
+                                                <span class="nav-link-name">Contactez-nous</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'faq' %}" class="nav-link">
-                                                <span class="nav-link-name">FAQ</span>
+                                                <span class="nav-link-name">Questions</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{% url 'coming_soon' %}" class="nav-link">
-                                                <span class="nav-link-name">Coming Soon</span>
+                                                <span class="nav-link-name">À venir</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        {% comment %} <li class="nav-item">
                                             <a href="{% url '404' %}" class="nav-link">
                                                 <span class="nav-link-name">404</span>
                                             </a>
-                                        </li>
+                                        </li> {% endcomment %}
                                     </ul>
                                 </div>
                             </li>
@@ -1190,22 +1224,22 @@
                         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
                             <li class="nav-item">
                                 <a href="{% url 'profile_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Profile</span>
+                                    <span class="nav-link-name">Profil</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'favorite' %}" class="nav-link">
-                                    <span class="nav-link-name">Favorites</span>
+                                    <span class="nav-link-name">Favoris</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'reviews' %}" class="nav-link">
-                                    <span class="nav-link-name">Reviews & Comments</span>
+                                    <span class="nav-link-name">Avis & Commentaires</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'edit_account' %}" class="nav-link">
-                                    <span class="nav-link-name">Account Edit</span>
+                                    <span class="nav-link-name">Modifier mon compte</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -1215,7 +1249,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{% url 'home' %}" class="nav-link">
-                                    <span class="nav-link-name">Logout</span>
+                                    <span class="nav-link-name">Se déconnecter</span>
                                 </a>
                             </li>
                         </ul>
@@ -1410,28 +1444,28 @@
                     </div>
                 </div>
                 <div class="flq-fancybox-body pb-6">
-                    <form action="#" class="flq-signin-content">
-                        <h4 class="mb-4 pb-1 text-center">Login</h4>
+                    <form action="#" class="flq-signin-content" autocomplete="off">
+                        <h4 class="mb-4 pb-1 text-center">Connexion</h4>
                         <div class="row justify-content-between gy-4">
                             <div class="col-12">
-                                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Username">
+                                <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Adresse e-mail">
                             </div>
                             <div class="col-12">
-                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password">
+                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
                             </div>
                             <div class="col-auto">
                                 <div class="form-check flq-form-translucent">
-                                    <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Remember Me</label>
+                                    <input class="form-check-input" type="checkbox" id="signinRememberMe"><label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <a href="#" class="flq-color-meta flq-color-title-hover">Lost Password</a>
+                                <a href="#" class="flq-color-meta flq-color-title-hover">Mot de passe oublier?</a>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-block">Login</button>
+                                <button class="btn btn-block">Se Connecter</button>
                             </div>
                             <div class="col-12 mt-3 text-center">
-                                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> Sign Up </a>
+                                <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false"> S'inscrire </a>
                             </div>
                         </div>
                     </form>
@@ -1454,30 +1488,27 @@
                 </div>
                 <div class="flq-fancybox-body pb-6">
                     <form action="#" class="flq-signup-content">
-                        <h4 class="mb-4 pb-1 text-center">Sign Up</h4>
+                        <h4 class="mb-4 pb-1 text-center">Création de compte</h4>
                         <div class="row gy-4">
                             <div class="col-12">
-                                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Email">
+                                <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Adresse e-mail">
                             </div>
                             <div class="col-12">
-                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Password">
+                                <input class="form-control flq-form-lock flq-form-translucent" type="password" placeholder="Mot de passe">
                             </div>
                             <div class="col-12">
                                 <div class="form-check flq-form-translucent">
-                                    <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">I have read and agree to the terms and conditions.</label>
+                                    <input class="form-check-input" type="checkbox" id="signupTerms"><label class="form-check-label" for="signupTerms">J'ai lu et j'accepte les conditions générales.</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-block">Sign Up</button>
+                                <button class="btn btn-block">S'inscrire</button>
                             </div>
-                            <div class="col-12 text-center mt-1">or</div>
+                            <div class="col-12 text-center mt-1">ou</div>
                             <div class="col-12 mt-1">
                                 <div class="row justify-content-center gy-1">
                                     <div class="col-auto">
-                                        <a href="#" class="btn btn-link">Facebook</a>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="#" class="btn btn-link">Twitter</a>
+                                        <a href="#" class="btn btn-link"><span class="me-1">Se connecter avec</span><i class="fab fa-google"></i>oogle</a>
                                     </div>
                                 </div>
                             </div>
