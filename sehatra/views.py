@@ -68,3 +68,12 @@ def notification(request):
 
 def log_out(request):
     return render(request, 'index.html')
+
+def base(request):
+    return render(request, 'base.html')
+
+def navbartop(request):
+    return render(request, 'navbar-top.html')
+
+def footer(request):
+    return render(request, 'footer.html')

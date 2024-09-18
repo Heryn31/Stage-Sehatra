@@ -31,12 +31,11 @@ urlpatterns = [
     path('artiste/nom', views.single_artiste, name='single_artiste'), # [Nom] change le nom d'artiste
     path('organisateur/', views.organizers, name='organizers'),
     path('association/', views.associations, name='associations'),
-    
-
     path('blog/', views.blog, name='blog'),
     path('single-post/', views.single_post, name='single_post'),  
     path('a-propos/', views.about, name='about'),  
     path('contact/', views.contact, name='contact'),  
+    path('a-propos/contact/', views.contact, name='contact'),
     path('question/', views.faq, name='faq'),  
     path('a-venir/', views.coming_soon, name='coming_soon'),  
     path('404/', views.error_404, name='404'), 
