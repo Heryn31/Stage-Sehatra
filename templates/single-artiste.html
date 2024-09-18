@@ -81,11 +81,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'tv_shows' %}" class="nav-link">
+                        <a href="{% url 'concert_live' %}" class="nav-link">
                             <span class="nav-link-name">Concerts et Lives</span>
                         </a>
                     </li>
-                    <li class="nav-item active flq-dropdown flq-dropdown-nav">
+                    <li class="nav-item flq-dropdown flq-dropdown-nav">
                         <a href="{% url 'movies' %}" class="nav-link" role="button">
                             <span class="nav-link-name">Films</span>
                         </a>
@@ -109,24 +109,24 @@
                             </ul>
                         </div> {% endcomment %}
                     </li>
-                    <li class="nav-item flq-dropdown flq-dropdown-nav">
-                        <a href="{% url 'blog' %}" class="nav-link" role="button">
+                    <li class="nav-item active flq-dropdown flq-dropdown-nav">
+                        <a href="#" class="nav-link" role="button">
                             <span class="nav-link-name">Partenaires</span>
                         </a>
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
-                                <li class="nav-item">
-                                    <a href="{% url 'blog' %}" class="nav-link">
+                                <li class="nav-item active">
+                                    <a href="{% url 'artiste' %}" class="nav-link">
                                         <span class="nav-link-name">Artistes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'single_post' %}" class="nav-link">
+                                    <a href="{% url 'organizers' %}" class="nav-link">
                                         <span class="nav-link-name">Organisateurs</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'single_post' %}" class="nav-link">
+                                    <a href="{% url 'associations' %}" class="nav-link">
                                         <span class="nav-link-name">Associations</span>
                                     </a>
                                 </li>
@@ -995,7 +995,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{% url 'tv_shows' %}" class="nav-link">
+                                <a href="{% url 'concert_live' %}" class="nav-link">
                                     <span class="nav-link-name">Concerts et Lives</span>
                                 </a>
                             </li>
@@ -1036,17 +1036,17 @@
                                 <div class="accordion-collapse collapse" id="Blog">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a href="{% url 'blog' %}" class="nav-link">
+                                            <a href="{% url 'artiste' %}" class="nav-link">
                                                 <span class="nav-link-name">Artistes</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                            <a href="{% url 'organizers' %}" class="nav-link">
                                                 <span class="nav-link-name">Organisateurs</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                            <a href="{% url 'associations' %}" class="nav-link">
                                                 <span class="nav-link-name">Associations</span>
                                             </a>
                                         </li>

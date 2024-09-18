@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Concert et Live | Sehatra.com</title>
+    <title>Associations | Sehatra.com</title>
     <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
     <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
     <meta name="author" content="nK" />
@@ -74,8 +74,8 @@
                       <span class="nav-link-name">Abonnement</span>
                   </a>
               </li>
-              <li class="nav-item active">
-                  <a href="{% url 'tv_shows' %}" class="nav-link">
+              <li class="nav-item">
+                  <a href="{% url 'concert_live' %}" class="nav-link">
                       <span class="nav-link-name">Concerts et Lives</span>
                   </a>
               </li>
@@ -107,24 +107,24 @@
                   </div> {% endcomment %}
               </li>
               
-              <li class="nav-item flq-dropdown flq-dropdown-nav">
-                  <a href="{% url 'blog' %}" class="nav-link" role="button">
+              <li class="nav-item flq-dropdown flq-dropdown-nav active">
+                  <a href="#" class="nav-link" role="button">
                       <span class="nav-link-name">Partenaires</span>
                   </a>
                   <div class="dropdown-menu gy-2">
                       <ul class="nav">
                           <li class="nav-item">
-                              <a href="{% url 'blog' %}" class="nav-link">
+                              <a href="{% url 'artiste' %}" class="nav-link">
                                   <span class="nav-link-name">Artistes</span>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="{% url 'single_post' %}" class="nav-link">
+                              <a href="{% url 'organizers' %}" class="nav-link">
                                   <span class="nav-link-name">Organisateurs</span>
                               </a>
                           </li>
-                          <li class="nav-item">
-                              <a href="{% url 'single_post' %}" class="nav-link">
+                          <li class="nav-item active">
+                              <a href="{% url 'associations' %}" class="nav-link">
                                   <span class="nav-link-name">Associations</span>
                               </a>
                           </li>
@@ -332,13 +332,13 @@
       </div>
       <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
       <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
-        <h1 class="display-5 mb-1" data-sr-item="banner-text">Nos concerts et lives</h1>
+        <h1 class="display-5 mb-1" data-sr-item="banner-text">Association partenaire de SEHATRA</h1>
         <nav aria-label="breadcrumb" data-sr-item="banner-text">
           <ol class="breadcrumb flq-color-opacity">
             <li class="breadcrumb-item">
               <a href="{% url 'home' %}">Accueil</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Concerts et Lives</li>
+            <li class="breadcrumb-item active" aria-current="page">Association</li>
           </ol>
         </nav>
       </div>
@@ -353,9 +353,9 @@
                   <li class="nav-item" data-sr-item="tvshow-options">
                     <a href="#" data-filter="all" class="nav-link active"><span class="nav-link-name">Tout</span></a>
                   </li>
-                  <li class="nav-item" data-sr-item="tvshow-options">
+                  {% comment %} <li class="nav-item" data-sr-item="tvshow-options">
                     <a href="#" data-filter="romance" class="nav-link"><span class="nav-link-name">{Genre}</span></a>
-                  </li>
+                  </li> {% endcomment %}
                   {% comment %} <li class="nav-item" data-sr-item="tvshow-options">
                     <a href="#" data-filter="action" class="nav-link"><span class="nav-link-name">Action</span></a>
                   </li>
@@ -380,14 +380,14 @@
                 </ul>
               </nav>
             </div>
-            <div class="col-12 col-md-auto" data-sr data-sr-delay="160" data-sr-duration="1000" data-sr-distance="10">
+            {% comment %} <div class="col-12 col-md-auto" data-sr data-sr-delay="160" data-sr-duration="1000" data-sr-distance="10">
               <select class="form-select">
                 <option>Populaire</option>
                 <option>Meilleur note</option>
                 <option>Date</option>
                 <option>Nom</option>
               </select>
-            </div>
+            </div> {% endcomment %}
           </div>
           <div class="row gy-5 justify-content-center flq-isotope-grid">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
@@ -1109,8 +1109,8 @@
                               <span class="nav-link-name">Abonnement</span>
                           </a>
                       </li>
-                      <li class="nav-item active">
-                        <a href="{% url 'tv_shows' %}" class="nav-link">
+                      <li class="nav-item">
+                        <a href="{% url 'concert_live' %}" class="nav-link">
                             <span class="nav-link-name">Concerts et Lives</span>
                         </a>
                     </li>
@@ -1146,17 +1146,17 @@
                           <div class="accordion-collapse collapse" id="Blog">
                               <ul class="nav flex-column">
                                   <li class="nav-item">
-                                      <a href="{% url 'blog' %}" class="nav-link">
+                                      <a href="{% url 'artiste' %}" class="nav-link">
                                           <span class="nav-link-name">Artistes</span>
                                       </a>
                                   </li>
                                   <li class="nav-item">
-                                      <a href="{% url 'single_post' %}" class="nav-link">
+                                      <a href="{% url 'organizers' %}" class="nav-link">
                                           <span class="nav-link-name">Organisateurs</span>
                                       </a>
                                   </li>
-                                  <li class="nav-item">
-                                      <a href="{% url 'single_post' %}" class="nav-link">
+                                  <li class="nav-item active">
+                                      <a href="{% url 'associations' %}" class="nav-link">
                                           <span class="nav-link-name">Associations</span>
                                       </a>
                                   </li>

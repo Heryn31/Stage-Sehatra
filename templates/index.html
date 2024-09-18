@@ -39,7 +39,6 @@
   </head>  
     <body id="page" class="flq-navbar-icons-existence">
       <!-- Preloader -->
-<!-- Preloader -->
 <div class="flq-preloader">
     <div class="flq-preloader-title">
         <img src="{% static 'assets/images/logo-sehatra.png' %}" alt="Preloader Image" class="preloader-image">
@@ -50,11 +49,11 @@
         <!-- Navbar top -->
         <nav class="flq-navbar flq-navbar-top flq-navbar-top-cloud flq-navbar-top-fixed">
             <div class="flq-navbar-container container-fluid">
-                <button class="btn btn-link me-4" data-bs-toggle="offcanvas" data-bs-target="#flq_offcanvas">
+                {% comment %} <button class="btn btn-link me-4" data-bs-toggle="offcanvas" data-bs-target="#flq_offcanvas">
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </button> {% endcomment %}
                 <a href="{% url 'home' %}"  class="flq-navbar-brand me-auto me-auto me-lg-4">
                   <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="">
                 </a>
@@ -70,7 +69,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'tv_shows' %}" class="nav-link">
+                        <a href="{% url 'concert_live' %}" class="nav-link">
                             <span class="nav-link-name">Concerts et Lives</span>
                         </a>
                     </li>
@@ -94,7 +93,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'single_actor' %}" class="nav-link">
+                                    <a href="{% url 'artiste' %}" class="nav-link">
                                         <span class="nav-link-name">Single Actor</span>
                                     </a>
                                 </li>
@@ -109,17 +108,18 @@
                         <div class="dropdown-menu gy-2">
                             <ul class="nav">
                                 <li class="nav-item">
-                                    <a href="{% url 'single_actor' %}" class="nav-link">
+                                    <a href="{% url 'artiste' %}" class="nav-link">
                                         <span class="nav-link-name">Artistes</span>
                                     </a>
                                 </li>
+                                
                                 <li class="nav-item">
-                                    <a href="{% url 'single_post' %}" class="nav-link">
+                                    <a href="{% url 'organizers' %}" class="nav-link">
                                         <span class="nav-link-name">Organisateurs</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'single_post' %}" class="nav-link">
+                                    <a href="{% url 'associations' %}" class="nav-link">
                                         <span class="nav-link-name">Associations</span>
                                     </a>
                                 </li>
@@ -284,13 +284,13 @@
                                         <div>
                                             <div class="row gy-1">
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">[Nom de l'artiste]</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">[Nom de l'artiste]</a>
                                                 </div>
                                                 {% comment %} <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Julius Barnett</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Julius Barnett</a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Anthony Lindsey</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Anthony Lindsey</a>
                                                 </div> {% endcomment %}
                                             </div>
                                         </div>
@@ -351,13 +351,13 @@
                                         <div>
                                             <div class="row gy-1">
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">[Producteur]</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">[Producteur]</a>
                                                 </div>
                                                 {% comment %} <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Julius Barnett</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Julius Barnett</a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Anthony Lindsey</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Anthony Lindsey</a>
                                                 </div> {% endcomment %}
                                             </div>
                                         </div>
@@ -420,13 +420,13 @@
                                         <div>
                                             <div class="row gy-1">
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Arline Kelley</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Arline Kelley</a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Julius Barnett</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Julius Barnett</a>
                                                 </div>
                                                 <div class="col-auto" data-animejs>
-                                                    <a href="{% url 'single_actor' %}" class="btn btn-link">Anthony Lindsey</a>
+                                                    <a href="{% url 'artiste' %}" class="btn btn-link">Anthony Lindsey</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -2060,7 +2060,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{% url 'tv_shows' %}" class="nav-link">
+                                <a href="{% url 'concert_live' %}" class="nav-link">
                                     <span class="nav-link-name">Concerts et Lives</span>
                                 </a>
                             </li>
@@ -2085,7 +2085,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{% url 'single_actor' %}" class="nav-link">
+                                            <a href="{% url 'artiste' %}" class="nav-link">
                                                 <span class="nav-link-name">Single Actor</span>
                                             </a>
                                         </li>
@@ -2101,17 +2101,17 @@
                                 <div class="accordion-collapse collapse" id="Blog">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a href="{% url 'blog' %}" class="nav-link">
+                                            <a href="{% url 'artiste' %}" class="nav-link">
                                                 <span class="nav-link-name">Artistes</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                            <a href="{% url 'organizers' %}" class="nav-link">
                                                 <span class="nav-link-name">Organisateurs</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="{% url 'single_post' %}" class="nav-link">
+                                            <a href="{% url 'associations' %}" class="nav-link">
                                                 <span class="nav-link-name">Associations</span>
                                             </a>
                                         </li>
@@ -2583,7 +2583,7 @@
             </div>
         </div>
         <!-- / Popup signup -->
-        <!-- Offcanvas -->
+        {% comment %} <!-- Offcanvas -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
             <div class="offcanvas-header">
                 <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
@@ -2704,7 +2704,7 @@
                 </div>
             </div>
         </div>
-        <!-- / Offcanvas -->
+        <!-- / Offcanvas --> {% endcomment %}
         <!-- START: Scripts -->
         <!-- Object Fit Polyfill -->
          <!-- START: Scripts -->

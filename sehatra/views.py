@@ -8,16 +8,27 @@ def home(request):
 def pricing(request):
     return render(request, 'pricing.html')
 
+def concert_live(request):
+    return render(request, 'concert-live.html')
+
 def movies(request):
     return render(request, 'movies.html')
+
+def artiste(request):
+    return render(request, 'artiste.html')
+
+def organizers(request):
+    return render(request, 'organizers.html')
+
+def associations(request):
+    return render(request, 'associations.html')
+
+
 def single_movie(request):
     return render(request, 'single-movie.html')
 
-def single_actor(request):
-    return render(request, 'single-actor.html')
-
-def tv_shows(request):
-    return render(request, 'tv-shows.html')
+def single_artiste(request):
+    return render(request, 'single-artiste.html')
 
 def blog(request):
     return render(request, 'blog.html')
