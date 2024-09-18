@@ -7,6 +7,24 @@
 {% load static %}
 
 {% block content %}
+<div class="modal fade" id="cookieModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cookieModalLabel">Accepter les Cookies</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à utiliser notre site, vous acceptez l'utilisation des cookies.
+        <a href="https://www.afapdp.org/archives/2901" class="link-info" target="blank">Règlement général sur la protection des données</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="acceptCookies">Accepter</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %} Modal cookies  {% endcomment %}
   <div class="flq-swiper-wrapper flq-background">
     <div class="flq-background-overlay py-6 d-flex align-items-end align-items-md-center z-index-2">
       <div class="container d-flex justify-content-center justify-content-md-end flq-pe-none">
@@ -923,3 +941,5 @@
     </div>
   </div>
 {% endblock %}
+
+

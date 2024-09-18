@@ -94,5 +94,24 @@
     <script src="{% static 'assets/js/fliqs.min.js' %}"></script>
     <script src="{% static 'assets/js/fliqs-init.js' %}"></script>
     <!-- END: Scripts -->
+
+    <script>
+      $(document).ready(function() {
+          // Check if cookies have already been accepted
+          if (!document.cookie.includes('cookies_accepted=true')) {
+              // Show the modal if cookies haven't been accepted
+              $('#cookieModal').modal('show');
+          }
+    
+          // On click of "Accept" button
+          $('#acceptCookies').click(function() {
+              // Set a cookie indicating the user accepted the cookies
+              document.cookie = "cookies_accepted=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days expiration
+    
+              // Hide the modal
+              $('#cookieModal').modal('hide');
+          });
+      });
+    </script>
   </body>
 </html>
