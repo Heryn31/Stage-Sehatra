@@ -23,18 +23,11 @@ def organizers(request):
 def associations(request):
     return render(request, 'associations.html')
 
-
 def single_movie(request):
     return render(request, 'single-movie.html')
 
 def single_artiste(request):
     return render(request, 'single-artiste.html')
-
-def blog(request):
-    return render(request, 'blog.html')
-
-def single_post(request):
-    return render(request, 'single-post.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -66,9 +59,6 @@ def editAccount(request):
 def notification(request):
     return render(request, 'account-notifications.html')
 
-def log_out(request):
-    return render(request, 'index.html')
-
 def base(request):
     return render(request, 'base.html')
 
@@ -77,3 +67,9 @@ def navbartop(request):
 
 def footer(request):
     return render(request, 'footer.html')
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+def terms(request):
+    return render(request, 'terms.html')

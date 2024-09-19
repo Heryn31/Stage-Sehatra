@@ -74,7 +74,7 @@
     </div>
     <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
     <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
-      <h1 class="display-5 mb-1" data-sr-item="banner-text">Association partenaire de SEHATRA</h1>
+      <h1 class="display-6 display-md-5 display-lg-4 mb-1" data-sr-item="banner-text">Association Partenaire De SEHATRA</h1>
       <nav aria-label="breadcrumb" data-sr-item="banner-text">
         <ol class="breadcrumb flq-color-opacity">
           <li class="breadcrumb-item">
@@ -88,6 +88,87 @@
   <div class="content-wrap">
     <div class="py-7">
       <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+        <div class="card-title h5 mb-2" data-sr-item="new-releases">
+          <p class="fs-6 fs-md-5 fs-lg-4">
+            Ces associations ont choisi de collaborer avec SEHATRA.COM pour donner une étendue internationale à leurs actions. 
+            Rappelons que chaque vidéo sur notre plateforme contribue directement à des actions sociales ou environnementales à Madagascar.
+          </p>
+        </div>
+        <div class="mb-4 mt-4" data-sr-item="new-releases">
+          <button class="btn btn-outline btn-white" data-bs-toggle="modal" data-bs-target="#inscriptionModal">Inscrivez votre association</button>
+          <!-- Modal -->
+          <div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="inscriptionModalLabel">Formulaire Association</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. 
+                    Veuillez remplir le formulaire ci-dessous avec les informations sur votre association.
+                  </p>
+                  <form>
+                    <fieldset>
+                      <legend>Vous</legend>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control required-field" id="nom" placeholder="Nom *" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control" id="prenom" placeholder="Prénom" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="tel" class="form-control" id="telephone" placeholder="Numéro téléphone" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="email" class="form-control required-field" id="emailYou" placeholder="E-mail *" required />
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <legend>Votre association</legend>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control required-field" id="nomAssociation" placeholder="Nom de l'association *" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="email" class="form-control required-field" id="emailAssociation" placeholder="E-mail *" required />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <label for="domaineIntervention" class="form-label">Domaine d'intervention *</label>
+                          <select id="domaineIntervention" class="form-select required-field" required>
+                            <option value="" disabled selected>Sélectionnez un domaine</option>
+                            <option value="social">Social</option>
+                            <option value="environnemental">Environnemental</option>
+                          </select>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <textarea class="form-control required-field" id="presentation" rows="3" placeholder="Décrivez votre activité en quelques phrases *" required></textarea>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-primary">
+                        Envoyer<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row align-items-center gy-4 mb-5">
           <div class="col-12 col-md">
             <nav>
@@ -105,8 +186,9 @@
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
                   <a href="{% url 'single_movie' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" /></span>
-                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
+                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                      <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" />
+                    </span>
                   </a>
                 </div>
                 <div class="card-body">
@@ -130,8 +212,9 @@
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
                   <a href="{% url 'single_movie' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="concert-live" /></span>
-                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.9</span> {% endcomment %}
+                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                      <img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="concert-live" />
+                    </span>
                   </a>
                 </div>
                 <div class="card-body">
