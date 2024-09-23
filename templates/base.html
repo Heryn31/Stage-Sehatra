@@ -5,28 +5,52 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      {% block title %}
-        Sehatra.com - Live Streaming Malagasy - Film Gasy - Concerts
-      {% endblock %}
+      {% block title %} Sehatra.com - Live Streaming Malagasy - Film Gasy -
+      Concerts {% endblock %}
     </title>
     <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
-    <meta name="keywords" content="gaming, game, esports, community, template, html, bootstrap, webpack" />
+    <meta
+      name="keywords"
+      content="gaming, game, esports, community, template, html, bootstrap, webpack"
+    />
     <meta name="author" content="nK" />
-    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.ico' %}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'assets/images/favicon.ico' %}"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- START: Styles -->
     <!-- Lien CDN pour Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap"
+    />
     <!-- Bootstrap -->
     <!-- <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/dist/css/bootstrap.min.css' %}" /> -->
     <!-- Swiper -->
-    <link rel="stylesheet" href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+    />
     <!-- Fancybox -->
-    <link rel="stylesheet" href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}"
+    />
     <!-- Fliqs -->
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/bootstrap-custom.css' %}"
+    />
     <link rel="stylesheet" href="{% static 'assets/css/fliqs.css' %}" />
     <!-- RTL (use these styles with RTL support) -->
     <!--      
@@ -42,21 +66,18 @@
     <script src="{% static 'assets/js/preloader.min.js' %}"></script>
   </head>
   <body id="page" class="flq-navbar-icons-existence">
-    
     <!-- navbar -->
     {% include 'navbar-top.html' %}
     <!-- navbar -->
 
     <main>
       {% block content %}
-        <!-- Default content goes here -->
+      <!-- Default content goes here -->
       {% endblock %}
     </main>
 
     <!-- Footer -->
-    {% block footer %}
-      {% include 'footer.html' %}
-    {% endblock %}
+    {% block footer %} {% include 'footer.html' %} {% endblock %}
     <!-- /Footer -->
 
     <!-- START: Scripts -->
@@ -93,25 +114,132 @@
     <!-- Fliqs -->
     <script src="{% static 'assets/js/fliqs.min.js' %}"></script>
     <script src="{% static 'assets/js/fliqs-init.js' %}"></script>
+
+    <!-- FLuid player CDN  -->
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <!-- END: Scripts -->
 
     <script>
-      $(document).ready(function() {
-          // Check if cookies have already been accepted
-          if (!document.cookie.includes('cookies_accepted=true')) {
-              // Show the modal if cookies haven't been accepted
-              $('#cookieModal').modal('show');
-          }
-    
-          // On click of "Accept" button
-          $('#acceptCookies').click(function() {
-              // Set a cookie indicating the user accepted the cookies
-              document.cookie = "cookies_accepted=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days expiration
-    
-              // Hide the modal
-              $('#cookieModal').modal('hide');
-          });
+      $(document).ready(function () {
+        // Check if cookies have already been accepted
+        if (!document.cookie.includes("cookies_accepted=true")) {
+          // Show the modal if cookies haven't been accepted
+          $("#cookieModal").modal("show");
+        }
+
+        // On click of "Accept" button
+        $("#acceptCookies").click(function () {
+          // Set a cookie indicating the user accepted the cookies
+          document.cookie =
+            "cookies_accepted=true; path=/; max-age=" + 60 * 60 * 24 * 30; // 30 days expiration
+
+          // Hide the modal
+          $("#cookieModal").modal("hide");
+        });
       });
     </script>
+
+    <!-- Script Fluid player  -->
+    <script>
+      const player = fluidPlayer("my-video", {
+        layoutControls: {
+          controlBar: {
+            autoHideTimeout: 3,
+            animated: true,
+            autoHide: true,
+          },
+          htmlOnPauseBlock: {
+            html: null,
+            height: null,
+            width: null,
+          },
+          autoPlay: false,
+          mute: false,
+          allowTheatre: true,
+          playPauseAnimation: false,
+          playbackRateEnabled: false,
+          allowDownload: false,
+          playButtonShowing: true,
+          fillToContainer: true,
+          posterImage: "",
+        },
+        vastOptions: {
+          adList: [],
+          adCTAText: false,
+          adCTATextPosition: "",
+        },
+      });
+
+      // Video resume system
+      let currentTime = 0;
+      let firstPlay = true;
+
+      const videoELement = document.getElementById("my-video");
+      // Listen for time updates
+      player.on("timeupdate", function (time) {
+        currentTime = time; // Store the current time from the timeupdate event
+      });
+
+      // Load the saved time from cookies when the player is ready
+      player.on("play", function () {
+        if (firstPlay) {
+          const savedTime = getCookie("videoTime");
+
+          if (savedTime && savedTime > 0) {
+            // Show the modal if saved time is available
+            $("#resumeModal").modal("show");
+
+            // When user clicks to resume video
+            document
+              .getElementById("resumeVideo")
+              .addEventListener("click", function () {
+                player.skipTo(savedTime);
+                $("#resumeModal").modal("hide");
+              });
+
+            // When user clicks to start from the beginning
+            document
+              .getElementById("startFresh")
+              .addEventListener("click", function () {
+                player.skipTo(0);
+                console.log("Video started from the beginning");
+                $("#resumeModal").modal("hide");
+              });
+          }
+        }
+        firstPlay = false;
+      });
+      // Save the current time in cookies when the video is paused
+      player.on("pause", function () {
+        setCookie("videoTime", currentTime, 1); // Use the stored current time
+        console.log("Cookie set to: " + currentTime); // Log for debugging
+      });
+
+      // Save time on page unload as well
+      window.addEventListener("beforeunload", function () {
+        setCookie("videoTime", currentTime, 1);
+      });
+
+      // Cookie helper functions
+      function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie =
+          name +
+          "=" +
+          encodeURIComponent(value) +
+          "; expires=" +
+          expires +
+          "; path=/";
+      }
+
+      function getCookie(name) {
+        return document.cookie.split("; ").reduce((r, v) => {
+          const parts = v.split("=");
+          return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+        }, "");
+      }
+    </script>
+
+    <!-- Video resume cookie system -->
   </body>
 </html>
