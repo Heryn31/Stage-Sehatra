@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Vidéo Sehatra.com - Plateforme de vidéo Vita Malagasy | Sehatra.com
+    Vidéo Sehatra.com - Plateforme de vidéo Vita Malagasy sur Sehatra.com
 {% endblock %}
 
 {% load static %}
 
-{% block content %}                            
+{% block content %}                       
     <div class="py-7 min-vh-100 flq-background d-flex align-items-center">
         <div class="flq-background-image">
-            <span class="flq-image jarallax" data-speed=0.7>
+            <span class="flq-image jarallax" data-speed="0.7">
                 <img src="{% static 'assets/images/actor/anna-chase-3840x2160.jpg' %}" class="jarallax-img" alt="">
             </span>
         </div>
@@ -77,21 +77,33 @@
                 </div>
                 <div class="col-12 col-lg-7 col-xxl-8" data-sr="actor" data-sr-interval="80" data-sr-duration="1000"
                     data-sr-distance="10">
-                    <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">Artiste</span>
-                        <h1 class="h2 mb-5" data-sr-item="actor">[Nom de l'Artiste]</h1>
-                        <h2 class="h5 mb-4" data-sr-item="actor">À propos de l'artiste</h2>
+                    <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">
+                        {{data.partner}}
+                    </span>
+                        <h1 class="h2 mb-5" data-sr-item="actor">
+                            {{data.title}}
+                        </h1>
+                        <h2 class="h5 mb-4" data-sr-item="actor">
+                            {{data.about_partner}}
+                        </h2>
                         <table class="table table-borderless flq-color-opacity" data-sr-item="actor">
                             <tbody>
                                 <tr>
-                                    <td class="flq-color-meta">Nombre de vidéos sur sehatra.com</td>
-                                    <td>[Total vidéo]</td>
+                                    <td class="flq-color-meta" style="white-space: nowrap;">Nombre de vidéos sur sehatra.com</td>
+                                    <td>
+                                        {{data.nbr_video}}
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td class="flq-color-meta">Genre de musique</td>
+                                    <td class="col-auto flq-color-meta">
+                                        Détails du partenaires
+                                    </td>
                                     <td>
                                         <div class="row">
                                             <div class="col-auto">
-                                                <a href="#">[Genre music]</a>
+                                                <a>
+                                                    {{ data.detail }}
+                                                </a>
                                             </div>
                                         </div>
                                     </td>
@@ -101,7 +113,9 @@
                     <div class="flq-swiper-wrapper mt-5">
                         <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4">
                             <div class="col-auto" data-sr-item="actor">
-                                <h2 class="h5">Vidéos associées à cette artiste</h2>
+                                <h2 class="h5">
+                                    {{data.associate}}
+                                </h2>
                             </div>
                             <div class="col d-none d-sm-block" data-sr-item="actor">
                                 <hr>
@@ -132,7 +146,7 @@
                                     <div class="swiper-slide">
                                         <div class="card flq-card-blog">
                                             <div class="card-img-wrap">
-                                                <a href="{% url 'single_movie' %}">
+                                                <a href="{% url 'single_movie' name=data.name %}">
                                                     <span class="flq-image flq-responsive">
                                                         <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste">
                                                     </span>
@@ -140,119 +154,21 @@
                                             </div>
                                             <div class="card-body">
                                                 <h5 class="card-title">
-                                                    <a href="{% url 'single_movie' %}">[Nom]</a>
+                                                    <a href="{% url 'single_movie' name=data.name %}">
+                                                        {{ data.title }}
+                                                    </a>
                                                 </h5>
                                                 <div class="flq-meta flq-meta-sm">
                                                     <ul>
                                                         <li>
-                                                            <a href="" class="card-year">[Duré]</a>
+                                                            <a href="" class="card-year">
+                                                                {{ data.duration }}
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#" class="card-category">[Date]</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card flq-card-blog">
-                                            <div class="card-img-wrap">
-                                                <a href="{% url 'single_movie' %}">
-                                                    <span class="flq-image flq-responsive">
-                                                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste">
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    <a href="{% url 'single_movie' %}">[Nom]</a>
-                                                </h5>
-                                                <div class="flq-meta flq-meta-sm">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="" class="card-year">[Duré]</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="card-category">[Date]</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card flq-card-blog">
-                                            <div class="card-img-wrap">
-                                                <a href="{% url 'single_movie' %}">
-                                                    <span class="flq-image flq-responsive">
-                                                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste">
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    <a href="{% url 'single_movie' %}">[Nom]</a>
-                                                </h5>
-                                                <div class="flq-meta flq-meta-sm">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="" class="card-year">[Duré]</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="card-category">[Date]</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card flq-card-blog">
-                                            <div class="card-img-wrap">
-                                                <a href="{% url 'single_movie' %}">
-                                                    <span class="flq-image flq-responsive">
-                                                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste">
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    <a href="{% url 'single_movie' %}">[Nom]</a>
-                                                </h5>
-                                                <div class="flq-meta flq-meta-sm">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="" class="card-year">[Duré]</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="card-category">[Date]</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card flq-card-blog">
-                                            <div class="card-img-wrap">
-                                                <a href="single-movie.html">
-                                                    <span class="flq-image flq-responsive">
-                                                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste">
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    <a href="{% url 'single_movie' %}">[Nom]</a>
-                                                </h5>
-                                                <div class="flq-meta flq-meta-sm">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="" class="card-year">[Duré]</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="card-category">[Date]</a>
+                                                            <a href="#" class="card-category">
+                                                                {{data.date}}
+                                                            </a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -273,7 +189,9 @@
                     <div class="flq-swiper-wrapper">
                         <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
                             <div class="col-auto" data-sr-item="actor">
-                                <h2 class="h4">Les autres artistes présents sur SEHATRA</h2>
+                                <h2 class="h4">
+                                    {{ data.other }}
+                                </h2>
                             </div>
                             <div class="col d-none d-sm-block" data-sr-item="actor">
                                 <hr>
@@ -297,30 +215,21 @@
                                     <div class="swiper-slide">
                                         <div class="card flq-card-blog">
                                             <div class="card-img-wrap">
-                                                <a href="{% url 'single_post' %}">
+                                                <a href="{% url 'single_movie' name=data.name %}">
                                                     <span class="flq-image flq-responsive">
                                                         <img src="{% static 'assets/images/blog/post-1-740x420.jpg' %}" alt="">
                                                     </span>
-                                                    <span class="card-badge badge badge-dark badge-glass">[Date et duré]</span>
-                                                </a>
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title h5"><a href="{% url 'single_post' %}">[Nom de l'artiste]</a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card flq-card-blog">
-                                            <div class="card-img-wrap">
-                                                <a href="{% url 'single_post' %}">
-                                                    <span class="flq-image flq-responsive">
-                                                        <img src="{% static 'assets/images/blog/post-2-740x420.jpg' %}" alt="">
+                                                    <span class="card-badge badge badge-dark badge-glass">                                                       
+                                                        {{ data.date }} 
                                                     </span>
-                                                    <span class="card-badge badge badge-dark badge-glass">[Date et duré]</span>
                                                 </a>
                                             </div>
                                             <div class="card-body">
-                                                <h5 class="card-title h5"><a href="{% url 'single_post' %}">[Nom de l'artiste]</a></h5>
+                                                <h5 class="card-title h5">
+                                                     <a href="{% url 'single_movie' name=data.name %}">
+                                                        {{data.title}}
+                                                    </a>
+                                                </h5>
                                             </div>
                                         </div>
                                     </div>

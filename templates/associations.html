@@ -89,10 +89,7 @@
     <div class="py-7">
       <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
         <div class="card-title h5 mb-2" data-sr-item="new-releases">
-          <p class="fs-6 fs-md-5 fs-lg-4">
-            Ces associations ont choisi de collaborer avec SEHATRA.COM pour donner une étendue internationale à leurs actions. 
-            Rappelons que chaque vidéo sur notre plateforme contribue directement à des actions sociales ou environnementales à Madagascar.
-          </p>
+          <p class="fs-6 fs-md-5 fs-lg-4">Ces associations ont choisi de collaborer avec SEHATRA.COM pour donner une étendue internationale à leurs actions. Rappelons que chaque vidéo sur notre plateforme contribue directement à des actions sociales ou environnementales à Madagascar.</p>
         </div>
         <div class="mb-4 mt-4" data-sr-item="new-releases">
           <button class="btn btn-outline btn-white" data-bs-toggle="modal" data-bs-target="#inscriptionModal">Inscrivez votre association</button>
@@ -105,9 +102,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. 
-                    Veuillez remplir le formulaire ci-dessous avec les informations sur votre association.
-                  </p>
+                  <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. Veuillez remplir le formulaire ci-dessous avec les informations sur votre association.</p>
                   <form>
                     <fieldset>
                       <legend>Vous</legend>
@@ -181,25 +176,27 @@
           </div>
         </div>
         <div class="row gy-5 justify-content-center flq-isotope-grid">
+          {% for data in associations %}
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
             <div data-sr-item="tvshow-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' %}">
+                  <a href="{% url 'association_details' name=data.name %}">
                     <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
-                      <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" />
-                    </span>
-                  </a>
+                    <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" />
+                  </span>
+                </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_movie' %}">{Exemple titre}</a></h5>
+                  <h5 class="card-title h6">
+                    <a href="{% url 'association_details' name=data.name %}">
+                      {{data.title}}
+                  </a>
+                </h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="#" class="card-year">{Date}</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">{Genre}</a>
+                        <a href="#" class="card-category">{{data.action}}</a>
                       </li>
                     </ul>
                   </div>
@@ -207,32 +204,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="horror">
-            <div data-sr-item="tvshow-item">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
-                      <img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="concert-live" />
-                    </span>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_movie' %}">{Exemple titre 2}</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="#" class="card-year">{Date}</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">{Genre}</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="text-center mt-5" data-sr-item="tvshow-item">

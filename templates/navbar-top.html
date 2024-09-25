@@ -18,49 +18,49 @@
     </button>
     <a href="{% url 'home' %}" class="flq-navbar-brand me-auto me-auto me-lg-4"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
     <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
-      <li class="nav-item">
+      <li class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
         <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Accueil</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item  {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">
         <a href="{% url 'pricing' %}" class="nav-link"><span class="nav-link-name">Abonnement</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item  {% if request.resolver_match.url_name == 'concert_live' %}active{% endif %}">
         <a href="{% url 'concert_live' %}" class="nav-link"><span class="nav-link-name">Concerts et Lives</span></a>
       </li>
-      <li class="nav-item flq-dropdown flq-dropdown-nav">
+      <li class="nav-item  {% if request.resolver_match.url_name == 'movies' %}active{% endif %}">
         <a href="{% url 'movies' %}" class="nav-link" role="button"><span class="nav-link-name">Films</span></a>
       </li>
 
-      <li class="nav-item flq-dropdown flq-dropdown-nav">
+      <li class="nav-item flq-dropdown flq-dropdown-nav {% if request.resolver_match.url_name == 'artiste' or request.resolver_match.url_name == 'organizers' or request.resolver_match.url_name == 'associations' %}active{% endif %}">
         <a href="#" class="nav-link" role="button"><span class="nav-link-name">Partenaires</span></a>
         <div class="dropdown-menu gy-2">
           <ul class="nav">
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'artiste' %}active{% endif %}">
               <a href="{% url 'artiste' %}" class="nav-link"><span class="nav-link-name">Artistes</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'organizers' %}active{% endif %}">
               <a href="{% url 'organizers' %}" class="nav-link"><span class="nav-link-name">Organisateurs</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'associations' %}active{% endif %}">
               <a href="{% url 'associations' %}" class="nav-link"><span class="nav-link-name">Associations</span></a>
             </li>
           </ul>
         </div>
       </li>
-      <li class="nav-item flq-dropdown flq-dropdown-nav">
+      <li class="nav-item flq-dropdown flq-dropdown-nav {% if request.resolver_match.url_name in 'about contact faq coming_soon' %}active{% endif %}">
         <a href="#" class="nav-link" role="button"><span class="nav-link-name">Plus</span></a>
         <div class="dropdown-menu gy-2">
           <ul class="nav">
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
               <a href="{% url 'about' %}" class="nav-link"><span class="nav-link-name">À propos</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
               <a href="{% url 'contact' %}" class="nav-link"><span class="nav-link-name">Contactez-nous</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
               <a href="{% url 'faq' %}" class="nav-link"><span class="nav-link-name">Questions</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.resolver_match.url_name == 'coming_soon' %}active{% endif %}">
               <a href="{% url 'coming_soon' %}" class="nav-link"><span class="nav-link-name">À venir</span></a>
             </li>
           </ul>
@@ -85,19 +85,19 @@
       <button class="btn btn-link align-self-center"><span class="flq-image flq-navbar-top-user"><img src="{% static 'assets/images/user.svg' %}" alt="" /></span></button>
       <div class="dropdown-menu gy-2">
         <ul class="nav">
-          <li class="nav-item">
+          <li class="nav-item {% if request.resolver_match.url_name == 'profile_account' %}active{% endif %}">
             <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profil</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {% if request.resolver_match.url_name == 'favorite' %}active{% endif %}">
             <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {% if request.resolver_match.url_name == 'reviews' %}active{% endif %}">
             <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis & Commentaires</span></a>
           </li>
-          <li class="nav-item">
-            <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon profile</span></a>
+          <li class="nav-item {% if request.resolver_match.url_name == 'edit_account' %}active{% endif %}">
+            <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon profil</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {% if request.resolver_match.url_name == 'notification' %}active{% endif %}">
             <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
           </li>
           <li class="nav-item">

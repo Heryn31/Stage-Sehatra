@@ -74,7 +74,7 @@
     </div>
     <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
     <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
-      <h1 class="display-5 mb-1" data-sr-item="banner-text">Nos concerts et lives</h1>
+      <h1 class="display-6 display-md-5 display-lg-4 mb-1" data-sr-item="banner-text">Nos concerts et lives</h1>
       <nav aria-label="breadcrumb" data-sr-item="banner-text">
         <ol class="breadcrumb flq-color-opacity">
           <li class="breadcrumb-item">
@@ -115,22 +115,25 @@
             <div data-sr-item="tvshow-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' %}">
+                  <a href="{% url 'single_movie' name='single-movie-name' %}">
                     <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
                       <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" />
                     </span>
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_movie' %}">{Exemple titre}</a></h5>
+                  <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">
+                      {{concert_live.title}}
+                  </a>
+                </h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="#" class="card-year">{Date}</a>
+                        <a href="#" class="card-year">{{concert_live.price}}</a>
                       </li>
-                      <li>
+                      {% comment %} <li>
                         <a href="#" class="card-category">{Genre}</a>
-                      </li>
+                      </li> {% endcomment %}
                     </ul>
                   </div>
                 </div>
@@ -141,14 +144,14 @@
             <div data-sr-item="tvshow-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' %}">
+                  <a href="{% url 'single_movie' name='single-movie-name' %}">
                     <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
                       <img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="concert-live" />
                     </span>
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_movie' %}">{Exemple titre 2}</a></h5>
+                  <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">{Exemple titre 2}</a></h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>

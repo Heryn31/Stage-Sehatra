@@ -74,7 +74,7 @@
     </div>
     <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
     <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
-      <h1class="display-6 display-md-5 display-lg-4 mb-1" data-sr-item="banner-text">Artistes Présents Sur SEHATRA</h1>
+      <h1 class="display-6 display-md-5 display-lg-4 mb-1" data-sr-item="banner-text">Artistes Présents Sur SEHATRA</h1>
       <nav aria-label="breadcrumb" data-sr-item="banner-text">
         <ol class="breadcrumb flq-color-opacity">
           <li class="breadcrumb-item">
@@ -174,24 +174,25 @@
           </div>
         </div>
         <div class="row gy-5 justify-content-center flq-isotope-grid">
+          {% for data in artiste %}
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
             <div data-sr-item="tvshow-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'single_artiste' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" /></span>
-                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">7.2</span> {% endcomment %}
+                  <a href="{% url 'artiste_details' name=data.name %}">
+                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
+                      <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span>
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_artiste' %}">{Exemple titre}</a></h5>
+                  <h5 class="card-title h6"><a href="{% url 'artiste_details' name=data.name %}">{{data.title}}</a></h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="#" class="card-year">{Date}</a>
+                        <a href="#" class="card-year">{{data.date}}</a>
                       </li>
                       <li>
-                        <a href="#" class="card-category">{Genre}</a>
+                        <a href="#" class="card-category">{{data.detail}}</a>
                       </li>
                     </ul>
                   </div>
@@ -199,31 +200,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="horror">
-            <div data-sr-item="tvshow-item">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'single_artiste' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="" /></span>
-                    {% comment %} <span class="card-badge badge badge-dark badge-glass flq-color-white badge-sm">6.9</span> {% endcomment %}
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_artiste' %}">{Exemple titre 2}</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="#" class="card-year">{Date}</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">{Genre}</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <div class="text-center mt-5" data-sr-item="tvshow-item">
           <button class="btn btn-outline btn-white">Voir plus</button>
