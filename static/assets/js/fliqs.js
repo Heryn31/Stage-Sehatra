@@ -2210,3 +2210,19 @@ window.Fliqs = new FLIQS();
 }();
 /******/ })()
 ;
+
+// afficher ou cacher le mdp
+document.querySelectorAll('i[id^="toggle"]').forEach(toggleIcon => {
+  toggleIcon.addEventListener('click', function() {
+    // Sélection du champ de mot de passe associé
+    const passwordInput = this.previousElementSibling;
+    
+    // Bascule du type de champ entre 'password' et 'text'
+    const passwordType = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', passwordType);
+    
+    // Bascule de l'icône entre 'fa-eye' et 'fa-eye-slash'
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+  });
+});  

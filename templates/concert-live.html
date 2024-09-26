@@ -122,18 +122,18 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">
+                  <h5 class="card-title h6">
+                    <a href="{% url 'single_movie' name='single-movie-name' %}">
                       {{concert_live.title}}
                   </a>
                 </h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="#" class="card-year">{{concert_live.price}}</a>
+                        <a href="#" class="card-price">
+                          {{concert_live.price}}
+                        </a>
                       </li>
-                      {% comment %} <li>
-                        <a href="#" class="card-category">{Genre}</a>
-                      </li> {% endcomment %}
                     </ul>
                   </div>
                 </div>
@@ -151,14 +151,17 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">{Exemple titre 2}</a></h5>
+                  <h5 class="card-title h6">
+                    <a href="{% url 'single_movie' name='single-movie-name' %}">
+                      {{concert_live.title}}
+                    </a>
+                  </h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="#" class="card-year">{Date}</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">{Genre}</a>
+                        <a href="#" class="card-price">
+                          {{concert_live.price}}
+                        </a>
                       </li>
                     </ul>
                   </div>

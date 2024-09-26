@@ -89,15 +89,17 @@
                         <table class="table table-borderless flq-color-opacity" data-sr-item="actor">
                             <tbody>
                                 <tr>
-                                    <td class="flq-color-meta" style="white-space: nowrap;">Nombre de vidéos sur sehatra.com</td>
-                                    <td>
-                                        {{data.nbr_video}}
+                                    <td class="flq-color-meta" style="white-space: nowrap;">
+                                        Nombre de vidéos sur sehatra.com : 
+                                        <span style="margin-left: 40px;">{{data.nbr_video}}</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-auto flq-color-meta">
                                         Détails du partenaires
                                     </td>
+                                </tr>
+                                <tr>
                                     <td>
                                         <div class="row">
                                             <div class="col-auto">
@@ -109,7 +111,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table>                        
                     <div class="flq-swiper-wrapper mt-5">
                         <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4">
                             <div class="col-auto" data-sr-item="actor">
@@ -184,9 +186,28 @@
         </div>
     </div>
     <div class="content-wrap">
-            <div class="py-7">
-                <div class="container-small">
-                    <div class="flq-swiper-wrapper">
+        <div class="py-7">
+            <div class="container-small">
+                {% if type == 'association' %}
+                <h2 class="h4">
+                    Actions associées à cette association
+                </h2>
+                <div class="mt-4">
+                    <h2 class="h6">
+                        Pour une meilleure éducation des enfants autistes
+                    </h2>
+                    <span class="flq-color-meta">{{ data.title }} | {{ data.action }}</span>
+                    <p class="mt-2">
+                        {{ data.detail_action }}
+                    </p>
+                </div>
+                <div class="mt-4">
+                    <a href="https://donate.stripe.com/dR67vQcvdc5W94k3cd">
+                        <button class="btn primary">Faire un don</button>
+                    </a>
+                </div>
+                {% endif %} 
+                <div class="flq-swiper-wrapper mt-4">
                         <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
                             <div class="col-auto" data-sr-item="actor">
                                 <h2 class="h4">
@@ -209,28 +230,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper flq-swiper-effect-touch" data-sr data-sr-delay=100 data-sr-duration=1500 data-gap=30 data-buttons=true data-loop=true data-speed=800 data-touch-ratio=0.8 data-breakpoints=320:1,656:2>
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="card flq-card-blog">
-                                            <div class="card-img-wrap">
+                    <div class="swiper flq-swiper-effect-touch" data-sr data-sr-delay=100 data-sr-duration=1500 data-gap=30 data-buttons=true data-loop=true data-speed=800 data-touch-ratio=0.8 data-breakpoints=320:1,656:2>
+                        <div class="swiper-container">
+                             <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card flq-card-blog">
+                                        <div class="card-img-wrap">
+                                            <a href="{% url 'single_movie' name=data.name %}">
+                                                <span class="flq-image flq-responsive">
+                                                    <img src="{% static 'assets/images/blog/post-1-740x420.jpg' %}" alt="">
+                                                </span>
+                                                <span class="card-badge badge badge-dark badge-glass">                                                       
+                                                    {{ data.date }} 
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title h5">
                                                 <a href="{% url 'single_movie' name=data.name %}">
-                                                    <span class="flq-image flq-responsive">
-                                                        <img src="{% static 'assets/images/blog/post-1-740x420.jpg' %}" alt="">
-                                                    </span>
-                                                    <span class="card-badge badge badge-dark badge-glass">                                                       
-                                                        {{ data.date }} 
-                                                    </span>
+                                                    {{data.title}}
                                                 </a>
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title h5">
-                                                     <a href="{% url 'single_movie' name=data.name %}">
-                                                        {{data.title}}
-                                                    </a>
-                                                </h5>
-                                            </div>
+                                            </h5>
                                         </div>
                                     </div>
                                 </div>
@@ -239,5 +259,6 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 {% endblock %}

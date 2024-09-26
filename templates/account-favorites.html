@@ -15,12 +15,11 @@
             <div class="col-12" data-sr-item="account-favorites">
               <div class="flq-account-favorite">
                 <div class="flq-media">
-                  <a href="{% url 'single_movie' %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/tv-shows/show-1-120x120.jpg' %}" alt="Favoris" /></span></a>
+                  <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/tv-shows/show-1-120x120.jpg' %}" alt="Favoris" /></span></a>
                   <div class="flq-media-meta">
-                    <h5 class="flq-media-title"><a href="{% url 'single_movie' %}">[Nom du film]</a></h5>
+                    <h5 class="flq-media-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Nom du film]</a></h5>
                     <div class="flq-meta">
                       <ul>
-                        {% comment %} <li>7.2</li> {% endcomment %}
                         <li>[Date]</li>
                         <li>[Duré]</li>
                       </ul>
@@ -42,12 +41,11 @@
             <div class="col-12" data-sr-item="account-favorites">
               <div class="flq-account-favorite">
                 <div class="flq-media">
-                  <a href="{% url 'single_movie' %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/movies/movie-1-120x120.jpg' %}" alt="Favoris" /></span></a>
+                  <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/movies/movie-1-120x120.jpg' %}" alt="Favoris" /></span></a>
                   <div class="flq-media-meta">
-                    <h5 class="flq-media-title"><a href="{% url 'single_movie' %}">[Nom du film]</a></h5>
+                    <h5 class="flq-media-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Nom du film]</a></h5>
                     <div class="flq-meta">
                       <ul>
-                        {% comment %} <li>8.4</li> {% endcomment %}
                         <li>[Date]</li>
                         <li>[Duré]</li>
                       </ul>
@@ -75,10 +73,10 @@
                     <div class="flq-meta">
                       <ul>
                         <li>
-                          <a href="{% url 'single_movie' %}">[Nom du video]</a>
+                          <a href=""{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}"">[Nom du video]</a>
                         </li>
                         <li>
-                          <a href="{% url 'single_movie' %}">[Nom du video]</a>
+                          <a href=""{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}"">[Nom du video]</a>
                         </li>
                       </ul>
                     </div>

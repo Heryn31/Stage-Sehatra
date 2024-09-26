@@ -90,6 +90,7 @@ def association_details(request, name):
         'title': "Association Malgache pour l'Autisme",
         'date': "06-09-2024",
         'action': "Action Sociale",
+        'detail_action':"Nous sommes conscients de la nécessité de soutenir les autistes pour qu’ils puissent mettre en valeur leur potentiel et qu’ils puissent exercer leur droit fondamental à l’égalité des chances et au bien-être. Notre objectif fondamental est qu’ils pourront grandir dans une société davantage accessible, où ils pourront s’épanouir et accéder à l’autonomie.",
         'detail': "L’Association Malgache pour l’Autisme (AMA) est une association des parents, familles et amis de personnes autistes et de professionnels relevant du domaine de l’autisme. Elle est née à la suite d’une prise de conscience de quelques parents d’autistes de la nécessité de s’organiser pour faire avancer la cause des personnes vivant avec autisme à Madagascar.",
         'partner': "Association",
         'about_partner': "À propos de l'association",
@@ -132,10 +133,10 @@ def favorite(request):
  
 def reviews(request):
     reviews_data = [{
-        'name': 'Example Name',  # Remplacez par la valeur souhaitée
-        'title': 'Example Title',  # Remplacez par la valeur souhaitée
+        'name': 'Example Name',  
+        'title': 'Example Title', 
         'action': "Action Sociale",
-        'date': datetime.now().strftime('%d/%m/%Y %H:%M')  # Ajout de la date et l'heure
+        'date': datetime.now().strftime('%d/%m/%Y %H:%M')  
     }]
     return render(request, 'account-reviews.html', context={'reviews': reviews_data, 'request': request})
 

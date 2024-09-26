@@ -1,63 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   {% load static %}
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      {% block title %} Sehatra.com - Live Streaming Malagasy - Film Gasy -
-      Concerts {% endblock %}
+      {% block title %}
+        Sehatra.com - Live Streaming Malagasy - Film Gasy - Concerts
+      {% endblock %}
     </title>
-    <meta name="description" content="Fliqs - Superpower for Gaming Websites" />
-    <meta
-      name="keywords"
-      content="gaming, game, esports, community, template, html, bootstrap, webpack"
-    />
-    <meta name="author" content="nK" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="{% static 'assets/images/favicon.ico' %}"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="description" content="Sehatra.com - Concert en ligne, film gasy, et bien d'autres contenues sur Madagascar" />
+    <meta name="keywords" content="live Streaming" />
+    <meta name="author" content="SEHATRA.COM" />
+    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
     <!-- START: Styles -->
-    <!-- Lien CDN pour Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap"
-    />
-    <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/dist/css/bootstrap.min.css' %}" /> -->
-    <!-- Swiper -->
-    <link
-      rel="stylesheet"
-      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
-    />
-    <!-- Fancybox -->
-    <link
-      rel="stylesheet"
-      href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}"
-    />
-    <!-- Fliqs -->
-    <link
-      rel="stylesheet"
-      href="{% static 'assets/css/bootstrap-custom.css' %}"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/fliqs.css' %}" />
-    <!-- RTL (use these styles with RTL support) -->
-    <!--      
-      <link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom-rtl.css' %}" />
-      <link rel="stylesheet" href="{% static 'assets/css/fliqs-rtl.css' %}" />
-            -->
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
     <!-- END: Styles -->
     <!-- jQuery -->
@@ -72,86 +36,67 @@
 
     <main>
       {% block content %}
-      <!-- Default content goes here -->
+        <!-- Contenu par défaut ici -->
       {% endblock %}
     </main>
 
     <!-- Footer -->
-    {% block footer %} {% include 'footer.html' %} {% endblock %}
+    {% block footer %}
+      {% include 'footer.html' %}
+    {% endblock %}
     <!-- /Footer -->
 
     <!-- START: Scripts -->
     <script src="{% static 'assets/vendor/object-fit-images/dist/ofi.min.js' %}"></script>
-    <!-- Popper -->
     <script src="{% static 'assets/vendor/@popperjs/core/dist/umd/popper.min.js' %}"></script>
-    <!-- ScrollReveal -->
     <script src="{% static 'assets/vendor/scrollreveal/dist/scrollreveal.min.js' %}"></script>
-    <!-- Rellax -->
     <script src="{% static 'assets/vendor/rellax/rellax.min.js' %}"></script>
-    <!-- Tilt -->
     <script src="{% static 'assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js' %}"></script>
-    <!-- Animejs -->
     <script src="{% static 'assets/vendor/animejs/lib/anime.min.js' %}"></script>
-    <!-- Bootstrap -->
     <script src="{% static 'assets/vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <!-- Jarallax -->
     <script src="{% static 'assets/vendor/jarallax/dist/jarallax.min.js' %}"></script>
-    <!-- Swiper -->
     <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-    <!-- Fancybox -->
     <script src="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
-    <!-- jQuery Countdown -->
     <script src="{% static 'assets/vendor/jquery-countdown/dist/jquery.countdown.min.js' %}"></script>
-    <!-- Moment.js (needed for jquery countdown) -->
     <script src="{% static 'assets/vendor/moment/min/moment.min.js' %}"></script>
     <script src="{% static 'assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js' %}"></script>
-    <!-- ImagesLoaded -->
     <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
-    <!-- Isotope -->
     <script src="{% static 'assets/vendor/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
-    <!-- Bootstrap Validator -->
     <script src="{% static 'assets/vendor/bootstrap-validator/dist/validator.min.js' %}"></script>
-    <!-- Fliqs -->
     <script src="{% static 'assets/js/fliqs.min.js' %}"></script>
+    <script src="{% static 'assets/js/fliqs.js' %}"></script>
     <script src="{% static 'assets/js/fliqs-init.js' %}"></script>
-
-    <!-- FLuid player CDN  -->
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <!-- END: Scripts -->
-
     <script>
       $(document).ready(function () {
-        // Check if cookies have already been accepted
-        if (!document.cookie.includes("cookies_accepted=true")) {
-          // Show the modal if cookies haven't been accepted
-          $("#cookieModal").modal("show");
+        // Vérifie si les cookies ont déjà été acceptés
+        if (!document.cookie.includes('cookies_accepted=true')) {
+          // Affiche la modal si les cookies n'ont pas été acceptés
+          $('#cookieModal').modal('show')
         }
-
-        // On click of "Accept" button
-        $("#acceptCookies").click(function () {
-          // Set a cookie indicating the user accepted the cookies
-          document.cookie =
-            "cookies_accepted=true; path=/; max-age=" + 60 * 60 * 24 * 30; // 30 days expiration
-
-          // Hide the modal
-          $("#cookieModal").modal("hide");
-        });
-      });
+      
+        // Au clic du bouton "Accepter"
+        $('#acceptCookies').click(function () {
+          // Définit un cookie indiquant que l'utilisateur a accepté les cookies
+          document.cookie = 'cookies_accepted=true; path=/; max-age=' + 60 * 60 * 24 * 30 // Expiration de 30 jours
+          // Masque la modal
+          $('#cookieModal').modal('hide')
+        })
+      })
     </script>
-
-    <!-- Script Fluid player  -->
     <script>
-      const player = fluidPlayer("my-video", {
+      const player = fluidPlayer('my-video', {
         layoutControls: {
           controlBar: {
             autoHideTimeout: 3,
             animated: true,
-            autoHide: true,
+            autoHide: true
           },
           htmlOnPauseBlock: {
             html: null,
             height: null,
-            width: null,
+            width: null
           },
           autoPlay: false,
           mute: false,
@@ -161,85 +106,62 @@
           allowDownload: false,
           playButtonShowing: true,
           fillToContainer: true,
-          posterImage: "",
+          posterImage: ''
         },
         vastOptions: {
           adList: [],
           adCTAText: false,
-          adCTATextPosition: "",
-        },
-      });
-
-      // Video resume system
-      let currentTime = 0;
-      let firstPlay = true;
-
-      const videoELement = document.getElementById("my-video");
-      // Listen for time updates
-      player.on("timeupdate", function (time) {
-        currentTime = time; // Store the current time from the timeupdate event
-      });
-
-      // Load the saved time from cookies when the player is ready
-      player.on("play", function () {
+          adCTATextPosition: ''
+        }
+      })
+      
+      let currentTime = 0
+      let firstPlay = true
+      
+      const videoElement = document.getElementById('my-video')
+      player.on('timeupdate', function (time) {
+        currentTime = time // Stocke le temps actuel
+      })
+      
+      player.on('play', function () {
         if (firstPlay) {
-          const savedTime = getCookie("videoTime");
-
+          const savedTime = getCookie('videoTime')
           if (savedTime && savedTime > 0) {
-            // Show the modal if saved time is available
-            $("#resumeModal").modal("show");
-
-            // When user clicks to resume video
-            document
-              .getElementById("resumeVideo")
-              .addEventListener("click", function () {
-                player.skipTo(savedTime);
-                $("#resumeModal").modal("hide");
-              });
-
-            // When user clicks to start from the beginning
-            document
-              .getElementById("startFresh")
-              .addEventListener("click", function () {
-                player.skipTo(0);
-                console.log("Video started from the beginning");
-                $("#resumeModal").modal("hide");
-              });
+            $('#resumeModal').modal('show')
+            document.getElementById('resumeVideo').addEventListener('click', function () {
+              player.skipTo(savedTime)
+              $('#resumeModal').modal('hide')
+            })
+            document.getElementById('startFresh').addEventListener('click', function () {
+              player.skipTo(0)
+              console.log('Vidéo démarrée depuis le début')
+              $('#resumeModal').modal('hide')
+            })
           }
         }
-        firstPlay = false;
-      });
-      // Save the current time in cookies when the video is paused
-      player.on("pause", function () {
-        setCookie("videoTime", currentTime, 1); // Use the stored current time
-        console.log("Cookie set to: " + currentTime); // Log for debugging
-      });
-
-      // Save time on page unload as well
-      window.addEventListener("beforeunload", function () {
-        setCookie("videoTime", currentTime, 1);
-      });
-
-      // Cookie helper functions
+        firstPlay = false
+      })
+      
+      player.on('pause', function () {
+        setCookie('videoTime', currentTime, 1)
+        console.log('Cookie défini sur : ' + currentTime) // Journal pour débogage
+      })
+      
+      window.addEventListener('beforeunload', function () {
+        setCookie('videoTime', currentTime, 1)
+      })
+      
       function setCookie(name, value, days) {
-        const expires = new Date(Date.now() + days * 864e5).toUTCString();
-        document.cookie =
-          name +
-          "=" +
-          encodeURIComponent(value) +
-          "; expires=" +
-          expires +
-          "; path=/";
+        const expires = new Date(Date.now() + days * 864e5).toUTCString()
+        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/'
       }
-
+      
       function getCookie(name) {
-        return document.cookie.split("; ").reduce((r, v) => {
-          const parts = v.split("=");
-          return parts[0] === name ? decodeURIComponent(parts[1]) : r;
-        }, "");
+        return document.cookie.split('; ').reduce((r, v) => {
+          const parts = v.split('=')
+          return parts[0] === name ? decodeURIComponent(parts[1]) : r
+        }, '')
       }
     </script>
-
-    <!-- Video resume cookie system -->
   </body>
 </html>
