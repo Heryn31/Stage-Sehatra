@@ -336,13 +336,17 @@
   <div class="flq-signin">
     <div class="flq-fancybox-head">
       <div class="container-fluid">
-        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
+          <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" />
+        </a>
         <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
       </div>
     </div>
     <div class="flq-fancybox-body pb-6">
       <form action="#" class="flq-signin-content" autocomplete="off">
-        <h4 class="mb-4 pb-1 text-center">Connexion</h4>
+        <img src="{% static 'assets/images/ico.png' %}" alt="iconlogin" style="width: 50px; height: 50px; display: block; margin: 0 auto; box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); border-radius: 8px;"><br>
+        <h4 class="mb-1 pb-0 text-center">Bienvenue</h4>
+        <span class="d-block text-center mb-2">Veuillez entrer vos coordonnées pour vous connecter.</span>
         <div class="row justify-content-between gy-4">
           <div class="col-12">
             <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Adresse e-mail" />
@@ -350,21 +354,30 @@
           <div class="col-12 position-relative">
             <input id="loginPassword" class="form-control flq-form-lock flq-form-translucent pr-5" type="password" placeholder="Mot de passe" />
             <i id="toggleLoginPassword" class="fa-solid fa-eye position-absolute" style="right: 40px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
-        </div>
+          </div>
           <div class="col-auto">
             <div class="form-check flq-form-translucent">
-              <input class="form-check-input" type="checkbox" id="signinRememberMe" /><label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
+              <input class="form-check-input" type="checkbox" id="signinRememberMe" />
+              <label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
             </div>
           </div>
-          <div class="col-auto">
-            <a href="#" class="flq-color-meta flq-color-title-hover">Mot de passe oublier?</a>
-          </div>
+          <div class="col-auto mt-1"> 
+            <a href="#" class="flq-color-meta flq-color-title-hover">Mot de passe oublié?</a>
+          </div>          
           <div class="col-12">
-            <button class="btn btn-block">Se Connecter</button>
+            <button class="btn btn-block">Se connecter</button>
+          </div>
+          <div class="col-12 text-center mt-1">ou</div>
+          <div class="col-12  mt-1">
+            <a href="https://accounts.google.com" class="btn btn-block">
+              <i class="fab fa-google" style="font-size: 20px;" aria-hidden="true"></i>
+              <span class="ms-2">Se connecter avec Google</span> 
+            </a>
           </div>
           <div class="col-12 mt-3 text-center">
+            <span>Vous n'avez pas de compte ?</span>
             <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false">S'inscrire</a>
-          </div>
+          </div>          
         </div>
       </form>
     </div>
@@ -377,37 +390,44 @@
   <div class="flq-signup">
     <div class="flq-fancybox-head">
       <div class="container-fluid">
-        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto">
+          <img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" />
+        </a>
         <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
       </div>
     </div>
     <div class="flq-fancybox-body pb-6">
-      <form action="#" class="flq-signup-content">
-        <h4 class="mb-4 pb-1 text-center">Création de compte</h4>
+      <form action="#" class="flq-signup-content" id="signupForm">
+        <img src="{% static 'assets/images/ico.png' %}" alt="iconlogin" style="width: 50px; height: 50px; display: block; margin: 0 auto; box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); border-radius: 8px;"> <br>
+        <h4 class="mb-4 pb-1 text-center">Créer un compte</h4>
         <div class="row gy-4">
           <div class="col-12">
-            <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Adresse e-mail" />
+            <input class="form-control flq-form-mail flq-form-translucent" type="email" placeholder="Adresse e-mail" required />
           </div>
           <div class="col-12 position-relative">
-            <input id="loginPassword" class="form-control flq-form-lock flq-form-translucent pr-5" type="password" placeholder="Mot de passe" />
+            <input id="loginPassword" class="form-control flq-form-lock flq-form-translucent pr-5" type="password" placeholder="Mot de passe" required />
             <i id="toggleLoginPassword" class="fa-solid fa-eye position-absolute" style="right: 40px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
-        </div>
+          </div>
+          <div class="col-12 position-relative">
+            <input id="confirmPassword" class="form-control flq-form-lock flq-form-translucent pr-5" type="password" placeholder="Confirmer le mot de passe" required />
+            <i id="toggleConfirmPassword" class="fa-solid fa-eye position-absolute" style="right: 40px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+          </div>
           <div class="col-12">
             <div class="form-check flq-form-translucent">
-              <input class="form-check-input" type="checkbox" id="signupTerms" /><label class="form-check-label" for="signupTerms">J'ai lu et j'accepte les conditions générales.</label>
+              <input class="form-check-input" type="checkbox" id="signupTerms" required />
+              <label class="form-check-label" for="signupTerms">
+                J'ai lu et j'accepte les 
+                <a href="{% url 'terms' %}" class="flq-terms-link" style="text-decoration: underline;">conditions générales</a>.
+              </label>
             </div>
-          </div>
+          </div>          
           <div class="col-12">
-            <button class="btn btn-block">S'inscrire</button>
+            <button class="btn btn-block" type="submit">S'inscrire</button>
           </div>
-          <div class="col-12 text-center mt-1">ou</div>
-          <div class="col-12 mt-1">
-            <div class="row justify-content-center gy-1">
-              <div class="col-auto">
-                <a href="https://accounts.google.com" class="btn btn-link"><span class="me-1">Se connecter avec</span><i class="fab fa-google"></i>oogle</a>
-              </div>
-            </div>
-          </div>
+          <div class="col-12 mt-3 text-center">
+            <span>Vous avez déjà un compte ?</span>
+            <a href="#" class="btn btn-link" data-fancybox data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">Se connecter</a>
+          </div>               
         </div>
       </form>
     </div>

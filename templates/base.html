@@ -113,15 +113,15 @@
           adCTAText: false,
           adCTATextPosition: ''
         }
-      })
+      });
       
-      let currentTime = 0
-      let firstPlay = true
+      let currentTime = 0;
+      let firstPlay = true;
       
       const videoElement = document.getElementById('my-video')
       player.on('timeupdate', function (time) {
         currentTime = time // Stocke le temps actuel
-      })
+      });
       
       player.on('play', function () {
         if (firstPlay) {
@@ -140,16 +140,16 @@
           }
         }
         firstPlay = false
-      })
+      });
       
       player.on('pause', function () {
         setCookie('videoTime', currentTime, 1)
         console.log('Cookie défini sur : ' + currentTime) // Journal pour débogage
-      })
+      });
       
       window.addEventListener('beforeunload', function () {
         setCookie('videoTime', currentTime, 1)
-      })
+      });
       
       function setCookie(name, value, days) {
         const expires = new Date(Date.now() + days * 864e5).toUTCString()
@@ -161,7 +161,7 @@
           const parts = v.split('=')
           return parts[0] === name ? decodeURIComponent(parts[1]) : r
         }, '')
-      }
+      };
     </script>
   </body>
 </html>
