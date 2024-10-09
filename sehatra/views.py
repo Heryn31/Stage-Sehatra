@@ -47,7 +47,10 @@ def associations(request):
     associations_data = [{
         'name': "awesome-madagascar-tours",
         'title': "Association Malgache pour l'Autisme",
-        'action': "Action Sociale"
+        'action': "Action Sociale",
+        'date': "06-09-2024",
+        'detail': "L’Association Malgache pour l’Autisme (AMA) est une association des parents, familles et amis de personnes autistes et de professionnels relevant du domaine de l’autisme. Elle est née à la suite d’une prise de conscience de quelques parents d’autistes de la nécessité de s’organiser pour faire avancer la cause des personnes vivant avec autisme à Madagascar.",
+        'nbr_action': "1"
     }]
     return render(request, 'associations.html', context={'associations' : associations_data,'request': request})
 

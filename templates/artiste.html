@@ -89,10 +89,8 @@
     <div class="py-7">
       <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
         <div class="card-title h5 mb-2" data-sr-item="new-releases">
-          <p class="fs-6 fs-md-5 fs-lg-4">Ces artistes ont choisi de collaborer avec SEHATRA.COM pour la production et/ou 
-            la diffusion de leur oeuvre pour rester en contact avec leurs fans dans le monde entier.
-          </p>
-        </div>        
+          <p class="fs-6 fs-md-5 fs-lg-4">Ces artistes ont choisi de collaborer avec SEHATRA.COM pour la production et/ou la diffusion de leur oeuvre pour rester en contact avec leurs fans dans le monde entier.</p>
+        </div>
         <div class="mb-4 mt-4" data-sr-item="new-releases">
           <button class="btn btn-outline btn-white" data-bs-toggle="modal" data-bs-target="#inscriptionModal">Inscrivez votre groupe</button>
           <!-- Modal -->
@@ -104,12 +102,9 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. 
-                    Veuillez remplir le formulaire ci-dessous avec les informations sur votre groupe.</p>
-                      <!-- Message indiquant que tous les champs sont obligatoires -->
-                  <p class="text-danger" style="background-color: hsla(var(--flq-btn--background-color)); color: var(--flq-text-color);">
-                    Tous les champs marqués d'une étoile (*) sont obligatoires.
-                  </p>
+                  <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. Veuillez remplir le formulaire ci-dessous avec les informations sur votre groupe.</p>
+                  <!-- Message indiquant que tous les champs sont obligatoires -->
+                  <p class="text-danger" style="background-color: hsla(var(--flq-btn--background-color)); color: var(--flq-text-color);">Tous les champs marqués d'une étoile (*) sont obligatoires.</p>
                   <form>
                     <fieldset>
                       <legend>Vous</legend>
@@ -151,16 +146,7 @@
                         <button class="btn btn-dark w-100" type="reset">Annuler</button>
                       </div>
                       <div class="col-12 col-sm-auto">
-                        <button type="submit" class="btn btn-primary w-100">
-                          Envoyer
-                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                          </svg>
-                        </button>
+                        <button type="submit" class="btn btn-primary w-100">Envoyer&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button>
                       </div>
                     </div>
                   </form>
@@ -168,7 +154,7 @@
               </div>
             </div>
           </div>
-          <!--/ Modal -->
+          <!-- / Modal -->
         </div>
         <div class="row align-items-center gy-4 mb-5">
           <div class="col-12 col-md">
@@ -186,36 +172,68 @@
         </div>
         <div class="row gy-5 justify-content-center flq-isotope-grid">
           {% for data in artiste %}
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
-            <div data-sr-item="tvshow-item">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'artiste_details' name=data.name %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
-                      <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span>
-                  </a>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
+              <div data-sr-item="tvshow-item">
+                <div class="card flq-card-blog">
+                  <div class="card-img-wrap">
+                    <a href="{% url 'artiste_details' name=data.name %}" data-bs-toggle="modal" data-bs-target="#artiste"><span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span></a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6"><a href="{% url 'artiste_details' name=data.name %}">{{ data.title }}</a></h5>
+                    <div class="flq-meta flq-meta-sm">
+                      <ul>
+                        <li>
+                          <a class="card-year">{{ data.date }}</a>
+                        </li>
+                        <li>
+                          <a class="card-category">{{ data.detail }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title h6"><a href="{% url 'artiste_details' name=data.name %}">{{data.title}}</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="#" class="card-year">{{data.date}}</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">{{data.detail}}</a>
-                      </li>
-                    </ul>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <!-- Fenêtre modale pour afficher les détails de l'artiste -->
+        {% for data in artiste %}
+        <div class="modal fade" id="artiste" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="movieModalLabel">Détails de l'artiste</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-0">
+                  <!-- Image du film à gauche -->
+                  <div class="col-lg-6 position-relative">
+                    <a href="{% url 'artiste_details' name=data.name %}" class="w-100 h-100 d-block">
+                      <div class="flq-image flq-rounded-xl position-relative">
+                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                        <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                        <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;">
+                          <span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span>
+                        </button>
+                      </div>                      
+                    </a>
+                  </div>
+                  <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                  <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                    <div class="text-start">
+                      <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">{{ data.name }}</h5>
+                      <p class="movie-date">Date : {{ data.date }}</p>
+                      <p class="movie-genre">Genre : {{ data.detail }}</p>
+                      <p class="movie-description">Description : [Description du film]</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {% endfor %}
         </div>
-        <div class="text-center mt-5" data-sr-item="tvshow-item">
-          <button class="btn btn-outline btn-white">Voir plus</button>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

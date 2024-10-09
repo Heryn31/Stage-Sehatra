@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Film Gasy sur Sehatra.com
+  Film Gasy - Sehatra.com
 {% endblock %}
 
 {% load static %}
@@ -99,113 +99,85 @@
           </ul>
         </nav>
         <div class="row gy-4 justify-content-center flq-isotope-grid" data-isotope-layout="fitRows" data-sr="movies-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
-          <div class="col-12 col-lg-6 col-xl-4 flq-isotope-item" data-filters="action">
+          <div class="col-12 col-lg-6 flq-isotope-item" data-filters="movie">
             <div data-sr-item="movies-item">
-              <a href="{% url 'single_movie' name='single-movie-name' %}" class="card flq-card-movie flq-color-opacity">
-                <span class="card-img-wrap">
-                  <span class="flq-image flq-responsive flq-responsive-lg-1x1">
-                    <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="" />
-                  </span>
-                </span>
-                <span class="card-body">
-                  <span class="card-badge">
-                    <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    </svg>
-                  </span>
-                  <span class="card-title h5">{Exemple titre}</span>
-                  <span class="card-description"><span>{On a journey to find the cure for a Tatarigami&#39;s curse, Ashitaka finds himself in the middle of a war between...}</span></span>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-4 flq-isotope-item" data-filters="action">
-            <div data-sr-item="movies-item">
-              <a href="{% url 'single_movie' name='single-movie-name' %}" class="card flq-card-movie flq-color-opacity">
-                <span class="card-img-wrap">
-                  <span class="flq-image flq-responsive flq-responsive-lg-1x1">
-                    <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="" />
-                  </span>
-                </span>
-                <span class="card-body">
-                  <span class="card-badge">
-                    <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    </svg>
-                  </span>
-                  <span class="card-title h5">{Exemple titre}</span>
-                  <span class="card-description"><span>{On a journey to find the cure for a Tatarigami&#39;s curse, Ashitaka finds himself in the middle of a war between...}</span></span>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-4 flq-isotope-item" data-filters="action">
-            <div data-sr-item="movies-item">
-              <a href="{% url 'single_movie' name='single-movie-name' %}" class="card flq-card-movie flq-color-opacity">
-                <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1"><img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="" /></span></span>
-                <span class="card-body">
-                  <span class="card-badge">
-                    <svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    </svg>
-                  </span>
-                  <span class="card-title h5">{Exemple titre}</span>
-                  <span class="card-description"><span>{On a journey to find the cure for a Tatarigami&#39;s curse, Ashitaka finds himself in the middle of a war between...}</span></span>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 flq-isotope-item" data-filters="documentary">
-            <div data-sr-item="movies-item">
-              <a href="{% url 'single_movie' name='single-movie-name' %}" class="card flq-card-movie flq-color-opacity">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#movie" class="card flq-card-movie flq-color-opacity">
                 <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-2-1290x1290.jpg' %}" alt="" /></span></span>
                 <span class="card-body">
-                  <span class="card-badge">
-                  </span>
+                  <span class="card-badge"></span>
                   <span class="card-title h5">[titre du film]</span>
-                  <span class="card-description"><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, aspernatur! Fugit error, accusantium nihil aut mollitia atque? Reprehenderit voluptates a perspiciatis. Ipsam facilis illo voluptate exercitationem corporis quis quisquam culpa?</span></span>
                 </span>
               </a>
             </div>
           </div>
-          <div class="col-12 col-lg-6 flq-isotope-item" data-filters="documentary">
+          <div class="col-12 col-lg-6 flq-isotope-item" data-filters="movie">
             <div data-sr-item="movies-item">
-              <a href="{% url 'single_movie' name='single-movie-name' %}" class="card flq-card-movie flq-color-opacity">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#movie" class="card flq-card-movie flq-color-opacity">
                 <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-2-1290x1290.jpg' %}" alt="" /></span></span>
                 <span class="card-body">
-                  <span class="card-badge">
-                  </span>
+                  <span class="card-badge"></span>
                   <span class="card-title h5">[titre du film]</span>
-                  <span class="card-description"><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolorum nam architecto delectus maiores, aut totam id, similique animi voluptas ipsa vel nostrum, autem quibusdam molestias vero unde eum ab.</span></span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 flq-isotope-item" data-filters="movie">
+            <div data-sr-item="movies-item">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#movie" class="card flq-card-movie flq-color-opacity">
+                <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-2-1290x1290.jpg' %}" alt="" /></span></span>
+                <span class="card-body">
+                  <span class="card-badge"></span>
+                  <span class="card-title h5">[titre du film]</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 flq-isotope-item" data-filters="movie">
+            <div data-sr-item="movies-item">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#movie" class="card flq-card-movie flq-color-opacity">
+                <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-2-1290x1290.jpg' %}" alt="" /></span></span>
+                <span class="card-body">
+                  <span class="card-badge"></span>
+                  <span class="card-title h5">[titre du film]</span>
                 </span>
               </a>
             </div>
           </div>
         </div>
-        <nav class="text-center mt-5">
-          <ul class="pagination" data-sr="pagination" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
-            <li class="page-item" data-sr-item="pagination">
-              <a class="page-link page-link-prev" href="#">
-                Précédent<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </li>
-            <li class="page-item active" data-sr-item="pagination">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item" data-sr-item="pagination">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item" data-sr-item="pagination">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item" data-sr-item="pagination">
-              <a class="page-link page-link-next" href="#">
-                Suivant<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <!-- Fenêtre modale pour afficher les détails du film -->
+        <div class="modal fade" id="movie" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="movieModalLabel">Détails du film</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-0">
+                  <!-- Image du film à gauche -->
+                  <div class="col-lg-6 position-relative">
+                    <a href="{% url 'single_movie' name='single-movie-name' %}" class="w-100 h-100 d-block">
+                      <div class="flq-image flq-rounded-xl">
+                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                        <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                        <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                  <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                    <div class="text-start">
+                      <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">[Titre du film]</h5>
+                      <p class="movie-date">Date : [Date]</p>
+                      <p class="movie-genre">Genre : [Genre]</p>
+                      <p class="movie-description">Description : [Description du film]</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

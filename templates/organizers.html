@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Organisateurs Sehatra.com - Plateforme de vidéo Vita Malagasy
+  Organisateurs - Plateforme de vidéo Vita Malagasy - Sehatra.com 
 {% endblock %}
 
 {% load static %}
@@ -149,14 +149,7 @@
                       </div>
                       <div class="col-12 col-sm-auto">
                         <button type="submit" class="btn btn-primary w-100">
-                          Envoyer
-                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                          </svg>
+                          Envoyer&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i>
                         </button>
                       </div>
                     </div>                    
@@ -183,7 +176,7 @@
             <div data-sr-item="tvshow-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'organizers_details' name=data.name %}">
+                  <a href="{% url 'organizers_details' name=data.name %}" data-bs-toggle="modal" data-bs-target="#organizers">
                     <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
                       <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" />
                     </span>
@@ -211,9 +204,43 @@
           </div>
           {% endfor %}
         </div>
-      </div>
-      <div class="text-center mt-5" data-sr-item="tvshow-item">
-        <button class="btn btn-outline btn-white">Voir plus</button>
+         <!-- Fenêtre modale pour afficher les détails de l'organisateur -->
+         {% for data in organizers %}
+         <div class="modal fade" id="organizers" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-lg modal-dialog-centered">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="movieModalLabel">Détails de l'organisateur</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                 <div class="row g-0">
+                   <!-- Image du film à gauche -->
+                   <div class="col-lg-6 position-relative">
+                     <a href="{% url 'organizers_details' name=data.name %}" class="w-100 h-100 d-block">
+                       <div class="flq-image flq-rounded-xl">
+                         <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                         <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;">
+                          <span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span>
+                        </button>
+                       </div>
+                     </a>
+                   </div>
+                   <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                   <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                     <div class="text-start">
+                       <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">{{ data.title }}</h5>
+                       <p class="movie-date">Date : {{ data.date }}</p>
+                       <p  class="card-category">Vues : {{ data.views }}</p>
+                       <p class="movie-description">Description : {{ data.detail }}</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         {% endfor %}
       </div>
     </div>
   </div>

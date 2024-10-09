@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Concert et Live sur Sehatra.com
+  Concert et Live - Sehatra.com
 {% endblock %}
 
 {% load static %}
@@ -111,28 +111,18 @@
           </div>
         </div>
         <div class="row gy-5 justify-content-center flq-isotope-grid">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="romance">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="live">
             <div data-sr-item="tvshow-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' name='single-movie-name' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
-                      <img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" />
-                    </span>
-                  </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#live"><span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="concert-live" /></span></a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title h6">
-                    <a href="{% url 'single_movie' name='single-movie-name' %}">
-                      {{concert_live.title}}
-                  </a>
-                </h5>
+                  <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">{{ concert_live.title }}</a></h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="#" class="card-price">
-                          {{concert_live.price}}
-                        </a>
+                        <a class="card-price">{{ concert_live.price }}</a>
                       </li>
                     </ul>
                   </div>
@@ -140,39 +130,41 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 flq-isotope-item" data-filters="horror">
-            <div data-sr-item="tvshow-item">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' name='single-movie-name' %}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4">
-                      <img src="{% static 'assets/images/tv-shows/show-2-390x440.jpg' %}" alt="concert-live" />
-                    </span>
-                  </a>
+          <!-- Fenêtre modale pour afficher les détails du concert-live -->
+          <div class="modal fade" id="live" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="movieModalLabel">Détails</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title h6">
-                    <a href="{% url 'single_movie' name='single-movie-name' %}">
-                      {{concert_live.title}}
-                    </a>
-                  </h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="#" class="card-price">
-                          {{concert_live.price}}
-                        </a>
-                      </li>
-                    </ul>
+                <div class="modal-body">
+                  <div class="row g-0">
+                    <!-- Image du film à gauche -->
+                    <div class="col-lg-6 position-relative">
+                      <a href="{% url 'single_movie' name='single-movie-name' %}" class="w-100 h-100 d-block">
+                        <div class="flq-image flq-rounded-xl">
+                          <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                          <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                          <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                    <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                      <div class="text-start">
+                        <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">{{ concert_live.title }}</h5>
+                        <p class="movie-date">Date de sortie : [Date]</p>
+                        <p class="movie-genre">Genre : [Genre]</p>
+                        <p class="movie-description">Description : [Description du film]</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="text-center mt-5" data-sr-item="tvshow-item">
-        <button class="btn btn-outline btn-white">Voir plus</button>
       </div>
     </div>
   </div>

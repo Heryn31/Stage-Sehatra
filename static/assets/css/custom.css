@@ -6,3 +6,76 @@
     width: 100%;
     height: auto;
 }
+
+::selection {
+    background-color: hsl(355, 59%, 57%);
+    /* Couleur de fond de la sélection */
+}
+
+.flq-image {
+    position: relative;
+    height: 100%;
+    /* Assurer que l'image prend tout l'espace disponible */
+}
+
+.col-lg-6.position-relative {
+    height: 100%;
+    /* Assurer que le conteneur de l'image prend tout l'espace */
+}
+
+/* Limitation de la hauteur pour le conteneur de texte */
+.movie-details {
+    flex: 1;
+    /* Permet au texte de prendre tout l'espace disponible */
+    max-height: 300px;
+    /* Ajuster la hauteur maximale selon le besoin */
+    overflow-y: auto;
+    /* Activer le défilement si le texte dépasse */
+    padding-right: 10px;
+    /* Ajout d'un padding pour éviter que le texte soit collé à la bordure */
+}
+
+/* Styles pour les paragraphes et les titres */
+.movie-details p {
+    margin: 0;
+    /* Réinitialiser les marges par défaut */
+    padding: 5px 0;
+    /* Ajouter de l'espace entre les paragraphes */
+    line-height: 1.6;
+    /* Améliorer l'espacement des lignes pour une meilleure lisibilité */
+    color: #ffffff;
+    /* Définir une couleur de texte pour le contraste */
+}
+
+.movie-details h5 {
+    margin-top: 0;
+    /* Supprimer la marge supérieure pour le titre */
+    color: #ffffff;
+    /* Couleur du titre */
+    font-weight: bold;
+    /* Rendre le titre plus en évidence */
+}
+
+/* Style pour masquer la scrollbar sur les navigateurs qui supportent */
+.movie-details::-webkit-scrollbar {
+    width: 8px;
+}
+
+.movie-details::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* Désactiver le défilement sur les écrans de moins de 768px */
+@media (max-width: 768px) {
+    .movie-details {
+        max-height: none;
+        overflow-y: visible;
+        padding-top: 15px;
+        /* Ajout d'un padding supérieur pour espacer le texte de l'image */
+    }
+}
+
+.rounded-img {
+    border-radius: 10px; /* Ajustez la valeur selon vos besoins */
+}

@@ -56,14 +56,9 @@
             <div class="row gy-4 align-items-center">
               <div class="col-auto" data-sr-item="movie">
                 <a href="#" class="btn btn-icon-sm">
-                  <span class="btn-name">Regarder maintenant</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
-                  </svg>
+                  <span class="btn-name">Regarder maintenant&nbsp;&nbsp;</span>
+                  <i class="fa-solid fa-play"></i>
                 </a>
-              </div>
-              <div class="col-auto" data-sr-item="movie">
-                <a href="#" class="btn btn-link">Plus de détails</a>
               </div>
             </div>
           </div>
@@ -208,15 +203,9 @@
                 <label class="form-check-label" for="form_check_review">Enregistrer mon nom, email et site web dans ce navigateur pour mon prochain commentaire.</label>
               </div>
             </div>
-            <div class="col-12 col-sm-auto" data-sr-item="movie-review">
+            <div class="col-12" data-sr-item="movie-review">
               <button class="btn btn-block">
-                Envoyer<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </g>
-                </svg>
+                Envoyer&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i>
               </button>
             </div>
           </div>
@@ -234,14 +223,10 @@
           </div>
           <div class="col-auto" data-sr-item="related">
             <div class="flq-swiper-button-prev btn btn-sm btn-square btn-white btn-brand-hover btn-active btn-icon-sm me-1">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <i class="fa-solid fa-angle-left"></i>
             </div>
             <div class="flq-swiper-button-next btn btn-sm btn-square btn-white btn-brand-hover btn-active btn-icon-sm">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <i class="fa-solid fa-angle-right"></i>
             </div>
           </div>
         </div>
@@ -251,21 +236,55 @@
               <div class="swiper-slide">
                 <div class="card flq-card-blog">
                   <div class="card-img-wrap">
-                    <a href="{% url 'single_movie' name='single-movie-name' %}">
-                      <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="film-video" /></span>
-                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="film-video" /></span></a>
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'single_movie' name='single-movie-name' %}">[Titre du film]</a></h5>
+                    <h5 class="card-title"><a href="#" data-bs-toggle="modal" data-bs-target="#movieModal">[Titre du film]</a></h5>
                     <div class="flq-meta flq-meta-sm">
                       <ul>
                         <li>
-                          <a href="" class="card-year">[Date]</a>
+                          <a href="#" class="card-year">[Date]</a>
                         </li>
                         <li>
                           <a href="#" class="card-category">[Genre]</a>
                         </li>
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fenêtre modale pour afficher les détails du film -->
+        <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="movieModalLabel">Détails du film</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-0">
+                  <!-- Image du film à gauche -->
+                  <div class="col-lg-6 position-relative">
+                    <a href="{% url 'single_movie' name='single-movie-name' %}" class="w-100 h-100 d-block">
+                      <div class="flq-image flq-rounded-xl">
+                        <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                        <!-- Bouton positionné sur l'image avec fond transparent et icône play -->
+                        <button type="button" class="position-absolute animated-button" style="bottom: 20px; left: 50%; transform: translateX(-50%); width: calc(100% - 40px);">
+                          <span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span>
+                        </button>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                  <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                    <div class="text-start">
+                      <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">[Titre du film]</h5>
+                      <p class="movie-date">Date : [Date]</p>
+                      <p class="movie-genre">Genre : [Genre]</p>
+                      <p class="movie-description">Description : [Description du film] Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime quo quidem expedita amet obcaecati cupiditate soluta reiciendis, esse natus saepe laboriosam nam alias eius libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora in voluptatibus consequatur, ipsum est nihil placeat error, optio reprehenderit enim illum molestiae a laboriosam ad nemo modi similique aliquid. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem mollitia, eum nostrum deserunt aliquid nam quae deleniti.</p>
                     </div>
                   </div>
                 </div>

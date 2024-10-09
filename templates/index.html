@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Sehatra.com - Live Streaming Malagasy - Film Gasy - Concerts
+Live Streaming Malagasy - Film Gasy - Concerts - Sehatra.com
 {% endblock %}
 
 {% load static %}
@@ -31,7 +31,6 @@
         <div class="flq-swiper-pagination flq-swiper-pagination-horizontal flq-swiper-pagination-md-vertical flq-pe-initial"></div>
       </div>
     </div>
-
     <div class="swiper flq-swiper-main" data-parallax="true" data-auto-height="true" data-speed="600" data-pagination="true">
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -45,12 +44,12 @@
               <div class="row">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-6 pt-navbar flq-vertical-rhythm">
                   <!-- Content for Slide 1 -->
-                  <div class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>[Genre de la musique]</div>
-                  <h2 class="display-5 mb-0" data-animejs>[Titre événement]</h2>
+                  <div class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>{Genre de la musique}</div>
+                  <h2 class="display-5 mb-0" data-animejs>{Titre événement}</h2>
                   <div class="flq-meta flq-color-opacity mt-3">
                     <ul class="gx-4">
                       <li data-animejs>
-                        <a href="">[Date]</a>
+                        <a class="card-year">{Date}</a>
                       </li>
                     </ul>
                   </div>
@@ -58,7 +57,7 @@
                   <div>
                     <div class="row gy-1">
                       <div class="col-auto" data-animejs>
-                        <a href="{% url 'artiste' %}" class="btn btn-link">[Nom de l'artiste]</a>
+                        <a href="{% url 'artiste' %}" class="btn btn-link">{Nom de l'artiste}</a>
                       </div>
                     </div>
                   </div>
@@ -66,14 +65,9 @@
                     <div class="row gy-4 align-items-center">
                       <div class="col-auto" data-animejs>
                         <a href="#" class="btn btn-icon-sm">
-                          <span class="btn-name">Regarder maintenant</span>
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
-                          </svg>
+                          <span class="btn-name">Regarder maintenant&nbsp;&nbsp;</span>
+                          <i class="fa-solid fa-play"></i>
                         </a>
-                      </div>
-                      <div class="col-auto" data-animejs>
-                        <a href="#" class="btn btn-link">Plus de détails</a>
                       </div>
                     </div>
                   </div>
@@ -81,7 +75,6 @@
               </div>
             </div>
           </div>
-
           <!-- Slide 2 -->
           <div class="swiper-slide flq-background">
             <div class="flq-background-image">
@@ -92,12 +85,12 @@
               <div class="row">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-6 pt-navbar flq-vertical-rhythm">
                   <!-- Content for Slide 2 -->
-                  <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>[Genre du film]</span>
-                  <h2 class="display-5 mb-0" data-animejs>Titre du film</h2>
+                  <span class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>{Genre du film}</span>
+                  <h2 class="display-5 mb-0" data-animejs>{Titre du film}</h2>
                   <div class="flq-meta flq-color-opacity mt-3">
                     <ul class="gx-4">
                       <li data-animejs>
-                        <a href="">[Date]</a>
+                        <a class="card-year">{Date}</a>
                       </li>
                     </ul>
                   </div>
@@ -105,7 +98,7 @@
                   <div>
                     <div class="row gy-1">
                       <div class="col-auto" data-animejs>
-                        <a href="{% url 'artiste' %}" class="btn btn-link">[Nom de l'artiste]</a>
+                        <a href="{% url 'single_movie' name='single-movie-name' %}" class="btn btn-link">{acteur}</a>
                       </div>
                     </div>
                   </div>
@@ -113,14 +106,9 @@
                     <div class="row gy-4 align-items-center">
                       <div class="col-auto" data-animejs>
                         <a href="#" class="btn btn-icon-sm">
-                          <span class="btn-name">Regarder maintenant</span>
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 19L19 12L8 5V19Z" fill="currentColor" />
-                          </svg>
+                          <span class="btn-name">Regarder maintenant&nbsp;&nbsp;</span>
+                          <i class="fa-solid fa-play"></i>
                         </a>
-                      </div>
-                      <div class="col-auto" data-animejs>
-                        <a href="#" class="btn btn-link">Plus de détails</a>
                       </div>
                     </div>
                   </div>
@@ -143,109 +131,53 @@
             <div class="swiper-slide">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'concert_live' %}">
-                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="" /></span>
-                  </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="" /></span></a>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title"><a href="{% url 'concert_live' %}">[Titre de l'évenement]</a></h5>
+                  <h5 class="card-title"><a href="{% url 'single_movie' name='single-movie-name' %}">{Titre de l'évenement}</a></h5>
                   <div class="flq-meta flq-meta-sm">
                     <ul>
                       <li>
-                        <a href="" class="card-year">[Date]</a>
+                        <a class="card-year">{Date}</a>
                       </li>
                       <li>
-                        <a href="#" class="card-category">[Genre de la musique]</a>
+                        <a class="card-category">{Genre de la musique}</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'concert_live' %}">
-                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="" /></span>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre de l'évenement]</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="" class="card-year">[Date]</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">[Genre de la musique]</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fenêtre modale pour afficher les détails de l'évenement -->
+      <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="movieModalLabel">Détails de l'évenement</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="swiper-slide">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'concert_live' %}">
-                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="" /></span>
+            <div class="modal-body">
+              <div class="row g-0">
+                <!-- Image du film à gauche -->
+                <div class="col-lg-6 position-relative">
+                  <a href="{% url 'single_movie' name='single-movie-name' %}" class="w-100 h-100 d-block">
+                    <div class="flq-image flq-rounded-xl">
+                      <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                      <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                      <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                    </div>
                   </a>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre de l'évenement]</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="" class="card-year">[Date]</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">[Genre de la musique]</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'concert_live' %}">
-                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="" /></span>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="{% url 'concert_live' %}">[Titre de l'évenement]</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="" class="card-year">[Date]</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">[Genre de la musique]</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="{% url 'concert_live' %}">
-                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="" /></span>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre de l'évenement]</a></h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a href="" class="card-year">[Date]</a>
-                      </li>
-                      <li>
-                        <a href="#" class="card-category">[Genre de la musique]</a>
-                      </li>
-                    </ul>
+                <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                  <div class="text-start">
+                    <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">[Titre de l'évenement]</h5>
+                    <p class="movie-date">Date : [Date]</p>
+                    <p class="movie-genre">Genre : [Genre de musique]</p>
+                    <p class="movie-description">Description : [Description du film] Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime quo quidem expedita amet obcaecati cupiditate soluta reiciendis, esse natus saepe laboriosam nam alias eius libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora in voluptatibus consequatur, ipsum est nihil placeat error, optio reprehenderit enim illum molestiae a laboriosam ad nemo modi similique aliquid. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem mollitia, eum nostrum deserunt aliquid nam quae deleniti.</p>
                   </div>
                 </div>
               </div>
@@ -263,63 +195,72 @@
           </div>
           <div class="col-auto" data-sr-item="new-releases">
             <div class="flq-swiper-button-prev btn btn-sm btn-dark btn-active btn-square btn-icon-sm me-1" data-sr-item="related">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <i class="fa-solid fa-angle-left"></i>
             </div>
             <div class="flq-swiper-button-next btn btn-sm btn-dark btn-active btn-square btn-icon-sm" data-sr-item="related">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <i class="fa-solid fa-angle-right"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {% comment %}films à venir{% endcomment %}
     <div class="container flq-swiper-wrapper mb-7" data-sr="upcoming-movies" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
       <h2 class="mb-5" data-sr-item="upcoming-movies">Films à venir</h2>
       <div class="swiper flq-swiper-effect-touch mb-5" data-sr-item="upcoming-movies" data-buttons="true" data-pagination-progress="true" data-gap="30" data-speed="800" data-touch-ratio="0.8" data-breakpoints="656:1,1072:2">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="{% url 'coming_soon' %}" class="card flq-card-movie flq-color-opacity">
+              <a href="#" class="card flq-card-movie flq-color-opacity" data-bs-toggle="modal" data-bs-target="#movieComingModal">
                 <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-2-1290x1290.jpg' %}" alt="" /></span></span>
                 <span class="card-body">
                   <span class="card-badge"><svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg"></svg></span>
                   <span class="card-title h5">[Titre du film]</span>
-                  <span class="card-description"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span></span>
                 </span>
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="{% url 'coming_soon' %}" class="card flq-card-movie flq-color-opacity">
+              <a href="#" class="card flq-card-movie flq-color-opacity" data-bs-toggle="modal" data-bs-target="#movieComingModal">
                 <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="" /></span></span>
                 <span class="card-body">
                   <span class="card-badge"><svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg"></svg></span>
                   <span class="card-title h5">[Titre du film]</span>
-                  <span class="card-description"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span></span>
                 </span>
               </a>
             </div>
-            <div class="swiper-slide">
-              <a href="{% url 'coming_soon' %}" class="card flq-card-movie flq-color-opacity">
-                <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static 'assets/images/movies/movie-3-1290x1290.jpg' %}" alt="" /></span></span>
-                <span class="card-body">
-                  <span class="card-badge"><svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg"></svg></span>
-                  <span class="card-title h5">[Titre du film]</span>
-                  <span class="card-description"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span></span>
-                </span>
-              </a>
+          </div>
+        </div>
+      </div>
+      <!-- Fenêtre modale pour afficher les détails du film à vénir -->
+      <div class="modal fade" id="movieComingModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="movieModalLabel">Détails du film à venir</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="swiper-slide">
-              <a href="{% url 'coming_soon' %}" class="card flq-card-movie flq-color-opacity">
-                <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="../static/assets/images/movies/movie-4-1290x1290.jpg" alt="" /></span></span>
-                <span class="card-body">
-                  <span class="card-badge"><svg width="43" height="22" viewBox="0 0 43 22" fill="none" xmlns="http://www.w3.org/2000/svg"></svg></span>
-                  <span class="card-title h5">[Titre du film]</span>
-                  <span class="card-description"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, itaque? Eaque odio culpa vitae officiis nihil laborum, perferendis corrupti consectetur, ipsum labore earum qui explicabo suscipit reiciendis beatae fuga aspernatur.</span></span>
-                </span>
-              </a>
+            <div class="modal-body">
+              <div class="row g-0">
+                <!-- Image du film à gauche -->
+                <div class="col-lg-6 position-relative">
+                  <a href="{% url 'coming_soon' %}" class="w-100 h-100 d-block">
+                    <div class="flq-image flq-rounded-xl">
+                      <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                      <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                      <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                    </div>
+                  </a>
+                </div>
+                <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+                <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                  <div class="text-start">
+                    <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">[Titre du film]</h5>
+                    <p class="movie-date">Date : [Date]</p>
+                    <p class="movie-genre">Genre : [Genre]</p>
+                    <p class="movie-description">Description : [Description du film] Lorem ipsum dolor sit amet consectetur adipisicing elit. maxime quo quidem expedita amet obcaecati cupiditate soluta reiciendis, esse natus saepe laboriosam nam alias eius libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora in voluptatibus consequatur, ipsum est nihil placeat error, optio reprehenderit enim illum molestiae a laboriosam ad nemo modi similique aliquid. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem mollitia, eum nostrum deserunt aliquid nam quae deleniti.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -357,82 +298,66 @@
       </div>
       <div class="col-auto" data-sr-item="best-serials">
         <div class="flq-swiper-button-prev btn btn-sm btn-white btn-brand-hover btn-active btn-square btn-icon-sm me-1">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <i class="fa-solid fa-angle-left"></i>
         </div>
         <div class="flq-swiper-button-next btn btn-sm btn-white btn-brand-hover btn-active btn-square btn-icon-sm">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <i class="fa-solid fa-angle-right"></i>
         </div>
       </div>
     </div>
-    <div class="swiper flq-swiper-effect-touch" data-sr-item="best-serials" data-buttons="true" data-gap="30" data-loop="true" data-speed="800" data-touch-ratio="0.8" data-breakpoints="320:1,656:2,1072:3,1280:4">
-      <div class="swiper-container">
+    <div class="swiper flq-swiper-effect-touch" data-sr-item="new-releases" data-buttons="true" data-pagination-custom="true" data-gap="30" data-speed="800" data-touch-ratio="0.8" data-slides="1" data-breakpoints="636:2,1072:3,1280:4">
+      <div class="swiper-container container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="card flq-card-blog">
               <div class="card-img-wrap">
-                <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">
-                  <span class="flq-image flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="" /></span>
-                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#movieMostWatchedModal"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/movies/movie-1-1290x1290.jpg" alt="" /></span></a>
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre du film]</a></h5>
+                <h5 class="card-title"><a href="{% url 'single_movie' name='single-movie-name' %}">[Titre des plus régarder]</a></h5>
                 <div class="flq-meta flq-meta-sm">
                   <ul>
                     <li>
-                      <a href="#" class="card-year">[Date]</a>
+                      <a class="card-year">[Date]</a>
                     </li>
                     <li>
-                      <a href="#" class="card-category">[Genre du film]</a>
+                      <a class="card-category">[Genre]</a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="card flq-card-blog">
-              <div class="card-img-wrap">
-                <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">
-                  <span class="flq-image flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="" /></span>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre du film]</a></h5>
-                <div class="flq-meta flq-meta-sm">
-                  <ul>
-                    <li>
-                      <a href="#" class="card-year">[Date]</a>
-                    </li>
-                    <li>
-                      <a href="#" class="card-category">[Genre du film]</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fenêtre modale pour afficher les détails des videos les plus regardés -->
+    <div class="modal fade" id="movieMostWatchedModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="movieModalLabel">Détails</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="swiper-slide">
-            <div class="card flq-card-blog">
-              <div class="card-img-wrap">
-                <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">
-                  <span class="flq-image flq-responsive flq-responsive-sm-3x4"><img src="../static/assets/images/tv-shows/show-3-1290x1290.jpg" alt="" /></span>
+          <div class="modal-body">
+            <div class="row g-0">
+              <!-- Image du film à gauche -->
+              <div class="col-lg-6 position-relative">
+                <a href="{% url 'single_movie' name='single-movie-name' %}" class="w-100 h-100 d-block">
+                  <div class="flq-image flq-rounded-xl">
+                    <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                    <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                    <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                  </div>
                 </a>
               </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre du film]</a></h5>
-                <div class="flq-meta flq-meta-sm">
-                  <ul>
-                    <li>
-                      <a href="#" class="card-year">[Date]</a>
-                    </li>
-                    <li>
-                      <a href="#" class="card-category">[Genre du film]</a>
-                    </li>
-                  </ul>
+              <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+              <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                <div class="text-start">
+                  <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">[Titre]</h5>
+                  <p class="movie-date">Date : [Date]</p>
+                  <p class="movie-genre">Genre : [Genre]</p>
+                  <p class="movie-description">Description : [Description du film]</p>
                 </div>
               </div>
             </div>
@@ -443,16 +368,6 @@
   </div>
   <div class="py-7 overflow-hidden flq-background flq-background-color-100" data-sr="features" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
     <div class="flq-background-shape">
-      <div data-rellax data-rellax-speed="1" class="mt-auto">
-        <svg class="flq-translate-y50 ms-n7" width="866" height="831" viewBox="0 0 866 831" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M323.654 829.93C224.153 816.108 227.515 661.483 166.991 581.373C117.182 515.444 16.5101 485.726 2.15912 404.394C-12.2526 322.718 48.441 248.437 96.2908 180.687C138.901 120.355 193.017 70.7174 259.952 39.3885C326.181 8.38988 399.582 -9.42614 471.263 5.18105C541.916 19.579 590.604 76.5775 649.113 118.693C724.145 172.702 839.74 196.401 861.604 286.155C883.301 375.219 810.521 461.538 749.243 529.731C697.595 587.206 611.836 589.844 548.676 634.395C465.428 693.116 424.619 843.956 323.654 829.93Z" fill="#fff" fill-opacity="0.02" />
-        </svg>
-      </div>
-      <div data-rellax data-rellax-speed="-1" class="ms-auto">
-        <svg class="flq-translate-yn50 mt-n7 ms-7" width="782" height="865" viewBox="0 0 782 865" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M755.116 831.212C680.566 911.828 543.954 812.208 434.284 816.447C344.028 819.936 254.487 891.671 172.561 853.73C90.2879 815.629 61.5615 714.78 30.6714 629.531C3.16372 553.617 -7.56424 474.065 6.13963 394.452C19.6991 315.678 49.5645 238.707 107.441 183.536C164.489 129.156 246.033 121.094 320.36 94.9246C415.677 61.3647 509.14 -27.5167 603.314 8.94621C696.764 45.1286 728.741 164.34 751.641 261.91C770.941 344.146 719.74 422.719 720.256 507.206C720.936 618.565 830.763 749.41 755.116 831.212Z" fill="#fff" fill-opacity="0.02" />
-        </svg>
-      </div>
     </div>
     <div class="container">
       <div class="row gy-5 gx-6">
@@ -532,19 +447,17 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-sr-item="online-streaming">
         <div class="card flq-card-blog">
           <div class="card-img-wrap">
-            <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">
-              <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span>
-            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#movie"><span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span></a>
           </div>
           <div class="card-body">
-            <h5 class="card-title h6"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre du film]</a></h5>
+            <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">[Titre du film]</a></h5>
             <div class="flq-meta flq-meta-sm">
               <ul>
                 <li>
-                  <a href="#" class="card-year">[Date]</a>
+                  <a class="card-year">[Date]</a>
                 </li>
                 <li>
-                  <a href="#" class="card-category">[Genre]</a>
+                  <a class="card-category">[Genre]</a>
                 </li>
               </ul>
             </div>
@@ -554,43 +467,53 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-sr-item="online-streaming">
         <div class="card flq-card-blog">
           <div class="card-img-wrap">
-            <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">
-              <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span>
-            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#movie"><span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span></a>
           </div>
           <div class="card-body">
-            <h5 class="card-title h6"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre du film]</a></h5>
+            <h5 class="card-title h6"><a href="{% url 'single_movie' name='single-movie-name' %}">[Titre du film]</a></h5>
             <div class="flq-meta flq-meta-sm">
               <ul>
                 <li>
-                  <a href="#" class="card-year">[Date]</a>
+                  <a class="card-year">[Date]</a>
                 </li>
                 <li>
-                  <a href="#" class="card-category">[Genre]</a>
+                  <a class="card-category">[Genre]</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-sr-item="online-streaming">
-        <div class="card flq-card-blog">
-          <div class="card-img-wrap">
-            <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">
-              <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-3x4"><img src="{% static 'assets/images/tv-shows/show-1-390x440.jpg' %}" alt="" /></span>
-            </a>
+    </div>
+    <!-- Fenêtre modale pour afficher les détails du film -->
+    <div class="modal fade" id="movie" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="movieModalLabel">Détails du film</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="card-body">
-            <h5 class="card-title h6"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Titre du film]</a></h5>
-            <div class="flq-meta flq-meta-sm">
-              <ul>
-                <li>
-                  <a href="#" class="card-year">[Date]</a>
-                </li>
-                <li>
-                  <a href="#" class="card-category">[Genre]</a>
-                </li>
-              </ul>
+          <div class="modal-body">
+            <div class="row g-0">
+              <!-- Image du film à gauche -->
+              <div class="col-lg-6 position-relative">
+                <a href="{% url 'single_movie' name='single-movie-name' %}" class="w-100 h-100 d-block">
+                  <div class="flq-image flq-rounded-xl">
+                    <img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="Détail du film" class="img-fluid w-100 h-100 rounded-img" style="object-fit: cover;" />
+                    <!-- Bouton positionné en bas de l'image et avec une longueur réduite -->
+                    <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                  </div>
+                </a>
+              </div>
+              <!-- Détails du film à droite (texte défilant sur grands écrans) -->
+              <div class="col-lg-6 d-flex flex-column justify-content-start ps-3 movie-details">
+                <div class="text-start">
+                  <h5 class="movie-title flq-subtitle badge badge-white badge-glass badge-translucent">[Titre du film]</h5>
+                  <p class="movie-date">Date : [Date]</p>
+                  <p class="movie-genre">Genre : [Genre]</p>
+                  <p class="movie-description">Description : [Description du film]</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
