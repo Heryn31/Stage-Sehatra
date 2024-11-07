@@ -114,54 +114,83 @@
           adCTATextPosition: ''
         }
       });
-      
-      let currentTime = 0;
       let firstPlay = true;
-      
-      const videoElement = document.getElementById('my-video')
-      player.on('timeupdate', function (time) {
-        currentTime = time // Stocke le temps actuel
-      });
-      
-      player.on('play', function () {
+      let currentTime = 0; // Variable to store the current time
+      const videoElement = document.getElementById("my-video");
+        
+
+        // Listen for time updates
+        videoElement.addEventListener('timeupdate', function() {
+            currentTime = videoElement.currentTime.toFixed(0);  // Log the current time
+        });
+
+        // Listen for the play event
+        player.on("play", function () {
         if (firstPlay) {
-          const savedTime = getCookie('videoTime')
+          const savedTime = getCookie("videoTime");
+
           if (savedTime && savedTime > 0) {
-            $('#resumeModal').modal('show')
-            document.getElementById('resumeVideo').addEventListener('click', function () {
-              player.skipTo(savedTime)
-              $('#resumeModal').modal('hide')
-            })
-            document.getElementById('startFresh').addEventListener('click', function () {
-              player.skipTo(0)
-              console.log('Vidéo démarrée depuis le début')
-              $('#resumeModal').modal('hide')
-            })
+            // Show the modal if saved time is available
+            $("#resumeModal").modal("show");
+
+            // When user clicks to resume video
+            document
+              .getElementById("resumeVideo")
+              .addEventListener("click", function () {
+                player.skipTo(savedTime);
+                $("#resumeModal").modal("hide");
+              });
+
+            // When user clicks to start from the beginning
+            document
+              .getElementById("startFresh")
+              .addEventListener("click", function () {
+                player.skipTo(0);
+                console.log("Video started from the beginning");
+                $("#resumeModal").modal("hide");
+              });
           }
+    
+          // On click of "Accept" button
+          $('#acceptCookies').click(function() {
+              // Set a cookie indicating the user accepted the cookies
+              document.cookie = "cookies_accepted=true; path=/; max-age=" + (60 * 60 * 24 * 30); // 30 days expiration
+    
+              // Hide the modal
+              $('#cookieModal').modal('hide');
+          });
         }
-        firstPlay = false
+        firstPlay = false;
       });
-      
-      player.on('pause', function () {
-        setCookie('videoTime', currentTime, 1)
-        console.log('Cookie défini sur : ' + currentTime) // Journal pour débogage
+      // Save the current time in cookies when the video is paused
+      player.on("pause", function () {
+        setCookie("videoTime", currentTime, 1); // Use the stored current time
+        console.log("Cookie set to: " + currentTime); // Log for debugging
       });
-      
-      window.addEventListener('beforeunload', function () {
-        setCookie('videoTime', currentTime, 1)
+
+      // Save time on page unload as well
+      window.addEventListener("beforeunload", function () {
+        setCookie("videoTime", currentTime, 1);
       });
-      
+
+      // Cookie helper functions
       function setCookie(name, value, days) {
-        const expires = new Date(Date.now() + days * 864e5).toUTCString()
-        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/'
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie =
+          name +
+          "=" +
+          encodeURIComponent(value) +
+          "; expires=" +
+          expires +
+          "; path=/";
       }
-      
+
       function getCookie(name) {
-        return document.cookie.split('; ').reduce((r, v) => {
-          const parts = v.split('=')
-          return parts[0] === name ? decodeURIComponent(parts[1]) : r
-        }, '')
-      };
+        return document.cookie.split("; ").reduce((r, v) => {
+          const parts = v.split("=");
+          return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+        }, "");
+      }
     </script>
   </body>
 </html>

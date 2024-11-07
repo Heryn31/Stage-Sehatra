@@ -1,8 +1,9 @@
 # sehatra/views.py
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from datetime import datetime
+from django.conf import settings
 
 def home(request):
     return render(request, 'index.html', context={'request': request})
@@ -111,7 +112,8 @@ def single_movie(request, name):
     single_movie_data = {
         'name': "single-movie"
     }
-    return render(request, 'single-movie.html', context={'data': single_movie_data,'name': name ,'request': request})
+    video_url = f"{settings.MEDIA_URL}test.mp4"
+    return render(request, 'single-movie.html', context={'data': single_movie_data,'name': name ,'video_url': video_url ,'request': request})
 
 def about(request):
     return render(request, 'about.html', context={'request': request})
@@ -163,3 +165,7 @@ def privacy(request):
 
 def terms(request):
     return render(request, 'terms.html', context={'request': request})
+
+# def video_list(request):
+#     videos = Video.objects.all()
+#     return render(request, 'video_list.html', {'videos': videos})   

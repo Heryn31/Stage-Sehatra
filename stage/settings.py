@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,3 +123,9 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# MEDIA_ROOT is the file system path where uploaded media files will be stored.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# MEDIA_URL is the URL that serves the media files. This is used to access media files in templates and views.
+MEDIA_URL = '/media/'
