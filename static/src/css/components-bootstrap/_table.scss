@@ -1,0 +1,40 @@
+@use "sass:math";
+
+.table {
+  --flq-table--gap: var(--flq-vertical-rhythm-1);
+
+  margin-bottom: 0;
+  color: hsla(var(--flq-color-title));
+
+  > :not(caption) > * > * {
+    padding: var(--flq-table--gap);
+    border-bottom-color: hsla(var(--flq-color-border));
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  > tbody {
+    &:first-child > tr:first-child > * {
+      padding-top: 0;
+    }
+
+    &:last-child > tr:last-child > * {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+.table-borderless {
+  --flq-table--gap: var(--flq-vertical-rhythm-2);
+
+  > tbody > tr + tr > * {
+    padding-top: 0;
+  }
+}

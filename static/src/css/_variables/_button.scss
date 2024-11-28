@@ -1,0 +1,42 @@
+:root {
+  --flq-btn--font-family: inter, sans-serif;
+  --flq-btn--line-height: 1;
+  --flq-btn--font-weight: 600;
+  --flq-btn--letter-spacing: auto;
+  --flq-btn--text-transform: none;
+
+  // Button medium.
+  --flq-btn-md--padding-v: 16px;
+  --flq-btn-md--padding-h: 35px;
+  --flq-btn-md--font-size: 16px;
+  --flq-btn-md--size: 48px;
+  --flq-btn-md--border-radius: var(--flq-border-radius);
+
+  // Button extra large.
+  --flq-btn-xl--padding-v: 24px;
+  --flq-btn-xl--padding-h: 45px;
+  --flq-btn-xl--font-size: 22px;
+  --flq-btn-xl--size: 70px;
+  --flq-btn-xl--border-radius: var(--flq-border-radius-lg);
+
+  // Button large.
+  --flq-btn-lg--padding-v: 19px;
+  --flq-btn-lg--padding-h: 45px;
+  --flq-btn-lg--font-size: 18px;
+  --flq-btn-lg--size: 56px;
+  --flq-btn-lg--border-radius: var(--flq-border-radius);
+
+  // Button small.
+  --flq-btn-sm--padding-v: 13px;
+  --flq-btn-sm--padding-h: 30px;
+  --flq-btn-sm--font-size: 14px;
+  --flq-btn-sm--size: 40px;
+  --flq-btn-sm--border-radius: var(--flq-border-radius);
+
+  // Button extra small.
+  --flq-btn-xs--padding-h: 25px;
+  --flq-btn-xs--padding-v: 12px;
+  --flq-btn-xs--font-size: 12px;
+  --flq-btn-xs--size: 36px;
+  --flq-btn-xs--border-radius: var(--flq-border-radius-sm);
+}

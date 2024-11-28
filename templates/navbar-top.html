@@ -1,0 +1,132 @@
+{% load static %}
+<!-- Preloader -->
+<div class="flq-preloader" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+  <div class="flq-preloader-title display-1 h1" style="text-align: center;">
+    <img src="{% static 'assets/images/logo-sehatra.png' %}" alt="Preloader Image" class="preloader-image" style="width: 250px; height: auto;" />
+  </div>
+</div>
+<div class="flq-preloader-bg"></div>
+<!-- / Preloader -->
+
+<!-- Navbar top -->
+<nav class="flq-navbar flq-navbar-top flq-navbar-top-scroll">
+  <div class="flq-navbar-container container-fluid">
+    <a href="{% url 'home' %}" class="flq-navbar-brand me-auto me-auto me-lg-4"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+    <ul class="nav nav-parent flex-grow-1 flq-navbar-nav justify-content-center d-none d-lg-flex">
+      <li class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+        <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Accueil</span></a>
+      </li>
+      <li class="nav-item  {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">
+        <a href="{% url 'pricing' %}" class="nav-link"><span class="nav-link-name">Abonnement</span></a>
+      </li>
+      <li class="nav-item  {% if request.resolver_match.url_name == 'concert_live' %}active{% endif %}">
+        <a href="{% url 'concert_live' %}" class="nav-link"><span class="nav-link-name">Concerts et Lives</span></a>
+      </li>
+      <li class="nav-item  {% if request.resolver_match.url_name == 'movies' %}active{% endif %}">
+        <a href="{% url 'movies' %}" class="nav-link" role="button"><span class="nav-link-name">Films</span></a>
+      </li>
+
+      <li class="nav-item flq-dropdown flq-dropdown-nav {% if request.resolver_match.url_name == 'artiste' or request.resolver_match.url_name == 'organizers' or request.resolver_match.url_name == 'associations' %}active{% endif %}">
+        <a href="#" class="nav-link" role="button"><span class="nav-link-name">Partenaires</span></a>
+        <div class="dropdown-menu gy-2">
+          <ul class="nav">
+            <li class="nav-item {% if request.resolver_match.url_name == 'artiste' %}active{% endif %}">
+              <a href="{% url 'artiste' %}" class="nav-link"><span class="nav-link-name">Artistes</span></a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.url_name == 'organizers' %}active{% endif %}">
+              <a href="{% url 'organizers' %}" class="nav-link"><span class="nav-link-name">Organisateurs</span></a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.url_name == 'associations' %}active{% endif %}">
+              <a href="{% url 'associations' %}" class="nav-link"><span class="nav-link-name">Associations</span></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item flq-dropdown flq-dropdown-nav {% if request.resolver_match.url_name in 'about contact faq coming_soon' %}active{% endif %}">
+        <a href="#" class="nav-link" role="button"><span class="nav-link-name">Plus</span></a>
+        <div class="dropdown-menu gy-2">
+          <ul class="nav">
+            <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+              <a href="{% url 'about' %}" class="nav-link"><span class="nav-link-name">À propos</span></a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+              <a href="{% url 'contact' %}" class="nav-link"><span class="nav-link-name">Contactez-nous</span></a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
+              <a href="{% url 'faq' %}" class="nav-link"><span class="nav-link-name">Questions</span></a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.url_name == 'coming_soon' %}active{% endif %}">
+              <a href="{% url 'coming_soon' %}" class="nav-link"><span class="nav-link-name">À venir</span></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <button class="btn btn-link btn-icon-md ms-5 d-none d-sm-flex" data-fancybox data-src="#flq_popup_search" data-base-class="flq-fancybox-search" data-animation-duration="1000" data-keyboard="false" data-auto-focus="true" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M19.25 19.25L15.2625 15.2625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <div class="d-flex align-items-center ms-4 d-none d-sm-flex">
+      {% if user.is_authenticated %}
+        
+          <a href="{% url 'profile_account' %}">
+            <button class="btn btn-xs d-none d-md-flex">{{ user.username | capfirst }}
+            </button> 
+          </a>
+      {% else %}
+        <button class="btn btn-xs btn-outline btn-white d-none d-md-flex" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+          Se connecter
+        </button>
+      {% endif %}
+      <button class="btn btn-link btn-icon-md d-md-none" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 17L15 12M15 12L10 7M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="flq-dropdown flq-dropdown-nav ms-4 d-none d-sm-flex">
+      <button class="btn btn-link align-self-center"><span class="flq-image flq-navbar-top-user"><img src="{% static 'assets/images/user.svg' %}" alt="" /></span></button>
+      <div class="dropdown-menu gy-2">
+        <ul class="nav">
+          <li class="nav-item {% if request.resolver_match.url_name == 'profile_account' %}active{% endif %}">
+            <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profil
+              {% if user.is_superuser %}
+              &nbsp;d'administrateur
+              {% endif %}
+            </span></a>
+          </li>
+          <li class="nav-item {% if request.resolver_match.url_name == 'favorite' %}active{% endif %}">
+            <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
+          </li>
+          <li class="nav-item {% if request.resolver_match.url_name == 'reviews' %}active{% endif %}">
+            <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis & Commentaires</span></a>
+          </li>
+          <li class="nav-item {% if request.resolver_match.url_name == 'edit_account' %}active{% endif %}">
+            <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon profil</span></a>
+          </li>
+          <li class="nav-item {% if request.resolver_match.url_name == 'notification' %}active{% endif %}">
+            <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
+          </li>
+            {% if user.is_superuser %}
+              <li class="nav-item {% if request.resolver_match.url_name == 'notification' %}active{% endif %}">
+                <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Gerer vos contenus</span></a>
+              </li>
+            {% endif %}
+          <li class="nav-item">
+            <a href="{% url 'custom_logout' %}" class="nav-link"><span class="nav-link-name">Se déconnecter</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    <button class="flq-navbar-top-toggle btn btn-link ms-4 d-flex d-lg-none" data-fancybox data-src="#flq_navbar_mobile" data-base-class="flq-fancybox-navbar" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+<!-- / Navbar top -->

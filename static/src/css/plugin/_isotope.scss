@@ -1,0 +1,7 @@
+.flq-isotope-grid.row {
+  pointer-events: none;
+
+  > * {
+    pointer-events: initial;
+  }
+}

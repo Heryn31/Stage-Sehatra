@@ -1,0 +1,18 @@
+@use "sass:math";
+
+@mixin create-col($size: 0, $column: 0) {
+  @if ($size and $column == 0 and $size != auto and $size != grow) {
+    flex: 0 0 $size;
+    max-width: $size;
+  } @else if $size == grow {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  } @else if $size == auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+  } @else if $column > 0 {
+    flex: 0 0 #{math.div($size, $column) * 100%};
+    max-width: #{math.div($size, $column) * 100%};
+  }
+}

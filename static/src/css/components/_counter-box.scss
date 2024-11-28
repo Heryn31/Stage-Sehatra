@@ -1,0 +1,17 @@
+.flq-counter-box {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.flq-counter-box-number {
+  display: block;
+  color: hsla(var(--flq-color-brand));
+
+  + .flq-counter-box-subtitle {
+    margin-top: var(--flq-vertical-rhythm-1);
+  }
+}
+
+.flq-counter-box-subtitle {
+  display: block;
+}

@@ -1,0 +1,25 @@
+.flq-fancybox-navbar .flq-fancybox-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > div > .nav {
+    position: sticky;
+    top: var(--flq-navbar-top--min-height);
+    left: 0;
+  }
+
+  .flq-fancybox-sidebar,
+  > div > .nav > .nav-item,
+  > .nav > .nav-item {
+    opacity: 0;
+    transition: opacity var(--flq-transition-duration) var(--flq-transition-easing);
+  }
+}
+
+// Open.
+.flq-fancybox-open.flq-fancybox-navbar .flq-fancybox-body .flq-fancybox-sidebar,
+.flq-fancybox-open.flq-fancybox-navbar .flq-fancybox-body > div > .nav > .nav-item,
+.flq-fancybox-open.flq-fancybox-navbar .flq-fancybox-body > .nav > .nav-item {
+  opacity: 1;
+}

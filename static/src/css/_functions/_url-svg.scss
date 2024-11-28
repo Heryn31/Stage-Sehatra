@@ -1,0 +1,3 @@
+@function url-svg($icon) {
+  @return url("data:image/svg+xml;utf8,#{str-replace($icon, "#", "%23")}");
+}

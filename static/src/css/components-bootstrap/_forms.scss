@@ -1,0 +1,188 @@
+.form-control,
+.form-select {
+  --flq-form--padding-v: 8.75px;
+  --flq-form--padding-h: 25px;
+  --flq-form--min-height: 48px;
+
+  height: auto;
+  min-height: var(--flq-form--min-height);
+  padding: var(--flq-form--padding-v) var(--flq-form--padding-h);
+  font-family: var(--flq-body--font-family);
+  font-size: var(--flq-body--font-size);
+  font-weight: var(--flq-body--font-weight);
+  line-height: var(--flq-body--line-height);
+  color: hsla(var(--flq-form--color));
+  text-transform: var(--flq-body--text-transform);
+  background-color: hsla(var(--flq-form--background-color));
+  background-repeat: no-repeat;
+  background-position: var(--flq-form--padding-h) calc(var(--flq-form--padding-v) + var(--flq-form__icon--position));
+  background-size: var(--flq-form__icon--size);
+  border: var(--flq-form--border-width) solid hsla(var(--flq-form--border-color));
+  border-radius: var(--flq-form--border-radius);
+  transition: color var(--flq-transition-duration) var(--flq-transition-easing), background var(--flq-transition-duration) var(--flq-transition-easing), border-color var(--flq-transition-duration) var(--flq-transition-easing);
+
+  &::placeholder {
+    color: hsla(var(--flq-form__placeholder--color));
+    opacity: 1;
+  }
+
+  &:focus {
+    color: hsla(var(--flq-form-focus--color));
+    background-color: hsla(var(--flq-form-focus--background-color));
+    border-color: hsla(var(--flq-form-focus--border-color));
+  }
+}
+
+// Textarea.
+textarea.form-control {
+  --flq-form__icon--position: 0.5em;
+}
+
+// Minimum height.
+.form-control,
+.form-select,
+textarea.form-control {
+  min-height: var(--flq-form--min-height);
+}
+
+// Sizes.
+.form-control-lg,
+.form-select-lg,
+textarea.form-control-lg {
+  --flq-form--padding-v: var(--flq-form-lg--padding-v);
+  --flq-form--padding-h: var(--flq-form-lg--padding-h);
+  --flq-form--min-height: var(--flq-form-lg--min-height);
+
+  border-radius: var(--flq-form-lg--border-radius);
+}
+
+// Glass.
+.flq-form-glass {
+  --flq-form--border-color: var(--flq-color-black), 0.2;
+  --flq-form--background-color: var(--flq-color-black), 0.2;
+  --flq-form-focus--border-color: var(--flq-color-black), 0.4;
+  --flq-form-focus--background-color: var(--flq-color-black), 0.4;
+
+  // Check.
+  --flq-form-check--border-color: var(--flq-form--border-color);
+  --flq-form-check--background-color: var(--flq-form--background-color);
+  --flq-form-check-focus--border-color: var(--flq-form-focus--border-color);
+  --flq-form-check-focus--background-color: var(--flq-form-focus--background-color);
+
+  @include backdrop-blur();
+}
+
+// Translucent.
+.flq-form-translucent {
+  --flq-form--border-color: var(--flq-color-white), var(--flq-color-border-opacity);
+  --flq-form--background-color: var(--flq-color-white), 0.06;
+  --flq-form-focus--border-color: var(--flq-color-white), var(--flq-color-meta-opacity);
+  --flq-form-focus--background-color: var(--flq-color-white), 0.06;
+
+  // Check.
+  --flq-form-check--border-color: var(--flq-form--border-color);
+  --flq-form-check--background-color: var(--flq-form--background-color);
+  --flq-form-check-focus--border-color: var(--flq-form-focus--border-color);
+  --flq-form-check-focus--background-color: var(--flq-form-focus--background-color);
+}
+
+// Form icons.
+@each $icon in ("user", "mail", "lock", "phone", "message") {
+  .flq-form-#{$icon} {
+    padding-left: calc(var(--flq-form--padding-h) + var(--flq-form__icon--size) + var(--flq-form__icon--gap));
+    background-image: var(--flq-icon-#{$icon});
+
+    &:focus {
+      background-image: var(--flq-icon-#{$icon}-focus);
+    }
+  }
+}
+
+// Form select with icon.
+.form-select {
+  padding-right: calc(var(--flq-form--padding-h) + var(--flq-form__icon--size) + var(--flq-form__icon--gap));
+  background-image: var(--flq-icon-select);
+  background-position: calc(100% - var(--flq-form--padding-h)) calc(var(--flq-form--padding-v) + var(--flq-form__icon--position));
+
+  &:focus {
+    background-image: var(--flq-icon-select-focus);
+  }
+}
+
+// Checkbox and Radio.
+.form-check {
+  position: relative;
+  display: inline-block;
+  padding-left: calc(var(--flq-form-check--size) + var(--flq-form-check--gap));
+
+  + .form-check {
+    margin-top: var(--flq-vertical-rhythm-1);
+  }
+}
+
+.form-check-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--flq-form-check--size);
+  height: var(--flq-form-check--size);
+  margin-top: var(--flq-form-check--position);
+  background-color: hsla(var(--flq-form-check--background-color));
+  border: var(--flq-form-check--border-width) solid hsla(var(--flq-form-check--border-color));
+  border-radius: var(--flq-form-check--border-radius);
+  transition: background-color var(--flq-transition-duration) var(--flq-transition-easing), border-color var(--flq-transition-duration) var(--flq-transition-easing);
+  appearance: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    clip-path: inset(0 100% 0 0);
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+  }
+
+  &[type="checkbox"]::after {
+    background-image: var(--flq-icon-check);
+    background-size: var(--flq-form-checkbox__icon--size);
+  }
+
+  &[type="radio"]::after {
+    background-image: var(--flq-icon-radio);
+    background-size: var(--flq-form-radio__icon--size);
+  }
+
+  &:focus {
+    background-color: hsla(var(--flq-form-check-focus--background-color));
+    border-color: hsla(var(--flq-form-check-focus--border-color));
+  }
+
+  &:checked {
+    background-color: hsla(var(--flq-form-check-checked--background-color));
+    border-color: hsla(var(--flq-form-check-checked--border-color));
+
+    &::after {
+      clip-path: inset(0 0 0 0);
+    }
+
+    &[type="checkbox"],
+    &[type="radio"] {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):active {
+    background-color: hsla(var(--flq-form-check-active--background-color));
+    border-color: hsla(var(--flq-form-check-active--border-color));
+  }
+}
+
+// Label.
+.form-check-label {
+  color: hsla(var(--flq-color-text));
+  text-align: left;
+}

@@ -1,0 +1,30 @@
+.flq-comments {
+  > ul {
+    @extend %flq-list-disable;
+  }
+}
+
+.flq-comment {
+  + .flq-comment {
+    margin-top: calc(var(--flq-vertical-rhythm-3) * 2);
+  }
+
+  > .flq-media {
+    + .flq-rating {
+      padding-top: var(--flq-vertical-rhythm-1);
+      margin-top: var(--flq-vertical-rhythm-3);
+    }
+
+    + .flq-comment-content {
+      margin-top: var(--flq-vertical-rhythm-3);
+    }
+  }
+
+  > .flq-rating + .flq-comment-content {
+    margin-top: var(--flq-vertical-rhythm-3);
+  }
+
+  > .btn:not(:first-child) {
+    margin-top: var(--flq-vertical-rhythm-3);
+  }
+}

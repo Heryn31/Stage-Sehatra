@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Modifier vos informations de compte - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="content-wrap">
+    <div class="container pt-5 pb-7">
+      <div class="row gy-6 gx-6">
+        <div class="col-12 col-xl order-5">
+          <div class="flq-account-content" data-sr data-sr-delay="300" data-sr-duration="1200" data-sr-distance="10">
+            <form action="#">
+              <div class="row gx-0 mb-5">
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">Photo</div>
+                    <div class="col-12 col-sm">
+                      <div class="flq-account-avatar">
+                        <div class="card flq-card-image">
+                          <a href="#" class="card-image">
+                            <span class="flq-image flq-responsive flq-responsive-1x1"><img src="{% static 'assets/images/user-160x160.jpg' %}" alt="user-photo" /></span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11 5.00004H6C5.46957 5.00004 4.96086 5.21075 4.58579 5.58583C4.21071 5.9609 4 6.46961 4 7.00004V18C4 18.5305 4.21071 19.0392 4.58579 19.4143C4.96086 19.7893 5.46957 20 6 20H17C17.5304 20 18.0391 19.7893 18.4142 19.4143C18.7893 19.0392 19 18.5305 19 18V13M17.586 3.58604C17.7705 3.39502 17.9912 3.24266 18.2352 3.13784C18.4792 3.03302 18.7416 2.97785 19.0072 2.97554C19.2728 2.97323 19.5361 3.02384 19.7819 3.1244C20.0277 3.22496 20.251 3.37346 20.4388 3.56125C20.6266 3.74904 20.7751 3.97234 20.8756 4.21813C20.9762 4.46392 21.0268 4.72728 21.0245 4.99284C21.0222 5.2584 20.967 5.52084 20.8622 5.76485C20.7574 6.00886 20.605 6.22955 20.414 6.41404L11.828 15H9V12.172L17.586 3.58604Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </a>
+                          <div class="card-body"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row gy-3 gx-0">
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountFirstName">Prénom(s)</label>
+                    </div>
+                    <div class="col-12 col-sm">
+                      <input class="form-control" type="text" id="accountFirstName" placeholder="Entrez votre prénom" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountLastName">Nom</label>
+                    </div>
+                    <div class="col-12 col-sm">
+                      <input class="form-control" type="text" id="accountLastName" placeholder="Entrez votre nom" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountEmail">Adresse e-mail</label>
+                    </div>
+                    <div class="col-12 col-sm">
+                      <input class="form-control" type="email" id="accountEmail" placeholder="Exemple@domaine.com" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountPhone">Téléphone</label>
+                    </div>
+                    <div class="col-12 col-sm">
+                      <input class="form-control" type="tel" id="accountPhone" placeholder="Entrez votre numéro de téléphone" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 flq-account-form-highlight mt-4 pt-1">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountCurrentPassword">Mot de passe actuel</label>
+                    </div>
+                    <div class="col-12 col-sm position-relative">
+                      <input class="form-control" type="password" id="accountCurrentPassword" placeholder="Mot de passe actuel" />
+                      <i id="toggleCurrentPassword" class="fa-solid fa-eye position-absolute" style="right: 40px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>                    
+                  </div>
+                </div>
+                <div class="col-12 flq-account-form-highlight mb-1 pb-1">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountPassword">Nouveau mot de passe</label>
+                    </div>
+                    <div class="col-12 col-sm position-relative">
+                      <input class="form-control" type="password" id="accountPassword" placeholder="Nouveau mot de passe" />
+                      <i id="toggleNewPassword" class="fa-solid fa-eye position-absolute" style="right: 40px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountGender">Genre</label>
+                    </div>
+                    <div class="col-12 col-sm">
+                      <select class="form-select" id="accountGender">
+                        <option value="" disabled selected>Choisissez votre genre</option>
+                        <option value="male">Homme</option>
+                        <option value="female">Femme</option>
+                        <option value="other">Autre</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row gy-1 gx-4 align-items-center">
+                    <div class="col-12 col-md-4 col-xl-3 flq-color-title">
+                      <label for="accountDateOfBirth">Date de naissance</label>
+                    </div>
+                    <div class="col-12 col-sm">
+                      <input class="form-control" type="date" id="accountDateOfBirth" placeholder="Entrez votre date de naissance" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-5">
+                  <div class="row g-3 justify-content-end">
+                    <div class="col-12 col-sm-auto">
+                      <button class="btn btn-dark btn-block" type="reset">Annuler</button>
+                    </div>
+                    <div class="col-12 col-sm-auto">
+                      <button class="btn btn-block">Sauvegarder</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-xl-auto">
+          <div class="flq-sidebar flq-sidebar-lg">
+            <div class="flq-account-navbar">
+              <nav>
+                <ul class="nav nav-dots flex-column gy-3">
+                  <li class="nav-item">
+                    <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profil</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis &amp; Commentaires</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon compte</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Se déconnecter</span></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

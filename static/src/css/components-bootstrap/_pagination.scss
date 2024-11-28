@@ -1,0 +1,93 @@
+.pagination {
+  --bs-gutter-y: 15px;
+  --bs-gutter-x: 15px;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.page-item {
+  padding-top: var(--bs-gutter-y);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+
+  &.active > .page-link {
+    color: hsla(var(--flq-color-title));
+    background-color: hsla(var(--flq-color-brand));
+  }
+
+  &:first-child .page-link {
+    border-radius: var(--flq-btn-sm--border-radius);
+
+    &-prev,
+    &-next {
+      border-radius: 0;
+    }
+  }
+
+  &:last-child .page-link {
+    border-radius: var(--flq-btn-sm--border-radius);
+
+    &-prev,
+    &-next {
+      border-radius: 0;
+    }
+  }
+}
+
+.page-link {
+  min-width: var(--flq-btn-sm--size);
+  padding: var(--flq-btn-sm--padding-v) var(--flq-btn-sm--padding-v);
+  font-family: var(--flq-btn--font-family);
+  font-size: var(--flq-btn-sm--font-size);
+  font-weight: var(--flq-btn--font-weight);
+  line-height: var(--flq-btn--line-height);
+  color: hsla(var(--flq-color-title));
+  text-align: center;
+  text-transform: var(--flq-btn--text-transform);
+  letter-spacing: var(--flq-btn--letter-spacing);
+  background-color: hsla(var(--flq-color-background-300));
+  border-radius: var(--flq-btn-sm--border-radius);
+
+  &:hover {
+    color: hsla(var(--flq-color-title));
+    background-color: hsla(var(--flq-color-border));
+  }
+}
+
+.page-link-prev,
+.page-link-next {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+  border-radius: 0;
+
+  @include media-breakpoint-up(sm) {
+    > svg {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    min-width: auto;
+    padding: 0;
+    font-size: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: hsla(var(--flq-color-brand));
+    background-color: transparent;
+  }
+}
+
+.page-link-prev {
+  padding-left: 0;
+}
+
+.page-link-next {
+  padding-right: 0;
+}

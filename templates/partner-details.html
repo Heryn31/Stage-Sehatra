@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Vidéo Sehatra.com - Plateforme de vidéo Vita Malagasy sur Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="py-7 min-vh-100 flq-background d-flex align-items-center">
+    <div class="flq-background-image">
+      <span class="flq-image jarallax" data-speed="0.7">
+        <img src="{% static 'assets/images/concert_live/fetisibal.png' %}" class="jarallax-img" alt="" /></span>
+    </div>
+    <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8);"></div>
+    <div class="container pt-navbar">
+      <div class="row gy-6 gx-6">
+        <div class="col-12 col-lg-5 col-xxl-4" data-sr="actor-image" data-sr-interval="80" data-sr-delay="100" data-sr-duration="1000" data-sr-distance="10">
+          <div class="card flq-card-image flq-card-favorites mb-4" data-sr-item="actor-image">
+            <a href="{% static 'assets/images/concert_live/fetisibal.png' %}" class="card-image" data-fancybox>
+              <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9">
+                <img src="{% static 'assets/images/concert_live/fetisibal.png' %}" alt="" />
+              </span>
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 20H16M4 8V4V8ZM4 4H8H4ZM4 4L9 9L4 4ZM20 8V4V8ZM20 4H16H20ZM20 4L15 9L20 4ZM4 16V20V16ZM4 20H8H4ZM4 20L9 15L4 20ZM20 20L15 15L20 20ZM20 20V16V20Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <div class="card-body">
+              <a href="#" class="btn btn-dark btn-glass btn-block" data-bs-toggle="button">
+                <span class="btn-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="btn-name">Ajouter aux favoris</span>
+              </a>
+            </div>
+          </div>
+          <div class="row gx-1 gy-1">
+            <div class="col" data-sr-item="actor-image">
+              <a href="#" class="btn btn-sm btn-block btn-facebook btn-icon-sm">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.625 12C23.625 5.57812 18.4219 0.375 12 0.375C5.57812 0.375 0.375 5.57812 0.375 12C0.375 17.8022 4.62609 22.6116 10.1836 23.4844V15.3605H7.23047V12H10.1836V9.43875C10.1836 6.52547 11.918 4.91625 14.5744 4.91625C15.8466 4.91625 17.1769 5.14313 17.1769 5.14313V8.0025H15.7106C14.2669 8.0025 13.8164 8.89875 13.8164 9.81797V12H17.0405L16.5248 15.3605H13.8164V23.4844C19.3739 22.6116 23.625 17.8022 23.625 12Z" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
+            <div class="col" data-sr-item="actor-image">
+              <a href="#" class="btn btn-sm btn-block btn-twitter btn-icon-sm">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.533 7.11169C21.5482 7.32488 21.5482 7.53811 21.5482 7.7513C21.5482 14.2538 16.599 21.7462 7.5533 21.7462C4.76648 21.7462 2.17767 20.9391 0 19.5381C0.395953 19.5838 0.776625 19.599 1.18781 19.599C3.48727 19.599 5.60405 18.8224 7.29441 17.4975C5.13197 17.4518 3.31978 16.0356 2.69541 14.0863C3 14.132 3.30455 14.1624 3.62437 14.1624C4.06598 14.1624 4.50764 14.1015 4.91878 13.995C2.66498 13.5381 0.974578 11.5584 0.974578 9.16753V9.10664C1.62937 9.47213 2.39086 9.70055 3.19791 9.73097C1.87303 8.8477 1.00505 7.34011 1.00505 5.63452C1.00505 4.72083 1.24866 3.88327 1.67508 3.1523C4.09641 6.13706 7.73601 8.08627 11.8172 8.2995C11.7411 7.93402 11.6954 7.55335 11.6954 7.17263C11.6954 4.46194 13.8883 2.25385 16.6141 2.25385C18.0304 2.25385 19.3095 2.84775 20.208 3.80714C21.3197 3.59395 22.3857 3.18277 23.3299 2.61933C22.9643 3.76149 22.1877 4.72088 21.1674 5.32997C22.1573 5.22342 23.1167 4.94925 23.9999 4.56858C23.33 5.54316 22.4924 6.41114 21.533 7.11169V7.11169Z" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7 col-xxl-8" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+          <span class="flq-subtitle badge badge-white badge-translucent" data-sr-item="actor">{{ data.partner }}</span>
+          <h1 class="h2 mb-5" data-sr-item="actor">{{ data.title }}</h1>
+          <h2 class="h5 mb-4" data-sr-item="actor">{{ data.about_partner }}</h2>
+          <table class="table table-borderless flq-color-opacity" data-sr-item="actor">
+            <tbody>
+              <tr>
+                <td class="flq-color-meta" style="white-space: nowrap;">
+                  Nombre de vidéos sur sehatra.com :
+                  <span style="margin-left: 40px;">{{ data.nbr_video }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-auto flq-color-meta">Détails du partenaires</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-auto">
+                      <a>{{ data.detail }}</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flq-swiper-wrapper mt-5">
+            <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4">
+              <div class="col-auto" data-sr-item="actor">
+                <h2 class="h5">{{ data.associate }}</h2>
+              </div>
+              <div class="col d-none d-sm-block" data-sr-item="actor">
+                <hr />
+              </div>
+              <div class="col-auto" data-sr-item="actor">
+                <div class="flq-swiper-button-prev btn btn-xs btn-square btn-white btn-brand-hover btn-active btn-icon-sm me-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="flq-swiper-button-next btn btn-xs btn-square btn-white btn-brand-hover btn-active btn-icon-sm">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper flq-swiper-effect-touch" data-sr-item="actor" data-gap="30" data-buttons="true" data-loop="true" data-speed="800" data-touch-ratio="0.8" data-breakpoints="320:1,656:2">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card flq-card-blog">
+                      <div class="card-img-wrap">
+                        <a href="{% url 'single_movie' name=data.name %}"><span class="flq-image flq-responsive"><img src="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}" alt="video-artiste" /></span></a>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'single_movie' name=data.name %}">{{ data.title }}</a></h5>
+                        <div class="flq-meta flq-meta-sm">
+                          <ul>
+                            <li>
+                              <a href="" class="card-year">{{ data.duration }}</a>
+                            </li>
+                            <li>
+                              <a href="#" class="card-category">{{ data.date }}</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="py-7">
+      <div class="container-small">
+        {% if type == 'association' %}
+          <h2 class="h4">Actions associées à cette association</h2>
+          <div class="mt-4">
+            <h2 class="h6">Pour une meilleure éducation des enfants autistes</h2>
+            <span class="flq-color-meta">{{ data.title }} | {{ data.action }}</span>
+            <p class="mt-2">{{ data.detail_action }}</p>
+          </div>
+          <div class="mt-4">
+            <a href="https://donate.stripe.com/dR67vQcvdc5W94k3cd"><button class="btn primary">Faire un don</button></a>
+          </div>
+        {% endif %}
+        <div class="flq-swiper-wrapper mt-4">
+          <div class="row align-items-center justify-content-between flq-color-opacity gx-5 gy-4 mb-4" data-sr="actor" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+            <div class="col-auto" data-sr-item="actor">
+              <h2 class="h4">{{ data.other }}</h2>
+            </div>
+            <div class="col d-none d-sm-block" data-sr-item="actor">
+              <hr />
+            </div>
+            <div class="col-auto" data-sr-item="actor">
+              <div class="flq-swiper-button-prev btn btn-xs btn-square btn-white btn-brand-hover btn-active btn-icon-sm me-1">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="flq-swiper-button-next btn btn-xs btn-square btn-white btn-brand-hover btn-active btn-icon-sm">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="swiper flq-swiper-effect-touch" data-sr data-sr-delay="100" data-sr-duration="1500" data-gap="30" data-buttons="true" data-loop="true" data-speed="800" data-touch-ratio="0.8" data-breakpoints="320:1,656:2">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card flq-card-blog">
+                    <div class="card-img-wrap">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#partner_modal" data-title="{{ data.title }}" data-date="{{ data.date }}" data-genre="{{ data.genre }}" data-description="{{ data.description }}" data-image="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}">
+                        <span class="flq-image flq-responsive"><img src="{% static 'assets/images/blog/post-1-740x420.jpg' %}" alt="" /></span>
+                        <span class="card-badge badge badge-dark badge-glass">{{ data.date }}</span>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title h5"><a href="#" data-bs-toggle="modal" data-bs-target="#partner_modal" data-title="{{ data.title }}" data-date="{{ data.date }}" data-genre="{{ data.genre }}" data-description="{{ data.description }}" data-image="{% static 'assets/images/movies/movie-1-1290x1290.jpg' %}">{{ data.title }}</a></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fenêtre modale pour afficher les détails des partenaires -->
+          <div class="modal fade" id="partner_modal" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Section Image en haut -->
+                <div class="modal-image position-relative">
+                  <a href="{% url 'single_movie' name='single-movie-name' %}">
+                    <img src="{% static 'assets/images/concert_live/fetisibal.jpg' %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                    <!-- Bouton au-dessus de l'image -->
+                    <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                  </a>
+                  <!-- Bouton de fermeture -->
+                  <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Section Texte en bas -->
+                <div class="modal-body">
+                  <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{titre de l'evenement}</h5>
+                  <p class="movie-date">Date : {{ data.date }}</p>
+                  <p class="card-category">Vues : {{ data.views }}</p>
+                  <p class="movie-description">Description : {{ data.detail }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

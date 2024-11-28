@@ -1,0 +1,15 @@
+@use "sass:color";
+@use "sass:math";
+
+@function hex2hsl($color) {
+  $hue: #{color.hue($color)};
+  $saturation: #{color.saturation($color)};
+  $lightness: #{color.lightness($color)};
+  $hue_round: #{math.round(flq-number(str-replace($hue, "deg", "")))};
+  $saturation_round: #{math.round(flq-number(str-replace($saturation, "%", "")))};
+  $lightness_round: #{math.round(flq-number(str-replace($lightness, "%", "")))};
+
+  $hsl: #{$hue_round + "deg"}, #{$saturation_round + "%"}, #{$lightness_round + "%"};
+
+  @return $hsl;
+}

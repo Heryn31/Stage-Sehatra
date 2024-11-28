@@ -1,0 +1,57 @@
+.flq-signin,
+.flq-signup {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > .flq-fancybox-head {
+    @include create-col(auto);
+  }
+
+  > .flq-fancybox-body {
+    @include create-col(grow);
+
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      .flq-signin-content,
+      .flq-signup-content {
+        padding-right: var(--flq-container--padding);
+        padding-left: var(--flq-container--padding);
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.flq-signin-content,
+.flq-signup-content {
+  width: 440px;
+  max-width: 100%;
+  padding: 60px 50px 50px;
+  margin-right: auto;
+  margin-left: auto;
+  clip-path: inset(0% 0 100% 0 round var(--flq-border-radius-xl));
+  background-color: hsla(var(--flq-color-black), 0.3);
+  border-radius: var(--flq-border-radius-xl);
+  transition: clip-path calc(var(--flq-transition-duration-cubic) + 0.4s) var(--flq-transition-easing-cubic);
+  transition-delay: var(--flq-fancybox-show--delay);
+}
+
+// Open.
+.flq-fancybox-open {
+  .flq-signin-content,
+  .flq-signup-content {
+    clip-path: inset(0% 0 0% 0 round var(--flq-border-radius-xl));
+  }
+}
+
+// Closing.
+.fancybox-is-closing {
+  .flq-signin-content,
+  .flq-signup-content {
+    clip-path: inset(60% 0% 60% 0 round var(--flq-border-radius-xl));
+    transition-delay: 0s;
+  }
+}

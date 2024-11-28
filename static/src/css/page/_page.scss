@@ -1,0 +1,18 @@
+.content-wrap {
+  margin: 0 auto;
+}
+
+.flq-sidebar {
+  width: 100%;
+  max-width: 100%;
+}
+
+@each $media, $width in $grid-breakpoints {
+  @if $media != "xs" {
+    @include media-breakpoint-up(#{$media}) {
+      .flq-sidebar-#{$media} {
+        width: var(--flq-page__sidebar--width);
+      }
+    }
+  }
+}

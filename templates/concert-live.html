@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Concert et Live - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="flq-background py-7">
+    <div class="flq-background-ticker">
+      <div class="flq-image-ticker mb-3" data-gap="20" data-pixels-per-second="20">
+        <div class="flq-image-ticker-inner">
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+        </div>
+      </div>
+      <div class="flq-image-ticker" data-gap="20" data-pixels-per-second="20" data-inverted>
+        <div class="flq-image-ticker-inner">
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
+    <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
+      <h1 class="display-6 display-md-5 display-lg-4 mb-1" data-sr-item="banner-text">Nos concerts et lives</h1>
+      <nav aria-label="breadcrumb" data-sr-item="banner-text">
+        <ol class="breadcrumb flq-color-opacity">
+          <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">Accueil</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Concerts et Lives</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="py-7">
+      <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+        <div class="row align-items-center gy-4 mb-5">
+          <div class="col-12 col-md">
+            <nav>
+              <ul class="nav nav-tabs flq-isotope-options" data-sr="tvshow-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+                <li class="nav-item" data-sr-item="tvshow-options">
+                  <a href="#" data-filter="all" class="nav-link active"><span class="nav-link-name">Tout</span></a>
+                </li>
+                <li class="nav-item" data-sr-item="tvshow-options">
+                  <a href="#" data-filter="romance" class="nav-link"><span class="nav-link-name">{Genre}</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-12 col-md-auto" data-sr data-sr-delay="160" data-sr-duration="1000" data-sr-distance="10">
+            <select class="form-select">
+              <option>Populaire</option>
+              <option>Meilleur note</option>
+              <option>Date</option>
+              <option>Nom</option>
+            </select>
+          </div>
+        </div>
+        <div class="row gy-5 justify-content-center flq-isotope-grid">
+          {% for concert in concert_live %}
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 flq-isotope-item" data-filters="live">
+            <div data-sr-item="tvshow-item">
+              <div class="card flq-card-blog">
+                <div class="card-img-wrap">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#concert-live-{{ forloop.counter }}">
+                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9">
+                      <img src="{% static concert.image %}" alt="concert-live" />
+                    </span>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title h6">
+                    <a href="{% url 'single_movie' name=concert.title %}">{{ concert.title }}</a>
+                  </h5>
+                  <div class="flq-meta flq-meta-sm">
+                    <ul>
+                      <li>
+                        <a class="card-date">{{ concert.date }}</a>
+                      </li>
+                      <li>
+                        <a class="card-price">{{ concert.price }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>       
+          <!-- Fenêtre modale pour afficher les détails du concert-live -->
+          <div class="modal fade" id="concert-live-{{ forloop.counter }}" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Section Image en haut -->
+                <div class="modal-image position-relative">
+                  <a href="{% url 'single_movie' name=concert.title %}">
+                    <img src="{% static concert.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                    <!-- Bouton au-dessus de l'image -->
+                    <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;">
+                      <span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span>
+                    </button>
+                  </a>
+                  <!-- Bouton de fermeture -->
+                  <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Section Texte en bas -->
+                <div class="modal-body">
+                  <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ concert.title }}</h5>
+                  <p class="movie-date">Date : {{ concert.date }}</p>
+                  <p class="movie-price">Prix : {{ concert.price }}</p>
+                  <p class="movie-genre">Genre : {{ concert.genre }}</p>
+                  <p class="movie-description">Description : {{ concert.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

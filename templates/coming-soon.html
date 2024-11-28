@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  A-venir - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="content-wrap">
+    <div class="min-vh-100 flq-background flq-background-move">
+      <div class="flq-background-image">
+        <span class="flq-image"><img src="{% static 'assets/images/sehatra-3.png' %}" alt="A-venir" /></span>
+      </div>
+      <div class="flq-background-overlay" style="background-color:  rgba(22, 24, 34, 0.5);"></div>
+      <div class="d-flex align-items-center justify-content-center py-7 min-vh-100">
+        <div class="container text-center pt-navbar" data-sr="coming-soon" data-sr-delay="100" data-sr-interval="100" data-sr-duration="1300" data-sr-distance="10">
+          <h1 class="display-3 mb-1" data-sr-item="coming-soon">SEHATRA</h1>
+          <p class="lead mb-5" data-sr-item="coming-soon">Du nouveau arrive bientôt, restez à l'écoute !</p>
+          <div class="flq-countdown row justify-content-center gy-4 h1 mb-5" data-end="2023-11-21 12:00" data-timezone="EST">
+            <div class="col-auto">
+              <div class="flq-countdown-item" data-sr-item="coming-soon">
+                <span class="h6">Jours</span>
+                <span><span class="flq-countdown-days"></span></span>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="flq-countdown-item" data-sr-item="coming-soon">
+                <span class="h6">Heures</span>
+                <span><span class="flq-countdown-hours"></span></span>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="flq-countdown-item" data-sr-item="coming-soon">
+                <span class="h6">Minutes</span>
+                <span><span class="flq-countdown-minutes"></span></span>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="flq-countdown-item" data-sr-item="coming-soon">
+                <span class="h6">Secondes</span>
+                <span><span class="flq-countdown-seconds"></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="test-countdown" data-end="2023-11-21 12:00" data-timezone="EST">
+            <div class="test-countdown-days"></div>
+            <div class="test-countdown-hours"></div>
+            <div class="test-countdown-minutes"></div>
+            <div class="test-countdown-seconds"></div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-6">
+              <div class="row gx-1 gy-4">
+                <div class="col-12 col-sm">
+                  <input class="form-control flq-form-mail form-control-lg flq-form-glass" type="email" placeholder="Votre adresse e-mail" data-sr-item="coming-soon" />
+                </div>
+                <div class="col-12 col-sm-auto">
+                  <button class="btn btn-lg btn-white btn-brand-hover btn-block" data-sr-item="coming-soon">Envoyer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

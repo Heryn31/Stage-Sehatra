@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Favoris - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="content-wrap">
+    <div class="container pt-5 pb-7">
+      <div class="row gy-6 gx-6">
+        <div class="col-12 col-xl order-5">
+          <div class="row gx-0 gy-3" data-sr="account-favorites" data-sr-delay="300" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
+            <div class="col-12" data-sr-item="account-favorites">
+              <div class="flq-account-favorite">
+                <div class="flq-media">
+                  <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/tv-shows/show-1-120x120.jpg' %}" alt="Favoris" /></span></a>
+                  <div class="flq-media-meta">
+                    <h5 class="flq-media-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Nom du film]</a></h5>
+                    <div class="flq-meta">
+                      <ul>
+                        <li>[Date]</li>
+                        <li>[Duré]</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-dark btn-xs btn-square btn-icon-sm align-self-center active" data-bs-toggle="button">
+                  <span class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-12" data-sr-item="account-favorites">
+              <div class="flq-account-favorite">
+                <div class="flq-media">
+                  <a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/movies/movie-1-120x120.jpg' %}" alt="Favoris" /></span></a>
+                  <div class="flq-media-meta">
+                    <h5 class="flq-media-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}">[Nom du film]</a></h5>
+                    <div class="flq-meta">
+                      <ul>
+                        <li>[Date]</li>
+                        <li>[Duré]</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-dark btn-xs btn-square btn-icon-sm align-self-center active" data-bs-toggle="button">
+                  <span class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-12" data-sr-item="account-favorites">
+              <div class="flq-account-favorite">
+                <div class="flq-media">
+                  <a href="{% url 'artiste' %}" class="flq-media-image"><span class="flq-image"><img src="{% static 'assets/images/actor/anna-chase-160x160.jpg' %}" alt="Favoris" /></span></a>
+                  <div class="flq-media-meta">
+                    <h5 class="flq-media-title"><a href="{% url 'artiste' %}">[Nom de l'artiste]]</a></h5>
+                    <div class="flq-meta">
+                      <ul>
+                        <li>
+                          <a href=""{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}"">[Nom du video]</a>
+                        </li>
+                        <li>
+                          <a href=""{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}#{% endif %}"">[Nom du video]</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="btn btn-dark btn-xs btn-square btn-icon-sm align-self-center active" data-bs-toggle="button">
+                  <span class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.3671 3.84166C16.9415 3.41583 16.4361 3.07803 15.8799 2.84757C15.3237 2.6171 14.7275 2.49847 14.1254 2.49847C13.5234 2.49847 12.9272 2.6171 12.371 2.84757C11.8147 3.07803 11.3094 3.41583 10.8838 3.84166L10.0004 4.725L9.11709 3.84166C8.25735 2.98192 7.09128 2.49892 5.87542 2.49892C4.65956 2.49892 3.4935 2.98192 2.63376 3.84166C1.77401 4.70141 1.29102 5.86747 1.29102 7.08333C1.29102 8.29919 1.77401 9.46525 2.63376 10.325L3.51709 11.2083L10.0004 17.6917L16.4838 11.2083L17.3671 10.325C17.7929 9.89937 18.1307 9.39401 18.3612 8.83779C18.5917 8.28158 18.7103 7.6854 18.7103 7.08333C18.7103 6.48126 18.5917 5.88508 18.3612 5.32887C18.1307 4.77265 17.7929 4.26729 17.3671 3.84166V3.84166Z" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-auto">
+          <div class="flq-sidebar flq-sidebar-lg">
+            <div class="flq-account-navbar">
+              <nav>
+                <ul class="nav nav-dots flex-column gy-3">
+                  <li class="nav-item">
+                    <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profil</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis &amp; Commentaires</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon compte</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Se déconnecter</span></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

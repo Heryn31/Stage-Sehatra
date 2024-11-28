@@ -1,0 +1,40 @@
+.list-group-item {
+  color: inherit;
+  border-color: hsla(var(--flq-color-border));
+}
+
+.list-group-flush {
+  .list-group-item {
+    padding: var(--flq-vertical-rhythm-2) 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.list-group-dotted {
+  .list-group-item {
+    position: relative;
+    padding-left: 21px;
+
+    &::before {
+      position: absolute;
+      top: calc(var(--flq-vertical-rhythm-2) + 0.7em);
+      left: 0;
+      width: 6px;
+      height: 6px;
+      content: "";
+      background-color: currentColor;
+      border-radius: 50%;
+    }
+
+    &:first-child::before {
+      top: 0.7em;
+    }
+  }
+}

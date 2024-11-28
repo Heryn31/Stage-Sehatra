@@ -1,0 +1,62 @@
+// Search.
+.flq-search {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > .flq-fancybox-head {
+    @include create-col(auto);
+
+    order: -1;
+  }
+
+  > .flq-fancybox-body {
+    @include create-col(grow);
+
+    display: flex;
+    align-items: center;
+  }
+
+  > .flq-fancybox-footer {
+    @include create-col(auto);
+
+    padding-bottom: 40px;
+  }
+
+  .flq-social ul {
+    opacity: 0;
+    transition: opacity var(--flq-transition-duration) var(--flq-transition-easing);
+  }
+}
+
+// Search content.
+.flq-search-content {
+  position: relative;
+  clip-path: inset(0% 100% 0% 0 round var(--flq-form-lg--border-radius));
+  transition: clip-path calc(var(--flq-transition-duration-cubic) + 0.4s) var(--flq-transition-easing-cubic);
+  transition-delay: var(--flq-fancybox-show--delay);
+
+  .flq-search-btn {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+  }
+}
+
+// Open.
+.flq-fancybox-open {
+  .flq-social ul {
+    opacity: 1;
+  }
+
+  .flq-search-content {
+    clip-path: inset(0% 0% 0% 0 round var(--flq-form-lg--border-radius));
+  }
+}
+
+// Closing.
+.fancybox-is-closing .flq-search-content {
+  clip-path: inset(60% 0% 60% 0 round var(--flq-form-lg--border-radius));
+  transition-delay: 0s;
+}

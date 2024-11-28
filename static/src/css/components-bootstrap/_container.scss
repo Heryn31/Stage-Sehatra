@@ -1,0 +1,37 @@
+:root {
+  --flq-container--padding: 40px;
+  --flq-container--max-width: 1320px;
+  --flq-container-small--max-width: 770px;
+
+  @each $media, $width in $container-max-widths {
+    @include media-breakpoint-only($media) {
+      --flq-container--max-width: #{$width};
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    --flq-container-small--max-width: var(--flq-container--max-width);
+  }
+}
+
+.container,
+.container-fluid,
+.container-small {
+  width: 100%;
+  padding-right: var(--flq-container--padding);
+  padding-left: var(--flq-container--padding);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: calc(var(--flq-container--max-width) + var(--flq-container--padding) + var(--flq-container--padding));
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+.container-small {
+  max-width: calc(var(--flq-container-small--max-width) + var(--flq-container--padding) + var(--flq-container--padding));
+}

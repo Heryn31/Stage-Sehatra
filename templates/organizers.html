@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Organisateurs - Plateforme de vidéo Vita Malagasy - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="flq-background py-7">
+    <div class="flq-background-ticker">
+      <div class="flq-image-ticker mb-3" data-gap="20" data-pixels-per-second="20">
+        <div class="flq-image-ticker-inner">
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+        </div>
+      </div>
+      <div class="flq-image-ticker" data-gap="20" data-pixels-per-second="20" data-inverted>
+        <div class="flq-image-ticker-inner">
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
+    <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
+      <h1 class="display-6 display-md-5 display-lg-4 mb-1" data-sr-item="banner-text">Organisateurs Partenaires De SEHATRA</h1>
+      <nav aria-label="breadcrumb" data-sr-item="banner-text">
+        <ol class="breadcrumb flq-color-opacity">
+          <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">Accueil</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Organisateurs</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="py-7">
+      <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+        <div class="card-title h5 mb-2" data-sr-item="new-releases">
+          <p class="fs-6 fs-md-5 fs-lg-4">Ces organisateurs ont choisi de collaborer avec SEHATRA.COM pour mettre leur production à la disposition des Malagasy dans le monde entier.</p>
+        </div>
+        <div class="mb-4 mt-4" data-sr-item="new-releases">
+          <button class="btn btn-outline btn-white" data-bs-toggle="modal" data-bs-target="#inscriptionModal">Inscrivez votre entreprise</button>
+          <!-- Modal -->
+          <div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="inscriptionModalLabel">Formulaire Organisateur</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="max-height: calc(100vh - 210px); overflow-y: auto;">
+                  <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. Veuillez remplir le formulaire ci-dessous avec les informations sur votre organisation.</p>
+                  <!-- Message indiquant que tous les champs sont obligatoires -->
+                  <p class="text-danger" style="background-color: hsla(var(--flq-btn--background-color)); color: var(--flq-text-color);">Tous les champs marqués d'une étoile (*) sont obligatoires.</p>
+                  <form>
+                    <fieldset>
+                      <legend>Vous</legend>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control required-field" id="nom" placeholder="Nom *" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control" id="prenom" placeholder="Prénom" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="tel" class="form-control" id="telephone" placeholder="Numéro téléphone" />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="email" class="form-control required-field" id="emailYou" placeholder="E-mail *" required />
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <legend>Votre association</legend>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control required-field" id="nomGroupe" placeholder="Nom de l'entreprise *" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="email" class="form-control required-field" id="emailGroupe" placeholder="E-mail *" required />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <textarea class="form-control required-field" id="presentation" rows="3" placeholder="Décrivez votre activité en quelques phrases *" required></textarea>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="row g-3 justify-content-end">
+                      <div class="col-12 col-sm-auto">
+                        <button class="btn btn-dark w-100" type="button" data-bs-dismiss="modal">Annuler</button>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <button type="submit" class="btn btn-primary w-100">Envoyer&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center gy-4 mb-5">
+          <div class="col-12 col-md">
+            <nav>
+              <ul class="nav nav-tabs flq-isotope-options" data-sr="tvshow-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+                <li class="nav-item" data-sr-item="tvshow-options">
+                  <a href="#" data-filter="all" class="nav-link active"><span class="nav-link-name">Tout</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="row gy-5 justify-content-center flq-isotope-grid">
+          {% for data in organizers %}
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 flq-isotope-item" data-filters="romance">
+              <div data-sr-item="tvshow-item">
+                <div class="card flq-card-blog">
+                  <div class="card-img-wrap">
+                    <!-- Make modal target dynamic based on the organizer's name -->
+                    <a href="{% url 'organizers_details' name=data.name %}" data-bs-toggle="modal" data-bs-target="#organizerModal{{ forloop.counter }}">
+                      <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-16x9">
+                        <img src="{% static data.image %}" alt="{{ data.name }}" /></span></a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">
+                      <a href="{% url 'organizers_details' name=data.name %}">{{ data.title }}</a></h5>
+                    <div class="flq-meta flq-meta-sm">
+                      <ul>
+                        <li>
+                          <a class="card-duration">{{ data.duration }}</a>
+                        </li>
+                        <li>
+                          <a class="card-year">{{ data.date }}</a>
+                        </li>
+                        <li>
+                          <a class="card-nbr">Vidéos : {{ data.nbr_video }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal for each organizer, make the modal id unique by using forloop.counter -->
+            <div class="modal fade" id="organizerModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <!-- Image Section at the top -->
+                  <div class="modal-image position-relative">
+                    <a href="{% url 'organizers_details' name=data.name %}">
+                      <img src="{% static data.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                      <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                    </a>
+                    <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!-- Text Section at the bottom -->
+                  <div class="modal-body">
+                    <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ data.title }}</h5>
+                    <p class="movie-duration">Durées : {{ data.duration }}</p>
+                    <p class="movie-date">Date : {{ data.date }}</p>
+                    <p class="price">Prix : {{ data.price }}</p>
+                    <p class="card-nbr">Vidéos : {{ data.nbr_video }}</p>
+                    <p class="detail">Détail : {{ data.detail }}</p>
+                    <p class="movie-description">Description :{{ data.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+.modal-backdrop {
+    -webkit-backdrop-filter: blur(80px); /* Pour Safari */
+    backdrop-filter: blur(80px); /* Pour les navigateurs modernes */
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback pour plus de compatibilité */
+}
+
+.card-video {
+    width: 100%;
+    height: auto;
+}
+
+::selection {
+    background-color: hsl(355, 59%, 57%);
+    /* Couleur de fond de la sélection */
+}
+
+.modal-image {
+    position: relative;
+    height: 50vh; /* Utilisation de 50% de la hauteur de la fenêtre pour une meilleure répartition de l'espace */
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image couvre tout le conteneur sans déformer son ratio */
+    object-position: center center; /* Centre l'image */
+}
+
+
+.modal-image button {
+    z-index: 2; /* Assure que le bouton est au-dessus de l'image */
+    bottom: 20px; /* Ajuste la position du bouton */
+}
+
+/* Section Texte */
+.modal-body {
+    padding: 20px;
+    max-height: 250px; /* Limite la hauteur du texte pour laisser de l'espace à l'image */
+    overflow-y: auto;
+}
+
+/* Scrollbar pour le contenu texte */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* Responsive pour les écrans plus petits */
+@media (max-width: 768px) {
+    .modal-image {
+        height: 200px; /* Réduit la hauteur de l'image pour les petits écrans */
+    }
+
+    .modal-body {
+        max-height: none; /* Désactive la hauteur maximale pour les petits écrans */
+    }
+}

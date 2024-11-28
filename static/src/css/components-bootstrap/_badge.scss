@@ -1,0 +1,36 @@
+.badge {
+  --flq-badge--background-color: var(--flq-color-background-300);
+
+  display: inline-block;
+  padding: 2.5px 10px;
+  font-size: var(--flq-small--font-size);
+  font-weight: var(--flq-small--font-weight-bold);
+  line-height: var(--flq-small--line-height);
+  color: hsla(var(--flq-color-text));
+  text-transform: var(--flq-small--text-transform);
+  background-color: hsla(var(--flq-badge--background-color));
+  border-radius: var(--flq-border-radius-sm);
+}
+
+.badge-sm {
+  padding: 0.5px 8px;
+}
+
+// Colors.
+@each $color in ("white", "black", "dark") {
+  .badge-#{$color} {
+    --flq-badge--background-color: var(--flq-color-#{$color});
+  }
+}
+
+// Glass.
+.badge-glass {
+  @include backdrop-blur();
+
+  background-color: hsla(var(--flq-badge--background-color), 0.6);
+}
+
+// Translucent.
+.badge-translucent {
+  background-color: hsla(var(--flq-badge--background-color), 0.1);
+}

@@ -1,0 +1,127 @@
+:root {
+  --flq-icon-star: #{url-svg('<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.90195 0.263541L11.0643 5.31475L16.6003 5.78413C16.9843 5.81685 17.1405 6.28968 16.849 6.53858L12.6499 10.1291L13.9082 15.4706C13.9955 15.8418 13.588 16.1337 13.2581 15.9365L8.50054 13.1047L3.74296 15.9365C3.41223 16.1329 3.00559 15.8409 3.09285 15.4706L4.35118 10.1291L0.151211 6.53772C-0.140248 6.28882 0.0150806 5.81599 0.399911 5.78326L5.93588 5.31389L8.09826 0.263541C8.24835 -0.0878471 8.75186 -0.0878471 8.90195 0.263541Z" fill="#FFBD3C"/></svg>')};
+  --flq-icon-star-back: #{url-svg('<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.90195 0.263541L11.0643 5.31475L16.6003 5.78413C16.9843 5.81685 17.1405 6.28968 16.849 6.53858L12.6499 10.1291L13.9082 15.4706C13.9955 15.8418 13.588 16.1337 13.2581 15.9365L8.50054 13.1047L3.74296 15.9365C3.41223 16.1329 3.00559 15.8409 3.09285 15.4706L4.35118 10.1291L0.151211 6.53772C-0.140248 6.28882 0.0150806 5.81599 0.399911 5.78326L5.93588 5.31389L8.09826 0.263541C8.24835 -0.0878471 8.75186 -0.0878471 8.90195 0.263541Z" fill="#3F3F41"/></svg>')};
+}
+
+.flq-rating {
+  --flq-rating--width: 0%;
+  --flq-rating--gap: 3px;
+  --flq-rating__icon--width: 17px;
+  --flq-rating__icon--height: 16px;
+
+  display: flex;
+  overflow: hidden;
+
+  > span {
+    position: relative;
+    display: inline-flex;
+    padding-right: calc(var(--flq-rating--gap) * 0.5);
+    padding-left: calc(var(--flq-rating--gap) * 0.5);
+    margin-right: calc(var(--flq-rating--gap) * -0.5);
+    margin-left: calc(var(--flq-rating--gap) * -0.5);
+
+    > span:first-child {
+      display: inline-block;
+      width: calc((var(--flq-rating--gap) + var(--flq-rating__icon--width)) * 5);
+      max-width: 100%;
+      height: var(--flq-rating__icon--height);
+      background-image: var(--flq-icon-star-back);
+      background-repeat: space repeat;
+      background-size: center/var(--flq-rating__icon--width);
+    }
+
+    > span:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      clip-path: inset(0 calc(var(--flq-rating--width) / 0.1) 0 0);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: calc(var(--flq-rating--gap) * 0.5);
+        bottom: 0;
+        left: calc(var(--flq-rating--gap) * 0.5);
+        display: inline-block;
+        content: "";
+        background-image: var(--flq-icon-star);
+        background-repeat: space repeat;
+        background-size: center/var(--flq-rating__icon--width);
+      }
+    }
+  }
+
+}
+
+// dynamic
+.flq-rating-dynamic {
+  --flq-rating-dynamic--gap: 5px;
+  --flq-rating-dynamic__icon--width: 22px;
+  --flq-rating-dynamic__icon--height: 21px;
+
+  display: flex;
+
+  > span {
+    display: inline-flex;
+    margin-left: calc(var(--flq-rating-dynamic--gap) * -1);
+  }
+
+  input {
+    position: relative;
+    width: var(--flq-rating-dynamic__icon--width);
+    height: var(--flq-rating-dynamic__icon--height);
+    margin-left: var(--flq-rating-dynamic--gap);
+    cursor: pointer;
+    background-color: transparent;
+    background-image: var(--flq-icon-star-back);
+    background-repeat: no-repeat;
+    background-size: var(--flq-rating-dynamic__icon--width) var(--flq-rating-dynamic__icon--height);
+    border: 0;
+    appearance: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      content: "";
+    }
+
+    // Active star.
+    &::before {
+      right: 0;
+      left: 0;
+      clip-path: inset(0 0 0 0);
+      background-image: var(--flq-icon-star);
+      background-repeat: no-repeat;
+      background-size: var(--flq-rating-dynamic__icon--width) var(--flq-rating-dynamic__icon--height);
+      transition: opacity var(--flq-transition-duration) var(--flq-transition-easing);
+    }
+
+    // Zone hover
+    &::after {
+      right: calc(var(--flq-rating-dynamic--gap) * -0.5);
+      left: calc(var(--flq-rating-dynamic--gap) * -0.5);
+    }
+
+    &:checked ~ input::before {
+      opacity: 0;
+    }
+
+    &:hover ~ input::before {
+      opacity: 0.5;
+    }
+  }
+
+  > span:hover input {
+    &:hover ~ input::before {
+      opacity: 0.5;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}

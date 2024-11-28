@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Questions - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="flq-background py-7">
+    <div class="flq-background-ticker">
+      <div class="flq-image-ticker mb-3" data-gap="20" data-pixels-per-second="20">
+        <div class="flq-image-ticker-inner">
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+        </div>
+      </div>
+      <div class="flq-image-ticker" data-gap="20" data-pixels-per-second="20" data-inverted>
+        <div class="flq-image-ticker-inner">
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/240x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+          <div class="flq-image-ticker-item">
+            <span class="flq-image"><img src="{% static 'assets/images/background-ticker/540x360.jpg' %}" alt="" /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.8)"></div>
+    <div class="container text-center" data-sr="banner-text" data-sr-interval="100" data-sr-distance="10" data-sr-duration="1000">
+      <h1 class="display-5 mb-1" data-sr-item="banner-text">QUESTIONS FRÉQUENTES</h1>
+      <nav aria-label="breadcrumb" data-sr-item="banner-text">
+        <ol class="breadcrumb flq-color-opacity">
+          <li class="breadcrumb-item">
+            <a href="{% url 'home' %}">Accueil</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Questions</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="py-7">
+      <div class="container">
+        <div class="accordion" data-sr="accordion" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
+          <div class="accordion-item" data-sr-item="accordion">
+            <h2 class="accordion-header h5">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">
+                Let may one from won&#39;t seasons beast lights under he?
+                <span class="accordion-button-icon"></span>
+              </button>
+            </h2>
+            <div id="faq-1" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-sr-item="accordion">
+            <h2 class="accordion-header h5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                May Fly behold, living days him divided signs forth after?
+                <span class="accordion-button-icon"></span>
+              </button>
+            </h2>
+            <div id="faq-2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-sr-item="accordion">
+            <h2 class="accordion-header h5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                Hath doesn&#39;t own it to, face open third replenish dry seed for he had bring great fourth creepeth thing to?
+                <span class="accordion-button-icon"></span>
+              </button>
+            </h2>
+            <div id="faq-3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-sr-item="accordion">
+            <h2 class="accordion-header h5"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">It man sixth the dominion gathering unto Female above you&#39;re dry fill evening creature in tree divided there beginning creeping Lights. Our together above subdue. Likeness be let light have? <span class="accordion-button-icon"></span></button></h2>
+            <div id="faq-4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-sr-item="accordion">
+            <h2 class="accordion-header h5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">
+                You blessed blessed created day seed in set evening man?
+                <span class="accordion-button-icon"></span>
+              </button>
+            </h2>
+            <div id="faq-5" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p>Said whales place. And kind under moveth spirit be she'd you'll that. Rule created darkness. Second. Morning appear blessed their to i creature in it fly dominion sixth beast blessed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flq-background-color-100">
+      <div class="container-small">
+        <div class="row gx-0 justify-content-center">
+          <div class="col-12 col-lg-10 col-xl">
+            <div class="py-7 flq-vertical-rhythm" data-sr="contact-form" data-sr-interval="100" data-sr-duration="1000" data-sr-distance="10">
+              <h2 class="h1" data-sr-item="contact-form">Vous avez encore des questions ?</h2>
+              <p data-sr-item="contact-form">N'hésitez pas à nous contacter pour toute question ou demande d'information supplémentaire. Nous sommes là pour vous aider et nous nous ferons un plaisir de répondre à toutes vos interrogations.</p>
+              <div class="flq-social" data-sr-item="contact-form">
+                <ul class="g-4">
+                  <li>
+                    <a href="https://www.facebook.com/sehatracom" target="_blank"  class="flq-social-link">
+                      <i class="fa-brands fa-facebook" style="width: 20px; height: 20px; font-size: 20px; display: inline-block;"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/sehatra/" target="_blank"  class="flq-social-link">
+                      <i class="fa-brands fa-instagram" style="width: 20px; height: 20px; font-size: 20px; display: inline-block;"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <form class="mt-6" action="#">
+                <div class="row gy-4">
+                  <div class="col-12 col-sm" data-sr-item="contact-form">
+                    <input class="form-control flq-form-user form-control-lg" type="text" placeholder="Votre nom" />
+                  </div>
+                  <div class="col-12 col-sm" data-sr-item="contact-form">
+                    <input class="form-control flq-form-mail form-control-lg" type="email" placeholder="Votre email" />
+                  </div>
+                  <div class="col-12" data-sr-item="contact-form">
+                    <textarea class="form-control flq-form-message form-control-lg" rows="5" placeholder="Votre message"></textarea>
+                  </div>
+                  <div class="col-12" data-sr-item="contact-form">
+                    <button class="btn btn-lg btn-block">
+                      Envoyer&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

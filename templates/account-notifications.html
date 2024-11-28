@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Notifications - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="content-wrap">
+    <div class="container pt-5 pb-7">
+      <div class="row gy-6 gx-6">
+        <div class="col-12 col-xl order-5">
+          <div class="flq-account-content" data-sr data-sr-delay="300" data-sr-duration="1200" data-sr-distance="10">
+            <h2 class="h5 mb-2">Notifications du site</h2>
+            <div class="row gy-1 gx-0">
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="notificationShowInstant" />
+                  <label class="form-check-label" for="notificationShowInstant">Afficher les notifications immédiates</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="notificationWithSound" checked />
+                  <label class="form-check-label" for="notificationWithSound">Recevoir des notifications avec son</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="notificationMessageText" checked />
+                  <label class="form-check-label" for="notificationMessageText">Afficher le message</label>
+                </div>
+              </div>
+            </div>
+            <h2 class="h5 mt-5 mb-2">Notifications par SMS</h2>
+            <div class="row gy-1 gx-0">
+              <div class="col-12">
+                <p>
+                  Les notifications par SMS seront envoyées au numéro <strong>1 (10*) ***-**49</strong>
+                </p>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="notificationSMS" />
+                  <label class="form-check-label" for="notificationSMS">Recevoir des notifications par SMS</label>
+                </div>
+              </div>
+            </div>
+            <h2 class="h5 mt-5 mb-2">Notifications par e-mail</h2>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="notificationEmail" checked />
+              <label class="form-check-label" for="notificationEmail">Notifications par e-mail</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-auto">
+          <div class="flq-sidebar flq-sidebar-lg">
+            <div class="flq-account-navbar">
+              <nav>
+                <ul class="nav nav-dots flex-column gy-3">
+                  <li class="nav-item">
+                    <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profil</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis &amp; Commentaires</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon compte</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Se déconnecter</span></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

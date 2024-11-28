@@ -1,0 +1,72 @@
+// Colors.
+$flq_colors: (
+  "brand": #{hex2hsl(#f73333)},
+  "success": #{hex2hsl(#42c440)},
+  "danger": #{hex2hsl(#c93f36)},
+  "warning":#{hex2hsl(#eb8424)},
+  "info":  #{hex2hsl(#30c5bb)},
+  "white": #{hex2hsl(#fff)},
+  "black":#{hex2hsl(#000)},
+  "dark":  #{hex2hsl(#262628)}
+) !default;
+
+// Colors social.
+$flq_color_social: (
+  "rss": #e06618,
+  "behance": #487cfb,
+  "dropbox": #4d86d9,
+  "dribbble": #ea4c89,
+  "facebook": #3b5998,
+  "flickr": #f40083,
+  "foursquare": #fc4575,
+  "instagram": #c32a68,
+  "linkedin": #007bb6,
+  "medium": #03a87a,
+  "odnoklassniki": #d8732a,
+  "paypal": #1d3283,
+  "pinterest": #cb2027,
+  "reddit": #ff5700,
+  "soundcloud": #f50,
+  "slack": #543b56,
+  "swarm": #ffb000,
+  "stumbleupon": #eb4924,
+  "tumblr": #2c4762,
+  "twitch": #5c43a1,
+  "twitter": #00b6f1,
+  "vimeo": #45bbff,
+  "vk": #657da0,
+  "youtube": #f00,
+) !default;
+
+:root {
+  // Colors.
+  @each $name, $color in $flq_colors {
+    --flq-color-#{$name}: #{$color};
+  }
+
+  // Text Colors.
+  --flq-color-title: #{hex2hsl(#fff)};
+  --flq-color-text: #{hex2hsl(#bfbfbf)};
+  --flq-color-meta: #{hex2hsl(#8c8c8c)};
+
+  // Background Colors.
+  --flq-color-background: #{hex2hsl(#111113)};
+  --flq-color-background-100: #{hex2hsl(#161618)};
+  --flq-color-background-200: #{hex2hsl(#1a1a1c)};
+  --flq-color-background-300: #{hex2hsl(#1e1e20)};
+  --flq-color-background-footer: #{hex2hsl(#0c0c0e)};
+
+  // Border Colors.
+  --flq-color-border: #{hex2hsl(#323234)};
+
+  // Overlay.
+  --flq-color-title-opacity: 1;
+  --flq-color-text-opacity: 0.7;
+  --flq-color-meta-opacity: 0.5;
+  --flq-color-border-opacity: 0.15;
+
+  // Social.
+  @each $name, $color in $flq_color_social {
+    --flq-color-#{$name}: #{hex2hsl($color)};
+  }
+}

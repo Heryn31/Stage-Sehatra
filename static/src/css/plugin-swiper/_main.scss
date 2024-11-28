@@ -1,0 +1,38 @@
+.swiper {
+  // Parallax.
+  &[data-parallax="true"] {
+    .swiper-slide {
+      overflow: hidden;
+    }
+  }
+}
+
+// Free mode.
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: var(--flq-transition-easing-cubic);
+}
+
+// Effect touch.
+.flq-swiper-effect-touch {
+  &.flq-swiper-touch .swiper-slide {
+    transform: scale(0.94);
+  }
+
+  .swiper-slide {
+    margin-top: 2px;
+    transition: transform 0.45s ease;
+    transform: scale(1);
+  }
+}
+
+// Main.
+.flq-swiper-main {
+  .swiper-slide .container {
+    opacity: 0;
+    transition: opacity var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+  }
+
+  .swiper-slide-active .container {
+    opacity: 1;
+  }
+}

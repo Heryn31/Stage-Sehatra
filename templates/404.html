@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  404 - Sehatra.com
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+  <div class="content-wrap">
+    <div class="min-vh-100 flq-background flq-background-move">
+      <div class="flq-background-image">
+        <span class="flq-image"><img src="{% static 'assets/images/sehatra-3.png' %}" alt="404" /></span>
+      </div>
+      <div class="flq-background-overlay" style="background-color: rgba(19, 23, 34, 0.5);"></div>
+      <div class="d-flex flex-column min-vh-100">
+        <div class="container flex-grow-1 pt-navbar my-7 d-flex align-items-center">
+          <div class="text-center flq-vertical-rhythm w-100" data-sr="page-404" data-sr-delay="100" data-sr-interval="100" data-sr-duration="1300" data-sr-distance="10">
+            <div class="d-flex justify-content-center" data-sr-item="page-404">
+              <svg width="240" height="96" viewBox="0 0 240 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5957 76.5114V77.5114H2.5957H43.7406V91V92H44.7406H64.8968H65.8968V91V77.5114H75.3372H76.3372V76.5114V59.892V58.892H75.3372H65.8968V3.72727V2.72727H64.8968H38.3485H37.7988L37.5042 3.19143L1.75138 59.5267L1.5957 59.772V60.0625V76.5114ZM163.408 76.5114V77.5114H164.408H205.553V91V92H206.553H226.709H227.709V91V77.5114H237.15H238.15V76.5114V59.892V58.892H237.15H227.709V3.72727V2.72727H226.709H200.161H199.611L199.317 3.19143L163.564 59.5267L163.408 59.772V60.0625V76.5114ZM44.1667 58.892H24.9449L44.1667 28.4347V58.892ZM119.487 94.1307C131.179 94.1525 140.692 89.7886 147.266 81.6962C153.819 73.6299 157.371 61.9613 157.393 47.493C157.414 33.0226 153.862 21.5286 147.291 13.6344C140.7 5.71667 131.166 1.53409 119.489 1.53409C107.809 1.53409 98.3172 5.75552 91.7545 13.6912C85.2125 21.6019 81.6711 33.0931 81.6284 47.4885C81.5856 61.8878 85.1273 73.5465 91.6853 81.6256C98.2631 89.7291 107.795 94.1302 119.487 94.1307ZM119.489 74.8722C115.326 74.8722 111.847 72.8804 109.353 68.5025C106.824 64.0632 105.319 57.1692 105.319 47.4915C105.319 38.0781 106.844 31.3241 109.381 26.9588C111.885 22.6498 115.366 20.6648 119.489 20.6648C123.613 20.6648 127.105 22.6506 129.62 26.9603C132.167 31.3255 133.702 38.0791 133.702 47.4915C133.702 57.1682 132.186 64.0618 129.647 68.501C127.143 72.8796 123.653 74.8722 119.489 74.8722ZM205.979 58.892H186.757L205.979 28.4347V58.892Z" stroke="white" stroke-width="2" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="h1 mb-1" data-sr-item="page-404">Page introuvable</h2>
+              <p data-sr-item="page-404"><big>Désolé, la page que vous recherchez n'existe pas ou a été déplacée.</big></p>
+            </div>
+            <a href="{% url 'home' %}" class="btn mt-0" data-sr-item="page-404">Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

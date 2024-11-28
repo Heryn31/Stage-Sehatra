@@ -1,0 +1,210 @@
+:root {
+  --flq-navbar-top--min-height: 80px;
+}
+
+.flq-navbar-top {
+  --flq-navbar-top--position: sticky;
+  --flq-navbar-top--background-color: var(--flq-color-dark), 0.5;
+  --flq-navbar-top__content--gap: 30px;
+  --flq-navbar-top__cloud--offset: var(--flq-page-offset);
+
+  // Toggle.
+  --flq-navbar-top__toggle--width: 45px;
+  --flq-navbar-top__toggle--height: 45px;
+  --flq-navbar-top__toggle--color: var(--flq-color-title);
+
+  position: var(--flq-navbar-top--position);
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: stretch;
+  min-height: var(--flq-navbar-top--min-height);
+  margin-right: var(--flq-navbar-top__cloud--offset);
+  margin-left: var(--flq-navbar-top__cloud--offset);
+  visibility: visible;
+  transition: visibility var(--flq-transition-duration) var(--flq-transition-easing);
+
+  // Background Blur.
+  &::before {
+    @include backdrop-blur();
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    background-color: hsla(var(--flq-navbar-top--background-color));
+    border-radius: var(--flq-border-radius-lg);
+    opacity: 0;
+    transition: opacity var(--flq-transition-duration) var(--flq-transition-easing), transform var(--flq-transition-duration) var(--flq-transition-easing);
+  }
+
+  // Container.
+  .flq-navbar-container {
+    display: flex;
+    transition: transform var(--flq-transition-duration) var(--flq-transition-easing), opacity var(--flq-transition-duration) var(--flq-transition-easing);
+  }
+
+  .container {
+    position: relative;
+  }
+
+  // container-fluid fixed padding-x when navbar cloud.
+  .container-fluid {
+    padding-right: calc(var(--flq-container--padding) - var(--flq-navbar-top__cloud--offset));
+    padding-left: calc(var(--flq-container--padding) - var(--flq-navbar-top__cloud--offset));
+  }
+
+  // Content.
+  .flq-navbar-content {
+    @include create-col(grow);
+
+    display: flex;
+  }
+
+  // Stretch height items.
+  .flq-navbar-container,
+  .flq-navbar-content {
+    align-items: stretch;
+  }
+
+  // Brand.
+  .flq-navbar-brand {
+    @include create-col(auto);
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  // Nav.
+  .nav {
+    --flq-nav__link--color: var(--flq-color-title);
+  }
+
+  // Toggle.
+  .flq-navbar-top-toggle {
+    @include create-col(auto);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: var(--flq-btn-xs--size);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: var(--flq-btn-xs--size);
+      margin-top: calc(var(--flq-btn-xs--size) * -0.5);
+      clip-path: inset(0 0 0 0 round var(--flq-border-radius));
+      content: "";
+      background-color: hsla(var(--flq-color-white), 0.1);
+      transition: clip-path var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic);
+    }
+
+    > span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 2px 0;
+      background-color: hsla(var(--flq-color-title));
+      border-radius: var(--flq-border-radius);
+      transition: transform var(--flq-transition-duration-cubic) var(--flq-transition-easing-cubic), opacity var(--flq-transition-duration) var(--flq-transition-easing);
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        clip-path: inset(0 0 0 0 round 50%);
+      }
+
+      > span:nth-child(1) {
+        transform: translateY(3px);
+      }
+
+      > span:nth-child(3) {
+        transform: translateY(-3px);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0.7);
+      }
+    }
+  }
+
+  // User Toggle.
+  .flq-navbar-top-user {
+    position: relative;
+    display: block;
+    width: var(--flq-btn-xs--size);
+    height: var(--flq-btn-xs--size);
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      @extend %img-ofi;
+    }
+  }
+
+  // Dropdown mega.
+  .flq-dropdown-mega {
+    position: static;
+  }
+
+  .container-fluid .flq-dropdown-mega > .dropdown-menu {
+    right: 0;
+    left: 0;
+  }
+
+  .container .flq-dropdown-mega > .dropdown-menu {
+    right: var(--bs-gutter-x);
+    left: var(--bs-gutter-x);
+  }
+}
+
+// Additional classes.
+// Cloud and scroll.
+.flq-navbar-top-cloud,
+.flq-navbar-top-scroll {
+  .container,
+  .container-fluid,
+  &::before {
+    transform: translateY(var(--flq-navbar-top__cloud--offset));
+  }
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+// Position fixed.
+.flq-navbar-top-fixed {
+  --flq-navbar-top--position: fixed;
+}
+
+// Fixed navbar width when open popups.
+.flq-offcanvas-active .flq-navbar-top-fixed,
+.fancybox-active .flq-navbar-top-fixed {
+  right: var(--flq-page-scrollbar__size);
+}
+
+// Hide.
+.flq-navbar-top-hide {
+  visibility: hidden;
+
+  .container,
+  .container-fluid,
+  &::before {
+    opacity: 0;
+    transform: translateY(calc(var(--flq-navbar-top__cloud--offset) * -1));
+  }
+}
