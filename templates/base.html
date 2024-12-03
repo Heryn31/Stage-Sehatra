@@ -5,24 +5,54 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      {% block title %}
-      Live Streaming Malagasy - Film Gasy - Concerts - Sehatra.com
-      {% endblock %}
+      {% block title %} Live Streaming Malagasy - Film Gasy - Concerts -
+      Sehatra.com {% endblock %}
     </title>
-    <meta name="description" content="Sehatra.com - Concert en ligne, film gasy, et bien d'autres contenues sur Madagascar" />
+    <meta
+      name="description"
+      content="Sehatra.com - Concert en ligne, film gasy, et bien d'autres contenues sur Madagascar"
+    />
     <meta name="keywords" content="live Streaming" />
     <meta name="author" content="SEHATRA.COM" />
-    <link rel="icon" type="image/png" href="{% static 'assets/images/favicon.ico' %}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'assets/images/favicon.ico' %}"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- START: Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" />
-    <link rel="stylesheet" href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-custom.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf/notyf.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/bootstrap-custom.css' %}"
+    />
     <link rel="stylesheet" href="{% static 'assets/css/fliqs.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+
     <!-- END: Styles -->
     <!-- jQuery -->
     <script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>
@@ -36,14 +66,12 @@
 
     <main>
       {% block content %}
-        <!-- Contenu par défaut ici -->
+      <!-- Contenu par défaut ici -->
       {% endblock %}
     </main>
 
     <!-- Footer -->
-    {% block footer %}
-      {% include 'footer.html' %}
-    {% endblock %}
+    {% block footer %} {% include 'footer.html' %} {% endblock %}
     <!-- /Footer -->
 
     <!-- START: Scripts -->
@@ -68,6 +96,36 @@
     <script src="{% static 'assets/js/fliqs-init.js' %}"></script>
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <!-- END: Scripts -->
   </body>
 </html>
+<!-- <script>
+  const notyf1 = new Notyf();
+
+  notyf1.error("You must fill out the form before moving forward");
+</script> -->
+{% if messages %}
+<script>
+  // Initialize Notyf
+  const notyf = new Notyf(
+    {
+  duration: 5000,
+  position: {
+    x: 'right',
+    y: 'bottom',
+  },
+}
+  )
+        {% for message in messages %}
+            {% if message.tags == "success" %}
+                notyf.success("{{ message }}");
+            {% elif message.tags == "error" %}
+                notyf.error("{{ message }}");
+            {% else %}
+                notyf.open({ type: "{{ message.tags }}", message: "{{ message }}" });
+            {% endif %}
+        {% endfor %}
+
+</script>
+{% endif %}

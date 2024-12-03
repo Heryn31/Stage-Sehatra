@@ -455,19 +455,20 @@ def privacy(request):
 def terms(request):
     return render(request, 'terms.html', context={'request': request})
 
+
 def custom_login_view(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
-        user = authenticate(request, username=username, password=password) #authenticate support only username and passwords
+        user = authenticate(request, username=username, password=password)
         print(username,password)
         if user is not None:
             login(request, user)
+            messages.success(request,"Connexion réussie ! Bienvenue "+username.capitalize()+".")
             return redirect("/")
         else:
-            messages.error(request, "Invalid username or password.")
-            #Error message
-            return redirect("movies")
+            messages.error(request, "Erreur de connection")
+            return redirect("/")
 
     return render(request, "index.html")
 
@@ -480,6 +481,8 @@ def custom_logout_view(request):
         
         # Log the user out
         logout(request)
+        messages.success(request, "Vous avez été déconnecté avec succès.")
+        return redirect("/")
     
     return redirect("/")
 
@@ -516,8 +519,8 @@ def custom_signup_view(request):
 
         print("User Logged")
 
-        # Show a success message and redirect to a desired page (e.g., homepage)
+        # Show a success message and redirect to a desired page (e.g., home)
         messages.success(request, "Account created and logged in successfully!")
-        return redirect("/")  # Redirect to homepage or any other page
+        return redirect("/") 
 
     return render(request, "index.html")

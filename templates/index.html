@@ -130,7 +130,7 @@
               <div class="swiper-slide">
                 <div class="card flq-card-blog">
                   <div class="card-img-wrap">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#LiveModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9"><img src="{% static concert.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" /></span></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#LiveModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-4x3"><img src="{% static concert.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" /></span></a>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'single_movie' name=concert.title %}">{{ concert.title }}</a></h5>
