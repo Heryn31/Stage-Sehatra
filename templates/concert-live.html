@@ -87,15 +87,15 @@
   </div>
   <div class="content-wrap">
     <div class="py-7">
-      <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+      <div class="container flq-isotope" data-sr="concert-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
         <div class="row align-items-center gy-4 mb-5">
           <div class="col-12 col-md">
             <nav>
-              <ul class="nav nav-tabs flq-isotope-options" data-sr="tvshow-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
-                <li class="nav-item" data-sr-item="tvshow-options">
+              <ul class="nav nav-tabs flq-isotope-options" data-sr="concert-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+                <li class="nav-item" data-sr-item="concert-options">
                   <a href="#" data-filter="all" class="nav-link active"><span class="nav-link-name">Tout</span></a>
                 </li>
-                <li class="nav-item" data-sr-item="tvshow-options">
+                <li class="nav-item" data-sr-item="concert-options">
                   <a href="#" data-filter="romance" class="nav-link"><span class="nav-link-name">{Genre}</span></a>
                 </li>
               </ul>
@@ -110,64 +110,63 @@
             </select>
           </div>
         </div>
-        <div class="row gy-5 justify-content-center flq-isotope-grid">
+        <div class="row gy-5 justify-content-center">
           {% for concert in concert_live %}
-          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 flq-isotope-item" data-filters="live">
-            <div data-sr-item="tvshow-item">
-              <div class="card flq-card-blog">
-                <div class="card-img-wrap">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#concert-live-{{ forloop.counter }}">
-                    <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9">
-                      <img src="{% static concert.image %}" alt="concert-live" />
-                    </span>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title h6">
-                    <a href="{% url 'single_movie' name=concert.title %}">{{ concert.title }}</a>
-                  </h5>
-                  <div class="flq-meta flq-meta-sm">
-                    <ul>
-                      <li>
-                        <a class="card-date">{{ concert.date }}</a>
-                      </li>
-                      <li>
-                        <a class="card-price">{{ concert.price }}</a>
-                      </li>
-                    </ul>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 flq-isotope-item" data-filters="live">
+              <div data-sr-item="concert-item">
+                <div class="card flq-card-blog">
+                  <div class="card-img-wrap">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#concert-live-{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-4x3"><img src="{% static concert.image %}" alt="concert-live" /></span></a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6"><a href="{% url 'single_movie' name=concert.title %}">{{ concert.title }}</a></h5>
+                    <div class="flq-meta flq-meta-sm">
+                      <ul>
+                        <li>
+                          <a class="card-date">{{ concert.date }}</a>
+                        </li>
+                        <li>
+                          <a class="card-price">{{ concert.price }}</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>       
-          <!-- Fenêtre modale pour afficher les détails du concert-live -->
-          <div class="modal fade" id="concert-live-{{ forloop.counter }}" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <!-- Section Image en haut -->
-                <div class="modal-image position-relative">
-                  <a href="{% url 'single_movie' name=concert.title %}">
-                    <img src="{% static concert.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
-                    <!-- Bouton au-dessus de l'image -->
-                    <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;">
-                      <span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span>
-                    </button>
-                  </a>
-                  <!-- Bouton de fermeture -->
-                  <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Section Texte en bas -->
-                <div class="modal-body">
-                  <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ concert.title }}</h5>
-                  <p class="movie-date">Date : {{ concert.date }}</p>
-                  <p class="movie-price">Prix : {{ concert.price }}</p>
-                  <p class="movie-genre">Genre : {{ concert.genre }}</p>
-                  <p class="movie-description">Description : {{ concert.description }}</p>
+            <!-- Fenêtre modale pour afficher les détails du concert-live -->
+            <div class="modal fade" id="concert-live-{{ forloop.counter }}" tabindex="-1" aria-labelledby="LiveModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog">
+                <div class="modal-content">
+                  <!-- Section Image en haut -->
+                  <div class="modal-image position-relative">
+                    <a href="{% url 'single_movie' name=concert.title %}">
+                      <img src="{% static concert.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                      <!-- Bouton au-dessus de l'image -->
+                      <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
+                    </a>
+                    <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+                  </div>
+                  <!-- Section Texte en bas -->
+                  <div class="modal-body">
+                    <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ concert.title }}</h5>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Date :</span> {{ concert.date }}
+                    </p>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Prix :</span> {{ concert.price }}
+                    </p>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Genre :</span> {{ concert.genre }}
+                    </p>
+                    <p>
+                      <span class="flq-color-meta">Description :</span> {{ concert.description }}
+                    </p>                    
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
         </div>
       </div>
     </div>

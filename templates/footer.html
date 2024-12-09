@@ -10,60 +10,9 @@
         <div class="row justify-content-center text-center">
           <div class="col-12 d-flex flex-row flex-wrap justify-content-center">
             <!-- Images redirigeant vers le popup de connexion -->
-            <a
-              href="#"
-              data-fancybox
-              data-src="#flq_popup_signin"
-              data-base-class="flq-fancybox-signin"
-              data-animation-duration="1000"
-              data-keyboard="false"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="true"
-              data-small-btn="false"
-              data-toolbar="false"
-              ><img
-                src="{% static 'assets/images/visa-mastercard.jpg' %}"
-                class="img-fluid mx-2 mb-2"
-                style="max-width: 100px"
-                alt="stripe"
-            /></a>
-            <a
-              href="#"
-              data-fancybox
-              data-src="#flq_popup_signin"
-              data-base-class="flq-fancybox-signin"
-              data-animation-duration="1000"
-              data-keyboard="false"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="true"
-              data-small-btn="false"
-              data-toolbar="false"
-              ><img
-                src="{% static 'assets/images/orange-money.jpg' %}"
-                class="img-fluid mx-2 mb-2"
-                style="max-width: 100px"
-                alt="orange-money"
-            /></a>
-            <a
-              href="#"
-              data-fancybox
-              data-src="#flq_popup_signin"
-              data-base-class="flq-fancybox-signin"
-              data-animation-duration="1000"
-              data-keyboard="false"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="true"
-              data-small-btn="false"
-              data-toolbar="false"
-              ><img
-                src="{% static 'assets/images/MVOLA.jpg' %}"
-                class="img-fluid mx-2 mb-2"
-                style="max-width: 100px"
-                alt="mvola"
-            /></a>
+            <a href="#" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false"><img src="{% static 'assets/images/visa-mastercard.jpg' %}" class="img-fluid mx-2 mb-2" style="max-width: 100px" alt="stripe" /></a>
+            <a href="#" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false"><img src="{% static 'assets/images/orange-money.jpg' %}" class="img-fluid mx-2 mb-2" style="max-width: 100px" alt="orange-money" /></a>
+            <a href="#" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false"><img src="{% static 'assets/images/MVOLA.jpg' %}" class="img-fluid mx-2 mb-2" style="max-width: 100px" alt="mvola" /></a>
           </div>
         </div>
       </div>
@@ -71,43 +20,16 @@
   </div>
   <br />
 </div>
-<footer
-  class="flq-footer flq-background py-7"
-  data-sr="footer"
-  data-sr-interval="60"
-  data-sr-duration="1000"
-  data-sr-distance="10"
->
+<footer class="flq-footer flq-background py-7" data-sr="footer" data-sr-interval="60" data-sr-duration="1000" data-sr-distance="10">
   <div class="flq-background-image">
-    <span class="flq-image jarallax" data-speed="0.7"
-      ><img
-        src="{% static 'assets/images/sehatra-3.png' %}"
-        class="jarallax-img"
-        alt=""
-    /></span>
+    <span class="flq-image jarallax" data-speed="0.7"><img src="{% static 'assets/images/sehatra-3.png' %}" class="jarallax-img" alt="" /></span>
   </div>
-  <div
-    class="flq-background-overlay"
-    style="background-color: hsla(var(--flq-color-background), 0.8)"
-  ></div>
+  <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-background), 0.8)"></div>
   <div class="container">
-    <div
-      class="row gx-5 gy-5 mb-6 justify-content-center justify-content-sm-start"
-    >
-      <div
-        class="col-md-9 col-lg-3 text-center text-sm-start"
-        data-sr-item="footer"
-      >
-        <a href="{% url 'home' %}"
-          ><img
-            src="{% static 'assets/images/logo-sehatra.png' %}"
-            class="flq-logo"
-            alt=""
-        /></a>
-        <p class="mt-1 pt-1">
-          Le secteur événementiel Malagasy au service de la société et de
-          l'environnement.
-        </p>
+    <div class="row gx-5 gy-5 mb-6 justify-content-center justify-content-sm-start">
+      <div class="col-md-9 col-lg-3 text-center text-sm-start" data-sr-item="footer">
+        <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <p class="mt-1 pt-1">Le secteur événementiel Malagasy au service de la société et de l'environnement.</p>
       </div>
       <div class="col-lg-1 col-xl d-none d-lg-block"></div>
       <div class="col-12 col-md-4 col-lg col-xl-2">
@@ -117,9 +39,7 @@
               <a href="{% url 'home' %}" class="nav-link">Accueil</a>
             </li>
             <li class="nav-item" data-sr-item="footer">
-              <a href="{% url 'profile_account' %}" class="nav-link"
-                >Mon compte</a
-              >
+              <a href="{% url 'profile_account' %}" class="nav-link">Mon compte</a>
             </li>
             <li class="nav-item" data-sr-item="footer">
               <a href="{% url 'contact' %}" class="nav-link">Contactez-nous</a>
@@ -134,14 +54,10 @@
               <a href="{% url 'artiste' %}" class="nav-link">Artistes</a>
             </li>
             <li class="nav-item" data-sr-item="footer">
-              <a href="{% url 'organizers' %}" class="nav-link"
-                >Organisateurs</a
-              >
+              <a href="{% url 'organizers' %}" class="nav-link">Organisateurs</a>
             </li>
             <li class="nav-item" data-sr-item="footer">
-              <a href="{% url 'associations' %}" class="nav-link"
-                >Associations</a
-              >
+              <a href="{% url 'associations' %}" class="nav-link">Associations</a>
             </li>
           </ul>
         </nav>
@@ -150,14 +66,10 @@
         <nav>
           <ul class="nav flex-column gy-3">
             <li class="nav-item" data-sr-item="footer">
-              <a href="{% url 'privacy' %}" class="nav-link text-nowrap"
-                >Politique de confidentialité</a
-              >
+              <a href="{% url 'privacy' %}" class="nav-link text-nowrap">Politique de confidentialité</a>
             </li>
             <li class="nav-item" data-sr-item="footer">
-              <a href="{% url 'terms' %}" class="nav-link"
-                >Conditions d'utilisation</a
-              >
+              <a href="{% url 'terms' %}" class="nav-link">Conditions d'utilisation</a>
             </li>
             <li class="nav-item" data-sr-item="footer">
               <a href="{% url 'faq' %}" class="nav-link">FAQ</a>
@@ -166,59 +78,28 @@
         </nav>
       </div>
     </div>
-    <div
-      class="row gy-4 justify-content-between"
-      data-sr="footer-copyright"
-      data-sr-interval="100"
-      data-sr-delay="200"
-      data-sr-duration="1000"
-      data-sr-distance="10"
-    >
-      <div
-        class="col-12 col-sm-auto text-center text-sm-start"
-        data-sr-item="footer-copyright"
-      >
+    <div class="row gy-4 justify-content-between" data-sr="footer-copyright" data-sr-interval="100" data-sr-delay="200" data-sr-duration="1000" data-sr-distance="10">
+      <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
         <p>© 2024 Sehatra.com</p>
       </div>
-      <div
-        class="col-12 col-sm-auto text-center text-sm-start"
-        data-sr-item="footer-copyright"
-      >
+      <div class="col-12 col-sm-auto text-center text-sm-start" data-sr-item="footer-copyright">
         <div class="flq-social text-center">
           <ul class="gy-4 gx-4">
             <li>
-              <a
-                href="https://www.facebook.com/sehatracom"
-                target="_blank"
-                class="flq-social-link"
-                data-sr-item="footer-copyright"
-                ><i
-                  class="fa-brands fa-facebook"
-                  style="
+              <a href="https://www.facebook.com/sehatracom" target="_blank" class="flq-social-link" data-sr-item="footer-copyright"><i class="fa-brands fa-facebook" style="
                     width: 20px;
                     height: 20px;
                     font-size: 20px;
                     display: inline-block;
-                  "
-                ></i
-              ></a>
+                  "></i></a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/sehatra/"
-                target="_blank"
-                class="flq-social-link"
-                data-sr-item="footer-copyright"
-                ><i
-                  class="fa-brands fa-instagram"
-                  style="
+              <a href="https://www.instagram.com/sehatra/" target="_blank" class="flq-social-link" data-sr-item="footer-copyright"><i class="fa-brands fa-instagram" style="
                     width: 20px;
                     height: 20px;
                     font-size: 20px;
                     display: inline-block;
-                  "
-                ></i
-              ></a>
+                  "></i></a>
             </li>
           </ul>
         </div>
@@ -233,142 +114,38 @@
   <ul>
     <li>
       <a href="{% url 'home' %}" class="btn btn-link btn-icon-md">
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15 12H9V22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0392 3 20.5305 3 20V9.9782C3 9.36102 3.28495 8.77841 3.77212 8.39949L10.7721 2.95505C11.4943 2.39332 12.5057 2.39332 13.2279 2.95505L20.2279 8.39949C20.7151 8.77841 21 9.36102 21 9.9782V20C21 20.5305 20.7893 21.0392 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H15V15"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 12H9V22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0392 3 20.5305 3 20V9.9782C3 9.36102 3.28495 8.77841 3.77212 8.39949L10.7721 2.95505C11.4943 2.39332 12.5057 2.39332 13.2279 2.95505L20.2279 8.39949C20.7151 8.77841 21 9.36102 21 9.9782V20C21 20.5305 20.7893 21.0392 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H15V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </a>
     </li>
     <li>
-      <button
-        width="22"
-        height="22"
-        class="btn btn-link btn-icon-md"
-        data-fancybox
-        data-src="#flq_popup_search"
-        data-base-class="flq-fancybox-search"
-        data-animation-duration="1000"
-        data-keyboard="false"
-        data-auto-focus="true"
-        data-touch="false"
-        data-close-existing="true"
-        data-small-btn="false"
-        data-toolbar="false"
-      >
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 22 22"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M19.25 19.25L15.2625 15.2625"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+      <button width="22" height="22" class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_search" data-base-class="flq-fancybox-search" data-animation-duration="1000" data-keyboard="false" data-auto-focus="true" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M19.25 19.25L15.2625 15.2625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
     </li>
     <li>
-      <button
-        class="btn btn-link btn-icon-md"
-        data-fancybox
-        data-src="#flq_popup_user"
-        data-base-class="flq-fancybox-navbar"
-        data-animation-duration="1000"
-        data-keyboard="false"
-        data-auto-focus="false"
-        data-touch="false"
-        data-close-existing="true"
-        data-small-btn="false"
-        data-toolbar="false"
-      >
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M16.4999 21.1422C17.888 20.8923 18.9884 20.5116 19.5 20C19.5718 19.3531 19.5 18.3333 19.5 18.3333C19.5 17.4493 19.0785 16.6014 18.3284 15.9763C15.9594 14.0022 8.04049 14.0022 5.67154 15.9763C4.92139 16.6014 4.49996 17.4493 4.49996 18.3333C4.49996 18.3333 4.42809 19.3531 4.49996 20C5.01153 20.5116 6.11194 20.8923 7.49996 21.1422M16 7C16 9.20914 14.2091 11 12 11C9.79082 11 7.99996 9.20914 7.99996 7C7.99996 4.79086 9.79082 3 12 3C14.2091 3 16 4.79086 16 7Z"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+      <button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_user" data-base-class="flq-fancybox-navbar" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.4999 21.1422C17.888 20.8923 18.9884 20.5116 19.5 20C19.5718 19.3531 19.5 18.3333 19.5 18.3333C19.5 17.4493 19.0785 16.6014 18.3284 15.9763C15.9594 14.0022 8.04049 14.0022 5.67154 15.9763C4.92139 16.6014 4.49996 17.4493 4.49996 18.3333C4.49996 18.3333 4.42809 19.3531 4.49996 20C5.01153 20.5116 6.11194 20.8923 7.49996 21.1422M16 7C16 9.20914 14.2091 11 12 11C9.79082 11 7.99996 9.20914 7.99996 7C7.99996 4.79086 9.79082 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
     </li>
     <li>
-      <button
-        class="btn btn-link btn-icon-md"
-        data-fancybox
-        data-src="#flq_popup_signin"
-        data-base-class="flq-fancybox-signin"
-        data-animation-duration="1000"
-        data-keyboard="false"
-        data-auto-focus="false"
-        data-touch="false"
-        data-close-existing="true"
-        data-small-btn="false"
-        data-toolbar="false"
-      >
-        <svg
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10 17L15 12M15 12L10 7M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+      <button class="btn btn-link btn-icon-md" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 17L15 12M15 12L10 7M15 12H3M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
     </li>
     <li class="d-flex align-items-center">
       <div class="flq-scroll-top-wrapper">
         <a class="flq-scroll-top-button flq-anchor" href="#page">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 6L15 12L9 18"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>
         <div class="flq-scroll-progress flq-scroll-progress-circle">
@@ -385,20 +162,8 @@
 <!-- Scroll top button -->
 <div class="flq-scroll-top-wrapper">
   <a class="flq-scroll-top-button flq-anchor" href="#page">
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M9 6L15 12L9 18"
-        stroke="currentColor"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   </a>
   <div class="flq-scroll-progress flq-scroll-progress-circle">
@@ -413,128 +178,63 @@
 <nav class="flq-navbar-mobile fancybox-content" id="flq_navbar_mobile">
   <div class="flq-fancybox-head">
     <div class="container-fluid">
-      <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-        ><img
-          src="{% static 'assets/images/logo-sehatra.png' %}"
-          class="flq-logo"
-          alt=""
-      /></a>
-      <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
-        <span></span>
-      </button>
+      <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+      <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
     </div>
   </div>
   <div class="container pt-4 pb-6">
     <div class="flq-fancybox-body row gy-6 gx-6">
       <div class="col-12 col-lg">
         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
-          >
-            <a href="{% url 'home' %}" class="nav-link"
-              ><span class="nav-link-name">Accueil</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+            <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Accueil</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}"
-          >
-            <a href="{% url 'pricing' %}" class="nav-link"
-              ><span class="nav-link-name">Abonnement</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">
+            <a href="{% url 'pricing' %}" class="nav-link"><span class="nav-link-name">Abonnement</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'concert_live' %}active{% endif %}"
-          >
-            <a href="{% url 'concert_live' %}" class="nav-link"
-              ><span class="nav-link-name">Concerts et Lives</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'concert_live' %}active{% endif %}">
+            <a href="{% url 'concert_live' %}" class="nav-link"><span class="nav-link-name">Concerts et Lives</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'movies' %}active{% endif %}"
-          >
-            <a href="{% url 'movies' %}" class="nav-link"
-              ><span class="nav-link-name">Films</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'movies' %}active{% endif %}">
+            <a href="{% url 'movies' %}" class="nav-link"><span class="nav-link-name">Films</span></a>
           </li>
-          <li
-            class="nav-item accordion-item flq-dropdown-nav {% if request.resolver_match.url_name == 'artiste' or request.resolver_match.url_name == 'organizers' or request.resolver_match.url_name == 'associations' %}active{% endif %}"
-          >
-            <button
-              class="nav-link accordion-button collapsed"
-              data-bs-target="#Blog"
-              data-bs-toggle="collapse"
-              aria-expanded="false"
-            >
+          <li class="nav-item accordion-item flq-dropdown-nav {% if request.resolver_match.url_name == 'artiste' or request.resolver_match.url_name == 'organizers' or request.resolver_match.url_name == 'associations' %}active{% endif %}">
+            <button class="nav-link accordion-button collapsed" data-bs-target="#Blog" data-bs-toggle="collapse" aria-expanded="false">
               <span class="nav-link-name">Partenaires</span>
               <span class="accordion-button-icon"></span>
             </button>
             <div class="accordion-collapse collapse" id="Blog">
               <ul class="nav flex-column">
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'artiste' %}active{% endif %}"
-                >
-                  <a href="{% url 'artiste' %}" class="nav-link"
-                    ><span class="nav-link-name">Artistes</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'artiste' %}active{% endif %}">
+                  <a href="{% url 'artiste' %}" class="nav-link"><span class="nav-link-name">Artistes</span></a>
                 </li>
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'organizers' %}active{% endif %}"
-                >
-                  <a href="{% url 'organizers' %}" class="nav-link"
-                    ><span class="nav-link-name">Organisateurs</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'organizers' %}active{% endif %}">
+                  <a href="{% url 'organizers' %}" class="nav-link"><span class="nav-link-name">Organisateurs</span></a>
                 </li>
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'associations' %}active{% endif %}"
-                >
-                  <a href="{% url 'associations' %}" class="nav-link"
-                    ><span class="nav-link-name">Associations</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'associations' %}active{% endif %}">
+                  <a href="{% url 'associations' %}" class="nav-link"><span class="nav-link-name">Associations</span></a>
                 </li>
               </ul>
             </div>
           </li>
-          <li
-            class="nav-item accordion-item flq-dropdown-nav {% if request.resolver_match.url_name in 'about contact faq coming_soon' %}active{% endif %}"
-          >
-            <button
-              class="nav-link accordion-button collapsed"
-              data-bs-target="#Pages"
-              data-bs-toggle="collapse"
-              aria-expanded="false"
-            >
+          <li class="nav-item accordion-item flq-dropdown-nav {% if request.resolver_match.url_name in 'about contact faq coming_soon' %}active{% endif %}">
+            <button class="nav-link accordion-button collapsed" data-bs-target="#Pages" data-bs-toggle="collapse" aria-expanded="false">
               <span class="nav-link-name">Plus</span>
               <span class="accordion-button-icon"></span>
             </button>
             <div class="accordion-collapse collapse" id="Pages">
               <ul class="nav flex-column">
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
-                >
-                  <a href="{% url 'about' %}" class="nav-link"
-                    ><span class="nav-link-name">À propos</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                  <a href="{% url 'about' %}" class="nav-link"><span class="nav-link-name">À propos</span></a>
                 </li>
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
-                >
-                  <a href="{% url 'contact' %}" class="nav-link"
-                    ><span class="nav-link-name">Contactez-nous</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                  <a href="{% url 'contact' %}" class="nav-link"><span class="nav-link-name">Contactez-nous</span></a>
                 </li>
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'faq' %}active{% endif %}"
-                >
-                  <a href="{% url 'faq' %}" class="nav-link"
-                    ><span class="nav-link-name">Questions</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
+                  <a href="{% url 'faq' %}" class="nav-link"><span class="nav-link-name">Questions</span></a>
                 </li>
-                <li
-                  class="nav-item {% if request.resolver_match.url_name == 'coming_soon' %}active{% endif %}"
-                >
-                  <a href="{% url 'coming_soon' %}" class="nav-link"
-                    ><span class="nav-link-name">À venir</span></a
-                  >
+                <li class="nav-item {% if request.resolver_match.url_name == 'coming_soon' %}active{% endif %}">
+                  <a href="{% url 'coming_soon' %}" class="nav-link"><span class="nav-link-name">À venir</span></a>
                 </li>
               </ul>
             </div>
@@ -550,60 +250,31 @@
 <nav class="flq-navbar-mobile fancybox-content" id="flq_popup_user">
   <div class="flq-fancybox-head">
     <div class="container-fluid">
-      <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-        ><img
-          src="{% static 'assets/images/logo-sehatra.png' %}"
-          class="flq-logo"
-          alt=""
-      /></a>
-      <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close>
-        <span></span>
-      </button>
+      <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+      <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
     </div>
   </div>
   <div class="container pt-4 pb-6">
     <div class="flq-fancybox-body row gy-6 gx-6">
       <div class="col-12 col-lg">
         <ul class="nav flex-column flq-navbar-nav accordion gy-3">
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'profile_account' %}active{% endif %}"
-          >
-            <a href="{% url 'profile_account' %}" class="nav-link"
-              ><span class="nav-link-name">Profil</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'profile_account' %}active{% endif %}">
+            <a href="{% url 'profile_account' %}" class="nav-link"><span class="nav-link-name">Profil</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'favorite' %}active{% endif %}"
-          >
-            <a href="{% url 'favorite' %}" class="nav-link"
-              ><span class="nav-link-name">Favoris</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'favorite' %}active{% endif %}">
+            <a href="{% url 'favorite' %}" class="nav-link"><span class="nav-link-name">Favoris</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'reviews' %}active{% endif %}"
-          >
-            <a href="{% url 'reviews' %}" class="nav-link"
-              ><span class="nav-link-name">Avis & Commentaires</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'reviews' %}active{% endif %}">
+            <a href="{% url 'reviews' %}" class="nav-link"><span class="nav-link-name">Avis & Commentaires</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'edit_account' %}active{% endif %}"
-          >
-            <a href="{% url 'edit_account' %}" class="nav-link"
-              ><span class="nav-link-name">Modifier mon compte</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'edit_account' %}active{% endif %}">
+            <a href="{% url 'edit_account' %}" class="nav-link"><span class="nav-link-name">Modifier mon compte</span></a>
           </li>
-          <li
-            class="nav-item {% if request.resolver_match.url_name == 'notification' %}active{% endif %}"
-          >
-            <a href="{% url 'notification' %}" class="nav-link"
-              ><span class="nav-link-name">Notifications</span></a
-            >
+          <li class="nav-item {% if request.resolver_match.url_name == 'notification' %}active{% endif %}">
+            <a href="{% url 'notification' %}" class="nav-link"><span class="nav-link-name">Notifications</span></a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'home' %}" class="nav-link"
-              ><span class="nav-link-name">Se déconnecter</span></a
-            >
+            <a href="{% url 'home' %}" class="nav-link"><span class="nav-link-name">Se déconnecter</span></a>
           </li>
         </ul>
       </div>
@@ -619,37 +290,11 @@
       <div class="container-small">
         <div class="flq-search-content">
           <form action="#">
-            <input
-              class="form-control form-control-lg flq-form-glass flq-search-input"
-              type="text"
-              placeholder="Tapez pour rechercher"
-              name="search"
-            />
-            <button
-              class="btn btn-link btn-icon-md flq-search-btn"
-              type="button"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 22 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M19.25 19.25L15.2625 15.2625"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+            <input class="form-control form-control-lg flq-form-glass flq-search-input" type="text" placeholder="Tapez pour rechercher" name="search" />
+            <button class="btn btn-link btn-icon-md flq-search-btn" type="button">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03325 14.1334 2.75 10.0833 2.75C6.03325 2.75 2.75 6.03325 2.75 10.0833C2.75 14.1334 6.03325 17.4167 10.0833 17.4167Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.25 19.25L15.2625 15.2625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
           </form>
@@ -658,18 +303,8 @@
     </div>
     <div class="flq-fancybox-head">
       <div class="container-fluid">
-        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-          ><img
-            src="{% static 'assets/images/logo-sehatra.png' %}"
-            class="flq-logo"
-            alt=""
-        /></a>
-        <button
-          class="flq-fancybox-close btn btn-link ms-4"
-          data-fancybox-close
-        >
-          <span></span>
-        </button>
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
       </div>
     </div>
     <div class="flq-fancybox-footer">
@@ -677,38 +312,20 @@
         <div class="flq-social text-center">
           <ul class="g-4">
             <li>
-              <a
-                href="https://www.facebook.com/sehatracom"
-                target="_blank"
-                class="flq-social-link"
-                data-sr-item="footer-copyright"
-                ><i
-                  class="fa-brands fa-facebook"
-                  style="
+              <a href="https://www.facebook.com/sehatracom" target="_blank" class="flq-social-link" data-sr-item="footer-copyright"><i class="fa-brands fa-facebook" style="
                     width: 20px;
                     height: 20px;
                     font-size: 20px;
                     display: inline-block;
-                  "
-                ></i
-              ></a>
+                  "></i></a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/sehatra/"
-                target="_blank"
-                class="flq-social-link"
-                data-sr-item="footer-copyright"
-                ><i
-                  class="fa-brands fa-instagram"
-                  style="
+              <a href="https://www.instagram.com/sehatra/" target="_blank" class="flq-social-link" data-sr-item="footer-copyright"><i class="fa-brands fa-instagram" style="
                     width: 20px;
                     height: 20px;
                     font-size: 20px;
                     display: inline-block;
-                  "
-                ></i
-              ></a>
+                  "></i></a>
             </li>
           </ul>
         </div>
@@ -723,102 +340,45 @@
   <div class="flq-signin">
     <div class="flq-fancybox-head">
       <div class="container-fluid">
-        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-          ><img
-            src="{% static 'assets/images/logo-sehatra.png' %}"
-            class="flq-logo"
-            alt=""
-        /></a>
-        <button
-          class="flq-fancybox-close btn btn-link ms-4"
-          data-fancybox-close
-        >
-          <span></span>
-        </button>
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
       </div>
     </div>
     <div class="flq-fancybox-body pb-6">
-      <form
-        method="post"
-        action="{% url 'custom_login' %}"
-        class="flq-signin-content"
-        autocomplete="off"
-      >
+      <form method="post" action="{% url 'custom_login' %}" class="flq-signin-content" autocomplete="off">
         {% csrf_token %}
-        <img
-          src="{% static 'assets/images/ico.png' %}"
-          alt="iconlogin"
-          style="
+        <img src="{% static 'assets/images/ico.png' %}" alt="iconlogin" style="
             width: 50px;
             height: 50px;
             display: block;
             margin: 0 auto;
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
-          "
-        /><br />
+          " /><br />
         <h4 class="mb-1 pb-0 text-center">Bienvenue</h4>
-        <span class="d-block text-center mb-2"
-          >Veuillez entrer vos coordonnées pour vous connecter.</span
-        >
+        <span class="d-block text-center mb-2">Veuillez entrer vos coordonnées pour vous connecter.</span>
         <div class="row justify-content-between gy-4">
           <div class="col-12">
-            <input
-              class="form-control flq-form-user flq-form-translucent"
-              type="text"
-              placeholder="Nom d'utilisateur"
-              name="username"
-            />
+            <input class="form-control flq-form-user flq-form-translucent" type="text" placeholder="Nom d'utilisateur" name="username" />
           </div>
           <div class="col-12 position-relative">
-            <input
-              id="loginPassword"
-              class="form-control flq-form-lock flq-form-translucent pr-5"
-              type="password"
-              placeholder="Mot de passe"
-              name="password"
-              required
-            />
-            <i
-              id="toggleLoginPassword"
-              class="fa-solid fa-eye position-absolute"
-              style="
+            <input id="loginPassword" class="form-control flq-form-lock flq-form-translucent pr-5" type="password" placeholder="Mot de passe" name="password" required />
+            <i id="toggleLoginPassword" class="fa-solid fa-eye position-absolute" style="
                 right: 40px;
                 top: 50%;
                 transform: translateY(-50%);
                 cursor: pointer;
                 z-index: 10;
-              "
-            ></i>
+              "></i>
           </div>
           <div class="col-auto">
             <div class="form-check flq-form-translucent">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="signinRememberMe"
-              />
-              <label class="form-check-label" for="signinRememberMe"
-                >Se souvenir de moi</label
-              >
+              <input class="form-check-input" type="checkbox" id="signinRememberMe" />
+              <label class="form-check-label" for="signinRememberMe">Se souvenir de moi</label>
             </div>
           </div>
           <div class="col-auto mt-1">
-            <a
-              href="#"
-              class="flq-color-meta flq-color-title-hover"
-              data-fancybox
-              data-src="#flq_popup_reset"
-              data-base-class="flq-fancybox-reset"
-              data-keyboard="false"
-              data-animation-duration="1000"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="false"
-              data-small-btn="false"
-              data-toolbar="false"
-              >Mot de passe oublié?</a
-            >
+            <a href="#" class="flq-color-meta flq-color-title-hover" data-fancybox data-src="#flq_popup_reset" data-base-class="flq-fancybox-reset" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false">Mot de passe oublié?</a>
           </div>
           <div class="col-12">
             <button class="btn btn-block" type="submit">Se connecter</button>
@@ -826,31 +386,13 @@
           <div class="col-12 text-center mt-1">ou</div>
           <div class="col-12 mt-1">
             <a href="https://accounts.google.com" class="btn btn-block">
-              <i
-                class="fab fa-google"
-                style="font-size: 20px"
-                aria-hidden="true"
-              ></i>
+              <i class="fab fa-google" style="font-size: 20px" aria-hidden="true"></i>
               <span class="ms-2">Se connecter avec Google</span>
             </a>
           </div>
           <div class="col-12 mt-3 text-center">
             <span>Vous n'avez pas de compte ?</span>
-            <a
-              href="#"
-              class="btn btn-link"
-              data-fancybox
-              data-src="#flq_popup_signup"
-              data-base-class="flq-fancybox-signup"
-              data-keyboard="false"
-              data-animation-duration="1000"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="false"
-              data-small-btn="false"
-              data-toolbar="false"
-              >S'inscrire</a
-            >
+            <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signup" data-base-class="flq-fancybox-signup" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false">S'inscrire</a>
           </div>
         </div>
       </form>
@@ -864,77 +406,35 @@
   <div class="flq-reset">
     <div class="flq-fancybox-head">
       <div class="container-fluid">
-        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-          ><img
-            src="{% static 'assets/images/logo-sehatra.png' %}"
-            class="flq-logo"
-            alt=""
-        /></a>
-        <button
-          class="flq-fancybox-close btn btn-link ms-4"
-          data-fancybox-close
-        >
-          <span></span>
-        </button>
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
       </div>
     </div>
     <div class="flq-fancybox-body pb-6">
       <form action="#" class="flq-reset-content" autocomplete="off">
-        <img
-          src="{% static 'assets/images/ico.png' %}"
-          alt="iconlogin"
-          style="
+        <img src="{% static 'assets/images/ico.png' %}" alt="iconlogin" style="
             width: 50px;
             height: 50px;
             display: block;
             margin: 0 auto;
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
-          "
-        /><br />
+          " /><br />
         <h4 class="mb-1 pb-0 text-center">Réinitialisation du mot de passe</h4>
-        <span class="d-block text-center mb-2"
-          >Vous avez oublié votre mot de passe ? Saisissez votre adresse e-mail
-          ci-dessous et nous vous enverrons un e-mail vous permettant de le
-          réinitialiser.</span
-        >
+        <span class="d-block text-center mb-2">Vous avez oublié votre mot de passe ? Saisissez votre adresse e-mail ci-dessous et nous vous enverrons un e-mail vous permettant de le réinitialiser.</span>
         <div class="row justify-content-between gy-4">
           <div class="col-12">
-            <input
-              class="form-control flq-form-user flq-form-translucent"
-              type="email"
-              placeholder="Adresse e-mail"
-              required
-            />
+            <input class="form-control flq-form-email flq-form-translucent" type="email" placeholder="Adresse e-mail" required />
           </div>
           <div class="col-12">
-            <button class="btn btn-block" type="submit">
-              Réinitialiser mon mot de passe
-            </button>
+            <button class="btn btn-block" type="submit">Réinitialiser mon mot de passe</button>
           </div>
           <div class="col-12 text-center mt-1">
             <span>Vous avez déjà un compte ?</span>
-            <a
-              href="#"
-              class="btn btn-link"
-              data-fancybox
-              data-src="#flq_popup_signin"
-              data-base-class="flq-fancybox-signin"
-              data-keyboard="false"
-              data-animation-duration="1000"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="false"
-              data-small-btn="false"
-              data-toolbar="false"
-              >Se connecter</a
-            >
+            <a href="#" class="btn btn-link" data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-keyboard="false" data-animation-duration="1000" data-auto-focus="false" data-touch="false" data-close-existing="false" data-small-btn="false" data-toolbar="false">Se connecter</a>
           </div>
           <div class="mb-1 pb-0 text-center">
-            <span
-              >Si vous rencontrez des difficultés pour réinitialiser votre mot
-              de passe, n'hésitez pas à nous contacter.</span
-            >
+            <span>Si vous rencontrez des difficultés pour réinitialiser votre mot de passe, n'hésitez pas à nous contacter.</span>
           </div>
         </div>
       </form>
@@ -948,132 +448,56 @@
   <div class="flq-signup">
     <div class="flq-fancybox-head">
       <div class="container-fluid">
-        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-          ><img
-            src="{% static 'assets/images/logo-sehatra.png' %}"
-            class="flq-logo"
-            alt=""
-        /></a>
-        <button
-          class="flq-fancybox-close btn btn-link ms-4"
-          data-fancybox-close
-        >
-          <span></span>
-        </button>
+        <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+        <button class="flq-fancybox-close btn btn-link ms-4" data-fancybox-close><span></span></button>
       </div>
     </div>
     <div class="flq-fancybox-body pb-6">
-      <form
-        method="post"
-        action="{% url 'signup' %}"
-        class="flq-signup-content"
-        id="signupForm"
-      >
+      <form method="post" action="{% url 'signup' %}" class="flq-signup-content" id="signupForm">
         {% csrf_token %}
-        <img
-          src="{% static 'assets/images/ico.png' %}"
-          alt="iconlogin"
-          style="
+        <img src="{% static 'assets/images/ico.png' %}" alt="iconlogin" style="
             width: 50px;
             height: 50px;
             display: block;
             margin: 0 auto;
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
-          "
-        />
+          " />
         <br />
         <h4 class="mb-4 pb-1 text-center">Créer un compte</h4>
         <div class="row gy-4">
           <div class="col-12">
-            <input
-              id="signName"
-              class="form-control flq-form-mail flq-form-translucent"
-              name="sp_name"
-              type="text"
-              placeholder="Nom d'utilisateur"
-              required
-            />
+            <input id="signName" class="form-control flq-form-user flq-form-translucent" name="sp_name" type="text" placeholder="Nom d'utilisateur" required />
           </div>
           <div class="col-12 position-relative">
-            <input
-              id="signEmail"
-              class="form-control flq-form-lock flq-form-translucent pr-5"
-              name="sp_email"
-              type="email"
-              placeholder="Email"
-              required
-            />
-            <i
-              id="toggleLoginPassword"
-              class="fa-solid fa-eye position-absolute"
-              style="
+            <input id="signEmail" class="form-control flq-form-mail flq-form-translucent pr-5" name="sp_email" type="email" placeholder="Email" required />
+          </div>
+          <div class="col-12 position-relative">
+            <input id="signPassword" class="form-control flq-form-lock flq-form-translucent pr-5" name="sp_password" type="password" placeholder="Mot de passe" required />
+            <i id="toggleLoginPassword" class="fa-solid fa-eye position-absolute" style="
                 right: 40px;
                 top: 50%;
                 transform: translateY(-50%);
                 cursor: pointer;
                 z-index: 10;
-              "
-            ></i>
+              "></i>
           </div>
           <div class="col-12 position-relative">
-            <input
-              id="signPassword"
-              class="form-control flq-form-lock flq-form-translucent pr-5"
-              name="sp_password"
-              type="password"
-              placeholder="Mot de passe"
-              required
-            />
-            <i
-              id="toggleLoginPassword"
-              class="fa-solid fa-eye position-absolute"
-              style="
+            <input id="signPasswordConfirm" class="form-control flq-form-lock flq-form-translucent pr-5" name="sp_password_confirmation" type="password" placeholder="Confirmer le mot de passe" required />
+            <i id="toggleConfirmPassword" class="fa-solid fa-eye position-absolute" style="
                 right: 40px;
                 top: 50%;
                 transform: translateY(-50%);
                 cursor: pointer;
                 z-index: 10;
-              "
-            ></i>
-          </div>
-          <div class="col-12 position-relative">
-            <input
-              id="signPasswordConfirm"
-              class="form-control flq-form-lock flq-form-translucent pr-5"
-              name="sp_password_confirmation"
-              type="password"
-              placeholder="Confirmer le mot de passe"
-              required
-            />
-            <i
-              id="toggleConfirmPassword"
-              class="fa-solid fa-eye position-absolute"
-              style="
-                right: 40px;
-                top: 50%;
-                transform: translateY(-50%);
-                cursor: pointer;
-                z-index: 10;
-              "
-            ></i>
+              "></i>
           </div>
           <div class="col-12">
             <div class="form-check flq-form-translucent">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="signupTerms"
-                required
-              />
+              <input class="form-check-input" type="checkbox" id="signupTerms" required />
               <label class="form-check-label" for="signupTerms">
                 J'ai lu et j'accepte les
-                <a
-                  href="{% url 'terms' %}"
-                  class="flq-terms-link"
-                  style="text-decoration: underline"
-                  >conditions générales</a
-                >.
+                <a href="{% url 'terms' %}" class="flq-terms-link" style="text-decoration: underline">conditions générales</a>.
               </label>
             </div>
           </div>
@@ -1082,22 +506,7 @@
           </div>
           <div class="col-12 mt-3 text-center">
             <span>Vous avez déjà un compte ?</span>
-            <a
-              href="#"
-              class="btn btn-link"
-              data-fancybox
-              data-fancybox
-              data-src="#flq_popup_signin"
-              data-base-class="flq-fancybox-signin"
-              data-animation-duration="1000"
-              data-keyboard="false"
-              data-auto-focus="false"
-              data-touch="false"
-              data-close-existing="true"
-              data-small-btn="false"
-              data-toolbar="false"
-              >Se connecter</a
-            >
+            <a href="#" class="btn btn-link" data-fancybox data-fancybox data-src="#flq_popup_signin" data-base-class="flq-fancybox-signin" data-animation-duration="1000" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">Se connecter</a>
           </div>
         </div>
       </form>
@@ -1109,23 +518,10 @@
 <!-- Offcanvas -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="flq_offcanvas">
   <div class="offcanvas-header">
-    <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"
-      ><img
-        src="{% static 'assets/images/logo-sehatra.png' %}"
-        class="flq-logo"
-        alt=""
-    /></a>
-    <button
-      type="button"
-      class="btn btn-link offcanvas-close"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"
-    >
-      <span></span>
-    </button>
+    <a href="{% url 'home' %}" class="flq-fancybox-brand me-auto"><img src="{% static 'assets/images/logo-sehatra.png' %}" class="flq-logo" alt="" /></a>
+    <button type="button" class="btn btn-link offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"><span></span></button>
   </div>
 </div>
 <!-- / Offcanvas -->
 
 <!-- Message et toast -->
-

@@ -38,13 +38,12 @@
           {% for artiste in artiste %}
             <div class="swiper-slide flq-background">
               <div class="flq-background-image">
-                <span class="flq-image swiper-image" data-speed="0.7" data-swiper-parallax-x="40%">
-                  <img src="{% static artiste.image %}" alt="{{ artiste.name }}" /></span>
+                <span class="flq-image swiper-image" data-speed="0.7" data-swiper-parallax-x="40%"><img src="{% static artiste.image %}" alt="{{ artiste.name }}" /></span>
               </div>
               <div class="flq-background-overlay" style="background-color: hsla(var(--flq-color-black), 0.7)"></div>
               <div class="container py-7 min-vh-100 d-flex align-items-center">
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-8 col-xl-6 pt-navbar flq-vertical-rhythm">
+                  <div class="col-12 col-md-10 col-lg-8 col-xl-10 pt-navbar flq-vertical-rhythm">
                     <!-- Content for Slide -->
                     <div class="flq-subtitle badge badge-white badge-glass badge-translucent" data-animejs>{{ artiste.gender }}</div>
                     <h2 class="display-5 mb-0" data-animejs>{{ artiste.title }}</h2>
@@ -90,28 +89,41 @@
     <!-- Fenêtres modales pour chaque artiste -->
     {% for data in artiste %}
       <div class="modal fade" id="artisteModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="artisteModalLabel{{ forloop.counter }}" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog">
           <div class="modal-content">
             <!-- Section Image en haut -->
             <div class="modal-image position-relative">
               <a href="{% url 'artiste_details' name=data.name %}">
                 <img src="{% static data.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
                 <!-- Bouton au-dessus de l'image -->
-                <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
               </a>
-              <!-- Bouton de fermeture -->
-              <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <!-- Section Texte en bas -->
             <div class="modal-body">
-              <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ data.title }}</h5>
-              <p class="movie-duration">Durées : {{ data.duration }}</p>
-              <p class="movie-date">Date : {{ data.date }}</p>
-              <p class="price">Prix : {{ data.price }}</p>
-              <p class="card-nbr">Vidéos : {{ data.nbr_video }}</p>
-              <p class="movie-genre">Genre : {{ data.gender }}</p>
-              <p class="movie-detail">Détail : {{ data.detail }}</p>
-              <p class="movie-description">Description : {{ data.description }}</p>
+              <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ data.title }}</h5>
+              <p class="mb-1">
+                <span>Durées :</span> <span class="flq-color-meta">{{ data.duration }}</span>
+              </p>
+              <p class="mb-1">
+                <span>Date :</span> <span class="flq-color-meta">{{ data.date }}</span>
+              </p>
+              <p class="mb-1">
+                <span>Prix :</span> <span class="flq-color-meta">{{ data.price }}</span>
+              </p>
+              <p class="mb-1">
+                <span>Vidéos :</span> <span class="flq-color-meta">{{ data.nbr_video }}</span>
+              </p>
+              <p class="mb-1">
+                <span>Genre :</span> <span class="flq-color-meta">{{ data.gender }}</span>
+              </p>
+              <p class="mb-1">
+                <span>Détail :</span> <span class="flq-color-meta">{{ data.detail }}</span>
+              </p>
+              <p>
+                <span>Description :</span> <span class="flq-color-meta">{{ data.description }}</span>
+              </p>              
             </div>
           </div>
         </div>
@@ -155,26 +167,35 @@
       <!-- Fenêtre modale pour afficher les détails de l'événement -->
       {% for concert in concert_live %}
         <div class="modal fade" id="LiveModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="LiveModalLabel{{ forloop.counter }}" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-dialog modal-lg modal-dialog">
             <div class="modal-content">
               <!-- Section Image en haut -->
               <div class="modal-image position-relative">
                 <a href="{% url 'single_movie' name=concert.title %}">
                   <img src="{% static concert.image %}" alt="Affiche de l'événement" class="img-fluid w-100 h-100" style="object-fit: cover;" />
                   <!-- Bouton au-dessus de l'image -->
-                  <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                  <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
                 </a>
-                <!-- Bouton de fermeture -->
-                <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
               </div>
               <!-- Section Texte en bas -->
               <div class="modal-body">
-                <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ concert.title }}</h5>
-                <p class="movie-date">Date : {{ concert.date }}</p>
-                <p class="movie-price">Prix : {{ concert.price }}</p>
-                <p class="movie-genre">Genre : {{ concert.genre }}</p>
-                <p class="movie-detail">Détail : {{ concert.detail }}</p>
-                <p class="movie-description">Description : {{ concert.description }}</p>
+                <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ concert.title }}</h5>
+                <p class="mb-1">
+                  <span>Date :</span> <span class="flq-color-meta">{{ concert.date }}</span>
+                </p>
+                <p class="mb-1">
+                  <span>Prix :</span> <span class="flq-color-meta">{{ concert.price }}</span>
+                </p>
+                <p class="mb-1">
+                  <span>Genre :</span> <span class="flq-color-meta">{{ concert.genre }}</span>
+                </p>
+                <p class="mb-1">
+                  <span>Détail :</span> <span class="flq-color-meta">{{ concert.detail }}</span>
+                </p>
+                <p>
+                  <span>Description :</span> <span class="flq-color-meta">{{ concert.description }}</span>
+                </p>                               
               </div>
             </div>
           </div>
@@ -223,26 +244,35 @@
       <!-- Fenêtre modale pour afficher les films à venir -->
       {% for movie in movies %}
         <div class="modal fade" id="upcoming-movies-{{ forloop.counter }}" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-dialog modal-lg modal-dialog">
             <div class="modal-content">
               <!-- Section Image en haut -->
               <div class="modal-image position-relative">
                 <a href="{% url 'coming_soon' %}">
                   <img src="{% static movie.image %}" alt="Affiche du film {{ movie.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
                   <!-- Bouton au-dessus de l'image -->
-                  <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                  <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
                 </a>
-                <!-- Bouton de fermeture -->
-                <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
               </div>
               <!-- Section Texte en bas -->
               <div class="modal-body">
-                <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ movie.title }}</h5>
-                <p class="production">Producteur : {{ movie.production }}</p>
-                <p class="movie-date">Date : {{ movie.date }}</p>
-                <p class="price">Prix : {{ movie.price }}</p>
-                <p class="movie-duration">Durée : {{ movie.duration }}</p>
-                <p class="movie-description">Description : {{ movie.description }}</p>
+                <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ movie.title }}</h5>
+                <p class="mb-1">
+                  <span>Producteur :</span> <span class="flq-color-meta">{{ movie.production }}</span>
+                </p>
+                <p class="mb-1">
+                  <span>Date :</span> <span class="flq-color-meta">{{ movie.date }}</span>
+                </p>
+                <p class="mb-1">
+                  <span>Prix :</span> <span class="flq-color-meta">{{ movie.price }}</span>
+                </p>
+                <p class="mb-1">
+                  <span>Durée :</span> <span class="flq-color-meta">{{ movie.duration }}</span>
+                </p>
+                <p>
+                  <span>Description :</span> <span class="flq-color-meta">{{ movie.description }}</span>
+                </p>                            
               </div>
             </div>
           </div>
@@ -295,7 +325,7 @@
             <div class="swiper-slide">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="{% url 'single_movie' name=movie.title %}" data-bs-toggle="modal" data-bs-target="#movieModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9"><img src="{% static movie.image %}" alt="{{ movie.title }}" /></span></a>
+                  <a href="{% url 'single_movie' name=movie.title %}" data-bs-toggle="modal" data-bs-target="#movieModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-4x3"><img src="{% static movie.image %}" alt="{{ movie.title }}" /></span></a>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"><a href="{% url 'single_movie' name=movie.title %}">{{ movie.title }}</a></h5>
@@ -319,7 +349,7 @@
             <div class="swiper-slide">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#concertModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9"><img src="{% static concert.image %}" alt="{{ concert.title }}" /></span></a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#concertModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-4x3"><img src="{% static concert.image %}" alt="{{ concert.title }}" /></span></a>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title"><a href="{% url 'single_movie' name=concert.title %}">{{ concert.title }}</a></h5>
@@ -345,22 +375,32 @@
     <!-- Movie Modals -->
     {% for movie in movies %}
       <div class="modal fade" id="movieModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="movieModalLabel{{ forloop.counter }}" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog">
           <div class="modal-content">
             <div class="modal-image position-relative">
               <a href="{% url 'single_movie' name=movie.title %}">
                 <img src="{% static movie.image %}" alt="{{ movie.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
-                <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
               </a>
-              <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
-              <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ movie.title }}</h5>
-              <p class="production">Producteur : {{ movie.production }}</p>
-              <p class="movie-date">Date : {{ movie.date }}</p>
-              <p class="price">Prix : {{ movie.price }}</p>
-              <p class="movie-duration">Durée : {{ movie.duration }}</p>
-              <p class="movie-description">Description : {{ movie.description }}</p>
+              <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ movie.title }}</h5>
+              <p class="mb-1"> 
+                <span class="flq-color-meta">Producteur :</span> {{ movie.production }}
+              </p>
+              <p class="mb-1">
+                <span class="flq-color-meta">Date :</span> {{ movie.date }}
+              </p>
+              <p class="mb-1">
+                <span class="flq-color-meta">Prix :</span> {{ movie.price }}
+              </p>
+              <p class="mb-1">
+                <span class="flq-color-meta">Durée :</span> {{ movie.duration }}
+              </p>
+              <p>
+                <span class="flq-color-meta">Description :</span> {{ movie.description }}
+              </p>    
             </div>
           </div>
         </div>
@@ -370,22 +410,32 @@
     <!-- Concert Modals -->
     {% for concert in concert_live %}
       <div class="modal fade" id="concertModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="concertModalLabel{{ forloop.counter }}" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog">
           <div class="modal-content">
             <div class="modal-image position-relative">
               <a href="{% url 'single_movie' name=concert.title %}">
                 <img src="{% static concert.image %}" alt="{{ concert.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
-                <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
               </a>
-              <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
-              <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ concert.title }}</h5>
-              <p class="movie-date">Date : {{ concert.date }}</p>
-              <p class="movie-price">Prix : {{ concert.price }}</p>
-              <p class="movie-genre">Genre : {{ concert.genre }}</p>
-              <p class="movie-detail">Détail : {{ concert.detail }}</p>
-              <p class="movie-description">Description : {{ concert.description }}</p>
+              <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ concert.title }}</h5>
+              <p class="mb-1">
+                <span class="flq-color-meta">Date :</span> {{ concert.date }}
+              </p>
+              <p class="mb-1">
+                <span class="flq-color-meta">Prix :</span> {{ concert.date }}
+              </p>
+              <p class="mb-1">
+                <span class="flq-color-meta">Genre :</span> {{ concert.genre }}
+              </p>
+              <p class="mb-1">
+                <span class="flq-color-meta">Détail :</span> {{ concert.detail  }}
+              </p>
+              <p>
+                <span class="flq-color-meta">Description :</span> {{ concert.detail  }}
+              </p>    
             </div>
           </div>
         </div>
@@ -473,7 +523,7 @@
         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 flq-isotope-item" data-sr-item="online-streaming">
           <div class="card flq-card-blog">
             <div class="card-img-wrap">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive-sm-16x9"><img src="{% static movie.image %}" alt="{{ movie.title }}" /></span></a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#movieModal{{ forloop.counter }}"><span class="flq-image flq-rounded-xl flq-responsive flq-responsive"><img src="{% static movie.image %}" alt="{{ movie.title }}" /></span></a>
             </div>
             <div class="card-body">
               <h5 class="card-title h6"><a href="{% url 'single_movie' name=movie.title %}">{{ movie.title }}</a></h5>
@@ -496,16 +546,30 @@
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-image position-relative">
-                <img src="{% static movie.image %}" alt="{{ movie.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
-                <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px;" data-bs-dismiss="modal" aria-label="Close"></button>
+                <a href="{% url 'single_movie' name=movie.title %}">
+                  <img src="{% static movie.image %}" alt="{{ movie.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+                  <!-- Bouton au-dessus de l'image -->
+                  <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
+                </a>
+                <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
               </div>
               <div class="modal-body">
-                <h5 class="flq-subtitle">{{ movie.title }}</h5>
-                <p>Production : {{ movie.production }}</p>
-                <p>Date : {{ movie.date }}</p>
-                <p>Durée : {{ movie.duration }}</p>
-                <p>Prix : {{ movie.price }}</p>
-                <p>Description : {{ movie.description }}</p>
+                <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ movie.title }}</h5>
+                <p class="mb-1">
+                  <span class="flq-color-meta">Producteur :</span> {{ movie.production }}
+                </p>
+                <p class="mb-1">
+                  <span class="flq-color-meta">Date :</span> {{ movie.date }}
+                </p>
+                <p class="mb-1">
+                  <span class="flq-color-meta">Prix :</span> {{ movie.price }}
+                </p>
+                <p class="mb-1">
+                  <span class="flq-color-meta">Durée :</span> {{ movie.duration }}
+                </p>
+                <p>
+                  <span class="flq-color-meta">Description :</span> {{ movie.description }}
+                </p>  
               </div>
             </div>
           </div>

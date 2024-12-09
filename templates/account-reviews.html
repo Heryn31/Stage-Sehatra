@@ -21,17 +21,17 @@
                   </a>
                   <div class="flq-media-meta">
                     <h5 class="flq-media-title"><a href="{% if data.name %}{% url 'single_movie' name=data.name %}{% else %}# {% endif %}">
-                      {{data.title}}
+                      {title}
                     </a>
                   </h5>
                     <div class="flq-meta">
                       <ul>
-                        <li>{{data.date}}</li>
+                        <li>{date}</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <p>{{data.detail}}</p>
+                <p>{detail}</p>
                 <hr class="my-0" />
                 <div>
                   <div class="flq-rating" style="--flq-rating--width: 0%;">

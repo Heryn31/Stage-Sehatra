@@ -98,47 +98,73 @@
             </li>
           </ul>
         </nav>
-        <div class="row gy-4 justify-content-center flq-isotope-grid" data-isotope-layout="fitRows" data-sr="movies-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+        <div class="row gy-5 justify-content-center flq-isotope-grid">
           {% for movie in movies %}
-            <div class="col-12 col-lg-6 flq-isotope-item" data-filters="movie">
-              <div data-sr-item="movies-item">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#film-gasy-{{ forloop.counter }}" class="card flq-card-movie flq-color-opacity">
-                  <span class="card-img-wrap"><span class="flq-image flq-responsive flq-responsive-lg-1x1 flq-responsive-xl-16x9"><img src="{% static movie.image %}" alt="{{ movie.title }}" /></span></span>
-                  <span class="card-body">
-                    <span class="card-badge"></span>
-                    <span class="card-title h5">{{ movie.title }}</span>
-                  </span>
-                </a>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 flq-isotope-item" data-filters="movie">
+              <div data-sr-item="movie-item">
+                <div class="card flq-card-blog">
+                  <div class="card-img-wrap">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#film-gasy-{{ forloop.counter }}">
+                      <span class="flq-image flq-rounded-xl flq-responsive flq-responsive-4x3">
+                        <img src="{% static movie.image %}" alt="{{ movie.title }}" />
+                      </span>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6"><a href="{% url 'single_movie' name=movie.title %}">{{ movie.title }}</a></h5>
+                    <div class="flq-meta flq-meta-sm">
+                      <ul>
+                        <li>
+                          <a class="card-production">{{ movie.production }}</a>
+                        </li>
+                        <li>
+                          <a class="card-duration">{{ movie.duration }}</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </div> 
             <!-- Fenêtre modale pour afficher les détails du film -->
             <div class="modal fade" id="film-gasy-{{ forloop.counter }}" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-dialog modal-lg modal-dialog">
                 <div class="modal-content">
                   <!-- Section Image en haut -->
                   <div class="modal-image position-relative">
                     <a href="{% url 'single_movie' name=movie.title %}">
                       <img src="{% static movie.image %}" alt="Affiche du film {{ movie.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
                       <!-- Bouton au-dessus de l'image -->
-                    <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;"><span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span></button>
+                      <button type="button" class="custom-play-button position-absolute">
+                        <span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span>
+                      </button>
                     </a>
-                    <!-- Bouton de fermeture -->
-                    <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
                   </div>
                   <!-- Section Texte en bas -->
                   <div class="modal-body">
-                    <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ movie.title }}</h5>
-                    <p class="production">Producteur : {{ movie.production }}</p>
-                    <p class="movie-date">Date : {{ movie.date }}</p>
-                    <p class="price">Prix : {{ movie.price }}</p>
-                    <p class="movie-duration">Durée : {{ movie.duration }}</p>   
-                    <p class="movie-description">Description : {{ movie.description }}</p>
+                    <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ movie.title }}</h5>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Producteur :</span> {{ movie.production }}
+                    </p>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Date :</span> {{ movie.date }}
+                    </p>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Prix :</span> {{ movie.price }}
+                    </p>
+                    <p class="mb-1">
+                      <span class="flq-color-meta">Durée :</span> {{ movie.duration }}
+                    </p>
+                    <p>
+                      <span class="flq-color-meta">Description :</span> {{ movie.description }}
+                    </p>                    
                   </div>
                 </div>
               </div>
             </div>
           {% endfor %}
-        </div>
+        </div>        
       </div>
     </div>
   </div>

@@ -1,0 +1,252 @@
+{
+    "concert_live": [
+        {
+            "name":"szayy",
+            "title": "Tarika Johary chante Barijaona & Kintana Telo",
+            "price": "40000Ar / 8,0€",
+            "date": "10 novembre 2024",
+            "duration": "4H",
+            "genre": "Traditionnel",
+            "image": "assets/images/concert_live/johary.png",
+            "detail": "Tarika Johary chante Barijaona & Kintana Telo. Lily, Lizah Raseta, Lilie, et Salomon, viendront enrichir ce moment de partage.",
+            "description": "Tarika Johary chante Barijaona & Kintana Telo - Une belle occasion de revivre des souvenirs nostalgiques à travers des chansons qui ont marqué des générations. Tarika Johary promet de faire résonner des mélodies qui rappellent les moments précieux de la vie. Lily, Lizah Raseta, Lilie, et Salomon, viendront enrichir ce moment de partage."
+        },
+        {
+            "title": "i-JAZZ FETISIBAL",
+            "price": "20000Ar / 5,0€",
+            "date": "6 septembre 2024",
+            "duration": "4H",
+            "genre": "JAZZ",
+            "image": "assets/images/concert_live/fetisibal.png",
+            "detail": "'i-JAZZ FETISIBAL' Une soirée jazz à ne pas manquer !",
+            "description": "Sous la direction du légendaire Velo Fanaiky, les plus grandes bassistes de Madagascar, telles qu'Antsiva, Manou, Moria, et Francia, vont vous envoûter, accompagnées par des musiciens talentueux. i-JAZZ FETISIBAL"
+        },
+        {
+            "title": "Revy Revy Mody Masoandro",
+            "price": "15000Ar / 5,0€",
+            "date": "28 juillet 2024",
+            "duration": "4h 44min",
+            "genre": "Traditionnel",
+            "image": "assets/images/concert_live/revy-mody-masoandro.png",
+            "detail": "Revy Revy Mody Masoandro avec Mahaleo, Benny & Bebey de Lolo sy ny tariny et Samoëla.",
+            "description": "Les légendes de la musique folk de Madagascar, ensemble sur une scène. Dama & Bekoto seront accompagnés par les Taranaka, Benny & Bebey par Nini Kolibera, et Samoëla par ses ingénieux musiciens. En direct du parking de CCI Ivato le 28 Juillet 2024."
+        },
+        {
+            "title": "Revy Feu De Camp Mahaleo",
+            "price": "15000Ar / 5,0€",
+            "date": "24 juin 2023",
+            "duration": "1H",
+            "genre": "Vazo Miteny",
+            "image": "assets/images/concert_live/affiche-mahaleo.png",
+            "detail": "Pour ce feu de camp, Dama et Bekoto seront accompagnés de Maharo (fils de Dama), Rôrô (fils de Charles), Benaivo (fils de Nônô), Pôpôly (Fils de Bekoto), Rado (fils de Fafah).",
+            "description": "En 1982, le groupe Mahaleo avait fait un feu de camp diffusé sur la télévision nationale Malagasy. 40 ans plus tard, dans le cadre de la célébration du 50ème anniversaire du groupe, les deux membres restants accompagnés de leurs fils ont souhaité reproduire ce concept mais cette fois pour les Malagasy du monde entier."
+        },
+        {
+            "title": "Tana Gospel Choir",
+            "price": "10000Ar / 3,0€",
+            "date": "24 juin 2023",
+            "duration": "1H",
+            "genre": "Vazo Miteny",
+            "image": "assets/images/concert_live/tgc-palais-des-sports.png",
+            "detail": "Tana Gospel Choir - 20ans « Izy no omem-boninahitra » en direct du Palais des Sports Mahamasina le 19 Mai à 15h (Heure Madagascar)",
+            "description": "Toujours à l’occasion de leur 20e anniversaire, TGC va donner grâce pour ses 20 années en louant, priant, chantant et dansant avec d’autres groupes de gospel comme Antsan’i Kristy, les Adeline, Iz’art gospel ainsi que d’excellents musiciens. Du Big Band, Chamber Strings, Drum line seront au rendez-vous. Nous vous invitons à les rejoindre en célébrant cet anniversaire avec eux."
+        },
+        {
+            "title": "Revy Sy Vazo Miteny",
+            "price": "25000Ar / 6,0€",
+            "date": "10 septembre 2023",
+            "duration": "4h 44min",
+            "genre": "Vazo Miteny",
+            "image": "assets/images/concert_live/vazo-miteny.png",
+            "detail": "Samoela, Princio, et Rah-Chiky: En direct depuis Antsahamanitra le 10 Septembre 2023",
+            "description": "Le trio Samoela, Princio, et Rah-Chiky entend se produire une nouvelle fois des années plus tard. Le spectacle s’intitule Revy sy Vazo Miteny. Préparez-vous à vibrer au son des chansons à texte les plus connues de Madagascar Les vazo miteny seront interprétés en trio, en duo, mais bien évidemment par l’auteur lui-même."
+        },
+        {
+            "title": "Ambondrona",
+            "price": "30000Ar / 6,0€",
+            "date": "25 février 2024",
+            "duration": "3H",
+            "genre": "Vazo Miteny",
+            "image": "assets/images/concert_live/ambondrona.png",
+            "detail": "Ambondrona - LIVE INÉDIT En direct du CCI Ivato",
+            "description": "Leur premier grand concert pour 2024 !! Une playlist inédite."
+        },
+        {
+            "title": "Madagasikara sy ny dihy",
+            "price": "20000Ar / 5,0€",
+            "date": "26 juillet 2023",
+            "duration": "4h 44min",
+            "genre": "Traditionnel",
+            "image": "assets/images/concert_live/randria-ernest.png",
+            "detail": "Comédie musicale réalisée par Randriamanantena Dieu Donné.",
+            "description": "Cette comédie musicale raconte l’histoire d’un homme faisant le tour de Madagascar dans le but de trouver le remède idéal pour sauver la vie de son ami. Un voyage durant lequel il découvre les Danses et musiques traditionnelles venant des 5 coins de Madagascar (Nord, Sud, Est, Ouest, Hautes Terres Centrales) Les scénarios et les chansons mettent en évidence l’importance de l’environnement et de la biodiversité"
+        }
+    ],
+    "movies": [
+        {
+            "title": "Unique Madagascar",
+            "price": "20000Ar / 8,0€",
+            "date": "1 avril 2019",
+            "production": "Awesome Madagascar Tours",
+            "duration": "40 Min",
+            "image": "assets/images/concert_live/unique.png",
+            "description": "WHAT IS UNIQUE FOR YOU? UNIQUE IS SIMPLY THE ISLAND OF MADAGASCAR. Don't miss to watch this amazing video to explore its FIVE \"U\" - Unique wildlife like lemurs - Unique culture like playing with dead - Unique plant like baobab trees - Unique limestone rock formation like the Tsingy - Unique musical instruments like the Valiha."
+        },
+        {
+            "title": "Sarango-pitia",
+            "price": "5000Ar / 2,0€",
+            "date": "22 août 2023",
+            "production": "Film Malagasy novokarin'ny FR Production.",
+            "duration": "1h 08min",
+            "image": "assets/images/films/sarangom-pitia-sehatra.png",
+            "description": "Betsaka isika no niandry ny andiany fahadimy amin'ity andian-tantara Sarangom-pitia ity. Tsy nanaiky hatramin’ny farany i Mino ka voatery nanao sorona ny tenany, mety ho diso safidy ve izy ?"
+        },
+        {
+            "title": "Sakaiza Mandoro",
+            "price": "5000Ar / 2,0€",
+            "date": "22 août 2023",
+            "production": "Film Malagasy novokarin'ny FR Production.",
+            "duration": "1h 14min",
+            "image": "assets/images/films/sakaiza-sehatra.png",
+            "description": "Eto amin'ny SEHATRA.COM no hamoahana voalohany ity horonan-tsary vaovao ity. Atolotra am-pitiavana ho antsika mpanohana ny sarimihetsika Malagasy. Tantara-na ankizivavy nahita fianarana saingy voatery nanao mpiasa antrano tao amina mpanan-karena iray."
+        },
+        {
+            "title": "Mafiady",
+            "price": "5000Ar / 2,0€",
+            "date": "29 août 2023",
+            "production": "Watch Production",
+            "duration": "1h 20min",
+            "image": "assets/images/films/Afiche_Mafiady-min.png",
+            "description": "Film policier by Andry Rarivonandrasana."
+        },
+        {
+            "title": "Le Mystère d'Arivonimamo",
+            "price": "5000Ar / 2,0€",
+            "date": "04 décembre 2023",
+            "production": "Film Malagasy novokarin'ny FR Production.",
+            "duration": "26 Min",
+            "image": "assets/images/films/mystere-d-arivonimamo.png",
+            "description": "Chloe et Jehanne, deux adolescentes passionnées de science, enquêtent sur le mystère des antennes qui composent le paysage d'Arivonimamo depuis des décennies. Ce qu'elles découvrent risque de changer l'avenir de Madagascar."
+        }
+    ],
+    "artiste": [
+        {
+            "name": "Samoela",
+            "title": "Samoela En Live",
+            "duration": "1h 10min",
+            "date": "16 mai 2021",
+            "price": "15000Ar / 5,0€",
+            "nbr_video": "1",
+            "partner": "Artiste",
+            "about_partner": "À propos de l'artiste",
+            "nbr_action": "1",
+            "associate":"Vidéos associées à cette artiste",
+            "other": "Les autres artistes présents sur SEHATRA",
+            "image": "assets/images/concert_live/samoela.png",
+            "detail": "Concert réalisé pendant la période de la Covid-19 à Madagascar.",
+            "gender": "Vazo Miteny",
+            "description": "Pendant plus d'une heure, Samoela et ses musiciens vous feront revivre ses 25 années de scènes pendant ce live."
+        },
+        {
+            "name": "Oladad",
+            "title": "Oladad En Live",
+            "duration": "1h 30min",
+            "date": "29 mars 2023",
+            "price": "15000Ar / 5,0€",
+            "nbr_video": "1",
+            "partner": "Artiste",
+            "about_partner": "À propos de l'artiste",
+            "nbr_action": "1",
+            "associate":"Vidéos associées à cette artiste",
+            "other": "Les autres artistes présents sur SEHATRA",
+            "image": "assets/images/concert_live/oladad.png",
+            "detail": "Dadalo, Evans, Kids, Tsiry et Lova : ces Betsileo au grand talent de danseur et de chanteur (avec leurs voix extraordinaires), vont vous faire voyager à travers la musique traditionnelle de Fianarantsoa fusionnée avec le rap.",
+            "gender": "hip-hop folk-fusion de Madagascar",
+            "description": "Oladad est un groupe hip-hop folk-fusion de Madagascar. Ils interprètent une fusion de hip-hop, de danse et de la musique horija traditionnelle du peuple Betsileo, y compris des instruments comme le kabosy, jejy, sodina et le violon. Le groupe a été formé en 1996 à Fianarantsoa. Le groupe tire son nom de l’orthographe inverse du nom du membre principal Dadalo, dont le nom signifie 'chance' (vintana mahery adalo). Oladad comprend cinq chanteurs (Dadalao, Evans, Kids, Tsiry et Lova) et six musiciens. Revivez leurs chansons célèbres : Afindrafindrao, Agnao, Ketamanga, Sesily, et bien d’autres."
+        },
+        {
+            "name": "Tarika Sakelidalana",
+            "title": "Live Sakelidalana",
+            "duration": "50 Min",
+            "date": "29 mars 2023",
+            "price": "15000Ar / 5,0€",
+            "nbr_video": "1",
+            "partner": "Artiste",
+            "about_partner": "À propos de l'artiste",
+            "nbr_action": "1",
+            "associate":"Vidéos associées à cette artiste",
+            "other": "Les autres artistes présents sur SEHATRA",
+            "image": "assets/images/concert_live/sakelidalana.png",
+            "detail": "Voahangy, Tao anatin'ny tolona, Fitia manalasala, Taratasin-drazandry et bien d'autres titres pendant ce live d'une heure.",
+            "gender": "Vazo Malagasy",
+            "description": "Depuis que Rakotozanany Stanislas a quitté le groupe en 1980, on les connaît sous le nom de Tarika Sakelidalana. Le nom Sakelidalana a été tiré de la fameuse chanson 'Voahangy', que vous allez revivre dans ce spectacle, ainsi que d'autres harmonieuses compositions du groupe."
+        },
+        {
+            "name": "Vahantsaina",
+            "title": "Vahantsaina One Man Band",
+            "duration": "30 Min",
+            "date": "1 mai 2023",
+            "price": "13000Ar / 4,5€",
+            "nbr_video": "1",
+            "partner": "Artiste",
+            "about_partner": "À propos de l'artiste",
+            "nbr_action": "1",
+            "associate":"Vidéos associées à cette artiste",
+            "other": "Les autres artistes présents sur SEHATRA",
+            "image": "assets/images/concert_live/vahantsaina-couverture.png",
+            "detail": "Vahantsaina un One Man Band vous fera découvrir ses compositions pendant ce live de trente minutes.",
+            "gender": "Healing song et ses musiques engagées",
+            "description": "Vahantsaina One Man Band nous invite à ce concert pour nous offrir un voyage musical particulier. L’homme-orchestre nous embarque en live avec ses healing song et ses musiques engagées. Il nous fascine en live en combinant le chant à trois voix, la guitare en accompagnement et en solo, la percussion émanant de sa propre guitare à 7 cordes, et surtout les mélodies envoutantes jaillissant de ses sodina. Tout cela réalisé par une seule personne. Laissez-vous emporter, bon visionnage."
+        },
+        {
+            "name": "Vilon'androy",
+            "title": "Live Vilon'Androy",
+            "duration": "1h 20min",
+            "date": "13 mai 2023",
+            "price": "20000Ar / 7,5€",
+            "nbr_video": "1",
+            "partner": "Artiste",
+            "about_partner": "À propos de l'artiste",
+            "nbr_action": "1",
+            "associate":"Vidéos associées à cette artiste",
+            "other": "Les autres artistes présents sur SEHATRA",
+            "image": "assets/images/concert_live/vilon-androy.png",
+            "detail": "Spectacle tourné en pleine nature, danse typique de la région, des instruments vita malagasy, chansons acapella à 4 voix comme 'SALAKAO' que vous connaissez sûrement.",
+            "gender": "Musique du Grand-Sud",
+            "description": "Un groupe du sud de l'île de Madagascar, mené par leur fameux chef de groupe Surgi, variant les styles Beko et Banaiky, de la musique typiquement malagasy grâce à laquelle Vilon'Androy a fait le tour du monde."
+        }
+    ],
+    "organizers": [
+        {
+            "name": "awesone-madagascar-tours",
+            "title": "Awesome Madagascar Tours",
+            "duration": "40 Min",
+            "price": "20000Ar / 8,0€",
+            "date": "1 avril 2019",
+            "nbr_video": "1",
+            "partner": "Organisateur",
+            "about_partner": "À propos de l'organisateur",
+            "associate":"Vidéos associées à cet organisateur",
+            "other": "Les autres organisateurs présents sur SEHATRA",
+            "image": "assets/images/concert_live/unique.png",
+            "detail": "WHAT IS UNIQUE FOR YOU? UNIQUE IS SIMPLY THE ISLAND OF MADAGASCAR. Don't miss to watch this amazing video to explore its FIVE 'U' -Unique wildlife like lemurs -Unique culture like playing with dead - Unique plant like baobab trees - Unique limestone rock formation like the Tsingy -Unique musical instruments like the Valiha.",
+            "description": "AWESOME MADAGASCAR TOURS est une entreprise locale de voyages malgaches fondée par l’équipe de mari et femme, Diary et Mihaja, qui sont dédiés à offrir des aventures incroyables aux voyageurs passionnés. Diary et Mihaja sont fiers de partager les talents naturels et l’histoire qu’ils ont hérités de leurs ancêtres pour s’assurer que votre séjour à Madagascar ne sera pas comme les autres."
+        }
+    ],
+    "associations": [
+        {
+            "name": "association-malgache-pour-lautisme",
+            "title": "Association Malgache pour l'Autisme",
+            "image": "assets/images/concert_live/couverture-ama.png",
+            "action": "Action Sociale",
+            "nbr_action": "1",
+            "detail_action":"Nous sommes conscients de la nécessité de soutenir les autistes pour qu’ils puissent mettre en valeur leur potentiel et qu’ils puissent exercer leur droit fondamental à l’égalité des chances et au bien-être. Notre objectif fondamental est qu’ils pourront grandir dans une société davantage accessible, où ils pourront s’épanouir et accéder à l’autonomie.",
+            "partner": "Association",
+            "about_partner": "À propos de l'association",
+            "associate":"Vidéos associées à cette action",
+            "duration": "1h 30min",
+            "other": "Les autres associations présents sur SEHATRA",
+            "description": "L’Association Malgache pour l’Autisme (AMA) est une association des parents, familles et amis de personnes autistes et de professionnels relevant du domaine de l’autisme. Elle est née à la suite d’une prise de conscience de quelques parents d’autistes de la nécessité de s’organiser pour faire avancer la cause des personnes vivant avec autisme à Madagascar."
+        }
+    ]
+}

@@ -87,7 +87,7 @@
   </div>
   <div class="content-wrap">
     <div class="py-7">
-      <div class="container flq-isotope" data-sr="tvshow-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+      <div class="container flq-isotope" data-sr="association-item" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
         <div class="card-title h5 mb-2" data-sr-item="new-releases">
           <p class="fs-6 fs-md-5 fs-lg-4">Ces associations ont choisi de collaborer avec SEHATRA.COM pour donner une étendue internationale à leurs actions. Rappelons que chaque vidéo sur notre plateforme contribue directement à des actions sociales ou environnementales à Madagascar.</p>
         </div>
@@ -99,7 +99,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="inscriptionModalLabel">Formulaire Association</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
                 </div>
                 <div class="modal-body" style="max-height: calc(100vh - 210px); overflow-y: auto;">
                   <p>Nous vous remercions de votre intérêt pour collaborer avec SEHATRA.COM. Veuillez remplir le formulaire ci-dessous avec les informations sur votre association.</p>
@@ -168,8 +168,8 @@
         <div class="row align-items-center gy-4 mb-5">
           <div class="col-12 col-md">
             <nav>
-              <ul class="nav nav-tabs flq-isotope-options" data-sr="tvshow-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
-                <li class="nav-item" data-sr-item="tvshow-options">
+              <ul class="nav nav-tabs flq-isotope-options" data-sr="association-options" data-sr-interval="80" data-sr-duration="1000" data-sr-distance="10">
+                <li class="nav-item" data-sr-item="association-options">
                   <a href="#" data-filter="all" class="nav-link active"><span class="nav-link-name">Tout</span></a>
                 </li>
               </ul>
@@ -178,13 +178,13 @@
         </div>
         <div class="row gy-5 justify-content-center flq-isotope-grid">
           {% for data in associations %}
-          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 flq-isotope-item" data-filters="association">
-            <div data-sr-item="tvshow-item">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 flq-isotope-item" data-filters="association">
+            <div data-sr-item="association-item">
               <div class="card flq-card-blog">
                 <div class="card-img-wrap">
                   <!-- Lien pour ouvrir le modal correspondant -->
                   <a href="{% url 'association_details' name=data.name %}" data-bs-toggle="modal" data-bs-target="#associationModal{{ forloop.counter }}">
-                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-sm-16x9">
+                    <span class="flq-image flq-rounded-lg flq-responsive flq-responsive-4x3">
                       <img src="{% static data.image %}" alt="{{ data.title }}" />
                     </span>
                   </a>
@@ -212,24 +212,28 @@
         
           <!-- Modal correspondant à cet élément -->
           <div class="modal fade" id="associationModal{{ forloop.counter }}" tabindex="-1" aria-labelledby="LiveModalLabel{{ forloop.counter }}" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-dialog modal-lg modal-dialog">
               <div class="modal-content">
                 <!-- Image et bouton -->
                 <div class="modal-image position-relative">
                   <a  href="{% url 'association_details' name=data.name %}">
                   <img src="{% static data.image %}" alt="{{ data.title }}" class="img-fluid w-100 h-100" style="object-fit: cover;" />
-                  <button type="button" class="btn btn-dark btn-glass position-absolute" style="bottom: 10px; left: 50%; transform: translateX(-50%); width: 150px; padding: 10px;">
-                    <span>Regarder&nbsp;&nbsp;<i class="fas fa-play"></i></span>
-                  </button>
+                  <button type="button" class="custom-play-button position-absolute"><span><i class="fas fa-play"></i>&nbsp;&nbsp;Regarder</span></button>
                 </a>
-                  <button type="button" class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 3;" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="custom-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
                 </div>
                 <!-- Contenu texte -->
                 <div class="modal-body">
-                  <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent">{{ data.title }}</h5>
-                  <p class="movie-action">Nom de l'action : {{ data.action }}</p>
-                  <p class="movie-nbr-action">Actions : {{ data.nbr_action }}</p>
-                  <p class="movie-description">Description : {{ data.description }}</p>
+                  <h5 class="flq-subtitle badge badge-white badge-glass badge-translucent mb-2">{{ data.title }}</h5>
+                  <p class="mb-1">
+                    <span class="flq-color-meta">Nom de l'action :</span> {{ data.action }}
+                  </p>
+                  <p class="mb-1">
+                    <span class="flq-color-meta">Actions :</span> {{ data.nbr_action }}
+                  </p>
+                  <p>
+                    <span class="flq-color-meta">Description :</span> {{ data.description }}
+                  </p>                  
                 </div>
               </div>
             </div>
